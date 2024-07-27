@@ -1,0 +1,31 @@
+<!ELEMENT mrt (line*)>								<!--root-->
+	<!ATTLIST mrt place-zhtw #PCDATA>
+	<!ATTLIST mrt place-en   #PCDATA>
+	
+	<!ELEMENT line (line-name-zhtw, line-name-en, line-name-ja, line-name-ko, station*)>
+		<!ATTLIST line line-id       ID           #REQUIRED>
+		<!ATTLIST line line-color-bg CDATA        #REQUIRED>
+		<!ATTLIST line line-color-fg CDATA        #REQUIRED>
+		<!ATTLIST line no-service    (true|false) false>
+		
+		<!ELEMENT line-name-zhtw #PCDATA>
+		<!ELEMENT line-name-en   #PCDATA>
+		<!ELEMENT line-name-ja   #PCDATA>
+		<!ELEMENT line-name-ko   #PCDATA>
+		<!ELEMENT station (sta-name-zhtw, sta-name-en, sta-name-ja, sta-name-ko, transfers)>
+			<!ATTLIST station sta-id      ID          #REQUIRED>
+			<!ATTLIST station no-service (true|false) false>
+			
+			<!ELEMENT sta-name-zhtw     #PCDATA>
+			<!ELEMENT sta-name-en       #PCDATA>
+			<!ELEMENT sta-name-ja       #PCDATA>
+			<!ELEMENT sta-name-ko       #PCDATA>
+			<!ELEMENT transfers         (transfer*)>
+				<!ELEMENT transfer          (transfer-line, transfer-line-sta)>
+					<!ATTLIST transfer no-service (true|false) false>
+					<!ATTLIST transfer out-of-sta (true|false) false>
+					
+					<!ELEMENT transfer-line     #PCDATA>
+						<!ATTLIST transfer-line IDREF #REQUIRED>
+					<!ELEMENT transfer-line-sta #PCDATA>
+						<!ATTLIST transfer-line-sta IDREF #REQUIRED>

@@ -1,0 +1,15 @@
+<!ELEMENT bus-routes (route*)>						<!--root-->
+	<!ELEMENT route ((route-number | (route-number-zh, route-number-en)), route-info, station*)
+		<!ATTLIST route route-id ID #REQUIRED>
+		
+		<!ELEMENT route-number    #PCDATA>
+		<!ELEMENT route-number-zh #PCDATA>
+		<!ELEMENT route-number-en #PCDATA>
+		<!ELEMENT route-info      #PCDATA>
+		<!ELEMENT station         (sta-name-zhtw, sta-name-en)>
+			<!ATTLIST station sta-id      IDREF            #REQUIRED>
+			<!ATTLIST station direction   (go|back|goback) goback>
+			<!ATTLIST station buffer-zone (true|false)     false>
+			
+			<!ELEMENT sta-name-zhtw #PCDATA>
+			<!ELEMENT sta-name-en   #PCDATA>
