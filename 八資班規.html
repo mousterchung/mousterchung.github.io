@@ -1,0 +1,48 @@
+<html>
+	<head>
+		<title>八資班規</title>
+		<style>
+			body             { counter-reset: chapter first second; 
+			                   font-family: Arial, sans-serif; }
+			ol               { list-style: none; }
+			.chapter         { counter-increment: chapter; 
+			                   font-size: 20pt; 
+			                   font-weight: bold; }
+			.chapter::before { content: "第 " counter(chapter) " 章 "; }
+			.first           { counter-increment: first; 
+			                   counter-reset: second; 
+			                   font-size: 15pt; 
+			                   font-weight: normal; }
+			.first::before   { content: "第 " counter(first) " 條 "; }
+			.second          { counter-increment: second; }
+			.second::before  { content: counter(second) " "; 
+			                   font-style: italic; 
+			                   color: grey; }
+		</style>
+	</head>
+	<body>
+		<ol>
+			<li class="chapter">
+				處罰
+				<ol>
+					<li class="first">
+						&&&
+						<ol>
+							<li class="second">&&&</li>
+						</ol>
+						</li>
+				</ol>
+			</li>
+			<li class="chapter">
+				折抵
+				<ol>
+					<li class="first">&&&</li>
+				</ol>
+			</li>
+			<li class="chapter">
+				規定
+				<ol>
+					<li class="first">&&&</li>
+				</ol>
+			</li>
+		</ol>
