@@ -1,0 +1,1490 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="./xsl/mrt.xsl" type="text/xsl"?>
+<!--<?xml-stylesheet href="./../css/mrt.css" type="text/css"?>-->
+<!DOCTYPE mrt SYSTEM "./dtd/mrt.dtd">
+<mrt place-zhtw="台北" place-en="taipei">
+	<line line-id="taipei-br" line-color-bg="#c48c31" line-color-fg="white">
+		<line-name-zhtw>文湖線</line-name-zhtw>
+		<line-name-en>Wenhu Line</line-name-en>
+		<line-name-ja>文湖線</line-name-ja>
+		<line-name-ko>원후 선</line-name-ko>
+		<station sta-id="taipei-br01">
+			<sta-name-zhtw>動物園</sta-name-zhtw>
+			<sta-name-en>Taipei Zoo</sta-name-en>
+			<sta-name-ja>動物園</sta-name-ja>
+			<sta-name-ko>동물원</sta-name-ko>
+			<transfers>
+				<transfer no-service="true">
+					<transfer-line transfer-line="newtaipei-y">環狀線</transfer-line>
+					<transfer-line-sta transfer-line-sta="newtaipei-y01">動物園</transfer-line-sta>
+				</transfer>
+				<transfer no-service="true" out-of-sta="true">
+					<transfer-line transfer-line="newtaipei-s">深坑輕軌</transfer-line>
+					<transfer-line-sta transfer-line-sta="newtaipei-s1">動物園</transfer-line-sta>
+				</transfer>
+			</transfers>
+		</station>
+		<station sta-id="taipei-br02">
+			<sta-name-zhtw>木柵</sta-name-zhtw>
+			<sta-name-en>Muzha</sta-name-en>
+			<sta-name-ja>木柵</sta-name-ja>
+			<sta-name-ko>무자</sta-name-ko>
+			<transfers>
+			</transfers>
+		</station>
+		<station sta-id="taipei-br03">
+			<sta-name-zhtw>萬芳社區</sta-name-zhtw>
+			<sta-name-en>Wanfang Community</sta-name-en>
+			<sta-name-ja>万芳コミュニティ</sta-name-ja>
+			<sta-name-ko>완팡 단지</sta-name-ko>
+			<transfers>
+			</transfers>
+		</station>
+		<station sta-id="taipei-br04">
+			<sta-name-zhtw>萬芳醫院</sta-name-zhtw>
+			<sta-name-en>Wanfang Hospital</sta-name-en>
+			<sta-name-ja>万芳病院</sta-name-ja>
+			<sta-name-ko>완팡 병원</sta-name-ko>
+			<transfers>
+			</transfers>
+		</station>
+		<station sta-id="taipei-br05">
+			<sta-name-zhtw>辛亥</sta-name-zhtw>
+			<sta-name-en>Xinhai</sta-name-en>
+			<sta-name-ja>辛亥</sta-name-ja>
+			<sta-name-ko>신하이</sta-name-ko>
+			<transfers>
+			</transfers>
+		</station>
+		<station sta-id="taipei-br06">
+			<sta-name-zhtw>麟光</sta-name-zhtw>
+			<sta-name-en>Linguang</sta-name-en>
+			<sta-name-ja>麟光</sta-name-ja>
+			<sta-name-ko>린광</sta-name-ko>
+			<transfers>
+			</transfers>
+		</station>
+		<station sta-id="taipei-br07">
+			<sta-name-zhtw>六張犁</sta-name-zhtw>
+			<sta-name-en>Liuzhangli</sta-name-en>
+			<sta-name-ja>六張犁</sta-name-ja>
+			<sta-name-ko>류장리</sta-name-ko>
+			<transfers>
+			</transfers>
+		</station>
+		<station sta-id="taipei-br08">
+			<sta-name-zhtw>科技大樓</sta-name-zhtw>
+			<sta-name-en>Technology Building</sta-name-en>
+			<sta-name-ja>テクノロジービル</sta-name-ja>
+			<sta-name-ko>테크놀로지 빌딩</sta-name-ko>
+			<transfers>
+			</transfers>
+		</station>
+		<station sta-id="taipei-br09">
+			<sta-name-zhtw>大安</sta-name-zhtw>
+			<sta-name-en>Daan</sta-name-en>
+			<sta-name-ja>大安</sta-name-ja>
+			<sta-name-ko>다안</sta-name-ko>
+			<transfers>
+				<transfer>
+					<transfer-line transfer-line="taipei-r">淡水信義線</transfer-line>
+					<transfer-line-sta transfer-line-sta="taipei-r05">大安</transfer-line-sta>
+				</transfer>
+			</transfers>
+		</station>
+		<station sta-id="taipei-br10">
+			<sta-name-zhtw>忠孝復興</sta-name-zhtw>
+			<sta-name-en>Zhongxiao Fuxing</sta-name-en>
+			<sta-name-ja>忠孝復興</sta-name-ja>
+			<sta-name-ko>중샤오 푸싱</sta-name-ko>
+			<transfers>
+				<transfer>
+					<transfer-line transfer-line="taipei-bl">板南線</transfer-line>
+					<transfer-line-sta transfer-line-sta="taipei-bl15">忠孝復興</transfer-line-sta>
+				</transfer>
+			</transfers>
+		</station>
+		<station sta-id="taipei-br11">
+			<sta-name-zhtw>南京復興</sta-name-zhtw>
+			<sta-name-en>Nanjing Fuxing</sta-name-en>
+			<sta-name-ja>南京復興</sta-name-ja>
+			<sta-name-ko>난징 푸싱</sta-name-ko>
+			<transfers>
+				<transfer>
+					<transfer-line transfer-line="taipei-g">松山新店線</transfer-line>
+					<transfer-line-sta transfer-line-sta="taipei-g16">南京復興</transfer-line-sta>
+				</transfer>
+			</transfers>
+		</station>
+		<station sta-id="taipei-br12">
+			<sta-name-zhtw>中山國中</sta-name-zhtw>
+			<sta-name-en>Zhongshan Junior High School</sta-name-en>
+			<sta-name-ja>中山中学校</sta-name-ja>
+			<sta-name-ko>중산 중학교</sta-name-ko>
+			<transfers>
+				<transfer no-service="true" out-of-sta="true">
+					<transfer-line transfer-line="keelung-sb">民生汐止線</transfer-line>
+					<transfer-line-sta transfer-line-sta="keelung-sb04">（站名未定）</transfer-line-sta>
+				</transfer>
+			</transfers>
+		</station>
+		<station sta-id="taipei-br13">
+			<sta-name-zhtw>松山機場</sta-name-zhtw>
+			<sta-name-en>Songshan Airport</sta-name-en>
+			<sta-name-ja>松山空港</sta-name-ja>
+			<sta-name-ko>송산 공항</sta-name-ko>
+			<transfers>
+			</transfers>
+		</station>
+		<station sta-id="taipei-br14">
+			<sta-name-zhtw>大直（實踐大學）</sta-name-zhtw>
+			<sta-name-en>Dazhi ( Shih Chien University )</sta-name-en>
+			<sta-name-ja>大直</sta-name-ja>
+			<sta-name-ko>다즈</sta-name-ko>
+			<transfers>
+			</transfers>
+		</station>
+		<station sta-id="taipei-br15">
+			<sta-name-zhtw>劍南路（美麗華）</sta-name-zhtw>
+			<sta-name-en>Jiannan Road ( Miramar )</sta-name-en>
+			<sta-name-ja>剣南路</sta-name-ja>
+			<sta-name-ko>젠난루</sta-name-ko>
+			<transfers>
+				<transfer no-service="true">
+					<transfer-line transfer-line="newtaipei-y">環狀線</transfer-line>
+					<transfer-line-sta transfer-line-sta="newtaipei-y29">劍南路（美麗華）</transfer-line-sta>
+				</transfer>
+			</transfers>
+		</station>
+		<station sta-id="taipei-br16">
+			<sta-name-zhtw>西湖（德明科大）</sta-name-zhtw>
+			<sta-name-en>Xihu ( Takming University )</sta-name-en>
+			<sta-name-ja>西湖</sta-name-ja>
+			<sta-name-ko>시후</sta-name-ko>
+			<transfers>
+			</transfers>
+		</station>
+		<station sta-id="taipei-br17">
+			<sta-name-zhtw>港墘</sta-name-zhtw>
+			<sta-name-en>Gangqian</sta-name-en>
+			<sta-name-ja>港墘</sta-name-ja>
+			<sta-name-ko>강첸</sta-name-ko>
+			<transfers>
+			</transfers>
+		</station>
+		<station sta-id="taipei-br18">
+			<sta-name-zhtw>文德（碧湖公園）</sta-name-zhtw>
+			<sta-name-en>Wende ( Bihu Park )</sta-name-en>
+			<sta-name-ja>文徳</sta-name-ja>
+			<sta-name-ko>원더</sta-name-ko>
+			<transfers>
+			</transfers>
+		</station>
+		<station sta-id="taipei-br19">
+			<sta-name-zhtw>內湖</sta-name-zhtw>
+			<sta-name-en>Neihu</sta-name-en>
+			<sta-name-ja>内湖</sta-name-ja>
+			<sta-name-ko>네이후</sta-name-ko>
+			<transfers>
+			</transfers>
+		</station>
+		<station sta-id="taipei-br20">
+			<sta-name-zhtw>大湖公園</sta-name-zhtw>
+			<sta-name-en>Dahu Park</sta-name-en>
+			<sta-name-ja>大湖公園</sta-name-ja>
+			<sta-name-ko>다후 공원</sta-name-ko>
+			<transfers>
+			</transfers>
+		</station>
+		<station sta-id="taipei-br21">
+			<sta-name-zhtw>葫洲</sta-name-zhtw>
+			<sta-name-en>Huzhou</sta-name-en>
+			<sta-name-ja>葫洲</sta-name-ja>
+			<sta-name-ko>후저우</sta-name-ko>
+			<transfers>
+			</transfers>
+		</station>
+		<station sta-id="taipei-br22">
+			<sta-name-zhtw>東湖</sta-name-zhtw>
+			<sta-name-en>Donghu</sta-name-en>
+			<sta-name-ja>東湖</sta-name-ja>
+			<sta-name-ko>둥후</sta-name-ko>
+			<transfers>
+				<transfer no-service="true">
+					<transfer-line transfer-line="keelung-sb">民生汐止線</transfer-line>
+					<transfer-line-sta transfer-line-sta="keelung-sb10">東湖</transfer-line-sta>
+				</transfer>
+			</transfers>
+		</station>
+		<station sta-id="taipei-br23">
+			<sta-name-zhtw>南港軟體園區</sta-name-zhtw>
+			<sta-name-en>Nangang Software Park</sta-name-en>
+			<sta-name-ja>南港ソフトウェアパーク</sta-name-ja>
+			<sta-name-ko>난강 소프트웨어 단지</sta-name-ko>
+			<transfers>
+			</transfers>
+		</station>
+		<station sta-id="taipei-br24">
+			<sta-name-zhtw>南港展覽館</sta-name-zhtw>
+			<sta-name-en>Taipei Nangang Exibition Center</sta-name-en>
+			<sta-name-ja>南港展覧館</sta-name-ja>
+			<sta-name-ko>난강 전람관</sta-name-ko>
+			<transfers>
+				<transfer>
+					<transfer-line transfer-line="taipei-bl">板南線</transfer-line>
+					<transfer-line-sta transfer-line-sta="taipei-bl23">南港展覧館</transfer-line-sta>
+				</transfer>
+			</transfers>
+		</station>
+	</line>
+	
+	<line line-id="taipei-r" line-color-bg="#e3002c" line-color-fg="white">
+		<line-name-zhtw>淡水信義線</line-name-zhtw>
+		<line-name-en>Tamsui-Xinyi Line</line-name-en>
+		<line-name-ja>淡水信義線</line-name-ja>
+		<line-name-ko>단수이-신이 선</line-name-ko>
+		<station sta-id="taipei-r01" no-service="true">
+			<sta-name-zhtw>廣慈／奉天宮</sta-name-zhtw>
+			<sta-name-en>Guangci / Fengtian Temple</sta-name-en>
+			<sta-name-ja>広慈／奉天宮</sta-name-ja>
+			<sta-name-ko>광츠 / 펑톈궁</sta-name-ko>
+			<transfers>
+			</transfers>
+		</station>
+		<station sta-id="taipei-r02">
+			<sta-name-zhtw>象山</sta-name-zhtw>
+			<sta-name-en>Xiangshan</sta-name-en>
+			<sta-name-ja>象山</sta-name-ja>
+			<sta-name-ko>샹산</sta-name-ko>
+			<transfers>
+				<transfer no-service="true" out-of-sta="true">
+					<transfer-line transfer-line="newtaipei-y">環狀線</transfer-line>
+					<transfer-line-sta transfer-line-sta="newtaipei-y38">象山</transfer-line-sta>
+				</transfer>
+			</transfers>
+		</station>
+		<station sta-id="taipei-r03">
+			<sta-name-zhtw>台北１０１／世貿</sta-name-zhtw>
+			<sta-name-en>Taipei 101 / World Trade Center</sta-name-en>
+			<sta-name-ja>台北１０１／世界貿易センター</sta-name-ja>
+			<sta-name-ko>타이베이101 / 세계무역센터</sta-name-ko>
+			<transfers>
+			</transfers>
+		</station>
+		<station sta-id="taipei-r04">
+			<sta-name-zhtw>信義安和</sta-name-zhtw>
+			<sta-name-en>Xinyi Anhe</sta-name-en>
+			<sta-name-ja>信義安和</sta-name-ja>
+			<sta-name-ko>신이 안허</sta-name-ko>
+			<transfers>
+			</transfers>
+		</station>
+		<station sta-id="taipei-r05">
+			<sta-name-zhtw>大安</sta-name-zhtw>
+			<sta-name-en>Daan</sta-name-en>
+			<sta-name-ja>大安</sta-name-ja>
+			<sta-name-ko>다안</sta-name-ko>
+			<transfers>
+				<transfer>
+					<transfer-line transfer-line="taipei-br">文湖線</transfer-line>
+					<transfer-line-sta transfer-line-sta="taipei-br09">大安</transfer-line-sta>
+				</transfer>
+			</transfers>
+		</station>
+		<station sta-id="taipei-r06">
+			<sta-name-zhtw>大安森林公園</sta-name-zhtw>
+			<sta-name-en>Daan Park</sta-name-en>
+			<sta-name-ja>大安森林公園</sta-name-ja>
+			<sta-name-ko>다안 삼림 공원</sta-name-ko>
+			<transfers>
+			</transfers>
+		</station>
+		<station sta-id="taipei-r07">
+			<sta-name-zhtw>東門</sta-name-zhtw>
+			<sta-name-en>Dongmen</sta-name-en>
+			<sta-name-ja>東門</sta-name-ja>
+			<sta-name-ko>둥먼</sta-name-ko>
+			<transfers>
+				<transfer>
+					<transfer-line transfer-line="taipei-o">中和新蘆線</transfer-line>
+					<transfer-line-sta transfer-line-sta="taipei-o06">東門</transfer-line-sta>
+				</transfer>
+			</transfers>
+		</station>
+		<station sta-id="taipei-r08">
+			<sta-name-zhtw>中正紀念堂（南門）</sta-name-zhtw>
+			<sta-name-en>Chiang Kai-Shek Memorial Hall ( Nanmen )</sta-name-en>
+			<sta-name-ja>中正紀念堂</sta-name-ja>
+			<sta-name-ko>중정 기념당</sta-name-ko>
+			<transfers>
+				<transfer>
+					<transfer-line transfer-line="taipei-g"></transfer-line>
+					<transfer-line-sta transfer-line-sta="taipei-g10">中正紀念堂（南門）</transfer-line-sta>
+				</transfer>
+				<transfer no-service="true">
+					<transfer-line transfer-line="taipei-lg">萬大－中和－樹林線</transfer-line>
+					<transfer-line-sta transfer-line-sta="taipei-lg01">中正紀念堂（南門）</transfer-line-sta>
+				</transfer>
+			</transfers>
+		</station>
+		<station sta-id="taipei-r09">
+			<sta-name-zhtw>台大醫院</sta-name-zhtw>
+			<sta-name-en>National Taiwan University Hospital</sta-name-en>
+			<sta-name-ja>台湾大学病院</sta-name-ja>
+			<sta-name-ko>대만 대학 병원</sta-name-ko>
+			<transfers>
+			</transfers>
+		</station>
+		<station sta-id="taipei-r10">
+			<sta-name-zhtw>台北車站</sta-name-zhtw>
+			<sta-name-en>Taipei Main Station</sta-name-en>
+			<sta-name-ja>台北駅</sta-name-ja>
+			<sta-name-ko>타이베이 역</sta-name-ko>
+			<transfers>
+				<transfer>
+					<transfer-line transfer-line="taipei-bl">板南線</transfer-line>
+					<transfer-line-sta transfer-line-sta="taipei-bl12">台北車站</transfer-line-sta>
+				</transfer>
+				<transfer out-of-sta="true">
+					<transfer-line transfer-line="taipei-g">松山新店線</transfer-line>
+					<transfer-line-sta transfer-line-sta="taipei-g13">北門</transfer-line-sta>
+				</transfer>
+				<transfer out-of-sta="true">
+					<transfer-line transfer-line="taoyuan-a">桃園機場捷運</transfer-line>
+					<transfer-line-sta transfer-line-sta="taoyuan-a1">台北車站</transfer-line-sta>
+				</transfer>
+			</transfers>
+		</station>
+		<station sta-id="taipei-r11">
+			<sta-name-zhtw>中山</sta-name-zhtw>
+			<sta-name-en>Zhongshan</sta-name-en>
+			<sta-name-ja>中山</sta-name-ja>
+			<sta-name-ko>중산</sta-name-ko>
+			<transfers>
+				<transfer>
+					<transfer-line transfer-line="taipei-g">松山新店線</transfer-line>
+					<transfer-line-sta transfer-line-sta="taipei-g14">中山</transfer-line-sta>
+				</transfer>
+			</transfers>
+		</station>
+		<station sta-id="taipei-r12">
+			<sta-name-zhtw>雙連（馬偕紀念醫院）</sta-name-zhtw>
+			<sta-name-en>Shuanglian ( Mackay Memorial Hospital )</sta-name-en>
+			<sta-name-ja>双連</sta-name-ja>
+			<sta-name-ko>솽롄</sta-name-ko>
+			<transfers>
+				<transfer no-service="true">
+					<transfer-line transfer-line="keelung-sb">民生汐止線</transfer-line>
+					<transfer-line-sta transfer-line-sta="keelung-sb02">雙連（馬偕紀念醫院）</transfer-line-sta>
+				</transfer>
+			</transfers>
+		</station>
+		<station sta-id="taipei-r13">
+			<sta-name-zhtw>民權西路</sta-name-zhtw>
+			<sta-name-en>Minquan West Road</sta-name-en>
+			<sta-name-ja>民権西路</sta-name-ja>
+			<sta-name-ko>민취안시루</sta-name-ko>
+			<transfers>
+				<transfer>
+					<transfer-line transfer-line="taipei-o">中和新蘆線</transfer-line>
+					<transfer-line-sta transfer-line-sta="taipei-o11">民權西路</transfer-line-sta>
+				</transfer>
+			</transfers>
+		</station>
+		<station sta-id="taipei-r14">
+			<sta-name-zhtw>圓山</sta-name-zhtw>
+			<sta-name-en>Yuanshan</sta-name-en>
+			<sta-name-ja>圓山</sta-name-ja>
+			<sta-name-ko>위안산</sta-name-ko>
+			<transfers>
+			</transfers>
+		</station>
+		<station sta-id="taipei-r15">
+			<sta-name-zhtw>劍潭（北藝中心）</sta-name-zhtw>
+			<sta-name-en>Jiantan ( Taipei Performing Arts Center )</sta-name-en>
+			<sta-name-ja>剣潭</sta-name-ja>
+			<sta-name-ko>젠탄</sta-name-ko>
+			<transfers>
+			</transfers>
+		</station>
+		<station sta-id="taipei-r16">
+			<sta-name-zhtw>士林</sta-name-zhtw>
+			<sta-name-en>Shilin</sta-name-en>
+			<sta-name-ja>士林</sta-name-ja>
+			<sta-name-ko>스린</sta-name-ko>
+			<transfers>
+				<transfer no-service="true">
+					<transfer-line transfer-line="newtaipei-y">環狀線</transfer-line>
+					<transfer-line-sta transfer-line-sta="newtaipei-y26">士林</transfer-line-sta>
+				</transfer>
+			</transfers>
+		</station>
+		<station sta-id="taipei-r17">
+			<sta-name-zhtw>芝山</sta-name-zhtw>
+			<sta-name-en>Zhishan</sta-name-en>
+			<sta-name-ja>芝山</sta-name-ja>
+			<sta-name-ko>즈산</sta-name-ko>
+			<transfers>
+			</transfers>
+		</station>
+		<station sta-id="taipei-r18">
+			<sta-name-zhtw>明德</sta-name-zhtw>
+			<sta-name-en>Mingde</sta-name-en>
+			<sta-name-ja>明徳</sta-name-ja>
+			<sta-name-ko>스린</sta-name-ko>
+			<transfers>
+			</transfers>
+		</station>
+		<station sta-id="taipei-r19">
+			<sta-name-zhtw>石牌（榮總）</sta-name-zhtw>
+			<sta-name-en>Shipai ( Veterans General Hospital )</sta-name-en>
+			<sta-name-ja>石牌</sta-name-ja>
+			<sta-name-ko>스파이</sta-name-ko>
+			<transfers>
+			</transfers>
+		</station>
+		<station sta-id="taipei-r20">
+			<sta-name-zhtw>唭哩岸（陽明交通大學）</sta-name-zhtw>
+			<sta-name-en>Qilian ( National Yang Ming Chiao Tung University</sta-name-en>
+			<sta-name-ja>唭哩岸</sta-name-ja>
+			<sta-name-ko>치리안</sta-name-ko>
+			<transfers>
+			</transfers>
+		</station>
+		<station sta-id="taipei-r21">
+			<sta-name-zhtw>奇岩</sta-name-zhtw>
+			<sta-name-en>Qiyan</sta-name-en>
+			<sta-name-ja>奇岩</sta-name-ja>
+			<sta-name-ko>치옌</sta-name-ko>
+			<transfers>
+			</transfers>
+		</station>
+		<station sta-id="taipei-r22">
+			<sta-name-zhtw>北投</sta-name-zhtw>
+			<sta-name-en>Beitou</sta-name-en>
+			<sta-name-ja>北投</sta-name-ja>
+			<sta-name-ko>베이터우</sta-name-ko>
+			<transfers>
+			</transfers>
+		</station>
+		<station sta-id="taipei-r22a">
+			<sta-name-zhtw>新北投</sta-name-zhtw>
+			<sta-name-en>Xinbeitou</sta-name-en>
+			<sta-name-ja>新北投</sta-name-ja>
+			<sta-name-ko>신베이터우</sta-name-ko>
+			<transfers>
+			</transfers>
+		</station>
+		<station sta-id="taipei-r23">
+			<sta-name-zhtw>復興崗</sta-name-zhtw>
+			<sta-name-en>Fuxinggang</sta-name-en>
+			<sta-name-ja>復興崗</sta-name-ja>
+			<sta-name-ko>푸싱강</sta-name-ko>
+			<transfers>
+			</transfers>
+		</station>
+		<station sta-id="taipei-r24">
+			<sta-name-zhtw>忠義</sta-name-zhtw>
+			<sta-name-en>Zhongyi</sta-name-en>
+			<sta-name-ja>忠義</sta-name-ja>
+			<sta-name-ko>중이</sta-name-ko>
+			<transfers>
+			</transfers>
+		</station>
+		<station sta-id="taipei-r25">
+			<sta-name-zhtw>關渡</sta-name-zhtw>
+			<sta-name-en>Guandu</sta-name-en>
+			<sta-name-ja>関渡</sta-name-ja>
+			<sta-name-ko>관두</sta-name-ko>
+			<transfers>
+			</transfers>
+		</station>
+		<station sta-id="taipei-r26">
+			<sta-name-zhtw>竹圍</sta-name-zhtw>
+			<sta-name-en>Zhuwei</sta-name-en>
+			<sta-name-ja>竹囲</sta-name-ja>
+			<sta-name-ko>주웨이</sta-name-ko>
+			<transfers>
+			</transfers>
+		</station>
+		<station sta-id="taipei-r27">
+			<sta-name-zhtw>紅樹林</sta-name-zhtw>
+			<sta-name-en>Hongshulin</sta-name-en>
+			<sta-name-ja>紅樹林</sta-name-ja>
+			<sta-name-ko>훙수린</sta-name-ko>
+			<transfers>
+				<transfer>
+					<transfer-line transfer-line="newtaipei-v">淡海輕軌綠山線</transfer-line>
+					<transfer-line-sta transfer-line-sta="newtaipei-v01">紅樹林</transfer-line-sta>
+				</transfer>
+			</transfers>
+		</station>
+		<station sta-id="taipei-r28">
+			<sta-name-zhtw>淡水</sta-name-zhtw>
+			<sta-name-en>Tamsui</sta-name-en>
+			<sta-name-ja>淡水</sta-name-ja>
+			<sta-name-ko>단수이</sta-name-ko>
+			<transfers>
+				<transfer no-service="true">
+					<transfer-line transfer-line="newtaipei-v">淡海輕軌藍海線</transfer-line>
+					<transfer-line-sta transfer-line-sta="newtaipei-v21">淡水</transfer-line-sta>
+				</transfer>
+			</transfers>
+		</station>
+	</line>
+	
+	<line line-id="taipei-g" line-color-bg="#008659" line-color-fg="white">
+		<line-name-zhtw>松山新店線</line-name-zhtw>
+		<line-name-en>Songshan-Xindian Line</line-name-en>
+		<line-name-ja>松山新店線</line-name-ja>
+		<line-name-ko>쑹산-신뎬 선</line-name-ko>
+		<station sta-id="taipei-g01">
+			<sta-name-zhtw>新店（碧潭）</sta-name-zhtw>
+			<sta-name-en>Xindian ( Bitan )</sta-name-en>
+			<sta-name-ja>新店</sta-name-ja>
+			<sta-name-ko>신뎬</sta-name-ko>
+			<transfers>
+			</transfers>
+		</station>
+		<station sta-id="taipei-g02">
+			<sta-name-zhtw>新店區公所</sta-name-zhtw>
+			<sta-name-en>Xindian District Office</sta-name-en>
+			<sta-name-ja>新店区役所</sta-name-ja>
+			<sta-name-ko>신뎬 구청</sta-name-ko>
+			<transfers>
+			</transfers>
+		</station>
+		<station sta-id="taipei-g03">
+			<sta-name-zhtw>七張</sta-name-zhtw>
+			<sta-name-en>Qizhang</sta-name-en>
+			<sta-name-ja>七張</sta-name-ja>
+			<sta-name-ko>치장</sta-name-ko>
+			<transfers>
+			</transfers>
+		</station>
+		<station sta-id="taipei-g03a">
+			<sta-name-zhtw>小碧潭（新店高中）</sta-name-zhtw>
+			<sta-name-en>Xiaobitan ( Xindian Senior High School )</sta-name-en>
+			<sta-name-ja>小碧潭</sta-name-ja>
+			<sta-name-ko>샤오비탄</sta-name-ko>
+			<transfers>
+			</transfers>
+		</station>
+		<station sta-id="taipei-g04">
+			<sta-name-zhtw>大坪林</sta-name-zhtw>
+			<sta-name-en>Dapinglin</sta-name-en>
+			<sta-name-ja>大坪林</sta-name-ja>
+			<sta-name-ko>다핑린</sta-name-ko>
+			<transfers>
+				<transfer>
+					<transfer-line transfer-line="newtaipei-y">環狀線</transfer-line>
+					<transfer-line-sta transfer-line-sta="newtaipei-y07">大坪林</transfer-line-sta>
+				</transfer>
+			</transfers>
+		</station>
+		<station sta-id="taipei-g05">
+			<sta-name-zhtw>景美</sta-name-zhtw>
+			<sta-name-en>Jingmei</sta-name-en>
+			<sta-name-ja>景美</sta-name-ja>
+			<sta-name-ko>징메이</sta-name-ko>
+			<transfers>
+			</transfers>
+		</station>
+		<station sta-id="taipei-g06">
+			<sta-name-zhtw>萬隆</sta-name-zhtw>
+			<sta-name-en>Wanlong</sta-name-en>
+			<sta-name-ja>万隆</sta-name-ja>
+			<sta-name-ko>완룽</sta-name-ko>
+			<transfers>
+			</transfers>
+		</station>
+		<station sta-id="taipei-g07">
+			<sta-name-zhtw>公館（台灣大學）</sta-name-zhtw>
+			<sta-name-en>Gongguan ( National Taiwan University )</sta-name-en>
+			<sta-name-ja>公館（台湾大学）</sta-name-ja>
+			<sta-name-ko>궁관</sta-name-ko>
+			<transfers>
+			</transfers>
+		</station>
+		<station sta-id="taipei-g08">
+			<sta-name-zhtw>台電大樓</sta-name-zhtw>
+			<sta-name-en>Taipower Building</sta-name-en>
+			<sta-name-ja>台湾電力ビル</sta-name-ja>
+			<sta-name-ko>대만 전력공사 빌딩</sta-name-ko>
+			<transfers>
+			</transfers>
+		</station>
+		<station sta-id="taipei-g09">
+			<sta-name-zhtw>古亭</sta-name-zhtw>
+			<sta-name-en>Guting</sta-name-en>
+			<sta-name-ja>古亭</sta-name-ja>
+			<sta-name-ko>구팅</sta-name-ko>
+			<transfers>
+				<transfer>
+					<transfer-line transfer-line="taipei-o">中和新蘆線</transfer-line>
+					<transfer-line-sta transfer-line-sta="taipei-o05">古亭</transfer-line-sta>
+				</transfer>
+			</transfers>
+		</station>
+		<station sta-id="taipei-g10">
+			<sta-name-zhtw>中正紀念堂（南門）</sta-name-zhtw>
+			<sta-name-en>Chiang Kai-Shek Memorial Hall ( Nanmen )</sta-name-en>
+			<sta-name-ja>中正紀念堂</sta-name-ja>
+			<sta-name-ko>중정 기념당</sta-name-ko>
+			<transfers>
+				<transfer>
+					<transfer-line transfer-line="taipei-r">淡水信義線</transfer-line>
+					<transfer-line-sta transfer-line-sta="taipei-r08">中正紀念堂（南門）</transfer-line-sta>
+				</transfer>
+				<transfer no-service="true">
+					<transfer-line transfer-line="taipei-lg">萬大－中和－樹林線</transfer-line>
+					<transfer-line-sta transfer-line-sta="taipei-lg01">中正紀念堂（南門）</transfer-line-sta>
+				</transfer>
+			</transfers>
+		</station>
+		<station sta-id="taipei-g11">
+			<sta-name-zhtw>小南門</sta-name-zhtw>
+			<sta-name-en>Xiaonanmen</sta-name-en>
+			<sta-name-ja>小南門</sta-name-ja>
+			<sta-name-ko>샤오난먼</sta-name-ko>
+			<transfers>
+			</transfers>
+		</station>
+		<station sta-id="taipei-g12">
+			<sta-name-zhtw>西門</sta-name-zhtw>
+			<sta-name-en>Ximen</sta-name-en>
+			<sta-name-ja>西門</sta-name-ja>
+			<sta-name-ko>시먼</sta-name-ko>
+			<transfers>
+				<transfer>
+					<transfer-line transfer-line="taipei-bl">板南線</transfer-line>
+					<transfer-line-sta transfer-line-sta="taipei-bl11">西門</transfer-line-sta>
+				</transfer>
+			</transfers>
+		</station>
+		<station sta-id="taipei-g13">
+			<sta-name-zhtw>北門（大稻埕南）</sta-name-zhtw>
+			<sta-name-en>Beimen ( Dadaocheng South )</sta-name-en>
+			<sta-name-ja>北門</sta-name-ja>
+			<sta-name-ko>베이먼</sta-name-ko>
+			<transfers>
+				<transfer out-of-sta="true">
+					<transfer-line transfer-line="taipei-r">淡水信義線</transfer-line>
+					<transfer-line-sta transfer-line-sta="taipei-r10">台北車站</transfer-line-sta>
+				</transfer>
+				<transfer out-of-sta="true">
+					<transfer-line transfer-line="taipei-bl">板南線</transfer-line>
+					<transfer-line-sta transfer-line-sta="taipei-bl12">台北車站</transfer-line-sta>
+				</transfer>
+				<transfer out-of-sta="true">
+					<transfer-line transfer-line="taoyuan-a">桃園機場捷運</transfer-line>
+					<transfer-line-sta transfer-line-sta="taoyuan-a1">台北車站</transfer-line-sta>
+				</transfer>
+			</transfers>
+		</station>
+		<station sta-id="taipei-g14">
+			<sta-name-zhtw>中山</sta-name-zhtw>
+			<sta-name-en>Zhongshan</sta-name-en>
+			<sta-name-ja>中山</sta-name-ja>
+			<sta-name-ko>중산</sta-name-ko>
+			<transfers>
+				<transfer>
+					<transfer-line transfer-line="taipei-r">淡水信義線</transfer-line>
+					<transfer-line-sta transfer-line-sta="taipei-r11">中山</transfer-line-sta>
+				</transfer>
+			</transfers>
+		</station>
+		<station sta-id="taipei-g15">
+			<sta-name-zhtw>松江南京</sta-name-zhtw>
+			<sta-name-en>Songjiang Nanjing</sta-name-en>
+			<sta-name-ja>松江南京</sta-name-ja>
+			<sta-name-ko>송장 난징</sta-name-ko>
+			<transfers>
+				<transfer>
+					<transfer-line transfer-line="taipei-o">中和新蘆線</transfer-line>
+					<transfer-line-sta transfer-line-sta="taipei-o08">松江南京</transfer-line-sta>
+				</transfer>
+			</transfers>
+		</station>
+		<station sta-id="taipei-g16">
+			<sta-name-zhtw>南京復興</sta-name-zhtw>
+			<sta-name-en>Nanjing Fuxing</sta-name-en>
+			<sta-name-ja>南京復興</sta-name-ja>
+			<sta-name-ko>난징 푸싱</sta-name-ko>
+			<transfers>
+				<transfer>
+					<transfer-line transfer-line="taipei-br">文湖線</transfer-line>
+					<transfer-line-sta transfer-line-sta="taipei-br11">南京復興</transfer-line-sta>
+				</transfer>
+			</transfers>
+		</station>
+		<station sta-id="taipei-g17">
+			<sta-name-zhtw>台北小巨蛋</sta-name-zhtw>
+			<sta-name-en>Taipei Arena</sta-name-en>
+			<sta-name-ja>台北アリーナ</sta-name-ja>
+			<sta-name-ko>타이베이 아레나</sta-name-ko>
+			<transfers>
+			</transfers>
+		</station>
+		<station sta-id="taipei-g18">
+			<sta-name-zhtw>南京三民</sta-name-zhtw>
+			<sta-name-en>Nanjing Sanmin</sta-name-en>
+			<sta-name-ja>南京三民</sta-name-ja>
+			<sta-name-ko>난징 싼민</sta-name-ko>
+			<transfers>
+			</transfers>
+		</station>
+		<station sta-id="taipei-g19">
+			<sta-name-zhtw>松山</sta-name-zhtw>
+			<sta-name-en>Songshan</sta-name-en>
+			<sta-name-ja>松山</sta-name-ja>
+			<sta-name-ko>송산</sta-name-ko>
+			<transfers>
+				<transfer no-service="true" out-of-sta="true">
+					<transfer-line transfer-line="newtaipei-y">環狀線</transfer-line>
+					<transfer-line-sta transfer-line-sta="newtaipei-y36">松山</transfer-line-sta>
+				</transfer>
+			</transfers>
+		</station>
+	</line>
+	
+	<line line-id="taipei-o" line-color-bg="#f8b61c" line-color-fg="black">
+		<line-name-zhtw>中和新蘆線</line-name-zhtw>
+		<line-name-en>Zhonghe-Xinlu Line</line-name-en>
+		<line-name-ja>中和新蘆線</line-name-ja>
+		<line-name-ko>중허-신루 선</line-name-ko>
+		<station sta-id="taipei-o01">
+			<sta-name-zhtw>南勢角</sta-name-zhtw>
+			<sta-name-en>Nanshijiao</sta-name-en>
+			<sta-name-ja>南勢角</sta-name-ja>
+			<sta-name-ko>난스자오</sta-name-ko>
+			<transfers>
+			</transfers>
+		</station>
+		<station sta-id="taipei-o02">
+			<sta-name-zhtw>景安</sta-name-zhtw>
+			<sta-name-en>Jingan</sta-name-en>
+			<sta-name-ja>景安</sta-name-ja>
+			<sta-name-ko>징안</sta-name-ko>
+			<transfers>
+				<transfer>
+					<transfer-line transfer-line="newtaipei-y">環狀線</transfer-line>
+					<transfer-line-sta transfer-line-sta="newtaipei-y11">景安</transfer-line-sta>
+				</transfer>
+			</transfers>
+		</station>
+		<station sta-id="taipei-o03">
+			<sta-name-zhtw>永安市場</sta-name-zhtw>
+			<sta-name-en>Yongan Market</sta-name-en>
+			<sta-name-ja>永安市場</sta-name-ja>
+			<sta-name-ko>융안 시장</sta-name-ko>
+			<transfers>
+			</transfers>
+		</station>
+		<station sta-id="taipei-o04">
+			<sta-name-zhtw>頂溪</sta-name-zhtw>
+			<sta-name-en>Dingxi</sta-name-en>
+			<sta-name-ja>頂渓</sta-name-ja>
+			<sta-name-ko>딩시</sta-name-ko>
+			<transfers>
+			</transfers>
+		</station>
+		<station sta-id="taipei-o05">
+			<sta-name-zhtw>古亭</sta-name-zhtw>
+			<sta-name-en>Guting</sta-name-en>
+			<sta-name-ja>古亭</sta-name-ja>
+			<sta-name-ko>구팅</sta-name-ko>
+			<transfers>
+				<transfer>
+					<transfer-line transfer-line="taipei-g">松山新店線</transfer-line>
+					<transfer-line-sta transfer-line-sta="taipei-g09">古亭</transfer-line-sta>
+				</transfer>
+			</transfers>
+		</station>
+		<station sta-id="taipei-o06">
+			<sta-name-zhtw>東門</sta-name-zhtw>
+			<sta-name-en>Dongmen</sta-name-en>
+			<sta-name-ja>東門</sta-name-ja>
+			<sta-name-ko>둥먼</sta-name-ko>
+			<transfers>
+				<transfer>
+					<transfer-line transfer-line="taipei-r">淡水信義線</transfer-line>
+					<transfer-line-sta transfer-line-sta="taipei-r07">東門</transfer-line-sta>
+				</transfer>
+			</transfers>
+		</station>
+		<station sta-id="taipei-o07">
+			<sta-name-zhtw>忠孝新生（台北科大）</sta-name-zhtw>
+			<sta-name-en>Zhonxiao Xinsheng ( National Taipei University of Technology )</sta-name-en>
+			<sta-name-ja>忠孝新生</sta-name-ja>
+			<sta-name-ko>중샤오 신성</sta-name-ko>
+			<transfers>
+				<transfer>
+					<transfer-line transfer-line="taipei-bl">板南線</transfer-line>
+					<transfer-line-sta transfer-line-sta="taipei-bl14">忠孝新生（台北科大）</transfer-line-sta>
+				</transfer>
+			</transfers>
+		</station>
+		<station sta-id="taipei-o08">
+			<sta-name-zhtw>松江南京</sta-name-zhtw>
+			<sta-name-en>Songjiang Nanjing</sta-name-en>
+			<sta-name-ja>松江南京</sta-name-ja>
+			<sta-name-ko>송장 난징</sta-name-ko>
+			<transfers>
+				<transfer>
+					<transfer-line transfer-line="taipei-g">松山新店線</transfer-line>
+					<transfer-line-sta transfer-line-sta="taipei-g15">松江南京</transfer-line-sta>
+				</transfer>
+			</transfers>
+		</station>
+		<station sta-id="taipei-o09">
+			<sta-name-zhtw>行天宮</sta-name-zhtw>
+			<sta-name-en>Xingtian Temple</sta-name-en>
+			<sta-name-ja>象山行天宮</sta-name-ja>
+			<sta-name-ko>싱톈궁</sta-name-ko>
+			<transfers>
+				<transfer no-service="true">
+					<transfer-line transfer-line="keelung-sb">民生汐止線</transfer-line>
+					<transfer-line-sta transfer-line-sta="keelung-sb03">行天宮</transfer-line-sta>
+				</transfer>
+			</transfers>
+		</station>
+		<station sta-id="taipei-o10">
+			<sta-name-zhtw>中山國小（晴光商圈）</sta-name-zhtw>
+			<sta-name-en>Zongshan Elementary School ( Qingguang Commercial Zone )</sta-name-en>
+			<sta-name-ja>中山小学校</sta-name-ja>
+			<sta-name-ko>중산 초등학교</sta-name-ko>
+			<transfers>
+			</transfers>
+		</station>
+		<station sta-id="taipei-o11">
+			<sta-name-zhtw>民權西路</sta-name-zhtw>
+			<sta-name-en>Minquan West Road</sta-name-en>
+			<sta-name-ja>民権西路</sta-name-ja>
+			<sta-name-ko>민취안시루</sta-name-ko>
+			<transfers>
+				<transfer>
+					<transfer-line transfer-line="taipei-r">淡水信義線</transfer-line>
+					<transfer-line-sta transfer-line-sta="taipei-r13">民權西路</transfer-line-sta>
+				</transfer>
+			</transfers>
+		</station>
+		<station sta-id="taipei-o12">
+			<sta-name-zhtw>大橋頭（大橋國小）</sta-name-zhtw>
+			<sta-name-en>Daqiaotou ( Daqiao Elementary School )</sta-name-en>
+			<sta-name-ja>大橋頭</sta-name-ja>
+			<sta-name-ko>다차오터우</sta-name-ko>
+			<transfers>
+			</transfers>
+		</station>
+		<station sta-id="taipei-o13">
+			<sta-name-zhtw>台北橋</sta-name-zhtw>
+			<sta-name-en>Taipei Bridge</sta-name-en>
+			<sta-name-ja>台北橋</sta-name-ja>
+			<sta-name-ko>타이베이 대교</sta-name-ko>
+			<transfers>
+			</transfers>
+		</station>
+		<station sta-id="taipei-o14">
+			<sta-name-zhtw>菜寮（新北市立醫院）</sta-name-zhtw>
+			<sta-name-en>Cailiao ( New Taipei City Hospital )</sta-name-en>
+			<sta-name-ja>菜寮</sta-name-ja>
+			<sta-name-ko>차이랴오</sta-name-ko>
+			<transfers>
+			</transfers>
+		</station>
+		<station sta-id="taipei-o15">
+			<sta-name-zhtw>三重</sta-name-zhtw>
+			<sta-name-en>Sanchong</sta-name-en>
+			<sta-name-ja>三重</sta-name-ja>
+			<sta-name-ko>싼충</sta-name-ko>
+			<transfers>
+				<transfer out-of-sta="true">
+					<transfer-line transfer-line="taoyuan-a">桃園機場捷運</transfer-line>
+					<transfer-line-sta transfer-line-sta="taoyuan-a2">三重</transfer-line-sta>
+				</transfer>
+			</transfers>
+		</station>
+		<station sta-id="taipei-o16">
+			<sta-name-zhtw>先嗇宮</sta-name-zhtw>
+			<sta-name-en>Xianse Temple</sta-name-en>
+			<sta-name-ja>先嗇宮</sta-name-ja>
+			<sta-name-ko>셴써궁</sta-name-ko>
+			<transfers>
+			</transfers>
+		</station>
+		<station sta-id="taipei-o17">
+			<sta-name-zhtw>頭前庄（台北醫院）</sta-name-zhtw>
+			<sta-name-en>Touqianzhuang ( Taipei Hospital )</sta-name-en>
+			<sta-name-ja>頭前庄</sta-name-ja>
+			<sta-name-ko>터우첸좡</sta-name-ko>
+			<transfers>
+				<transfer>
+					<transfer-line transfer-line="newtaipei-y">環狀線</transfer-line>
+					<transfer-line-sta transfer-line-sta="newtaipei-y18">頭前庄（台北醫院）</transfer-line-sta>
+				</transfer>
+			</transfers>
+		</station>
+		<station sta-id="taipei-o18">
+			<sta-name-zhtw>新莊（新莊廟街）</sta-name-zhtw>
+			<sta-name-en>Xinzhuang ( Xinzhuang Temple Street )</sta-name-en>
+			<sta-name-ja>新荘</sta-name-ja>
+			<sta-name-ko>신좡</sta-name-ko>
+			<transfers>
+			</transfers>
+		</station>
+		<station sta-id="taipei-o19">
+			<sta-name-zhtw>輔大</sta-name-zhtw>
+			<sta-name-en>Fu Jen University</sta-name-en>
+			<sta-name-ja>輔仁大学</sta-name-ja>
+			<sta-name-ko>푸런 대학교</sta-name-ko>
+			<transfers>
+				<transfer no-service="true" out-of-sta="true">
+					<transfer-line transfer-line="newtaipei-f">泰山板橋輕軌</transfer-line>
+					<transfer-line-sta transfer-line-sta="newtaipei-f*">（站名未定）</transfer-line-sta>
+				</transfer>
+			</transfers>
+		</station>
+		<station sta-id="taipei-o20">
+			<sta-name-zhtw>丹鳳</sta-name-zhtw>
+			<sta-name-en>Danfeng</sta-name-en>
+			<sta-name-ja>丹鳳</sta-name-ja>
+			<sta-name-ko>단펑</sta-name-ko>
+			<transfers>
+				<transfer out-of-sta="true">
+					<transfer-line transfer-line="taoyuan-a">桃園機場捷運</transfer-line>
+					<transfer-line-sta transfer-line-sta="taoyuan-a6">泰山貴和</transfer-line-sta>
+				</transfer>
+			</transfers>
+		</station>
+		<station sta-id="taipei-o21">
+			<sta-name-zhtw>迴龍（樂生）</sta-name-zhtw>
+			<sta-name-en>Huilong ( Lo-sheng )</sta-name-en>
+			<sta-name-ja>迴龍</sta-name-ja>
+			<sta-name-ko>후이룽</sta-name-ko>
+			<transfers>
+				<transfer no-service="true">
+					<transfer-line transfer-line="taipei-lg">萬大－中和－樹林線</transfer-line>
+					<transfer-line-sta transfer-line-sta="taipei-lg21">迴龍</transfer-line-sta>
+				</transfer>
+				<transfer no-service="true" out-of-sta="true">
+					<transfer-line transfer-line="taoyuan-br">桃園捷運棕線</transfer-line>
+					<transfer-line-sta transfer-line-sta="taoyuan-brh07">迴龍</transfer-line-sta>
+				</transfer>
+			</transfers>
+		</station>
+		<station sta-id="taipei-o50">
+			<sta-name-zhtw>三重國小</sta-name-zhtw>
+			<sta-name-en>Sanchong Elementary School</sta-name-en>
+			<sta-name-ja>三重小学校</sta-name-ja>
+			<sta-name-ko>싼충 초등학교</sta-name-ko>
+			<transfers>
+			</transfers>
+		</station>
+		<station sta-id="taipei-o51">
+			<sta-name-zhtw>三和國中</sta-name-zhtw>
+			<sta-name-en>Sanhe Junior High School</sta-name-en>
+			<sta-name-ja>三和中学校</sta-name-ja>
+			<sta-name-ko>싼허 중학교</sta-name-ko>
+			<transfers>
+			</transfers>
+		</station>
+		<station sta-id="taipei-o52">
+			<sta-name-zhtw>徐匯中學</sta-name-zhtw>
+			<sta-name-en>Saint Ignatius High School</sta-name-en>
+			<sta-name-ja>徐匯高校</sta-name-ja>
+			<sta-name-ko>쉬후이 고등학교</sta-name-ko>
+			<transfers>
+				<transfer no-service="true">
+					<transfer-line transfer-line="newtaipei-y">環狀線</transfer-line>
+					<transfer-line-sta transfer-line-sta="newtaipei-y21">徐匯中學</transfer-line-sta>
+				</transfer>
+			</transfers>
+		</station>
+		<station sta-id="taipei-o53">
+			<sta-name-zhtw>三民高中（空中大學）</sta-name-zhtw>
+			<sta-name-en>Sanmin Senior High School ( National Open University )</sta-name-en>
+			<sta-name-ja>三民高校</sta-name-ja>
+			<sta-name-ko>싼민 고등학교</sta-name-ko>
+			<transfers>
+			</transfers>
+		</station>
+		<station sta-id="taipei-o54">
+			<sta-name-zhtw>蘆洲（蘆洲李宅）</sta-name-zhtw>
+			<sta-name-en>Luzhou ( Luzhou Lee Family Historic Estate )</sta-name-en>
+			<sta-name-ja>蘆洲</sta-name-ja>
+			<sta-name-ko>루저우</sta-name-ko>
+			<transfers>
+				<transfer no-service="true" out-of-sta="true">
+					<transfer-line transfer-line="newtaipei-f">五股泰山輕軌</transfer-line>
+					<transfer-line-sta transfer-line-sta="newtaipei-f5">蘆洲（蘆洲李宅）</transfer-line-sta>
+				</transfer>
+			</transfers>
+		</station>
+	</line>
+	
+	<line line-id="taipei-bl" line-color-bg="#0070bd" line-color-fg="white">
+		<line-name-zhtw>板南線</line-name-zhtw>
+		<line-name-en>Bannan Line</line-name-en>
+		<line-name-ja>板南線</line-name-ja>
+		<line-name-ko>반난 선</line-name-ko>
+		<station sta-id="taipei-bl01">
+			<sta-name-zhtw>頂埔</sta-name-zhtw>
+			<sta-name-en>Dingpu</sta-name-en>
+			<sta-name-ja>頂埔</sta-name-ja>
+			<sta-name-ko>딩푸</sta-name-ko>
+			<transfers>
+				<transfer no-service="true">
+					<transfer-line transfer-line="newtaipei-lb">三峽鶯歌線</transfer-line>
+					<transfer-line-sta transfer-line-sta="newtaipei-lb01">頂埔</transfer-line-sta>
+				</transfer>
+			</transfers>
+		</station>
+		<station sta-id="taipei-bl02">
+			<sta-name-zhtw>永寧</sta-name-zhtw>
+			<sta-name-en>Yongning</sta-name-en>
+			<sta-name-ja>永寧</sta-name-ja>
+			<sta-name-ko>융닝</sta-name-ko>
+			<transfers>
+				<transfer no-service="true" out-of-sta="true">
+					<transfer-line transfer-line="taipei-lg">萬大－中和－樹林線</transfer-line>
+					<transfer-line-sta transfer-line-sta="taipei-lg12">（站名未定）</transfer-line-sta>
+				</transfer>
+			</transfers>
+		</station>
+		<station sta-id="taipei-bl03">
+			<sta-name-zhtw>土城</sta-name-zhtw>
+			<sta-name-en>Tucheng</sta-name-en>
+			<sta-name-ja>土城</sta-name-ja>
+			<sta-name-ko>투청</sta-name-ko>
+			<transfers>
+				<transfer no-service="true">
+					<transfer-line transfer-line="taipei-lg">萬大－中和－樹林線</transfer-line>
+					<transfer-line-sta transfer-line-sta="taipei-lg11">土城</transfer-line-sta>
+				</transfer>
+			</transfers>
+		</station>
+		<station sta-id="taipei-bl04">
+			<sta-name-zhtw>海山</sta-name-zhtw>
+			<sta-name-en>Haishan</sta-name-en>
+			<sta-name-ja>海山</sta-name-ja>
+			<sta-name-ko>하이산</sta-name-ko>
+			<transfers>
+			</transfers>
+		</station>
+		<station sta-id="taipei-bl05">
+			<sta-name-zhtw>亞東醫院</sta-name-zhtw>
+			<sta-name-en>Far Eastern Hospital</sta-name-en>
+			<sta-name-ja>亜東病院</sta-name-ja>
+			<sta-name-ko>야둥 병원</sta-name-ko>
+			<transfers>
+			</transfers>
+		</station>
+		<station sta-id="taipei-bl06">
+			<sta-name-zhtw>府中（林家花園）</sta-name-zhtw>
+			<sta-name-en>Fuzhong ( The Lin Family Mansion and Garden )</sta-name-en>
+			<sta-name-ja>府中</sta-name-ja>
+			<sta-name-ko>푸중</sta-name-ko>
+			<transfers>
+			</transfers>
+		</station>
+		<station sta-id="taipei-bl07">
+			<sta-name-zhtw>板橋</sta-name-zhtw>
+			<sta-name-en>Banqiao</sta-name-en>
+			<sta-name-ja>板橋</sta-name-ja>
+			<sta-name-ko>반차오</sta-name-ko>
+			<transfers>
+				<transfer out-of-sta="true">
+					<transfer-line transfer-line="newtaipei-y">環狀線</transfer-line>
+					<transfer-line-sta transfer-line-sta="newtaipei-y16">板橋</transfer-line-sta>
+				</transfer>
+			</transfers>
+		</station>
+		<station sta-id="taipei-bl08">
+			<sta-name-zhtw>新埔</sta-name-zhtw>
+			<sta-name-en>Xinpu</sta-name-en>
+			<sta-name-ja>新埔</sta-name-ja>
+			<sta-name-ko>신푸</sta-name-ko>
+			<transfers>
+				<transfer out-of-sta="true">
+					<transfer-line transfer-line="newtaipei-y">環狀線</transfer-line>
+					<transfer-line-sta transfer-line-sta="newtaipei-y17">新埔民生</transfer-line-sta>
+				</transfer>
+			</transfers>
+		</station>
+		<station sta-id="taipei-bl09">
+			<sta-name-zhtw>江子翠</sta-name-zhtw>
+			<sta-name-en>Jiangzicui</sta-name-en>
+			<sta-name-ja>江子翠</sta-name-ja>
+			<sta-name-ko>장쯔추이</sta-name-ko>
+			<transfers>
+			</transfers>
+		</station>
+		<station sta-id="taipei-bl10">
+			<sta-name-zhtw>龍山寺（艋舺商圈）</sta-name-zhtw>
+			<sta-name-en>Longshan Temple ( Bangka Commercial Zone )</sta-name-en>
+			<sta-name-ja>龍山寺</sta-name-ja>
+			<sta-name-ko>용산사</sta-name-ko>
+			<transfers>
+			</transfers>
+		</station>
+		<station sta-id="taipei-bl11">
+			<sta-name-zhtw>西門</sta-name-zhtw>
+			<sta-name-en>Ximen</sta-name-en>
+			<sta-name-ja>西門</sta-name-ja>
+			<sta-name-ko>시먼</sta-name-ko>
+			<transfers>
+				<transfer>
+					<transfer-line transfer-line="taipei-g">松山新店線</transfer-line>
+					<transfer-line-sta transfer-line-sta="taipei-g12">西門</transfer-line-sta>
+				</transfer>
+			</transfers>
+		</station>
+		<station sta-id="taipei-bl12">
+			<sta-name-zhtw>台北車站</sta-name-zhtw>
+			<sta-name-en>Taipei Main Station</sta-name-en>
+			<sta-name-ja>台北駅</sta-name-ja>
+			<sta-name-ko>타이베이 역</sta-name-ko>
+			<transfers>
+				<transfer>
+					<transfer-line transfer-line="taipei-r">淡水信義線</transfer-line>
+					<transfer-line-sta transfer-line-sta="taipei-r10">台北車站</transfer-line-sta>
+				</transfer>
+				<transfer out-of-sta="true">
+					<transfer-line transfer-line="taipei-g">松山新店線</transfer-line>
+					<transfer-line-sta transfer-line-sta="taipei-g13">北門</transfer-line-sta>
+				</transfer>
+				<transfer>
+					<transfer-line transfer-line="taoyuan-a">桃園機場捷運</transfer-line>
+					<transfer-line-sta transfer-line-sta="taoyuan-a1">台北車站</transfer-line-sta>
+				</transfer>
+			</transfers>
+		</station>
+		<station sta-id="taipei-bl13">
+			<sta-name-zhtw>善導寺（華山）</sta-name-zhtw>
+			<sta-name-en>Shandao Temple ( Huashan )</sta-name-en>
+			<sta-name-ja>善導寺</sta-name-ja>
+			<sta-name-ko>산다오사</sta-name-ko>
+			<transfers>
+			</transfers>
+		</station>
+		<station sta-id="taipei-bl14">
+			<sta-name-zhtw>忠孝新生（台北科大）</sta-name-zhtw>
+			<sta-name-en>Zhongxiao Xinsheng ( National Taipei University of Technology )</sta-name-en>
+			<sta-name-ja>忠孝新生</sta-name-ja>
+			<sta-name-ko>중샤오 신성</sta-name-ko>
+			<transfers>
+				<transfer>
+					<transfer-line transfer-line="taipei-o">中和新蘆線</transfer-line>
+					<transfer-line-sta transfer-line-sta="taipei-o07">忠孝新生（台北科大）</transfer-line-sta>
+				</transfer>
+			</transfers>
+		</station>
+		<station sta-id="taipei-bl15">
+			<sta-name-zhtw>忠孝復興</sta-name-zhtw>
+			<sta-name-en>Zhongxiao Fuxing</sta-name-en>
+			<sta-name-ja>忠孝復興</sta-name-ja>
+			<sta-name-ko>중샤오 푸싱</sta-name-ko>
+			<transfers>
+				<transfer>
+					<transfer-line transfer-line="taipei-br">文湖線</transfer-line>
+					<transfer-line-sta transfer-line-sta="taipei-br10">忠孝復興</transfer-line-sta>
+				</transfer>
+			</transfers>
+		</station>
+		<station sta-id="taipei-bl16">
+			<sta-name-zhtw>忠孝敦化</sta-name-zhtw>
+			<sta-name-en>Zhongxiao Dunhua</sta-name-en>
+			<sta-name-ja>忠孝敦化</sta-name-ja>
+			<sta-name-ko>중샤오 둔화</sta-name-ko>
+			<transfers>
+			</transfers>
+		</station>
+		<station sta-id="taipei-bl17">
+			<sta-name-zhtw>國父紀念館</sta-name-zhtw>
+			<sta-name-en>Sun Yat-Sen Memorial Hall</sta-name-en>
+			<sta-name-ja>国父紀念館</sta-name-ja>
+			<sta-name-ko>국부 기념관</sta-name-ko>
+			<transfers>
+			</transfers>
+		</station>
+		<station sta-id="taipei-bl18">
+			<sta-name-zhtw>市政府</sta-name-zhtw>
+			<sta-name-en>Taipei City Hall</sta-name-en>
+			<sta-name-ja>台北市政府</sta-name-ja>
+			<sta-name-ko>타이베이 시청</sta-name-ko>
+			<transfers>
+			</transfers>
+		</station>
+		<station sta-id="taipei-bl19">
+			<sta-name-zhtw>永春</sta-name-zhtw>
+			<sta-name-en>Yongchun</sta-name-en>
+			<sta-name-ja>永春</sta-name-ja>
+			<sta-name-ko>융춘</sta-name-ko>
+			<transfers>
+				<transfer no-service="true">
+					<transfer-line transfer-line="newtaipei-y">環狀線</transfer-line>
+					<transfer-line-sta transfer-line-sta="newtaipei-y37">永春</transfer-line-sta>
+				</transfer>
+			</transfers>
+		</station>
+		<station sta-id="taipei-bl20">
+			<sta-name-zhtw>後山埤（五分埔商圈）</sta-name-zhtw>
+			<sta-name-en>Houshanpi ( Wufenpu Commercial Zone )</sta-name-en>
+			<sta-name-ja>後山埤</sta-name-ja>
+			<sta-name-ko>허우산피</sta-name-ko>
+			<transfers>
+			</transfers>
+		</station>
+		<station sta-id="taipei-bl02">
+			<sta-name-zhtw>昆陽</sta-name-zhtw>
+			<sta-name-en>Kunyang</sta-name-en>
+			<sta-name-ja>昆陽</sta-name-ja>
+			<transfers>
+			</transfers>
+			<sta-name-ko>쿤양</sta-name-ko>
+		</station>
+		<station sta-id="taipei-bl02">
+			<sta-name-zhtw>南港</sta-name-zhtw>
+			<sta-name-en>Nangang</sta-name-en>
+			<sta-name-ja>南港</sta-name-ja>
+			<sta-name-ko>난강</sta-name-ko>
+			<transfers>
+				<transfer no-service="true">
+					<transfer-line transfer-line="keelung-kl">（基隆捷運）</transfer-line>
+					<transfer-line-sta transfer-line-sta="keelung-kl*">南港</transfer-line-sta>
+				</transfer>
+			</transfers>
+		</station>
+		<station sta-id="taipei-bl02">
+			<sta-name-zhtw>南港展覽館</sta-name-zhtw>
+			<sta-name-en>Taipei Nangang Exibition Center</sta-name-en>
+			<sta-name-ja>南港展覧館</sta-name-ja>
+			<sta-name-ko>난강 전람관</sta-name-ko>
+			<transfers>
+				<transfer>
+					<transfer-line transfer-line="taipei-br">文湖線</transfer-line>
+					<transfer-line-sta transfer-line-sta="taipei-br24">南港展覽館</transfer-line-sta>
+				</transfer>
+				<transfer no-service="true">
+					<transfer-line transfer-line="keelung-kl">（基隆捷運）</transfer-line>
+					<transfer-line-sta transfer-line-sta="keelung-kl*">南港展覽館</transfer-line-sta>
+				</transfer>
+			</transfers>
+		</station>
+	</line>
+	<line line-id="taipei-lg" line-color-bg="" line-color-fg="" no-service="true">
+		<line-name-zhtw>萬大－中和－樹林線</line-name-zhtw>
+		<line-name-en>( Route Name Undecided )</line-name-en>
+		<line-name-ja>（路線名未定）</line-name-ja>
+		<line-name-ko>( 노선명 미정 )</line-name-ko>
+		<station sta-id="taipei-lg01" no-service="true">
+			<sta-name-zhtw>中正紀念堂（南門）</sta-name-zhtw>
+			<sta-name-en>Chiang Kai-Shek Memorial Hall ( Nanmen )</sta-name-en>
+			<sta-name-ja>中正紀念堂</sta-name-ja>
+			<sta-name-ko>중정 기념당</sta-name-ko>
+			<transfers>
+				<transfer>
+					<transfer-line transfer-line="taipei-r">淡水信義線</transfer-line>
+					<transfer-line-sta transfer-line-sta="taipei-r08">中正紀念堂（南門）</transfer-line-sta>
+				</transfer>
+				<transfer>
+					<transfer-line transfer-line="taipei-g"></transfer-line>
+					<transfer-line-sta transfer-line-sta="taipei-g10">中正紀念堂（南門）</transfer-line-sta>
+				</transfer>
+			</transfers>
+		</station>
+		<station sta-id="taipei-lg02" no-service="true">
+			<sta-name-zhtw>（站名未定）</sta-name-zhtw>
+			<sta-name-en>( Station Name Undecided )</sta-name-en>
+			<sta-name-ja>（駅名未定）</sta-name-ja>
+			<sta-name-ko>( 역명 미정 )</sta-name-ko>
+			<transfers>
+			</transfers>
+		</station>
+		<station sta-id="taipei-lg03" no-service="true">
+			<sta-name-zhtw>（站名未定）</sta-name-zhtw>
+			<sta-name-en>( Station Name Undecided )</sta-name-en>
+			<sta-name-ja>（駅名未定）</sta-name-ja>
+			<sta-name-ko>( 역명 미정 )</sta-name-ko>
+			<transfers>
+			</transfers>
+		</station>
+		<station sta-id="taipei-lg04" no-service="true">
+			<sta-name-zhtw>（站名未定）</sta-name-zhtw>
+			<sta-name-en>( Station Name Undecided )</sta-name-en>
+			<sta-name-ja>（駅名未定）</sta-name-ja>
+			<sta-name-ko>( 역명 미정 )</sta-name-ko>
+			<transfers>
+			</transfers>
+		</station>
+		<station sta-id="taipei-lg05" no-service="true">
+			<sta-name-zhtw>（站名未定）</sta-name-zhtw>
+			<sta-name-en>( Station Name Undecided )</sta-name-en>
+			<sta-name-ja>（駅名未定）</sta-name-ja>
+			<sta-name-ko>( 역명 미정 )</sta-name-ko>
+			<transfers>
+			</transfers>
+		</station>
+		<station sta-id="taipei-lg06" no-service="true">
+			<sta-name-zhtw>中和</sta-name-zhtw>
+			<sta-name-en>Zhonghe</sta-name-en>
+			<sta-name-ja>中和</sta-name-ja>
+			<sta-name-ko>중허</sta-name-ko>
+			<transfers>
+				<transfer>
+					<transfer-line transfer-line="newtaipei-y">環狀線</transfer-line>
+					<transfer-line-sta transfer-line-sta="newtaipei-y12">中和</transfer-line-sta>
+				</transfer>
+			</transfers>
+		</station>
+		<station sta-id="taipei-lg07" no-service="true">
+			<sta-name-zhtw>（站名未定）</sta-name-zhtw>
+			<sta-name-en>( Station Name Undecided )</sta-name-en>
+			<sta-name-ja>（駅名未定）</sta-name-ja>
+			<sta-name-ko>( 역명 미정 )</sta-name-ko>
+			<transfers>
+			</transfers>
+		</station>
+		<station sta-id="taipei-lg08" no-service="true">
+			<sta-name-zhtw>（站名未定）</sta-name-zhtw>
+			<sta-name-en>( Station Name Undecided )</sta-name-en>
+			<sta-name-ja>（駅名未定）</sta-name-ja>
+			<sta-name-ko>( 역명 미정 )</sta-name-ko>
+			<transfers>
+			</transfers>
+		</station>
+		<station sta-id="taipei-lg08a" no-service="true">
+			<sta-name-zhtw>（站名未定）</sta-name-zhtw>
+			<sta-name-en>( Station Name Undecided )</sta-name-en>
+			<sta-name-ja>（駅名未定）</sta-name-ja>
+			<sta-name-ko>( 역명 미정 )</sta-name-ko>
+			<transfers>
+				<transfer>
+					<transfer-line transfer-line="newtaipei-f">泰山板橋輕軌</transfer-line>
+					<transfer-line-sta transfer-line-sta="newtaipei-f*">（站名未定）</transfer-line-sta>
+				</transfer>
+			</transfers>
+		</station>
+		<station sta-id="taipei-lg09" no-service="true">
+			<sta-name-zhtw>（站名未定）</sta-name-zhtw>
+			<sta-name-en>( Station Name Undecided )</sta-name-en>
+			<sta-name-ja>（駅名未定）</sta-name-ja>
+			<sta-name-ko>( 역명 미정 )</sta-name-ko>
+			<transfers>
+			</transfers>
+		</station>
+		<station sta-id="taipei-lg10" no-service="true">
+			<sta-name-zhtw>（站名未定）</sta-name-zhtw>
+			<sta-name-en>( Station Name Undecided )</sta-name-en>
+			<sta-name-ja>（駅名未定）</sta-name-ja>
+			<sta-name-ko>( 역명 미정 )</sta-name-ko>
+			<transfers>
+			</transfers>
+		</station>
+		<station sta-id="taipei-lg11" no-service="true">
+			<sta-name-zhtw>土城</sta-name-zhtw>
+			<sta-name-en>Tucheng</sta-name-en>
+			<sta-name-ja>土城</sta-name-ja>
+			<sta-name-ko>투청</sta-name-ko>
+			<transfers>
+				<transfer>
+					<transfer-line transfer-line="taipei-bl">板南線</transfer-line>
+					<transfer-line-sta transfer-line-sta="taipei-bl03">土城</transfer-line-sta>
+				</transfer>
+			</transfers>
+		</station>
+		<station sta-id="taipei-lg12" no-service="true">
+			<sta-name-zhtw>（站名未定）</sta-name-zhtw>
+			<sta-name-en>( Station Name Undecided )</sta-name-en>
+			<sta-name-ja>（駅名未定）</sta-name-ja>
+			<sta-name-ko>( 역명 미정 )</sta-name-ko>
+			<transfers>
+				<transfer out-of-sta="true">
+					<transfer-line transfer-line="taipei-bl">板南</transfer-line>
+					<transfer-line-sta transfer-line-sta="taipei-bl02">永寧</transfer-line-sta>
+				</transfer>
+			</transfers>
+		</station>
+		<station sta-id="taipei-lg13" no-service="true">
+			<sta-name-zhtw>（站名未定）</sta-name-zhtw>
+			<sta-name-en>( Station Name Undecided )</sta-name-en>
+			<sta-name-ja>（駅名未定）</sta-name-ja>
+			<sta-name-ko>( 역명 미정 )</sta-name-ko>
+			<transfers>
+			</transfers>
+		</station>
+		<station sta-id="taipei-lg14" no-service="true">
+			<sta-name-zhtw>（站名未定）</sta-name-zhtw>
+			<sta-name-en>( Station Name Undecided )</sta-name-en>
+			<sta-name-ja>（駅名未定）</sta-name-ja>
+			<sta-name-ko>( 역명 미정 )</sta-name-ko>
+			<transfers>
+			</transfers>
+		</station>
+		<station sta-id="taipei-lg15" no-service="true">
+			<sta-name-zhtw>（站名未定）</sta-name-zhtw>
+			<sta-name-en>( Station Name Undecided )</sta-name-en>
+			<sta-name-ja>（駅名未定）</sta-name-ja>
+			<sta-name-ko>( 역명 미정 )</sta-name-ko>
+			<transfers>
+			</transfers>
+		</station>
+		<station sta-id="taipei-lg16" no-service="true">
+			<sta-name-zhtw>（站名未定）</sta-name-zhtw>
+			<sta-name-en>( Station Name Undecided )</sta-name-en>
+			<sta-name-ja>（駅名未定）</sta-name-ja>
+			<sta-name-ko>( 역명 미정 )</sta-name-ko>
+			<transfers>
+			</transfers>
+		</station>
+		<station sta-id="taipei-lg17" no-service="true">
+			<sta-name-zhtw>（站名未定）</sta-name-zhtw>
+			<sta-name-en>( Station Name Undecided )</sta-name-en>
+			<sta-name-ja>（駅名未定）</sta-name-ja>
+			<sta-name-ko>( 역명 미정 )</sta-name-ko>
+			<transfers>
+			</transfers>
+		</station>
+		<station sta-id="taipei-lg18" no-service="true">
+			<sta-name-zhtw>（站名未定）</sta-name-zhtw>
+			<sta-name-en>( Station Name Undecided )</sta-name-en>
+			<sta-name-ja>（駅名未定）</sta-name-ja>
+			<sta-name-ko>( 역명 미정 )</sta-name-ko>
+			<transfers>
+			</transfers>
+		</station>
+		<station sta-id="taipei-lg19" no-service="true">
+			<sta-name-zhtw>（站名未定）</sta-name-zhtw>
+			<sta-name-en>( Station Name Undecided )</sta-name-en>
+			<sta-name-ja>（駅名未定）</sta-name-ja>
+			<sta-name-ko>( 역명 미정 )</sta-name-ko>
+			<transfers>
+			</transfers>
+		</station>
+		<station sta-id="taipei-lg20" no-service="true">
+			<sta-name-zhtw>（站名未定）</sta-name-zhtw>
+			<sta-name-en>( Station Name Undecided )</sta-name-en>
+			<sta-name-ja>（駅名未定）</sta-name-ja>
+			<sta-name-ko>( 역명 미정 )</sta-name-ko>
+			<transfers>
+			</transfers>
+		</station>
+		<station sta-id="taipei-lg21" no-service="true">
+			<sta-name-zhtw>迴龍</sta-name-zhtw>
+			<sta-name-en>Huilong</sta-name-en>
+			<sta-name-ja>迴龍</sta-name-ja>
+			<sta-name-ko>후이룽</sta-name-ko>
+			<transfers>
+				<transfer>
+					<transfer-line transfer-line="taipei-o">中和新蘆線</transfer-line>
+					<transfer-line-sta transfer-line-sta="taipei-o21">迴龍（樂生）</transfer-line-sta>
+				</transfer>
+				<transfer no-service="true" out-of-sta="true">
+					<transfer-line transfer-line="taoyuan-br">桃園捷運棕線</transfer-line>
+					<transfer-line-sta transfer-line-sta="taoyuan-brh07">迴龍</transfer-line-sta>
+				</transfer>
+			</transfers>
+		</station>
+	</line>
+</mrt>

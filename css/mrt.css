@@ -1,0 +1,88 @@
+@font-face{
+	font-family: "TaipeiSansTCBeta";
+	src: local("Taipei Sans TC Beta"), "./../font/TaipeiSansTCBeta/TaipeiSansTCBeta-Regular.ttf"
+	font-weight: normal;
+}
+
+@font-face{
+	font-family: "TaipeiSansTCBeta";
+	src: local("Taipei Sans TC Beta"), "./../font/TaipeiSansTCBeta/TaipeiSansTCBeta-Bold.ttf"
+	font-weight: bold;
+}
+
+@font-face{
+	font-family: "TaipeiSansTCBeta";
+	src: local("Taipei Sans TC Beta"), "./../font/TaipeiSansTCBeta/TaipeiSansTCBeta-Light.ttf"
+	font-weight: 300;
+}
+
+:root{
+	--color-grey: grey
+}
+
+/*mrt::before{
+	content: '<script scr="C:/Users/Dinsh/Desktop/css-attr.js"></script>'
+}*/
+
+*, *::before, *::after{
+	vertical-align: middle;
+	font-family: "TaipeiSansTCBeta", Arial, sans-serif;
+}
+
+mrt{
+	display: table;
+	border: solid 1px;
+	border-spacing: 2px;
+}
+
+line{
+	display: table-row-group;
+	--line-color-bg: attr(line-color-bg color);
+	background: var(--line-color-bg);
+	--line-color-fg: attr(line-color-fg color);
+	color: var(--line-color-fg);
+}
+
+line-name-zhtw, line-name-en, line-name-ja, line-name-ko, sta-name-zhtw, sta-name-en, sta-name-ja, sta-name-ko, transfers{
+	display: table-cell;
+	border: solid 1px;
+	padding: 2px;
+}
+
+line-name-zhtw, sta-name-zhtw{
+	
+}
+
+line-name-en, sta-name-en{
+	
+}
+
+line-name-ja, sta-name-ja{
+	
+}
+
+line-name-ko, sta-name-ko{
+	
+}
+
+transfer{
+	display: block;
+}
+
+station{
+	display: table-row;
+}
+
+line-name-zhtw, line-name-en, line-name-ja, line-name-ko{
+	color: attr(line-color-fg);
+	background:attr(line-color-bg);
+}
+
+[no-service="true"]{
+	color: var(--color-grey);
+}
+
+[out-of-sta="true"]::after{
+	content: "（站外轉乘）";
+	color: var(--color-grey);
+}
