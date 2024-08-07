@@ -10,24 +10,27 @@
 			ol				 { list-style: none; }
 			.chapter		 { counter-increment: chapter; 
 							   font-size: 20pt; 
-							   font-weight: bold; }
+							   font-weight: bold; 
+							   background: inherit; }
 			.chapter::before { content: "第　" counter(chapter) "　章　"; }
 			.first			 { counter-increment: first; 
 							   counter-reset: second; 
 							   font-size: 15pt; 
-							   font-weight: normal; }
+							   font-weight: normal; 
+							   background: inherit; }
 			.first::before	 { content: "第　" counter(first) "　條　"; 
 							   color: #555; }
-			.second			 { counter-increment: second; }
+			.second			 { counter-increment: second; 
+							   background: inherit; }
 			.second::before	 { content: counter(second) " "; 
 							   font-style: italic; 
 							   color: #888; }
 			.people			 { text-decoration: rgba(255, 0, 0, 0.1) dashed underline; }
 			time			 { color: #888; }
 			ins				 { background: #D9EAD3; 
-							   text-decoration: #555 solid underline; }
+							   text-decoration: #6AA84F solid underline; }
 			del				 { background: #F4CCCC; 
-							   text-decoration: #555 solid line-through; }
+							   text-decoration: #CC0000 solid line-through; }
 		</style>
 	</head>
 	<body>
@@ -74,4 +77,14 @@
 					<li class="first">若比中指、說帶有性別歧視、黃色言論被舉報，記處罰１～５次不等。</li>
 				</ol>
 			</li>
+<ins datetime="" style="display: none;">
+			<li class="chapter">
+				隱藏任務
+				<ol>
+					<li class="first"></li>
+				</ol>
+			</li>
+</ins>
 		</ol>
+	</body>
+</html>
