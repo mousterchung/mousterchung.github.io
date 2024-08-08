@@ -5,7 +5,7 @@
 		<meta http-equiv="cache-control" content="no-cache"/>
 		<title>《新北市立永和國民中學數理資優班自治條例》</title>
 		<style>
-			body			 { counter-reset: chapter first second; 
+			body			 { counter-reset: chapter first second third; 
 							   font-family: Arial, sans-serif; }
 			ol				 { list-style: none; }
 			.chapter		 { counter-increment: chapter; 
@@ -21,16 +21,23 @@
 			.first::before	 { content: "第　" counter(first) "　條　"; 
 							   color: #555; }
 			.second			 { counter-increment: second; 
+							   counter-reset: third; 
 							   background: inherit; }
 			.second::before	 { content: counter(second) " "; 
 							   font-style: italic; 
 							   color: #888; }
+			.third			 { counter-increment: third; 
+							   background: inherit; }
+			.third::before	 { content: counter(third) "、"; }
 			.people			 { text-decoration: rgba(255, 0, 0, 0.1) dashed underline; }
 			time			 { color: #888; }
-			ins				 { background: #D9EAD3; 
+			ins, .ins		 { background: #D9EAD3; 
 							   text-decoration: #6AA84F solid underline; }
-			del				 { background: #F4CCCC; 
+			del, .del		 { background: #F4CCCC; 
 							   text-decoration: #CC0000 solid line-through; }
+			.important		 { font-weight: bold; 
+							   font-style: italic; 
+							   text-decoration: #000 solid underline; }
 		</style>
 	</head>
 	<body>
@@ -38,49 +45,47 @@
 			<h1>《新北市立永和國民中學數理資優班自治條例》</h1>
 			<h2>簡稱《班規》</h2>
 			<h3>圖例：<ins datetime="">新增</ins>　<del datetime="">刪除</del></h3>
-			<h3><time datetime="2024-08-06">20240806</time>修正案<time datetime="2024-08-06T11:00">2024/08/06 11:00</time>公告；<time datetime="2024-08-12T00:00">2024/08/12 00:00</time>起實施</h3>
-			<h3 style="display: none;"><time datetime=""></time>修正案<time datetime=""></time>公告；<time datetime=""></time>起實施</h3>
+			<h3><time datetime="2024-08-06">0806</time>修正案<time datetime="2024-08-06T11:00">2024/08/06 11:00</time>公告；<time datetime="2024-08-12T00:00">2024/08/12 00:00</time>起實施</h3>
+			<h3><time datetime="2024-08-08">0808</time>修正案<time datetime="2024-08-08T10:15">2024/08/08 10:15</time>公告；<time datetime="2024-08-12T00:00">2024/08/12 00:00</time>起實施</h3>
 		</div>
 		<ol>
-			
-			<li class="chapter">
-				折抵＆處罰
+			<li class="chapter">獎勵＆處罰
 				<ol>
-					<li class="first">處罰次數以違反該條，以該條之次數增加為原則</li>
-					<li class="first">折抵辦法
+					<li class="first">獎勵及處罰點數以違反該條，以該條之點數增加為原則</li>
+					<li class="first">獎勵辦法
 						<ol>
-							<li class="second">班會課口頭報告（３分鐘／折抵１００次），須包含簡報內容；若無，折抵次數由導師評定（折抵次數＜１０）。</li>
-							<li class="second">理化或數學課回答問題（１個問題／折抵１～３次）次數由上課老師評定。</li>
-							<li class="second">寫每週研究進度心得（１００字／折抵５次）心得內容由導師評定。<li>
-							<li class="second">愛班服務（清板溝、掃＋拖……）折抵０～２０次。</li>
-							<li class="second">在學期前未折抵完：抄寫元素週期表１～１１８號元素（折抵１０～１５次）。</li>
+							<li class="second">班會課口頭報告（３分鐘／記獎勵１００點），須包含簡報內容；若無簡報，獎勵點數由導師評定（獎勵點數＜１０）。點數＜１０）。</li>
+							<li class="second">理化或數學課回答問題（１個問題／記獎勵１～３點）次數由上課老師評定。</li>
+							<li class="second">寫每週研究進度心得（１００字／記獎勵１～５點）心得內容由導師評定。<li>
+							<li class="second">愛班服務（清板溝、掃＋拖……）記獎勵０～２０點。</li>
+							<li class="second">學期末獎勵與處罰點數互抵，若互抵後尚有處罰點數未抵完，抄寫元素週期表１～１１８號元素（折抵處罰１０～１５點）。</li>
 						</ol>
 					</li>
 				</ol>
 			</li>
-			<li class="chapter">
-				Ｎｏｔｉｏｎ檢核
+			<li class="chapter">Ｎｏｔｉｏｎ檢核
 				<ol>
-					<li class="first">幹部檢核後以<a title="各週幹部檢核情形" href="https://docs.google.com/spreadsheets/d/1btyyERgMuM9tTVdhCYxwn8a_81MNotgyPxTZVOTBU1Q/edit?usp=sharing">Ｇｏｏｇｌｅ試算表</a>紀錄，若有組別進度太落後，由<span class="people" title="鍾定栩">栩</span>、<span class="people" title="林永濬">濬</span>、<span class="people" title="黃至毅">毅</span>、<span class="people" title="周品亦">亦</span>做【關心】。
+					<li class="first">幹部檢核後以<a title="各週幹部檢核情形" href="https://docs.google.com/spreadsheets/d/1btyyERgMuM9tTVdhCYxwn8a_81MNotgyPxTZVOTBU1Q/edit?usp=sharing">Ｇｏｏｇｌｅ試算表</a>紀錄，若有組別進度太落後，由<span class="people" title="鍾定栩">栩</span>、<span class="people" title="林永濬">濬</span>、<span class="people" title="黃至毅">毅</span>、<span class="people" title="周品亦">亦</span>做<span class="important">關心</span>。
 					<li class="first">Ｎｏｔｉｏｎ的檢核標準由幹部產出，置於<a title="每週檢核規定Ｎｏｔｉｏｎ" href="https://worried-eel-b35.notion.site/1478b4fe2af542139757b24769784ef3?v=361b078bf19e4021921eb64d96f5f16d">此</a>。</li>
 				</ol>
 			</li>
-			<li class="chapter">
-				課堂＆會議規定
+			<li class="chapter">課堂＆會議規定
 				<ol>
-					<li class="first">班會或其他會議若無故缺席，記處罰２次；若無故遲到，記處罰１次。</li>
-					<li class="first">未完整做值日生之工作（包括擦黑板、關冷氣、關電扇、關燈、檢查有無垃圾、排桌椅……等）者，記處罰１次；若累犯，則每次<b><u><i>遞加</i></u></b>２次。</li>
-					<li class="first">上課時若太吵，經老師確認後記處罰１～３次不等。</li>
-					<li class="first">不得丟擲任何物品（如：粉筆、球類……等），違者記處罰１次。</li>
-					<li class="first">不得資三教室走廊的黑板上隨意塗鴉，影響版面、遮住重要內容，違者記處罰２次。</li>
-					<li class="first">若比中指、說帶有性別歧視、黃色言論被舉報，記處罰１～５次不等。</li>
+					<li class="first">班會或其他會議若無故缺席，記處罰２點；若無故遲到，記處罰１點。</li>
+					<li class="first">未完整做值日生之工作（包括擦黑板、關冷氣、關電扇、關燈、檢查有無垃圾、排桌椅……等）者，記處罰１點；若累犯，則每次<span class="important">遞加</span>２點。</li>
+					<li class="first">上課時若太吵，經老師確認後記處罰１～３點不等。</li>
+					<li class="first">不得丟擲任何物品（如：粉筆、球類……等），違者記處罰１點。</li>
+					<li class="first">不得資三教室走廊的黑板上隨意塗鴉，影響版面、遮住重要內容，違者記處罰２點。</li>
+					<li class="first">若比中指、說帶有性別歧視、黃色言論被舉報，記處罰１～５點不等。</li>
 				</ol>
 			</li>
-<ins datetime="" style="display: none;">
-			<li class="chapter">
-				隱藏任務
+<ins datetime="2024-08-08T10:15" title="0808修正案">
+			<li class="chapter">隱藏任務
 				<ol>
-					<li class="first"></li>
+					<li class="first">每次有新公告，皆可能會發布新隱藏任務。</li>
+					<li class="first">若未於期限內完成隱藏任務，將記處罰１～１０點。</li>
+					<li class="first">若有題目為<span class="important">答錯</span>，記處罰１點。</li>
+					<li class="first">若於某日期前（於各次隱任內指定）先完成隱藏任務，記獎勵５點。</li>
 				</ol>
 			</li>
 </ins>
