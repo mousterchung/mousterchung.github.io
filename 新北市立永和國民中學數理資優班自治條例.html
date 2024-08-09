@@ -5,46 +5,53 @@
 		<meta http-equiv="cache-control" content="no-cache"/>
 		<title>《新北市立永和國民中學數理資優班自治條例》</title>
 		<style>
-			body					 { counter-reset: chapter first second apdx; 
-									   font-family: Arial, sans-serif; }
-			ol						 { list-style-type: none; }
-			.chapter				 { counter-increment: chapter; 
-									   font-size: 20pt; 
-									   font-weight: bold; 
-									   background: inherit; }
-			.chapter::before		 { content: "第　" counter(chapter) "　章　"; }
-			.first					 { counter-increment: first; 
-									   counter-reset: second; 
-									   font-size: 15pt; 
-									   font-weight: normal; 
-									   background: inherit; }
-			.first::before			 { content: "第　" counter(first) "　條　"; 
-									   color: #555; }
-			.second					 { counter-increment: second; 
-									   background: inherit; }
-			.second::before			 { content: counter(second) "　"; 
-									   font-style: italic; 
-									   color: #888; }
-			.third					 { list-style-type: trad-chinese-informal; 
-									   counter-reset: apdx; }
-			.apdx					 { counter-increment: apdx; 
-									   background: inherit; 
-									   font-size: 20pt; 
-									   font-weight: bold; }
-			.apdx::before			 { content: "附錄　" counter(apdx, upper-alpha) "　"; }
-			.people					 { text-decoration: rgba(255, 0, 0, 0.1) dashed underline; }
-			time					 { color: #888; }
-			ins, .ins				 { background: #D9EAD3; 
-									   text-decoration: #6AA84F solid underline; }
-			del, .del				 { background: #F4CCCC; 
-									   text-decoration: #CC0000 solid line-through; }
-			.important				 { font-weight: bold; 
-									   font-style: italic; 
-									   text-decoration: #000 solid underline; }
-			table, td, td *			 { text-align: center; }
-			.border-show td			 { border: 1px solid black; }
-			.border-show table td	 { border: none; }
-			td:empty				 { border: none; }
+			body									{ counter-reset: chapter first second apdx atom-num; 
+													  font-family: Arial, sans-serif; }
+			ol										{ list-style-type: none; }
+			.chapter								{ counter-increment: chapter; 
+													  font-size: 20pt; 
+													  font-weight: bold; 
+													  background: inherit; }
+			.chapter::before						{ content: "第　" counter(chapter) "　章　"; }
+			.first									{ counter-increment: first; 
+													  counter-reset: second; 
+													  font-size: 15pt; 
+													  font-weight: normal; 
+													  background: inherit; }
+			.first::before							{ content: "第　" counter(first) "　條　"; 
+													  color: #555; }
+			.second									{ counter-increment: second; 
+													  background: inherit; }
+			.second::before							{ content: counter(second) "　"; 
+													  font-style: italic; 
+													  color: #888; }
+			.third									{ list-style-type: trad-chinese-informal; 
+													  counter-reset: apdx; }
+			.apdx									{ counter-increment: apdx; 
+													  background: inherit; 
+													  font-size: 20pt; 
+													  font-weight: bold; }
+			.apdx::before							{ content: "附錄　" counter(apdx, upper-alpha) "　"; }
+			.people									{ text-decoration: rgba(255, 0, 0, 0.1) dashed underline; }
+			time									{ color: #888; }
+			ins, .ins								{ background: #D9EAD3; 
+													  text-decoration: #6AA84F solid underline; }
+			del, .del								{ background: #F4CCCC; 
+													  text-decoration: #CC0000 solid line-through; }
+			.important								{ font-weight: bold; 
+													  font-style: italic; 
+													  text-decoration: #000 solid underline; }
+			table, td, td *							{ text-align: center; }
+			.border-show td							{ border: 1px solid black; }
+			.border-show table td					{ border: none; }
+			td:empty								{ border: none; }
+			.atom-list :is(td, th)					{ padding-left:  10px; 
+													  padding-right: 10px; }
+			.atom-list tr td:nth-of-type(1)			{ counter-increment: atom-num; 
+													  border: 1px solid; }
+			.atom-list tr td:nth-of-type(1)::before	{ content: counter(atom-num); 
+													  text-align: center; }
+			.atom-list tr td:nth-of-type(4)			{ text-align: start; }
 		</style>
 	</head>
 	<body>
@@ -54,7 +61,7 @@
 			<h3>圖例：<ins datetime="">新增</ins>　<del datetime="">刪除</del></h3>
 			<h3><time datetime="2024-08-06">0806</time>修正案<time datetime="2024-08-06T11:00">2024/08/06 11:00</time>公告；<time datetime="2024-08-12T00:00">2024/08/12 00:00</time>起實施</h3>
 			<h3><time datetime="2024-08-08">0808</time>修正案<time datetime="2024-08-08T10:15">2024/08/08 10:15</time>公告；<time datetime="2024-08-12T00:00">2024/08/12 00:00</time>起實施</h3>
-			<h3><time datetime="2024-08-09">0809</time>修正案<time datetime="2024-08-09T18:30">2024/08/09 18:30</time>公告；<time datetime="2024-08-12T00:00">2024/08/12 00:00</time>起實施</h3>
+			<h3><time datetime="2024-08-09">0809</time>修正案<time datetime="2024-08-09T18:30">2024/08/09 18:30</time>公告；<time datetime="2024-08-19T00:00">2024/08/19 00:00</time>起實施</h3>
 		</div>
 		<ol>
 <ins datetime="2024-08-09T18:30" title="0809修正案">
@@ -773,6 +780,41 @@
 					</tr>
 				</table>
 				<span style="font-size: 1rem; font-weight: normal; ">＊Db：釒杜；Sg：釒喜；Bh：釒波；Hs：釒黑；Mt：釒麥；Nh：釒尔；Ts：石田；Og：气奧</span>
+			</li>
+</ins>
+<ins datetime="" title="修正案">
+			<li class="apdx">元素列表
+				<table border="1" class="atom-list">
+					<col/><col/><col/><col style="text-align: start; "/>
+					<tr><th rowspan="2">原子<br/>序</th><th rowspan="2">元素<br/>符號</th><th colspan="2">元素名稱</th></tr>
+					<tr>														 <th>中</th>	<th>英</th>
+					<tr><td></td><td>H </td><td>氫</td><td>hydrogen</td></tr>
+					<tr><td></td><td>He</td><td>氦</td><td>helium</td></tr>
+					<tr><td></td><td>Li</td><td>鋰</td><td>lithium</td></tr>
+					<tr><td></td><td>Be</td><td>鈹</td><td>beryllium</td></tr>
+					<tr><td></td><td>B </td><td>硼</td><td>boron</td></tr>
+					<tr><td></td><td>C </td><td>碳</td><td>carbon</td></tr>
+					<tr><td></td><td>N </td><td>氮</td><td>nitrogen</td></tr>
+					<tr><td></td><td>O </td><td>氧</td><td>oxygen</td></tr>
+					<tr><td></td><td>F </td><td>氟</td><td>fluorine</td></tr>
+					<tr><td></td><td>Ne</td><td>氖</td><td>neon</td></tr>
+					<tr><td></td><td>Na</td><td>鈉</td><td>sodium<sup>*1</sup></td></tr>
+					<tr><td></td><td>Mg</td><td>鎂</td><td>magnesium</td></tr>
+					<tr><td></td><td>Al</td><td>鋁</td><td>aluminium<sup>*2</sup></td></tr>
+					<tr><td></td><td>Si</td><td>矽</td><td>silicon</td></tr>
+					<tr><td></td><td>P </td><td>磷</td><td>phosphorus</td></tr>
+					<tr><td></td><td>S </td><td>硫</td><td>sulfur / sulphur</td></tr>
+					<tr><td></td><td>Cl</td><td>氯</td><td>chlorne</td></tr>
+					<tr><td></td><td>Ar</td><td>氬</td><td>argon</td></tr>
+					<tr><td></td><td>K </td><td>鉀</td><td>potassium<sup>*3</sup></td></tr>
+					<tr><td></td><td>Ca</td><td>鈣</td><td>calcium</td></tr>
+					
+				</table>
+				<div style="font-size: 1rem; font-weight: normal; ">
+					＊１：符號來自拉丁語natrium<br/>
+					＊２：aluminium（IUPAC） / aluminum（北美）<br/>
+					＊３：符號來自德語kalium<br/>
+				</div>
 			</li>
 </ins>
 		</ol>
