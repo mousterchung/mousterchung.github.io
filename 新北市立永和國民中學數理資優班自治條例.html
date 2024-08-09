@@ -5,39 +5,45 @@
 		<meta http-equiv="cache-control" content="no-cache"/>
 		<title>《新北市立永和國民中學數理資優班自治條例》</title>
 		<style>
-			body			 { counter-reset: chapter first second third; 
-							   font-family: Arial, sans-serif; }
-			ol				 { list-style: none; }
-			.chapter		 { counter-increment: chapter; 
-							   font-size: 20pt; 
-							   font-weight: bold; 
-							   background: inherit; }
-			.chapter::before { content: "第　" counter(chapter) "　章　"; }
-			.first			 { counter-increment: first; 
-							   counter-reset: second; 
-							   font-size: 15pt; 
-							   font-weight: normal; 
-							   background: inherit; }
-			.first::before	 { content: "第　" counter(first) "　條　"; 
-							   color: #555; }
-			.second			 { counter-increment: second; 
-							   counter-reset: third; 
-							   background: inherit; }
-			.second::before	 { content: counter(second) " "; 
-							   font-style: italic; 
-							   color: #888; }
-			.third			 { counter-increment: third; 
-							   background: inherit; }
-			.third::before	 { content: counter(third) "、"; }
-			.people			 { text-decoration: rgba(255, 0, 0, 0.1) dashed underline; }
-			time			 { color: #888; }
-			ins, .ins		 { background: #D9EAD3; 
-							   text-decoration: #6AA84F solid underline; }
-			del, .del		 { background: #F4CCCC; 
-							   text-decoration: #CC0000 solid line-through; }
-			.important		 { font-weight: bold; 
-							   font-style: italic; 
-							   text-decoration: #000 solid underline; }
+			body					 { counter-reset: chapter first second apdx; 
+									   font-family: Arial, sans-serif; }
+			ol						 { list-style-type: none; }
+			.chapter				 { counter-increment: chapter; 
+									   font-size: 20pt; 
+									   font-weight: bold; 
+									   background: inherit; }
+			.chapter::before		 { content: "第　" counter(chapter) "　章　"; }
+			.first					 { counter-increment: first; 
+									   counter-reset: second; 
+									   font-size: 15pt; 
+									   font-weight: normal; 
+									   background: inherit; }
+			.first::before			 { content: "第　" counter(first) "　條　"; 
+									   color: #555; }
+			.second					 { counter-increment: second; 
+									   background: inherit; }
+			.second::before			 { content: counter(second) "　"; 
+									   font-style: italic; 
+									   color: #888; }
+			.third					 { list-style-type: trad-chinese-informal; 
+									   counter-reset: apdx; }
+			.apdx					 { counter-increment: apdx; 
+									   background: inherit; 
+									   font-size: 20pt; 
+									   font-weight: bold; }
+			.apdx::before			 { content: "附錄　" counter(apdx, upper-alpha) "　"; }
+			.people					 { text-decoration: rgba(255, 0, 0, 0.1) dashed underline; }
+			time					 { color: #888; }
+			ins, .ins				 { background: #D9EAD3; 
+									   text-decoration: #6AA84F solid underline; }
+			del, .del				 { background: #F4CCCC; 
+									   text-decoration: #CC0000 solid line-through; }
+			.important				 { font-weight: bold; 
+									   font-style: italic; 
+									   text-decoration: #000 solid underline; }
+			.border-show td			 { border: 1px solid black; }
+			.border-show table td	 { border: none; }
+			td:empty				 { border: none; }
 		</style>
 	</head>
 	<body>
@@ -56,7 +62,7 @@
 						<ol>
 							<li class="second">班會課口頭報告（３分鐘／記獎勵１００點），須包含簡報內容；若無簡報，獎勵點數由導師評定（獎勵點數＜１０）。點數＜１０）。</li>
 							<li class="second">理化或數學課回答問題（１個問題／記獎勵１～３點）次數由上課老師評定。</li>
-							<li class="second">寫每週研究進度心得（１００字／記獎勵１～５點）心得內容由導師評定。<li>
+							<li class="second">寫每週研究進度心得（１００字／記獎勵１～５點）心得內容由導師評定。</li>
 							<li class="second">愛班服務（清板溝、掃＋拖……）記獎勵０～２０點。</li>
 							<li class="second">學期末獎勵與處罰點數互抵，若互抵後尚有處罰點數未抵完，抄寫元素週期表１～１１８號元素（折抵處罰１０～１５點）。</li>
 						</ol>
@@ -87,6 +93,41 @@
 					<li class="first">若有題目為<span class="important">答錯</span>，記處罰１點。</li>
 					<li class="first">若於某日期前（於各次隱任內指定）先完成隱藏任務，記獎勵５點。</li>
 				</ol>
+			</li>
+</ins>
+<ins datetime="2024-08-09">
+			<li class="apdx">元素週期表
+				<table class="border-show" style="border-collapse: collapse; margin-top: 10px;">
+					<tr>
+						<td><table>
+							<tr><td>1</td><td></td><td>H</td></tr>
+							<tr><td colspan="3">氫</td></tr>
+							<tr><td colspan="3">1.008</td></tr>
+						</table></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td><table>
+							<tr><td>2</td><td></td><td>He</td></tr>
+							<tr><td colspan="3">氦</td></tr>
+							<tr><td colspan="3">4.003</td></tr>
+						</table></td>
+					</tr>
+					
+				</table>
 			</li>
 </ins>
 		</ol>
