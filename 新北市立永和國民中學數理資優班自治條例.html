@@ -5,7 +5,7 @@
 		<meta http-equiv="cache-control" content="no-cache"/>
 		<title>《新北市立永和國民中學數理資優班自治條例》</title>
 		<style>
-			body									{ counter-reset: chapter first second apdx atom-num; 
+			body									{ counter-reset: chapter first second third apdx atom-num; 
 													  font-family: Arial, sans-serif; }
 			ol										{ list-style-type: none; }
 			.chapter								{ counter-increment: chapter; 
@@ -21,12 +21,13 @@
 			.first::before							{ content: "第　" counter(first) "　條　"; 
 													  color: #555; }
 			.second									{ counter-increment: second; 
-													  background: inherit; }
+													  background: inherit; 
+													  counter-reset: third; }
 			.second::before							{ content: counter(second) "　"; 
 													  font-style: italic; 
 													  color: #888; }
-			.third									{ list-style-type: trad-chinese-informal; 
-													  counter-reset: apdx; }
+			.third									{ counter-increment: third; }
+			.third::before							{ content: counter(third, trad-chinese-informal) "、"; }
 			.apdx									{ counter-increment: apdx; 
 													  background: inherit; 
 													  font-size: 20pt; 
