@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 	<head>
 		<meta http-equiv="pragma" content="no-cache"/>
@@ -33,6 +34,8 @@
 													  font-size: 20pt; 
 													  font-weight: bold; }
 			.apdx::before							{ content: "附錄　" counter(apdx, upper-alpha) "　"; }
+			.apdx *									{ font-size: 1rem; 
+													  font-weight: normal; }
 			.people									{ text-decoration: rgba(255, 0, 0, 0.1) dashed underline; }
 			time									{ color: #888; }
 			ins, .ins								{ background: #D9EAD3; 
@@ -43,6 +46,10 @@
 													  font-style: italic; 
 													  text-decoration: #000 solid underline; }
 			table, td, td *							{ text-align: center; }
+			.atom-table table						{ width: 100%; }
+			.atom-table table tr:nth-of-type(1) td	{ width: 50%; }
+			.atom-table table td					{ width: 100%; }
+			.atom-table td							{ width: 60px; }
 			.border-show td							{ border: 1px solid black; }
 			.border-show table td					{ border: none; }
 			td:empty								{ border: none; }
@@ -61,11 +68,7 @@
 			<h2 style="text-align: center; margin-top: -5px; ">簡稱《班規》</h2>
 		</div>
 		<h3 style="text-align: center; ">圖例：<ins datetime="">新增</ins>　<del datetime="">刪除</del></h3>
-		<h3 style="text-align: center; "><time datetime="2024-08-06">0806</time>修正案<time datetime="2024-08-06T11:00">2024/08/06 11:00</time>公告；<time datetime="2024-08-12T00:00">2024/08/12 00:00</time>起實施</h3>
-		<h3 style="text-align: center; "><time datetime="2024-08-08">0808</time>修正案<time datetime="2024-08-08T10:15">2024/08/08 10:15</time>公告；<time datetime="2024-08-12T00:00">2024/08/12 00:00</time>起實施</h3>
 		<h3 style="text-align: center; "><time datetime="2024-08-09">0809</time>修正案<time datetime="2024-08-09T18:30">2024/08/09 18:30</time>公告；<time datetime="2024-08-19T00:00">2024/08/19 00:00</time>起實施</h3>
-		<h3 style="text-align: center; "><time datetime="2024-08-09">0809</time>新增<span style="color: #888; ">附錄Ａ</span></h3>
-		<h3 style="text-align: center; "><time datetime="2024-08-10">0810</time>新增<span style="color: #888; ">附錄Ｂ</span></h3>
 		<ol>
 <ins datetime="2024-08-09T18:30" title="0809修正案">
 			<li class="chapter">總論
@@ -109,7 +112,6 @@
 					<li class="first">若比中指、說帶有性別歧視、黃色言論被舉報，記處罰１～５點不等。</li>
 				</ol>
 			</li>
-<ins datetime="2024-08-08T10:15" title="0808修正案">
 			<li class="chapter">隱藏任務
 				<ol>
 					<li class="first">每次有新公告，皆可能會發布新隱藏任務。</li>
@@ -118,10 +120,8 @@
 					<li class="first">若於某日期前（於各次隱任內指定）先完成隱藏任務，記獎勵５點。</li>
 				</ol>
 			</li>
-</ins>
-<ins datetime="2024-08-09T18:30" title="0809新增">
 			<li class="apdx">元素週期表
-				<table class="border-show" style="border-collapse: collapse; margin-top: 10px;">
+				<table class="border-show atom-table" style="border-collapse: collapse; margin-top: 10px;">
 					<tr>
 						<td><table>
 							<tr><td>1</td><td>H</td></tr>
@@ -784,8 +784,6 @@
 				</table>
 				<span style="font-size: 1rem; font-weight: normal; ">＊Db：釒杜；Sg：釒喜；Bh：釒波；Hs：釒黑；Mt：釒麥；Nh：釒尔；Ts：石田；Og：气奧</span>
 			</li>
-</ins>
-<ins datetime="2024-08-10T09:40" title="0810新增">
 			<li class="apdx">元素列表
 				<table border="1" class="atom-list">
 					<col/><col/><col/><col style="text-align: start; "/>
@@ -927,7 +925,6 @@
 					＊＊Db：釒杜；Sg：釒喜；Bh：釒波；Hs：釒黑；Mt：釒麥；Nh：釒尔；Ts：石田；Og：气奧
 				</div>
 			</li>
-</ins>
 		</ol>
 	</body>
 </html>
