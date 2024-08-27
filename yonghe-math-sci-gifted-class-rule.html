@@ -13,13 +13,13 @@
 													  font-size: 20pt; 
 													  font-weight: bold; 
 													  background: inherit; }
-			.chapter::before						{ content: "第　" counter(chapter) "　章　"; }
+			.chapter::before						{ content: "第" counter(chapter, trad-chinese-informal) "章　"; }
 			.first									{ counter-increment: first; 
 													  counter-reset: second; 
 													  font-size: 15pt; 
 													  font-weight: normal; 
 													  background: inherit; }
-			.first::before							{ content: "第　" counter(first) "　條　"; 
+			.first::before							{ content: "第 " counter(first) " 條　"; 
 													  color: #555; }
 			.second									{ counter-increment: second; 
 													  background: inherit; 
@@ -33,7 +33,7 @@
 													  background: inherit; 
 													  font-size: 20pt; 
 													  font-weight: bold; }
-			.apdx::before							{ content: "附錄　" counter(apdx, upper-alpha) "　"; }
+			.apdx::before							{ content: "附錄" counter(apdx, upper-alpha) "　"; }
 			.apdx *									{ font-size: 1rem; 
 													  font-weight: normal; }
 			.people									{ text-decoration: rgba(255, 0, 0, 0.1) dashed underline; }
