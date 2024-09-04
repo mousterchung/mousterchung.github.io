@@ -1,0 +1,94 @@
+<form>
+	accept-charset="表單字元編碼",
+	action="表單傳送URI/URL"
+	accept="MIME類型",
+	enctype="傳回時編碼" (檔案multipart/form-data,純文字text/plain)
+	method="{get,post}"
+		get	內容加在網址後($_get)
+		post	內容封包後傳送($_post)
+	name="表單名稱" 後端.Script或表單處理程式用
+	target="處理後結果之框架"
+	autocomplete="{on,off,default}" 自動完成功能(default繼承其他元素的autocomplete屬性,其他元素on即on)
+	novalidate 不要進行驗證
+<input>
+	align="{left,center,right}" type="image"時對齊方式
+	accept="MIME類型"
+	checked 選取
+	disabled 取消欄位,使其無法接受或提交
+	maxlength="最大字元數"
+	name="後端處理用名稱"
+	notab 不允許用[Tab]移至該欄位
+	readonly 不允許變更
+	size="顯示寬度字元數"
+	src="URI,URL" type="image"時
+	usemap 影像地圖檔案位置.名稱
+	form="隸屬於此直(ID)的表單"
+	min="n",max="n",step="n" 最小.最大.間隔值
+	repuired 必填
+	multiple 複選或多填
+	patterm="輸入格式"
+	autocomplete="..." 參前
+	autofocus 載入時自動移至該欄位
+	placeholder="提示文字"
+	list 搭配<datalist>
+	type="{state}"
+		text
+		password
+		radio
+		checkbox
+		submit
+		reset
+		file
+		image
+		hidden
+		button
+		email
+		url
+		search
+		tel
+		number
+		range
+		color
+		date
+		time
+		datetime
+		month
+		week
+		datetime-local
+<textarea> 多行文字
+	cols="寬度字元數"
+	desabled 取消,使之無法存取
+	name="後端處理名稱"
+	readonly 不可變更
+	rows="高度行數"
+	required,autofocus,placeholder="...",form="..." 參前
+<option>
+	disabled 取消,使之無法存取
+	selected 選取
+	value="傳送值"
+<datalist> (id)搭配<option>
+	option為資料庫(value)
+	輸入找尋資料庫
+<label> 標籤
+	for="此值為ID產生關聯"
+	form="..." 參前
+<fieldset> 搭配<legend>
+	disabled 無法存取
+	name="名稱"
+<legend> 說明文字
+	align="{top,bottom,left,right}" 說明文字位置
+<output>
+	例:
+		<form onsubmit="return false" oninput="sum.value=num1.valueAsNumber+num2.valueAsNumber">
+		<input name="num1" type="number" step="any">+
+		<input name="num2" type="number" step="any">=
+		<output name="sum"></output>
+<progress> 進度列
+<meter> 比率
+	low 低邊界值(min)
+	high 高邊界值(max)
+	optimum 最佳值(avg(min,max))
+<keygen> 金鑰
+	公鑰->伺服器
+	私鑰->用戶端
+<optgroup> 群組option

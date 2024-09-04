@@ -1,0 +1,18 @@
+accesskey	快捷鍵
+class		類別名稱
+contenteditable	能否編輯		{true|false|inherit}
+contextmenu	menu元素的id屬性值
+dir		文字的走向		{ltr|rtl}
+draggable	能否拖曳		{true|false}		drag & drop API
+dropzone	drop物件的處理方法	{copy|move|link|...}	drag & drop API
+hidden					{hidden|true|false}
+id		識別名稱
+lang		語言碼			{ja|en|en-US|fr|...}
+spellcheck	是否啟用拼字檢查	{true|""|false}
+style		CSS宣告
+tabindex	移動的順序
+title		補充資料
+translate	是否翻譯		{yes|""|no}
+data-*		將資訊傳給Script
+aria-*		╦提升無障礙性
+role		╝

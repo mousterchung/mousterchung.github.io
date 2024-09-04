@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>永和國中112學年度入學第20班 | 表單 | 鼠妖的網頁</title>
+	<meta name="description" content="鼠妖的網站"/>
+	<meta name="author" content="鼠妖"/>
+	<meta name="keywords" content="鼠妖,鼠妖的網站,鼠妖的網頁"/>
+	<meta name="viwport" content="width=device-width, initial-scale=1.0"/>
+	<link rel="stylesheet" href="css/base.css"/>
+	<link rel="stylesheet" href="css/form.css"/>
+	<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+	<script>
+		(function(){emailjs.init('IfvZJbNNYR2OCykeW');})()
+		window.onload=function(){
+			document.getElementById('form_jhjhs11220').addEventListener('submit',function(evt){
+				evt.preventDefault();
+				this.contact_number.value=Math.random()*100000|0;
+				emailjs.sendForm('service_form_jhjhs11220','template_form_jhjhs11220',this)
+					.then(function(){
+						console.log('SUCCESS!');
+						alert('傳送完成！');
+					},function(error){
+						console.log('FAILED...',error);
+						alert('請重新傳送...');
+					});
+			});
+		}
+	</script>
+</head>
+<body>
+	<div style="color:red;">*表示必填問題</div>
+	<form id="form_jhjhs11220">
+		<fieldset>
+			<legend>基本資料</legend>
+			<label class="dc-form-required">
+				座號
+				<select name="number" required>
+					<option value="-1" selected disabled>請選擇...</option>
+					<option>1</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+					<option>5</option>
+					<option>6</option>
+					<option>7</option>
+					<option>8</option>
+					<option>9</option>
+					<option>10</option>
+					<option>11</option>
+					<option>12</option>
+					<option>13</option>
+					<option>14</option>
+					<option>15</option>
+					<option>16</option>
+					<option>17</option>
+					<option>18</option>
+					<option>19</option>
+					<option>20</option>
+					<option>21</option>
+					<option>22</option>
+					<option>23</option>
+					<option>24</option>
+					<option>25</option>
+					<option>26</option>
+				</select>
+			</label><br/>
+			<div class="input-outline-x">
+				<datalist id="namelist">
+					<option>王璿榕</option>
+					<option>伊照翔</option>
+					<option>朱峻毅</option>
+					<option>李維喆</option>
+					<option>周乃旭</option>
+					<option>林瑋康</option>
+					<option>邱俞誠</option>
+					<option>孫郁哲</option>
+					<option>徐子育</option>
+					<option>黃貴廷</option>
+					<option>楊子睿</option>
+					<option>裴茂期</option>
+					<option>潘奕儒</option>
+					<option>鍾定栩</option>
+					<option>吳若湘</option>
+					<option>李若瑜</option>
+					<option>周莉穎</option>
+					<option>施凱云</option>
+					<option>紅語棠</option>
+					<option>陳品妍</option>
+					<option>陶志恩</option>
+					<option>楊靜渝</option>
+					<option>劉宥希</option>
+					<option>劉彩琳</option>
+					<option>賴沁萱</option>
+					<option>薛穎琦</option>
+				</datalist>
+				<input class="input-control input-outline" name="name" type="text" list="namelist" placeholder="姓名" required />
+				<label class="input-label">姓名</label>
+			</div><br/>
+			<div class="input-outline-x">
+				<input class="input-control input-outline" name="email-edu" type="email" placeholder="教育局電子郵件" required />
+				<label class="input-label">教育局電子郵件</label>
+			</div><br/>
+			<div class="input-outline-x">
+				<input class="input-control input-outline" name="pagamo" type="text" placeholder="PaGamO ID" pattern="\d{7,8}" title="數字7~8碼" required />
+				<label class="input-label">PaGamO ID</label>
+			</div>
+		</fieldset>
+		<fieldset>
+			<legend>聯絡資料</legend>
+			<div class="input-outline-x">
+				<input class="input-control input-outline" name="email-out" type="email" placeholder="外部電子郵件(非必填)" multiple />
+				<label class="input-label">外部電子郵件(非必填)</label>
+			</div><br/>
+			<div class="input-outline-x">
+				<input class="input-control input-outline" name="fb" type="text" placeholder="Facebook帳號(非必填)" multiple />
+				<label class="input-label">Facebook帳號(非必填)</label>
+			</div><br/>
+			<div class="input-outline-x">
+				<input class="input-control input-outline" name="ig" type="text" placeholder="Instagram帳號(非必填)" multiple />
+				<label class="input-label">Instagram帳號(非必填)</label>
+			</div><br/>
+			<div class="input-outline-x">
+				<input class="input-control input-outline" name="line-name" type="text" placeholder="LINE 名稱(非必填)" multiple />
+				<label class="input-label">LINE 名稱(非必填)</label>
+			</div><br/>
+			<div class="input-outline-x">
+				<input class="input-control input-outline" name="line-id" type="text" placeholder="LINE ID(非必填)" multiple />
+				<label class="input-label">LINE ID(非必填)</label>
+			</div>
+		</fieldset>
+		<fieldset>
+			<legend>使用環境</legend>
+			<div class="input-outline-x">
+				<datalist id="oslist">
+					<option>Microsoft Windows 7</option>
+					<option>Microsoft Windows 8</option>
+					<option>Microsoft Windows 10</option>
+					<option>Microsoft Windows 11</option>
+					<option>Apple MacOS</option>
+					<option>Apple iPhone</option>
+					<option>Apple iPad</option>
+					<option>Google ChromeOS</option>
+				</datalist>
+				<input class="input-control input-outline" name="os" type="text" placeholder="所使用的作業系統" list="oslist" required />
+				<label class="input-label">所使用的作業系統</label>
+			</div><br/>
+			<div class="input-outline-x">
+				<datalist id="browserlist">
+					<option>Microsoft Internet Explorer</option>
+					<option>Microsoft Edge</option>
+					<option>Google Chrome</option>
+					<option>Mozilla Firefox</option>
+					<option>Apple Safari</option>
+					<option>Opera</option>
+					<option>Brave</option>
+				</datalist>
+				<input class="input-control input-outline" name="browser" type="text" placeholder="所使用的瀏覽器" list="browserlist" required />
+				<label class="input-label">所使用的瀏覽器</label>
+		</fieldset>
+		<fieldset>
+			<legend>班級調查</legend>
+			<table border="1">
+				<tr>
+					<th>座號</th>
+					<th>姓名</th>
+					<th>紅</th>
+					<th>橘</th>
+					<th>黃</th>
+					<th>綠</th>
+					<th>藍</th>
+					<th>紫</th>
+					<th>黑</th>
+					<th>白</th>
+				</tr>
+				<tr>
+					<th>01</th>
+					<td class="dc-form-required">王璿榕</td>
+					<td><input type="radio" name="clr01" value="clr01-r" reqired/></td>
+					<td><input type="radio" name="clr01" value="clr01-o" reqired/></td>
+					<td><input type="radio" name="clr01" value="clr01-y" reqired/></td>
+					<td><input type="radio" name="clr01" value="clr01-g" reqired/></td>
+					<td><input type="radio" name="clr01" value="clr01-b" reqired/></td>
+					<td><input type="radio" name="clr01" value="clr01-p" reqired/></td>
+					<td><input type="radio" name="clr01" value="clr01-k" reqired/></td>
+					<td><input type="radio" name="clr01" value="clr01-w" reqired/></td>
+				</tr>
+				<tr>
+					<th>02</th>
+					<td class="dc-form-required">伊照翔</td>
+					<td><input type="radio" name="clr02" value="clr02-r" reqired/></td>
+					<td><input type="radio" name="clr02" value="clr02-o" reqired/></td>
+					<td><input type="radio" name="clr02" value="clr02-y" reqired/></td>
+					<td><input type="radio" name="clr02" value="clr02-g" reqired/></td>
+					<td><input type="radio" name="clr02" value="clr02-b" reqired/></td>
+					<td><input type="radio" name="clr02" value="clr02-p" reqired/></td>
+					<td><input type="radio" name="clr02" value="clr02-k" reqired/></td>
+					<td><input type="radio" name="clr02" value="clr02-w" reqired/></td>
+				</tr>
+				<tr>
+					<th>03</th>
+					<td class="dc-form-required">朱峻毅</td>
+					<td><input type="radio" name="clr03" value="clr03-r" reqired/></td>
+					<td><input type="radio" name="clr03" value="clr03-o" reqired/></td>
+					<td><input type="radio" name="clr03" value="clr03-y" reqired/></td>
+					<td><input type="radio" name="clr03" value="clr03-g" reqired/></td>
+					<td><input type="radio" name="clr03" value="clr03-b" reqired/></td>
+					<td><input type="radio" name="clr03" value="clr03-p" reqired/></td>
+					<td><input type="radio" name="clr03" value="clr03-k" reqired/></td>
+					<td><input type="radio" name="clr03" value="clr03-w" reqired/></td>
+				</tr>
+				<tr>
+					<th>04</th>
+					<td class="dc-form-required">李維喆</td>
+					<td><input type="radio" name="clr04" value="clr04-r" reqired/></td>
+					<td><input type="radio" name="clr04" value="clr04-o" reqired/></td>
+					<td><input type="radio" name="clr04" value="clr04-y" reqired/></td>
+					<td><input type="radio" name="clr04" value="clr04-g" reqired/></td>
+					<td><input type="radio" name="clr04" value="clr04-b" reqired/></td>
+					<td><input type="radio" name="clr04" value="clr04-p" reqired/></td>
+					<td><input type="radio" name="clr04" value="clr04-k" reqired/></td>
+					<td><input type="radio" name="clr04" value="clr04-w" reqired/></td>
+				</tr>
+				<tr>
+					<th>05</th>
+					<td class="dc-form-required">周乃旭</td>
+					<td><input type="radio" name="clr05" value="clr05-r" reqired/></td>
+					<td><input type="radio" name="clr05" value="clr05-o" reqired/></td>
+					<td><input type="radio" name="clr05" value="clr05-y" reqired/></td>
+					<td><input type="radio" name="clr05" value="clr05-g" reqired/></td>
+					<td><input type="radio" name="clr05" value="clr05-b" reqired/></td>
+					<td><input type="radio" name="clr05" value="clr05-p" reqired/></td>
+					<td><input type="radio" name="clr05" value="clr05-k" reqired/></td>
+					<td><input type="radio" name="clr05" value="clr05-w" reqired/></td>
+				</tr>
+				<tr>
+					<th>06</th>
+					<td class="dc-form-required">林瑋康</td>
+					<td><input type="radio" name="clr06" value="clr06-r" reqired/></td>
+					<td><input type="radio" name="clr06" value="clr06-o" reqired/></td>
+					<td><input type="radio" name="clr06" value="clr06-y" reqired/></td>
+					<td><input type="radio" name="clr06" value="clr06-g" reqired/></td>
+					<td><input type="radio" name="clr06" value="clr06-b" reqired/></td>
+					<td><input type="radio" name="clr06" value="clr06-p" reqired/></td>
+					<td><input type="radio" name="clr06" value="clr06-k" reqired/></td>
+					<td><input type="radio" name="clr06" value="clr06-w" reqired/></td>
+				</tr>
+				<tr>
+					<th>07</th>
+					<td class="dc-form-required">邱俞誠</td>
+					<td><input type="radio" name="clr07" value="clr07-r" reqired/></td>
+					<td><input type="radio" name="clr07" value="clr07-o" reqired/></td>
+					<td><input type="radio" name="clr07" value="clr07-y" reqired/></td>
+					<td><input type="radio" name="clr07" value="clr07-g" reqired/></td>
+					<td><input type="radio" name="clr07" value="clr07-b" reqired/></td>
+					<td><input type="radio" name="clr07" value="clr07-p" reqired/></td>
+					<td><input type="radio" name="clr07" value="clr07-k" reqired/></td>
+					<td><input type="radio" name="clr07" value="clr07-w" reqired/></td>
+				</tr>
+				<tr>
+					<th>08</th>
+					<td class="dc-form-required">孫郁哲</td>
+					<td><input type="radio" name="clr08" value="clr08-r" reqired/></td>
+					<td><input type="radio" name="clr08" value="clr08-o" reqired/></td>
+					<td><input type="radio" name="clr08" value="clr08-y" reqired/></td>
+					<td><input type="radio" name="clr08" value="clr08-g" reqired/></td>
+					<td><input type="radio" name="clr08" value="clr08-b" reqired/></td>
+					<td><input type="radio" name="clr08" value="clr08-p" reqired/></td>
+					<td><input type="radio" name="clr08" value="clr08-k" reqired/></td>
+					<td><input type="radio" name="clr08" value="clr08-w" reqired/></td>
+				</tr>
+				<tr>
+					<th>09</th>
+					<td class="dc-form-required">徐子育</td>
+					<td><input type="radio" name="clr09" value="clr09-r" reqired/></td>
+					<td><input type="radio" name="clr09" value="clr09-o" reqired/></td>
+					<td><input type="radio" name="clr09" value="clr09-y" reqired/></td>
+					<td><input type="radio" name="clr09" value="clr09-g" reqired/></td>
+					<td><input type="radio" name="clr09" value="clr09-b" reqired/></td>
+					<td><input type="radio" name="clr09" value="clr09-p" reqired/></td>
+					<td><input type="radio" name="clr09" value="clr09-k" reqired/></td>
+					<td><input type="radio" name="clr09" value="clr09-w" reqired/></td>
+				</tr>
+				<tr>
+					<th>10</th>
+					<td class="dc-form-required">黃貴廷</td>
+					<td><input type="radio" name="clr10" value="clr10-r" reqired/></td>
+					<td><input type="radio" name="clr10" value="clr10-o" reqired/></td>
+					<td><input type="radio" name="clr10" value="clr10-y" reqired/></td>
+					<td><input type="radio" name="clr10" value="clr10-g" reqired/></td>
+					<td><input type="radio" name="clr10" value="clr10-b" reqired/></td>
+					<td><input type="radio" name="clr10" value="clr10-p" reqired/></td>
+					<td><input type="radio" name="clr10" value="clr10-k" reqired/></td>
+					<td><input type="radio" name="clr10" value="clr10-w" reqired/></td>
+				</tr>
+				<tr>
+					<th>11</th>
+					<td class="dc-form-required">楊子睿</td>
+					<td><input type="radio" name="clr11" value="clr11-r" reqired/></td>
+					<td><input type="radio" name="clr11" value="clr11-o" reqired/></td>
+					<td><input type="radio" name="clr11" value="clr11-y" reqired/></td>
+					<td><input type="radio" name="clr11" value="clr11-g" reqired/></td>
+					<td><input type="radio" name="clr11" value="clr11-b" reqired/></td>
+					<td><input type="radio" name="clr11" value="clr11-p" reqired/></td>
+					<td><input type="radio" name="clr11" value="clr11-k" reqired/></td>
+					<td><input type="radio" name="clr11" value="clr11-w" reqired/></td>
+				</tr>
+				<tr>
+					<th>12</th>
+					<td class="dc-form-required">裴茂期</td>
+					<td><input type="radio" name="clr12" value="clr12-r" reqired/></td>
+					<td><input type="radio" name="clr12" value="clr12-o" reqired/></td>
+					<td><input type="radio" name="clr12" value="clr12-y" reqired/></td>
+					<td><input type="radio" name="clr12" value="clr12-g" reqired/></td>
+					<td><input type="radio" name="clr12" value="clr12-b" reqired/></td>
+					<td><input type="radio" name="clr12" value="clr12-p" reqired/></td>
+					<td><input type="radio" name="clr12" value="clr12-k" reqired/></td>
+					<td><input type="radio" name="clr12" value="clr12-w" reqired/></td>
+				</tr>
+				<tr>
+					<th>13</th>
+					<td class="dc-form-required">潘奕儒</td>
+					<td><input type="radio" name="clr13" value="clr13-r" reqired/></td>
+					<td><input type="radio" name="clr13" value="clr13-o" reqired/></td>
+					<td><input type="radio" name="clr13" value="clr13-y" reqired/></td>
+					<td><input type="radio" name="clr13" value="clr13-g" reqired/></td>
+					<td><input type="radio" name="clr13" value="clr13-b" reqired/></td>
+					<td><input type="radio" name="clr13" value="clr13-p" reqired/></td>
+					<td><input type="radio" name="clr13" value="clr13-k" reqired/></td>
+					<td><input type="radio" name="clr13" value="clr13-w" reqired/></td>
+				</tr>
+				<tr>
+					<th>14</th>
+					<td class="dc-form-required">鍾定栩</td>
+					<td><input type="radio" name="clr14" value="clr14-r" reqired/></td>
+					<td><input type="radio" name="clr14" value="clr14-o" reqired/></td>
+					<td><input type="radio" name="clr14" value="clr14-y" reqired/></td>
+					<td><input type="radio" name="clr14" value="clr14-g" reqired/></td>
+					<td><input type="radio" name="clr14" value="clr14-b" reqired/></td>
+					<td><input type="radio" name="clr14" value="clr14-p" reqired/></td>
+					<td><input type="radio" name="clr14" value="clr14-k" reqired/></td>
+					<td><input type="radio" name="clr14" value="clr14-w" reqired/></td>
+				</tr>
+				<tr>
+					<th>15</th>
+					<td class="dc-form-required">吳若湘</td>
+					<td><input type="radio" name="clr15" value="clr15-r" reqired/></td>
+					<td><input type="radio" name="clr15" value="clr15-o" reqired/></td>
+					<td><input type="radio" name="clr15" value="clr15-y" reqired/></td>
+					<td><input type="radio" name="clr15" value="clr15-g" reqired/></td>
+					<td><input type="radio" name="clr15" value="clr15-b" reqired/></td>
+					<td><input type="radio" name="clr15" value="clr15-p" reqired/></td>
+					<td><input type="radio" name="clr15" value="clr15-k" reqired/></td>
+					<td><input type="radio" name="clr15" value="clr15-w" reqired/></td>
+				</tr>
+				<tr>
+					<th>16</th>
+					<td class="dc-form-required">李若瑜</td>
+					<td><input type="radio" name="clr16" value="clr16-r" reqired/></td>
+					<td><input type="radio" name="clr16" value="clr16-o" reqired/></td>
+					<td><input type="radio" name="clr16" value="clr16-y" reqired/></td>
+					<td><input type="radio" name="clr16" value="clr16-g" reqired/></td>
+					<td><input type="radio" name="clr16" value="clr16-b" reqired/></td>
+					<td><input type="radio" name="clr16" value="clr16-p" reqired/></td>
+					<td><input type="radio" name="clr16" value="clr16-k" reqired/></td>
+					<td><input type="radio" name="clr16" value="clr16-w" reqired/></td>
+				</tr>
+				<tr>
+					<th>17</th>
+					<td class="dc-form-required">周莉穎</td>
+					<td><input type="radio" name="clr17" value="clr17-r" reqired/></td>
+					<td><input type="radio" name="clr17" value="clr17-o" reqired/></td>
+					<td><input type="radio" name="clr17" value="clr17-y" reqired/></td>
+					<td><input type="radio" name="clr17" value="clr17-g" reqired/></td>
+					<td><input type="radio" name="clr17" value="clr17-b" reqired/></td>
+					<td><input type="radio" name="clr17" value="clr17-p" reqired/></td>
+					<td><input type="radio" name="clr17" value="clr17-k" reqired/></td>
+					<td><input type="radio" name="clr17" value="clr17-w" reqired/></td>
+				</tr>
+				<tr>
+					<th>18</th>
+					<td class="dc-form-required">施凱云</td>
+					<td><input type="radio" name="clr18" value="clr18-r" reqired/></td>
+					<td><input type="radio" name="clr18" value="clr18-o" reqired/></td>
+					<td><input type="radio" name="clr18" value="clr18-y" reqired/></td>
+					<td><input type="radio" name="clr18" value="clr18-g" reqired/></td>
+					<td><input type="radio" name="clr18" value="clr18-b" reqired/></td>
+					<td><input type="radio" name="clr18" value="clr18-p" reqired/></td>
+					<td><input type="radio" name="clr18" value="clr18-k" reqired/></td>
+					<td><input type="radio" name="clr18" value="clr18-w" reqired/></td>
+				</tr>
+				<tr><th>19</th>
+					<td class="dc-form-required">紅語棠</td>
+					<td><input type="radio" name="clr19" value="clr19-r" reqired/></td>
+					<td><input type="radio" name="clr19" value="clr19-o" reqired/></td>
+					<td><input type="radio" name="clr19" value="clr19-y" reqired/></td>
+					<td><input type="radio" name="clr19" value="clr19-g" reqired/></td>
+					<td><input type="radio" name="clr19" value="clr19-b" reqired/></td>
+					<td><input type="radio" name="clr19" value="clr19-p" reqired/></td>
+					<td><input type="radio" name="clr19" value="clr19-k" reqired/></td>
+					<td><input type="radio" name="clr19" value="clr19-w" reqired/></td>
+				</tr>
+				<tr>
+					<th>20</th>
+					<td class="dc-form-required">陳品妍</td>
+					<td><input type="radio" name="clr20" value="clr20-r" reqired/></td>
+					<td><input type="radio" name="clr20" value="clr20-o" reqired/></td>
+					<td><input type="radio" name="clr20" value="clr20-y" reqired/></td>
+					<td><input type="radio" name="clr20" value="clr20-g" reqired/></td>
+					<td><input type="radio" name="clr20" value="clr20-b" reqired/></td>
+					<td><input type="radio" name="clr20" value="clr20-p" reqired/></td>
+					<td><input type="radio" name="clr20" value="clr20-k" reqired/></td>
+					<td><input type="radio" name="clr20" value="clr20-w" reqired/></td>
+				</tr>
+				<tr>
+					<th>21</th>
+					<td class="dc-form-required">陶志恩</td>
+					<td><input type="radio" name="clr21" value="clr21-r" reqired/></td>
+					<td><input type="radio" name="clr21" value="clr21-o" reqired/></td>
+					<td><input type="radio" name="clr21" value="clr21-y" reqired/></td>
+					<td><input type="radio" name="clr21" value="clr21-g" reqired/></td>
+					<td><input type="radio" name="clr21" value="clr21-b" reqired/></td>
+					<td><input type="radio" name="clr21" value="clr21-p" reqired/></td>
+					<td><input type="radio" name="clr21" value="clr21-k" reqired/></td>
+					<td><input type="radio" name="clr21" value="clr21-w" reqired/></td>
+				</tr>
+				<tr>
+					<th>22</th>
+					<td class="dc-form-required">楊靜渝</td>
+					<td><input type="radio" name="clr22" value="clr22-r" reqired/></td>
+					<td><input type="radio" name="clr22" value="clr22-o" reqired/></td>
+					<td><input type="radio" name="clr22" value="clr22-y" reqired/></td>
+					<td><input type="radio" name="clr22" value="clr22-g" reqired/></td>
+					<td><input type="radio" name="clr22" value="clr22-b" reqired/></td>
+					<td><input type="radio" name="clr22" value="clr22-p" reqired/></td>
+					<td><input type="radio" name="clr22" value="clr22-k" reqired/></td>
+					<td><input type="radio" name="clr22" value="clr22-w" reqired/></td>
+				</tr>
+				<tr>
+					<th>23</th>
+					<td class="dc-form-required">劉宥希</td>
+					<td><input type="radio" name="clr23" value="clr23-r" reqired/></td>
+					<td><input type="radio" name="clr23" value="clr23-o" reqired/></td>
+					<td><input type="radio" name="clr23" value="clr23-y" reqired/></td>
+					<td><input type="radio" name="clr23" value="clr23-g" reqired/></td>
+					<td><input type="radio" name="clr23" value="clr23-b" reqired/></td>
+					<td><input type="radio" name="clr23" value="clr23-p" reqired/></td>
+					<td><input type="radio" name="clr23" value="clr23-k" reqired/></td>
+					<td><input type="radio" name="clr23" value="clr23-w" reqired/></td>
+				</tr>
+				<tr>
+					<th>24</th>
+					<td class="dc-form-required">劉彩琳</td>
+					<td><input type="radio" name="clr24" value="clr24-r" reqired/></td>
+					<td><input type="radio" name="clr24" value="clr24-o" reqired/></td>
+					<td><input type="radio" name="clr24" value="clr24-y" reqired/></td>
+					<td><input type="radio" name="clr24" value="clr24-g" reqired/></td>
+					<td><input type="radio" name="clr24" value="clr24-b" reqired/></td>
+					<td><input type="radio" name="clr24" value="clr24-p" reqired/></td>
+					<td><input type="radio" name="clr24" value="clr24-k" reqired/></td>
+					<td><input type="radio" name="clr24" value="clr24-w" reqired/></td>
+				</tr>
+				<tr>
+					<th>25</th>
+					<td class="dc-form-required">賴沁萱</td>
+					<td><input type="radio" name="clr25" value="clr25-r" reqired/></td>
+					<td><input type="radio" name="clr25" value="clr25-o" reqired/></td>
+					<td><input type="radio" name="clr25" value="clr25-y" reqired/></td>
+					<td><input type="radio" name="clr25" value="clr25-g" reqired/></td>
+					<td><input type="radio" name="clr25" value="clr25-b" reqired/></td>
+					<td><input type="radio" name="clr25" value="clr25-p" reqired/></td>
+					<td><input type="radio" name="clr25" value="clr25-k" reqired/></td>
+					<td><input type="radio" name="clr25" value="clr25-w" reqired/></td>
+				</tr>
+				<tr>
+					<th>26</th>
+					<td class="dc-form-required">薛穎琦</td>
+					<td><input type="radio" name="clr26" value="clr26-r" reqired/></td>
+					<td><input type="radio" name="clr26" value="clr26-o" reqired/></td>
+					<td><input type="radio" name="clr26" value="clr26-y" reqired/></td>
+					<td><input type="radio" name="clr26" value="clr26-g" reqired/></td>
+					<td><input type="radio" name="clr26" value="clr26-b" reqired/></td>
+					<td><input type="radio" name="clr26" value="clr26-p" reqired/></td>
+					<td><input type="radio" name="clr26" value="clr26-k" reqired/></td>
+					<td><input type="radio" name="clr26" value="clr26-w" reqired/></td>
+				</tr>
+			</table>
+		</fieldset>
+		<div class="textarea-outline-x">
+			<textarea class="input-control textarea-outline" name="other" placeholder="其他"></textarea>
+			<label class="input-label">其他</label>
+		</div>
+		<input type="submit" value="送出"/>
+		<input type="reset" value="重新填寫"/>
+	</form>
+</body>
+</html>

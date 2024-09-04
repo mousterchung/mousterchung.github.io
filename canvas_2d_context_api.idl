@@ -1,0 +1,89 @@
+interface CanvasRenderingContext2D{
+	//參考繪製圖形所在的HTMLCanvasElement
+	readonly attribute HTMLCanvasElement canvas;
+	//狀態管理
+	void save();
+	void restore();
+	//轉換
+	void scale(in double x, in double y);
+	void rotate(in double angle);
+	void translate(in double x, in double y);
+	boid transform(in double a, indouble b, in double c, in double d, in double e, in double f);
+	void setTransform(in double a, in double b, in double c, in double d, in double e, in double f);
+	//混合
+	attribute double globalAlpha; //(default (1.0)
+	attribute DOMString globalCompositeOperation; //(default source-over)\
+	//顏色和樣式
+	attribute any strokeStyle; //(default black)
+	attribute any fillStyle; //(default black)
+	CanvasGradient createLinearGradient(in double x0, in dou y0, in double x1, in double y1);
+	CanvasGradient createRadialGradient(in double x0, in dou y0, in double x1, in double y1);
+	CanvasPattern createPattern(in HTMLImageElement image, in DOMString repetition);
+	CanvasPattern createPattern(in HTMLVideoElement image, in DOMString repetition);
+	//線條粗細、線蓋、線條組合
+	attribute double lineWidth; //(default 1)
+	attribute DOMString lineCap; //'butt', 'round', 'square', (default 'butt')
+	attribute DOMString lineJoin; //'round', 'bevel', 'miter' (default 'miter')
+	attribute double miterLimit; //(default 10)
+	//陰影
+	attribute double shadowOffsetX; //(default 0)
+	attribute double shadowOffsetY; //(default 0)
+	attribute double shadowBlur; //(default 0)
+	attribute DOMString shadowColor; //(default transparent black)
+	//繪製和清除矩形區域
+	void clearRect(in double x, in double y, in double w, in double h);
+	void fillRect(in double x, in double y, in double w, in double h);
+	void strokeRect(in double x, in double y, in double w, in double h);
+	//路徑
+	void beginPath();
+	void closePath();
+	void moveTo(in double x, in double y);
+	void lineTo(in double x, in double y);
+	void quadraticCurveTo(in double cpx, in double cpy, in double x, in double y);
+	void bezierCurveTo(in double cp1x, in double cp1y, in double cp2x, in double cp2y, in double x, in double y);
+	void arcTo(in double x1, in double y1, in double x2, in double y2, in double radius);
+	void rect(in double x, in double y, in double w, in double h);
+	void arc(in double x, in double y, in double radius, in double startAngle, in double endAngle, in boolean anticlockwise);
+	void fill();
+	void stroke();
+	void clip();
+	boolean isPointInPath(in double x, in double y);
+	//繪製文字
+	attribute DOMString font; //(default 10px sans-serif)
+	attribute DOMString textAlign; //'start', 'end', 'left', 'right', 'center' (default 'start')
+	attribute DOMString textBaseline; //'top', 'hanging', 'middle', 'alphabetic', 'ideographic', 'bottom (default 'alphabetic')
+	void fillText(in DOMString text, in double x, in double y, in optional double maxWidth);
+	TextMetrics measureText(in DOMString text);
+	//繪製圖片
+	void drawImage(in HTMLImageElement image, in double dx, in double dy, in optional double dw, in double dh);
+	void drawImage(in HTMLImageElement image, in double sx, in double sy, in double sw in double sh, in double dx, in double dy, in double dw in double dh);
+	void drawImage(in HTMLCanvasElement image, in double dx, in double dy, in optional double dw, in double dh);
+	void drawImage(in HTMLCanvasElement image, in double sx, in double sy, in double sw in double sh, in double dx, in double dy, in double dw in double dh);
+	void drawImage(in HTMLVideoElement image, in double dx, in double dy, in optional double dw, in double dh);
+	void drawImage(in HTMLVideoElement image, in double sx, in double sy, in double sw in double sh, in double dx, in double dy, in double dw in double dh);
+	//像素管理
+	ImageData createImageData(in double sw, in double sh);
+	ImageData createImageData(in ImageData imagedata);
+	ImageData getImageData(in double sx, in double sy, in double sw, in double sh);
+	void putImageData(in ImageData imagedata, in double dx, in double dy, in optional double dirtyX, in double dirtyY, in double dirtyWidth, in double dirtyHeight);
+};
+interface CanvasGradient{
+	//opaque object
+	void addColorStop(in double offset, in DOMString color);
+};
+interface CanvasPattern{
+	//opaque object
+};
+interface TextMetrics{
+	readonly attribute double width;
+};
+interface ImageDataP
+	readonly attribute unsigned long width;
+	readonly attribute unsigned long height;
+	readonly attribute CanvasPixelArray data;
+};
+interface CanvasPixelArray{
+	readonly attribute unsigned long length;
+	getter octet (in unsigned long index);
+	setter void (in unsigned long index, in octet value);
+};

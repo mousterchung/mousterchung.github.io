@@ -1,0 +1,19 @@
+Vendor Prefix	In Use	Layout Engine	intro in book
+-ah-		y	Formatter
+-apple-		y	WebKit
+-atsc-
+-epub-		y	WebKit
+-fx-		y
+-hp-
+-khtml-		y	KHTML/Webkit	n*
+-moz-		y	Gecko		y
+-ms-		y	Trident/MSHTML	y
+mso-			Office
+-o-		y	Presto		y
+prince-		y	Prince
+-rim-			WebKit
+-ro-		y	MARTHA
+-tc-
+-wap-		y	Presto
+-webkit-	y	WebKit/Blink	y
+-xv-		n	Presto		n*

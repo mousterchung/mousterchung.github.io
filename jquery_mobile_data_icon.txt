@@ -1,0 +1,50 @@
+action
+alert		警示
+arrow-d		向下箭頭
+arrow-d-l
+arrow-d-r
+arrow-l		向左箭頭
+arrow-r		向右箭頭
+arrow-u		向上箭頭
+arrow-u-l
+arrow-u-r
+audio
+back		後退
+bars
+bullets
+calendar
+camera
+carad-d
+carat-l
+carat-r
+carat-u
+check		核可
+clock
+cloud
+comment
+delete		刪除
+edit
+eye
+forbidden
+forward		前進
+gear		齒輪
+grid		格子
+heart
+home		首頁
+info		資訊
+location
+lock
+mail
+minus		減號
+navigation
+phone
+plus		加號
+power
+recycle
+refresh		重新整理
+search		搜尋
+shop
+star		星號
+tag
+user
+video

@@ -1,0 +1,10 @@
+/*@example
+ *function animate(timeStamp){
+ *	var progress;
+ *	if(start===null)start=timeStamp;
+ *	progress=timeStamp-start;
+ *	if(/*對progress做一些比較*/){
+ *		requestAnimationFrame(step);
+ *	}
+ *}
+ */

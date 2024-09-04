@@ -1,0 +1,6 @@
+mailto:
+username@mailserver.com[;username@mailserver.com[;...]]
+?subject=主旨
+?cc=副本帳號
+?bcc=密件副本帳號
+?body=文字內容

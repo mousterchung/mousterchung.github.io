@@ -1,0 +1,35 @@
+@charset "UTF-8";
+nav{
+	border-bottom:1px solid #DDDCCC;
+	display:flex;
+	flex-direction:row;
+	justify-content:flex-end;
+}
+nav ul{
+	overflow:hidden;
+	padding:0 0 5px 0;
+	margin:0;
+}
+nav li{
+	float:left;
+	list-style:none;
+	padding:0 5px;
+}
+@media screen and(max-width: 920px){
+	nav{
+		justify-content: space-between;
+	}
+	a{
+		font-size: 25px;
+	}
+}
+@media screen and(max-width: 600px){
+	nav{
+		flex-direction: column;
+		align-items: center;
+	}
+}
+nav{position:sticky;background:white;z-index:100}
+nav:nth-of-type(1){top:0px;}
+nav:nth-of-type(2){top:1.5em;}
+nav:nth-of-type(3){top:3em;}

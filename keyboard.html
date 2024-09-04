@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+<head>
+	<title>Keyboard input</title>
+</head>
+<body>
+	<div id="test">
+	<canvas id="canvas" width="400" height="400"></canvas>
+	<script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+	<script>
+		document.getElementById("test").innerHTML="";
+		$("body").keydown(function(event){
+			document.getElementById("test").innerHTML+=(event.keyCode+"<br>");
+		});
+	</script>
+	</div>
+</body>
+</html>

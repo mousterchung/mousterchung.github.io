@@ -1,0 +1,24 @@
+[Supplemental, NoInterfaceObject]
+interface WindowAnimationTiming{
+	long requestAnimationFrame(in FrameRequestCallback callback);
+	void cancelAnimationFrame(in long handle);
+};
+Window implements WindowAnimationTiming;
+[Callback, NoInterfaceObject]
+interface FrameRequestCallback{
+	void callback(in DOMTimeStamp time);
+};
+/*@example
+ *<script>
+ *var animationStartTime;
+ *function animate(timeStamp){
+ *	document.getElementById('animated'),style,left=(timeStamp-animationStartTime)%500+'px';
+ *	window.requestAnimationFrame(animate);
+ *}
+ *function start(){
+ *	animationStartTime=Date.now();
+ *	window.requestAnimationFrame(animate);
+ *}
+ *</script>
+ *<div onclick="start()" id="animated" style="width:100px;height:100px;background-color:green;position:absolute">Click me!</div>
+ */

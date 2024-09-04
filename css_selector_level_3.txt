@@ -1,0 +1,107 @@
+樣式		含意				明確性與範例
+==========萬用選擇器============================0-0-0
+*		選擇所有元素			*
+==========類型選擇器============================0-0-1
+E		選擇E類型的元素			em
+						strong
+==========類別選擇器============================0-1-0
+.myClass	選擇類別清單包含myClass類別的所	.myClass
+		有元素
+==========ID選擇器==============================1-0-0
+#myId		選擇ID等於myID的元素		#myId
+==========選擇器================================0-0-0
+E F		選擇E元素的後代元素F(無論是否為	ol li
+		直接子系)			tr td
+E>F		選擇E元素的直接子系後代F	ol>li
+						thead>tr
+E+F		如果E元素與F元素有同樣的父元素	h1+p
+		，選擇E元素後面的F元素		tr.current+tr
+E~F		選擇所有在E元素後面，與E元素有	li:first-child~li
+		同一個父元素的F元素
+==========屬性選擇器============================0-1-0
+E[attr]		選擇具備【attr】屬性的E元素，無	input[type]
+		論其屬性值為何
+E[attr="val"]	選擇【attr】屬性值為【val】的E	input[type="checkbox"]
+		元素
+E[attr~="val"]	選擇【attr】屬性值是一串以空格	img[alt~="figure"]
+		分隔的值，其中有一個是【val】的
+		E元素
+E[attr^="val"]	選擇【attr】屬性值是以【val】字	a[href^="mailto:"]
+		串開頭的E元素
+E[attr$="val"]	選擇【attr】屬性值是以【val】字	a[href$=".pdf"]
+		串結尾的E元素
+E[attr*="val"]	選擇【attr】屬性值包含子字串【	a[href*="://"]
+		val】的E元素			a[href*="twitter.com"]
+E[attr|="val"]	選擇【attr】屬性值等於【val】，	html[lant|="en"]
+		或以【val】開頭加上一個連字號的
+		E元素
+==========結構虛擬類別==========================0-1-0
+E:first-child	選擇第一個子元素E元素		h1:first-child
+E:last-child	選擇最後一個子元素E元素		p:last-child
+E:only-child	選擇唯一的子元素E元素		li:only-child
+E:first-of-type	選擇該類型的第一個E元素，不需要	li:first-of-type
+		是第一個子元素
+E:last-of-type	選擇該類型的最後一個E元素，不需	li:last-of-type
+		要是最後一個子元素
+E:only-of-type	選擇子元素裡面，唯一屬於該類型	h1:only-of-type
+		的E元素，不需要是唯一的子元素
+E:nth-child(n)	選擇第n個子元素E元素(一或多個)	tr:nth-child(odd)
+		，其中n可為一個整數、一個an+b的
+		方程式(其中a是乘數，b是為移值)
+		，或關鍵字even或odd
+E:nth-last-	選擇倒數第n個子元素E元素	li:nth-last-child(5)
+child(n)
+E:nth-of-	選擇第n個同類型的同級元素E元素	th:nth-of-type(2)
+type(n)		(有同一個父元素)
+E:nth-last-of	選擇由最後一個E算起，第n個E類型
+type(n)		同級元素
+E:root		選擇文件的根元素E，它一定是HTML	html:root
+		文件的html元素
+E:empty		選擇空的E元素，在它裡面除了註解	p:empty
+		之外沒有其他子元素；如果元素裡
+		面有一個空格，它就不是空的
+==========連結、使用者動作及UI元素狀態虛擬類別==0-1-0
+E:link		link虛擬類別會在超連結E尚未被造	a:link
+E:visited	訪(:link)或已被造訪(:visited)的	a:visited
+		情況下匹配它
+E:active	在使用者操作的過程，當元素被使	a:active
+E:hover		用、被滑鼠游標一道上面、或被聚	img:hover
+E:focus		焦時，使用者動作虛擬類別會選擇	input:focus
+		E元素
+E:enabled	選擇使用者介面元素E，指定啟用或	input:enabled
+E:disabled	停用				select:disabled
+E:checked	選擇已被璇取的單選按鈕或確認方	input[type="radio"]:checked
+		塊等使用者介面元素E
+E:default	選擇一組相似元素的預設值E元素，	option:default
+		例如在網頁載入時，預設選取的選項
+E:valid		選擇值是valid或invalid的E元素，	input:valid
+E:invalid	例如符合輸入項的pattern屬性或資	input:invalid
+		料類型與否
+E:in-range	選擇的E元素有範圍限制，例如數字	input:in-range
+E:out-of-range	輸入類型中，具有最小值與最大值	input:out-of-range
+		的範圍輸入類型；而且該值為:in
+		-range或:out-of-range之一
+E:required	選擇:required或:optional的E表單	input:required
+E:optional	欄位元素			input:optional
+E:read-only	選擇內容無法讓使用者更改的(	input:read-only
+E:read-write	:read-only)，或可讓使用者更改的	input:read-write
+		(:read-write)(例如文字輸入欄位)
+		E元素
+==========Target and Language===================
+E:target	E元素是被URI引用的目標		div:target
+E:lang(fr)	使用fr語言的E元素類型(文件語言	p:lang(fr)
+		指定語言的確定方式
+==========否定==================================?-?-?
+E:not(exclude)	選擇所有不符合選擇棄exclude的E	div:target
+		元素；:not沒有明確性優先權，而	.foo:not(div)
+		是由參數的內容來提高優先權
+==========虛擬類別==============================0-0-1
+E::first-line	選擇E元素的第一行格式化內容	p::first-line
+E::first-letter	選擇E元素的第一個格式化字母	p::first-letter
+E::before	在E元素之前加入內容，並選擇那個	div::before
+		內容
+E::after	在E元素的內容後面加入內容，並選	div::after
+		則那個內容
+E::selection	未被列入目前的規格，他會選擇目	*::selection
+		前被使用者選取或高量顯示的E元素	*::-moz-selection
+		內容

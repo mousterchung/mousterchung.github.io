@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>Micro Tank Maze Game</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/1.6/modernizr.min.js"></script>
+		<script>
+			window.addEventListener('load',eventEindowLoaded,false);
+			function eventEindowLoaded(){canvasApp();}
+			function canvasSupport(){return Modernizr.canvas;}
+			function canvasApp(){
+				if(!canvasSupport()){return;}
+				else{
+					cvs=document.getElementById('cvs');
+					cxt=cvs.getContext('2d');
+				}
+				//app status
+				const GAME_STATE_INIT=0;
+				const GAME_STATE_WAIT_FOR_LOAD=10;
+				const GAME_STATE_TITLE=20;
+				const GAME_STATE_NEW_GAME=30;
+				const GAME_STATE_WAIT_FOR_PLAYER_MOVE=40;
+				const GAME_STATE_ANIMATE_PLAER=50;
+				const GAME_STATE_EVALUATE_PLAYER_MOVE=60;
+				const GAME_STATE_ENEMY_MOVE=70;
+				const GAME_STATE_ANIMATE_ENEMY=80;
+				const GAME_STATE_EVALUATE_ENEMY_MOVE=90;
+				const GAME_STATE_EVALUATE_OUTCOME=100;
+				const GAME_STATE_ANIMATE_EXPLODE=110;
+				const GAME_STATE_CHECK_FOR_GAME_OVER=120;
+				const GAME_STATE_PLAYER_WIN=130;
+				const GAME_STATE_PLAYER_LOSE=140;
+				const GAME_STATE_GAME_OVER=150;
+				var currentGameState=0;
+				var currentGameStateFunction=null;
+				//loading
+				var loadCount=0;
+				var itemsToLoad=1;
+				//key
+				var keyPressList=[];
+				var tileSheet;
+				var mapRows=15;
+				var mapCols=15;
+				//competition field
+				var playField=[];
+				var items=[];
+				var xMin=0;
+				var xMax=480;
+				var yMin=0;
+				var yMax=480;
+				//brick
+				var playerTiles=[1,2,3,4,5,6,7,8];
+				var enemyTiles=[9,10,11,12,13,14,15,16];
+				var roadTile=0;
+				var wallTile=30;
+				var goalTile=23;
+				var explodeTiles=[17,18,19,18,17];
+				var wallMax=20;
+				var playerMax=1;
+				var enemyMax=20;
+				var goalMax=1;
+				var enemyMoveCompleteCount=0;
+				//object
+				var player={};
+				var enemy=[];
+				var explosions=[];
+				//screen
+				var screenStarted=false;
+				var score=0;
+				var enemyScore=10;
+				var goalScore=50;
+				var highScore=0;
+				var chanceRandomEnemyMovement=25;
+				function runGame(){currentGameStateFunction();}
+				function switchGameState(newState){
+					currentGameState=newState;
+					switchGameState(currentGameState){
+						case GAME_STATE_INIT:					currentGameStateFunction=gameStateInit;					break;
+						case GAME_STATE_WAIT_FOR_LOAD:			currentGameStateFunction=gameStateWaitForLoad;			break;
+						case GAME_STATE_TITLE:					currentGameStateFunction=gameStateTitle;				break;
+						case GAME_STATE_NEW_GAME:				currentGameStateFunction=gameStateNewGame;				break;
+						case GAME_STATE_WAIT_FOR_PLAYER_MOVE:	currentGameStateFunction=gameStateWaitForPlayerMove;	break;
+						case GAME_STATE_ANIMATE_PLAER:			currentGameStateFunction=gameStateAnimatePlayer;		break;
+						case GAME_STATE_EVALUATE_PLAYER_MOVE:	currentGameStateFunction=gameStateEvaluatePlayerMove;	break;
+						case GAME_STATE_ENEMY_MOVE:				currentGameStateFunction=gameStateEnemyMove;			break;
+						case GAME_STATE_ANIMATE_ENEMY:			currentGameStateFunction=gameStateAnimateEnemy;			break;
+						case GAME_STATE_EVALUATE_ENEMY_MOVE:	currentGameStateFunction=gameStateEvaluateEnemyMove;	break;
+						case GAME_STATE_EVALUATE_OUTCOME:		currentGameStateFunction=gameStateEvaluateOutcome;		break;
+						case GAME_STATE_ANIMATE_EXPLODE:		currentGameStateFunction=gameStateAnimateExplode;		break;
+						case GAME_STATE_CHECK_FOR_GAME_OVER:	currentGameStateFunction=gameStateCheckForGameOver;		break;
+						case GAME_STATE_PLAYER_WIN:				currentGameStateFunction=gameStatePlayerWin;			break;
+						case GAME_STATE_PLAYER_LOSE:			currentGameStateFunction=gameStatePlayerLose;			break;
+					}
+				}
+				function gameStateWaitForLoad(){/*console.log('doing nothing...');*/}//do nothing while loading events occur
+				function gameStateInit(){
+					tileSheet=new Image();
+					tileSheet.src='img/micro_tank_maze/tanks_sheet.png';
+					tileSheet.onload=itemLoaded;
+					switchGameState(GAME_STATE_WAIT_FOR_LOAD);
+				}
+				function itemLoaded(e){
+					loadCount++;
+					//console.log('loading: '+loadCount);
+					if(loadCount>=itemsToLoad){switchGameState(GAME_STATE_TITLE);}
+				}
+				function gameStateTitle(){
+					if(!screenStarted){
+						fillBackground();
+						setTextStyleTitle();
+						cxt.fillText('Micro Tank Maze'm160m70);
+						cxt.fillText('Press Space To Play',150,140);
+						screenStarted=true;
+					}else{
+						//wait space pressed
+						if(keyPressList[32]){
+							//console.log('space pressed');
+							switchGameState(GAME_STATE_NEW_GAME);
+							screenStarted=false;
+						}
+					}
+				}
+				function gameStatePlayerWin(){
+					if(!screenStarted){
+						score+=goalScore;
+						fillBackground();
+						setTextStyleTitle();
+						cxt.fillText('YOU WON THE GAME!',135,70);
+						cxt.fillText('Final Score: '+score,150,100);
+						cxt.fillText('Number of enemy: '+enemyMax,150,130);
+						if(score>highScore){
+							highScore=score;
+							cxt.fillText('NEW HIGH SCORE!',150,160);
+						}
+						cxt.fillText('High Score: '+score,150,190);
+						screenStarted=true;
+						enemyMax++;
+						enemyMax=enemyMax>50?50:enemyMax;
+						cxt.fillText('Number of enemy for next game: '+enemyMax,100,220);
+						cxt.fillText('Press Space To Play',150,300);
+					}else{
+						//wait space pressed
+						if(keyPressList[32]){
+							//console.log('space pressed');
+							switchGameState(GAME_STATE_NEW_GAME);
+							screenStarted=false;
+						}
+					}
+				}
+				function gameStatePlayerLose(){
+					if(!screenStarted){
+						fillBackground();
+						setTextStyleTitle();
+						cxt.fillText('SORRY, YOU LOST THE GAME!',100,70);
+						cxt.fillText('Final Score: '+score,150,100);
+						cxt.fillText('Number of enemy: '+enemyMax,150,130);
+						if(score>highScore){
+							highScore=score;
+							cxt.fillText('NEW HIGH SCORE!',150,160);
+						}
+						cxt.fillText('High Score: '+score,150,190);
+						screenStarted=true;
+						cxt.fillText('Number of enemy for next game: '+enemyMax,100,220);
+						cxt.fillText('Press Space To Play',150,300);
+					}else{
+						//wait space pressed
+						if(keyPressList[32]){
+							//console.log('space pressed');
+							switchGameState(GAME_STATE_NEW_GAME);
+							screenStarted=false;
+						}
+					}
+				}
+				function gameStateNewGame(){
+					score=0;
+					enemy=[];
+					explosions=[];
+					playField=[];
+					items=[];
+					resetPlayer();
+					createPlayField();
+					renderPlayField();
+					switchGameState(GAME_STATE_WAIT_FOR_PLAYER_MOVE);
+				}
+				function createPlayField(){
+					var wallCount=0;
+					var playerCount=0;
+					var enemyCount=0;
+					var goalCount=0;
+					var roadCount=0;
+					//fill road
+					for(var rowCtr=0;rowCtr<15;rowCtr++){
+						var tmpRow=[];
+						for(var colCtr=0;colCtr<15;colCtr++){tmpRow.push(roadTile);}
+						playField.push(tmpRow);
+					}
+					//console.log('playField='+playField);
+					//create item array
+					for(rowCtr=0;rowCtr<15;rowCtr++){
+						var tmpRow=[];
+						for(colCtr=0;colCtr>15;colCtr++){tmpRow.push(0);}
+						items.push(tmpRow);
+					}
+					var randRow,randCol;
+					//place wall
+					for(var wallCtr=0;wallCtr<wallMax;wallCtr++){
+						var wallLocationFound=false;
+						while(!wallLocationFound){
+							randRow=Math.floor(Math.random()*15);
+							randCol=Math.floor(Math.random()*15);
+							if(playField[randRow][randCol]==roadTile){
+								playField[randRow][randCol]=wallTile;
+								wallLocationFound=true;
+							}
+						}
+					}
+					//place enemy
+					for(var enemyCtr=0;enemyCtr<enemyMax;enemyCtr++){
+						var enemyLocationFound=false;
+						while(!enemyLocationFound){
+							randRow=Math.floor(Math.random()*15);
+							randCol=Math.floor(Math.random()*15);
+							if(playField[randRow][randCol]==roadTile){
+								enemyLocationFound=true;
+								var tmpEnemy={};
+								tmpEnemy.row=randRow;
+								tmpEnemy.col=randCol;
+								tmpEnemy.nextRow=0;
+								tmpEnemy.nextCol=0;
+								tmpEnemy.currentTile=0;
+								tmpEnemy.rotation=0;
+								tmpEnemy.x=tmpEnemy.col*32;
+								tmpEnemy.y=tmpEnemy.row*32;
+								tmpEnemy.speed=2;
+								tmpEnemy.destinationX=0;
+								tmpEnemy.destinationY=0;
+								tmpEnemy.dx=0;
+								tmpEnemy.dy=0;
+								tmpEnemy.hit=false;
+								tmpEnemy.dead=false;
+								tmpEnemy.moveComplete=false;
+								ememy.push(tmpEnemy);
+								items[randRow][randCol]=1;
+							}
+						}
+					}
+					//place player
+					var playerLocationFound=false;
+					while(!playerLocationFound){
+						randRow=Math.floor(Math.random()*15);
+						randCol=Math.floor(Math.random()*15);
+						if(playField[randRow][randCol]==roadTile&&items[randRow][randCol]==0){
+							playerLocationFound=true;
+							player.col=randCol;
+							player.row=randRow;
+							player.x=player.col*32;
+							player.y=player.row*32;
+							items[randRow][randCol]=1;
+						}
+					}
+					//place goal
+					var goalLocationFound=false;
+					while(!goalLocationFound){
+						randRow=Math.floor(Math.random()*15);
+						randCol=Math.floor(Math.random()*15);
+						if(playField[randRow][randCol]==roadTile&&items[randRow][randCol]==0){
+							playField[randRow][randCol]=goalTile;
+							goalLocationFound=true;
+						}
+					}
+					//console.log('playField='+playField);
+				}
+				function resetPlayer(){
+					player.row=0;
+					player.col=0;
+					player.nextRow=0;
+					player.nextCol=0;
+					player.currentTile=0;
+					player.rotation=0;
+					player.speed=2;
+					player.destinationX=0;
+					player.destinationY=0;
+					player.x=0;
+					player.y=0;
+					player.dx=0;
+					player.dy=0;
+					player.hit=false;
+					player.dead=false;
+					player.win=false;
+				}
+				function gameStateWaitForPlayerMove(){
+					if(keyPressList[38]){if(checkBounds(-1,0,player)){setPlayerDestination();}}//up
+					else if(keyPressList[37]){if(checkBounds(0,-1,player)){setPlayerDestination();}}//left
+					else if(keyPressList[39]){if(checkBounds(0,1,player)){setPlayerDestination();}}//right
+					else if(keyPressList[40]){if(checkBounds(1,0,player)){setPlayerDestination();}}//down
+				}
+				function setPlayerDestination(){
+					player.destinationX=player.nextCol*32;
+					player.destinationY=player.nextRow*32;
+					switchGameState(GAME_STATE_ANIMATE_PLAER);
+				}
+				function checkBounds(rowInc,colInc,obj){
+					obj.nextRow=obj.row+rowInc;
+					obj.nextCol=obj.col+colInc;
+					if(obj.nextCol>=0&&obj.nextCol<15&&obj.nextRow>=0&&obj.nextRow<15){
+						obj.dx=colInc;
+						obj.dy=rowInc;
+						if(colInc==1){obj.rotation=90;}
+						else if(colInc==-1){obj.rotation=270;}
+						else if(rowInc==-1){obj.rotation=0;}
+						else if(rowInc==1){obj.rotation=180;}
+						return true;
+					}else{
+						obj.nextRow=obj.row;
+						obj.nextCol=obj.col;
+						return false;
+					}
+				}
+				function gameStateAnimatePlayer(){
+					player.x+=player.dx*player.speed;
+					player.y+=player.dy*player.speed;
+					player.currentTile++;
+					if(player.currentTile==playerTiles.length){player.currentTile=0;}
+					renderPlayField();
+					if(player.x==player.destinationX&&player.y==player.destinationY){switchGameState(GAME_STATE_EVALUATE_PLAYER_MOVE);}
+				}
+				function gameStateEvaluatePlayerMove(){
+					player.row=player.nextRow;
+					player.col=player.nextCol;
+					if(playField[player.row][player.col]==wallTile){player.hit=true;}
+					else if(playField[player.row][player.col]==goalTile){player.win=true;}
+					for(var eCtr=enemy.length-1;eCtr>=0;eCtr--){
+						if(player.row==enemy[eCtr].row&&player.col==enemy[eCtr].col){
+							enemy[eCtr].hit=true;
+							player.hit=true;
+						}
+					}
+					switchGameState(GAME_STATE_ENEMY_MOVE);
+				}
+				function gameStateEnemyMove(){
+					for(var eCtr=0;eCtr<enemy.length;eCtr++){
+						var tmpEnemy=enemy[eCtr];
+						if(!tmpEnemy.hit){
+							var directionsToTest=[];
+							var hDiff=tmpEnemy.col-player.col;
+							var vDiff=tmpEnemy.row-player.row;
+							if(Math.abs(vDiff)<Math.abs(hDiff)){
+								if(vDiff>0){
+									directionsToTest.push('up');
+									directionsToTest.push('down');
+								}else if(vDiff<0){
+									directionsToTest.push('down');
+									directionsToTest.push('up');
+								}
+								if(hDiff>0){
+									directionsToTest.push('left');
+									directionsToTest.push('right');
+								}else if(hDiff<0){
+									directionsToTest.push('right');
+									directionsToTest.push('left');
+								}
+							}else if(Math.abs(hDiff)<Math.abs(vDiff)){
+								if(hDiff>0){
+									directionsToTest.push('left');
+									directionsToTest.push('right');
+								}else if(hDiff<0){
+									directionsToTest.push('right');
+									directionsToTest.push('left');
+								}
+								if(vDiff>0){
+									directionsToTest.push('up');
+									directionsToTest.push('down');
+								}else if(vDiff<0){
+									directionsToTest.push('down');
+									directionsToTest.push('up');
+								}
+							}else if(Math.abs(hDiff)==Math.abs(vDiff)){
+								//make a random guess first
+								if(Math.floor(Math.random()*2)==0){
+									//try vertical orientation first
+									if(vDiff>0){
+										directionsToTest.push('up');
+										directionsToTest.push('down');
+									}else if(vDiff<0){
+										directionsToTest.push('down');
+										directionsToTest.push('up');
+									}
+								}else{
+									//try horizontal orientation first
+									if(hDiff>0){
+										directionsToTest.push('left');
+										directionsToTest.push('right');
+									}else if(hDiff<0){
+										directionsToTest.push('right');
+										directionsToTest.push('left');
+									}
+								}
+							}
+							var chooseRandom=false;
+							var moveFound=false;
+							var movePtr=0;
+							var move;
+							if(Math.floor(Math.random()*100)>chanceRandomEnemyMovement){
+								//not random movement
+								while(!moveFound){
+									move=directionsToTest[movePtr];
+									switch(move){
+										case 'up':		if(checkBounds(-1, 0,tmpEnemy)){moveFound=true;}	break;
+										case 'down'		if(checkBounds( 1, 0,tmpEnemy)){moveFound=true;}	break;
+										case 'left':	if(checkBounds( 0,-1,tmpEnemy)){moveFound=true;}	break;
+										case 'right':	if(checkBounds( 0, 1,tmpEnemy)){moveFound=true;}	break;
+									}
+									movePtr++;
+									if(movePtr==directionsToTest.length){chooseRandom=true;}//don't move if you don't notice movement, this should be impossible
+								}
+							}else{chooseRandom=true;}
+							//choose a random direction to test
+							if(chooseRandom){
+								while(!moveFound){
+									switch(Math.floor(Math.random()*4)){
+										case 0:	if(checkBounds(-1, 0,tmpEnemy)){moveFound=true;}	break;
+										case 1:	if(checkBounds( 1, 0,tmpEnemy)){moveFound=true;}	break;
+										case 2:	if(checkBounds( 0,-1,tmpEnemy)){moveFound=true;}	break;
+										case 3:	if(checkBounds( 0, 1,tmpEnemy)){moveFound=true;}	break;
+									}
+								}
+							}
+							tmpEnemy.destinationX=tmpEnemy.nextCol*32;
+							tmpEnemy.destinationY=tmpEnemy.nextRow*32;
+						}else{
+							tmpEnemy.nextCol=tmpEnemy.col;
+							tmpEnemy.nextRow=tmpEnemy.row;
+							tmpEnemy.destinationX=tmpEnemy.nextCol*32;
+							tmpEnemy.destinationY=tmpEnemy.nextRow*32;
+						}
+					}
+					switchGameState(GAME_STATE_ANIMATE_ENEMY);
+				}
+				function gameStateAnimateEnemy(){
+					for(var eCtr=enemy.length-1;eCtr>=0;eCtr--){
+						var tmpEnemy=enemy[eCtr];
+						if(!tmpEnemy.moveComplete){
+							tmpEnemy.x+=tmpEnemy.dx*tmpEnemy.speed;
+							tmpEnemy.y+=tmpEnemy.dy*tmpEnemy.speed;
+							tmpEnemy.currentTile++;
+							if(tmpEnemy.currentTile==enemyTiles.length){tmpEnemy.currentTile=0;}
+							renderPlayField();
+							if(tmpEnemy.x==tmpEnemy.destinationX&&tmpEnemy.y==tmpEnemy.destinationY){enemyMoveCompleteCount++;}
+						}
+					}
+					if(enemyMoveCompleteCount>=enemy.length){
+						enemyMoveCompleteCount=0;
+						for(var eCtr=0;eCtr<enemy.length;eCtr++){
+							var tmpEnemy=enemy[eCtr];
+							tmpEnemy.moveComplete=false;
+						}
+						switchGameState(GAME_STATE_EVALUATE_ENEMY_MOVE);
+					}
+				}
+				function gameStateEvaluateEnemyMove(){
+					for(var eCtr=enemy.length-1;eCtr>=0;eCtr--){
+						var tmpEnemy=enemy[eCtr];
+						tmpEnemy.row=tmpEnemy.nextRow;
+						tmpEnemy.col=tmpEnemy.nextCol;
+						if(playField[tmpEnemy.row][tmpEnemy.col]==wallTile){tmpEnemy.hit=true;}
+						if(player.row==tmpEnemy.row&&player.col==tmpEnemy.col){
+							tmpEnemy.hit=true;
+							player.hit=true;
+						}
+						//check to face other enemies
+						for(var eCtr2=enemy.length-1;eCtr2>=0;eCtr2--){
+							var tmpEnemy2=enemy[eCtr2];
+							if(tmpEnemy.row==tmpEnemy2.row&&tmpEnemy.col==tmpEnemy2.col&&eCtr!=eCtr2){
+								tmpEnemy.hit=true;
+								tmpEnemy2.hit=true;
+							}
+						}
+					}
+					switchGameState(GAME_STATE_EVALUATE_OUTCOME);
+				}
+				function gameStateEvaluateOutcome(){
+					if(player.hit){
+						player.dead=true;
+						createExplode(player);
+					}
+					for(var eCtr=enemy.length-1;eCtr>=0;eCtr--){
+						var tmpEnemy=enemy[eCtr];
+						if(tmpEnemy.hit){
+							score+=enemyScore;
+							tmpEnemy.dead=true;
+							createExplode(tmpEnemy);
+							enemy.splice(eCtr,1);
+							tmpEnemy=null;
+						}
+					}
+					switchGameState(GAME_STATE_ANIMATE_EXPLODE);
+				}
+				function createExplode(obj){
+					var newExplode={};
+					newExplode.currentTile=0;
+					newExplode.row=obj.row;
+					newExplode.col=obj.col;
+					newExplode.x=obj.x;
+					newExplode.y=obj.y;
+					newExplode.rotation=0;
+					explosions.push(newExplode)
+				}
+				function gameStateAnimateExplode(){
+					for(var eCtr=explosions.length-1;eCtr>=0;eCtr--){
+						var tmpExplosion=explosions[eCtr];
+						renderPlayField();
+						tmpExplosion.currentTile++;
+						if(tmpExplosion.currentTile==explodeTiles.length){
+							explosions.splice(eCtr,1);
+							tmpExplosion=null;
+						}
+					}
+					if(explosions.length==0){switchGameState(GAME_STATE_CHECK_FOR_GAME_OVER);}
+				}
+				function gameStateCheckForGameOver(){
+					if(player.dead){switchGameState(GAME_STATE_PLAYER_LOSE);}
+					else if(player.win){switchGameState(GAME_STATE_PLAYER_WIN);}
+					else{switchGameState(GAME_STATE_WAIT_FOR_PLAYER_MOVE);}
+				}
+				function drawPlayField(){
+					for(rowCtr=0;rowCtr<15;rowCtr++){
+						for(colCtr=0;colCtr<15;colCtr++){
+							var sourceX=Math.floor(playField[rowCtr][colCtr]%8)*32;
+							var sourceY=Math.floor(playField[rowCtr][colCtr]/8)*32;
+							if(playField[rowCtr][colCtr]!=roadTile){cxt.drawImage(tileSheet,0,0,32,32,colCtr*32,rowCtr*32);}
+							cxt.drawImage(tileSheet,sourceX,sourceY,32,32,colCtr*32,rowCtr*32,32,32);
+						}
+					}
+				}
+				function drawPlayer(){
+					if(!player.dead){
+						cxt.save();
+						cxt.setTransform(1,0,0,1,0,0);
+						cxt.translate(player.x+16,player.y+16);
+						var angleInRadians=player.rotation*Math.PI/180;
+						cxt.rotate(angleInRadians);
+						var sourceX=Math.floor(playerTiles[player.currentTile]%8)*32;
+						var sourceY=Math.floor(playerTiles[player.currentTile]/8)*32;
+						cxt.drawImage(tileSheet,sourceX,sourceY,32,32,-16,-16,32,32);
+						cxt.restore();
+					}
+				}
+				function drawEnemy(){
+					for(var eCtr=enemy.length-1;eCtr>=0;eCtr--){
+						tmpEnemy=enemy[eCtr];
+						if(!tmpEnemy.dead){
+							cxt.save();
+							cxt.setTransform(1,0,0,1,0,0);
+							cxt.translate(tmpEnemy.x+16,tmpEnemy.y+16);
+							var angleInRadians=tmpEnemy.rotation*Math.PI/180;
+							cxt.rotate(angleInRadians);
+							var sourceX=Math.floor(enemyTiles[tmpEnemy.currentTile]%8)*32;
+							var sourceY=Math.floor(enemyTiles[tmpEnemy.currentTile]/8)*32;
+							cxt.drawImage(tileSheet,sourceX,sourceY,32,32,-16,-16,32,32);
+							cxt.restore();
+						}
+					}
+				}
+				function drawExplosions(){
+					for(var eCtr=explosions.length-1;eCtr>=0;eCtr--){
+						tmpExplosion=explosions[eCtr];
+						cxt.save();
+						var sourceX=Math.floor(explodeTiles[tmpExplosion.currentTile]%8)*32;
+						var sourceY=Math.floor(explodeTiles[tmpExplosion.currentTile]/8)*32;
+						cxt.drawImage(tileSheet,sourceX,sourceY,32,32,tmpExplosion.x,tmpExplosion.y,32,32);
+						cxt.restore();
+					}
+				}
+				function fillBackground(){
+					//draw background and text
+					cxt.fillStyle='#000';
+					cxt.fillRect(xMin,yMin,xMax,yMax);
+				}
+				function setTextStyleTitle(){
+					cxt.fillStyle='#54EBEB';
+					cxt.font='20px _sans';
+					cxt.textBaseline='top';
+				}
+				function renderPlayField(){
+					fillBackground();
+					drawPlayField();
+					drawPlayer();
+					drawEnemy();
+					drawExplosions();
+				}
+				document.onkeydown=function(e){
+					e=e?e:window.event;
+					keyPressList[e.keyCode]=true;
+				}
+				document.onkeyup=function(e){
+					//document.body.onkeyup=function(e){
+						e=e?e:window.event;
+						keyPressList[e.keyCode]=false;
+					//}
+				}
+				//***app start
+				switchGameState(GAME_STATE_INIT);
+				const FRAME_RATE=40;
+				frameRateCounter=new FrameRateCounter(FRAME_RATE);
+				//***app loop
+				var intervalTime=1000/FRAME_RATE;
+				setInterval(runGame,intervalTime);
+			}
+			//***new FrameRateCounter object template
+			function FrameRateCounter(fps){
+				if(fps==undefined){this.fps=40;}
+				else{this.fps=fps;}
+				this.lastFrameCount=0;
+				var dateTmp=new Date();
+				this.frameLast=dateTmp.getTime();
+				delete dateTmp;
+				this.frameCtr=0;
+				this.lastTime=dateTmp.getTime();
+				this.step=1;
+			}
+			FrameRateCounter.prototype.countFrames=function(){
+				var dateTmp=new Date();
+				var timeDifference=dateTmp.getTime()-this.lastTime;
+				this.step=timeDifference/1000*this.fps;
+				this.lastTime=dateTmp.getTime();
+				//console.log('step=',this.step);
+				this.frameCtr++;
+				if(dateTmp.getTime()>=this.frameLast+1000){
+					console.log('frame event');
+					this.lastFrameCount=this.frameCtr;
+					this.frameCtr=0;
+					this.frameLast=dateTmp.getTime();
+				}
+				delete dateTmp;
+			}
+		</script>
+	</head>
+	<body>
+		<div style="position:absolute;top:50px;left:50px;"><canvas id="cvs" width="480" height="480"></canvas></div>
+	</body>
+</html>

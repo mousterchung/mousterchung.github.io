@@ -1,0 +1,10 @@
+all		所有的媒體
+brille		點字顯示
+embossed	點字印表機
+handheld	行動載具
+print		印表機(包含預覽列印)
+projection	投影機等
+speech		音訊合成裝置(螢幕閱讀器screen reader、音訊瀏覽器等)
+screen		螢幕(電腦的顯示器等)
+tty		文字寬度固定的媒體
+tv		電視

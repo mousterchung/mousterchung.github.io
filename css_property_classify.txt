@@ -1,0 +1,176 @@
+類別/屬性名稱			用途
+================================================================================
+動態虛擬類別 (dynamic pseudo-classes)
+--------------------------------------------------------------------------------
+:link				將樣式規則套用到尚未瀏覽的超連結
+:visited			將樣式規則套用到已經瀏覽的超連結
+:hover				將樣式規則套用到指標所指到但尚未點選的元素
+:focus				將樣式規則套用到取得焦點的元素
+:active				將樣式規則套用到所點選的元素
+:enabled*			將樣式規則套用到表單中啟用的欄位
+:disabled*			將樣式規則套用到表單中取消的欄位
+:checked*			將樣式規則套用到表單中核取的選擇鈕或核取方塊
+:indeterminate*			將樣式規則套用到表單中不確定的選擇鈕或核取方塊
+================================================================================
+font property (字型屬性)
+--------------------------------------------------------------------------------
+font-family			指定文字字型
+font-size			指定文字大小
+font-style			指定文字為正常/斜體
+font-variant			指定文字為正常/小型大寫字
+font-weight			指定文字粗細
+line-height			指定行高
+font				字型屬性簡便表示法
+font-stretch*			指定文字延展
+font-size-adjust*		指定字型長寬比
+@font-face*			指定使用伺服器端安裝的字型
+================================================================================
+text property (文字屬性)
+--------------------------------------------------------------------------------
+text-indent			指定首行縮排
+text-align			指定文字對齊方式
+text-decoration			指定文字裝飾(頂向、底線、刪除線、閃爍)
+letter-spacing			指定字母間距
+word-spacing			指定文字間距
+text-transform			指定大小寫轉換方式
+white-space			指定換行、定位點/空白、自動還行的顯示方式
+vertical-align			指定行內層級元素的垂直對齊方式
+text-shadow*			指定文字陰影
+text-decoration-line*		╦指定線條裝飾
+text-decoration-color*		╣
+text-decoration-style*		╣
+text-underline-position*	╝
+text-emphasis-style*		╦指定強調標記
+text-emphasis-color*		╣
+text-emphasis-position*		╣
+text-emphasis*			╝
+================================================================================
+list property (清單屬性)
+--------------------------------------------------------------------------------
+list-style-type			指定項目符號與編號類型
+list-style-image		指定圖片項目符號的圖檔名稱
+list-style-position		指定項目符號與編號位置
+list-style			清單屬性簡便表示法
+================================================================================
+color property (色彩屬性)
+--------------------------------------------------------------------------------
+color				指定前景色彩
+opacity*			指定透明度
+================================================================================
+background property (背景屬性)
+--------------------------------------------------------------------------------
+background-color		指定背景色彩
+background-image		指定背景圖片
+background-repeat		指定背景圖片重複排列方式
+background-position		指定背景圖片從哪個位置開始顯示
+background-attachment		指定背景圖片是否隨內容捲動
+background-clip*		指定背景顯示區域
+background-origin*		指定背景顯示位置基準點
+background-size*		指定背景圖片大小
+background			背景屬性簡便表示法
+================================================================================
+margin property (邊界屬性)
+--------------------------------------------------------------------------------
+margin-top			指定上邊界大小
+margin-bottom			指定下邊界大小
+margin-left			指定左邊界大小
+margin-right			指定右邊界大小
+margin				邊界屬性簡便表示法
+================================================================================
+padding property (留白屬性)
+--------------------------------------------------------------------------------
+padding-top			指定上留白大小
+padding-bottom			指定下留白大小
+padding-left			指定左留白大小
+padding-right			指定右留白大小
+padding				留白屬性簡便表示法
+================================================================================
+border property (框線屬性)
+--------------------------------------------------------------------------------
+border-top-style		指定上框線樣式
+border-bottom-style		指定下框線樣式
+border-left-style		指定左框線樣式
+border-right-style		指定右框線樣式
+border-style			框線樣式屬性簡便表示法
+border-top-color		指定上框線色彩
+border-bottom-color		指定下框線色彩
+border-left-color		指定左框線色彩
+border-right-color		指定右框線色彩
+border-color			框線色彩屬性簡便表示法
+border-top-width		指定上框線寬度
+border-bottom-width		指定下框線寬度
+border-left-width		指定左框線寬度
+border-right-width		指定右框線寬度
+border-width			框線寬度屬性簡便表示法
+border-top			指定上框線樣式、色彩與寬度
+border-bottom			指定下框線樣式、色彩與寬度
+border-left			指定左框線樣式、色彩與寬度
+border-right			指定右框線樣式、色彩與寬度
+border				指定框線樣式、色彩與寬度
+border-top-left-radius*		指定框線左上角顯示成圓角
+border-top-right-radius*	指定框線右上角顯示成圓角
+border-bottom-right-radius*	指定框線右下角顯示成圓角
+border-bottom-left-radius*	指定框線右下角顯示成圓角
+border-radius*			框線顯示成圓角屬性簡便表示法
+border-image*			指定圖片框線
+================================================================================
+positioning property (定位屬性)
+--------------------------------------------------------------------------------
+display				指定顯示層級
+top				指定Block Box的上方位移量
+bottom				指定Block Box的下方位移量
+left				指定Block Box的左方位移量
+right				指定Block Box的右方位移量
+width				指定Block Box的寬度
+height				指定Block Box的高度
+max-width			指定Block Box的最大寬度
+min-width			指定Block Box的最小寬度
+max-height			指定Block Box的最大高度
+min-height			指定Block Box的最小高度
+position			指定Box的定位方式
+float				指定文繞圖
+clear				指定解除文繞圖
+z-index				指定重疊順序
+visibility			指定顯示或隱藏Box
+overflow			指定顯示或隱藏溢出Box的內容
+object-fit*			指定配合Box調整物件大小
+object-position*		指定物件在Box內的顯示位置
+box-shadow*			指定Box陰影
+================================================================================
+table property (表格屬性)
+--------------------------------------------------------------------------------
+caption-side			指定表格標題元素的位置
+border-collapse			指定表格元素的框限模式
+table-layout			指定表格元素的版面編排方式
+empty-cells			指定顯示或隱藏空白儲存格
+border-spacing			指定表格框線間距
+================================================================================
+user interface property (使用者介面屬性)
+--------------------------------------------------------------------------------
+cursor				指定指標樣式
+outline-color*			指定外框線色彩
+outline-style*			指定外框線樣式
+outline-width*			指定外框線寬度
+outline*			外框線屬性簡便表示法
+outline-offset*			指定外框線與框線的間距
+================================================================================
+multicolumn property (多欄位屬性)
+--------------------------------------------------------------------------------
+column-count*			指定欄位數目
+column-width*			指定欄位寬度
+columns*			columncount和column-width屬性的簡便表示法
+column-gap*			指定欄位之間的間距
+column-rule-color*		指定分隔線色彩
+column-rule-style*		指定分隔線樣式
+column-rule-width*		指定分隔線寬度
+column-rule*			分隔線屬性簡便表示法
+break-before*			指定換欄或換頁的位置
+break-after*			指定換欄或換頁的位置
+column-span*			指定跨欄顯示
+column-fill*			指定欄位內容比例
+================================================================================
+transform property (變形屬性)
+--------------------------------------------------------------------------------
+transform*			指定2D、3D變形處理
+transform-origin*		指定2D、3D變形處理的原點
+================================================================================

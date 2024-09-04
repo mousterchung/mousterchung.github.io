@@ -1,0 +1,30 @@
+  說明					  建構方法
+曲面的線框				var wfh=new THREE.WireframeHelper(object)
+頂點的切線				var vth=new THREE.VertexTangentsHelper(object,seze,hex,linewidth)
+頂點的法線				var vnh=new THREE.VertexNormalsHelper(object,size,hex,linewidth)
+面的法線				var fnh=new THREE.FaceNormalsHelper(object,size,hex,linewidth)
+可包圍幾何體之最小長方體-線條繪製	var bh=new THREE.BoxHelper(object)
+可包圍幾何體之最小長方體-三角繪製	var bbh=new THREE.BoundingBoxHelper(object,hex)
+
+@example
+//建立球體
+var sphere=new THREE.SphereGeometry(200,12,12);
+//建立法線材質
+var material=new THREE.MeshNormalMaterial();
+//根據模型和材質建立曲面
+mesh=new THREE.Mesh(sphere,material);
+//將曲面增加到場景中
+scene.add(mesh);
+scene.add(new THREE.VertexNormalsHelper(mesh,10));
+scene.add(new HTREE.FaceNormalsHelper(mesh,10));
+var helper=new THREE.WireframeHelper(mesh);
+helper.material.depthTest=false;
+helper.material.opacity=0.25;
+helper.material.transparent=true;
+scene.add(helper);
+scene.add(new HTREE.BoxHelper(mesh));
+/*
+var help=new THREE.BoundingBoxHelper(mesh,0x000000);
+help.update();
+scene.add(help);
+*/

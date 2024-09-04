@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>Text Arranger Version 3.0</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/1.6/modernizr.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jscolor/2.5.2/jscolor.min.js"></script>
+		<script>
+			window.addEventListener('load',eventWindowLoaded,false);
+			function canvasSupport(){return Modernizr.canvas;}
+			function eventWindowLoaded(){
+				var pattern=new Image();
+				pattern.src='img/text_arranger/texture.jpg';
+				pattern.onload=eventAssetsLoaded;
+			}
+			function eventAssetsLoaded(){canvasApp();}
+			function canvasApp(){
+				var message='your text';
+				var fillOrStroke='fill';
+				var fontSize='50';
+				var fontFace='serif';
+				var textFillColor='#F00';
+				var textAlpha=1;
+				var shadowX=1;
+				var shadowY=1;
+				var shadowBlur=4;
+				var shadowColor='#707070';
+				var textBaseline='middle';
+				var textAlign='center';
+				var fontWeight='normal';
+				var fontStyle='normal';
+				var fillType='colorFill';
+				var textFillColor2='#000';
+				var pattern=new Image();
+				if(!canvasSupport(){return;}
+				var cvs=document.getElementById('cvs');
+				var cxt=cvs.getContext('2d');
+				var formElement=document.getElementById('textBox');
+				formElement.addEventListener('keyup',textBoxcChanged,false);
+				formElement=document.getElementById('fillOrStroke');
+				formElement.addEventListener('change',fillOrStrokeChanged,false);
+				formElement=document.getElementById('textSize');
+				formElement.addEventListener('change',textSizeChanged,false);
+				formElement=document.getElementById('textFillColor');
+				formElement.addEventListener('change',textFillColorChanged,false);
+				formElement=document.getElementById('textFont');
+				formElement.addEventListener('change',textFontChanged,false);
+				formElement=document.getElementById('textBaseline');
+				formElement.addEventListener('change',textBaselineChanged,false);
+				formElement=document.getElementById('textAlign');
+				formElement.addEventListener('change',textAlignChanged,false);
+				formElement=document.getElementById('fontWeight');
+				formElement.addEventListener('change',fontWeightChanged,false);
+				formElement=document.getElementById('fontStyle');
+				formElement.addEventListener('change',fontStyleChanged,false);
+				formElement=document.getElementById('shadowX');
+				formElement.addEventListener('change',shadowXChanged,false);
+				formElement=document.getElementById('shadowY');
+				formElement.addEventListener('change',shadowYChanged,false);
+				formElement=document.getElementById('shadowBlur');
+				formElement.addEventListener('change',shadowBlurChanged,false);
+				formElement=document.getElementById('shadowColor');
+				formElement.addEventListener('change',shadowColorChanged,false);
+				formElement=document.getElementById('textAlpha');
+				formElement.addEventListener('change',textAlphaChanged,false);
+				formElement=document.getElementById('textFillColor2');
+				formElement.addEventListener('change',textFillColor2Changed,false);
+				formElement=document.getElementById('fillType');
+				formElement.addEventListener('change',fillTypeChanged,false);
+				formElement=document.getElementById('cvsWidth');
+				formElement.addEventListener('change',cvsWidthChanged,false);
+				formElement=document.getElementById('cvsHeight');
+				formElement.addEventListener('change',cvsHeightChanged,false);
+				formElement=document.getElementById('cvsStyleWidth');
+				formElement.addEventListener('change',cvsStyleSizeChanged,false);
+				formElement=document.getElementById('cvsStyleHeight');
+				formElement.addEventListener('change',cvsStyleSizeChanged,false);
+				formElement=document.getElementById('createImageData');
+				formElement.addEventListener('change',createImageDataPressed,false);
+				pattern.src='img/text_arranger/texture.jpg'
+				drawScreen();
+				function drawScreen(){
+					//background
+					cxt.globalAlpha=1;
+					cxt.shadowColor='#707070';
+					cxt.shadowOffsetX=0;
+					cxt.shadowOffsetY=0;
+					cxt.shadowBlur=0;
+					cxt.fillStyle='#FFA';
+					cxt.fillRect(0,0,cvs.width,cvs.height);
+					//square
+					cxt.strokeStyle='#000';
+					cxt.strokeRect(5,5,cvs.width-10,cvs.height-10);
+					//text
+					cxt.textBaseline=textBaseline;
+					cxt.textAlign=textAlign;
+					cxt.font=fontWeight+' '+fontStyle+' '+fontSize+'px '+fontFace;
+					cxt.shadowColor=shadowColor;
+					cxt.shadowOffsetX=shadowX;
+					cxt.shadowOffsetY=shadowY;
+					cxt.shadowBlur=shadowBlur;
+					cxt.globalAlpha=textAlpha;
+					var metrics=cxt.measureText(message);
+					var textWidth=metrics.width;
+					var xPosition=(cvs.width/2)-(textWidth/2);
+					var yPosition=(cvs.height/2)
+					var tmpColor;
+					if(fillType=='colorFill'){tmpColor=textFillColor;}
+					else if(fillType=='linearGradient'){
+						var gradient=cxt.createLinearGradient(xPosition,yPosition,fontSize,xPosition+textWidth,yPosition,1);
+						gradient.addColorStop(0,textFillColor);
+						gradient.addColorStop(.6,textFillColor2);
+						tmpColor=gradient;
+					}else if(fillType=='radialGradient'){
+						var gradient=cxt.createRadialGradient(xPosition,yPosition,fontSize,xPosition+textWidth,yPosition,1);
+						gradient.addColorStop(0,textFillColor);
+						gradient.addColorStop(.6,textFillColor2);
+						tmpColor=gradient;
+					}else if(fillType='pattern'){var tmpColor=cxt.creatPattern(pattern,'repeat');}
+					else{tmpColor=textFillColor;}
+					switch(fillOrStroke){ 
+						case'fill':
+							cxt.fillStyle=tmpColor;
+							cxt.fillText(message,xPosition,yPosition);
+							break;
+						case'stroke':
+							cxt.strokeStyle=tmpColor;
+							cxt.strokeText(message,xPosition,yPosition);
+							break;
+						case'both':
+							cxt.fillStyle=tmpColor;
+							cxt.fillText(message,xPosition,yPosition);
+							cxt.strokeStyle='#000';
+							cxt.strokeText(message,xPosition,yPosition);
+							break;
+					}
+				}
+				function textBoxChanged(e){
+					var target=e.target;
+					message=target.value;
+					drawScreen();
+				}
+				function fillOrStrokeChanged(e){
+					var target=e.target;
+					fillOrStroke=target.value;
+					drawScreen();
+				}
+				function textSizeChanged(e){
+					var target=e.target;
+					fontSize=target.value;
+					drawScreen();
+				}
+				function textFillColorChanged(e){
+					var target=e.target;
+					textFillColor='#'+target.value;
+					drawScreen();
+				}
+				function textFontChanged(e){
+					var target=e.target;
+					fontFace=target.value;
+					drawScreen();
+				}
+				function textBaselineChanged(e){
+					var target=e.target;
+					textBaseline=target.value;
+					drawScreen();
+				}
+				function textAlignChanged(e){
+					var target=e.target;
+					textAlign=target.value;
+					drawScreen();
+				}
+				function fontWeightChanged(e){
+					var target=e.target;
+					fontWeight=target.value;
+					drawScreen();
+				}
+				function fontStyleChanged(e){
+					var target=e.target;
+					fontStyle=target.value;
+					drawScreen();
+				}
+				function shadowXChanged(e){
+					var target=e.target;
+					shadowX=target.value;
+					drawScreen();
+				}
+				function shadowYChanged(e){
+					var target=e.target;
+					shadowY=target.value;
+					drawScreen();
+				}
+				function shadowBlurChanged(e){
+					var target=e.target;
+					shadowBlur=target.value;
+					drawScreen();
+				}
+				function shadowColorChanged(e){
+					var target=e.target;
+					shadowColor=target.value;
+					drawScreen();
+				}
+				function textAlphaChanged(e){
+					var target=e.target;
+					textAlpha=target.value;
+					drawScreen();
+				}
+				function textFillColor2Changed(e){
+					var target=e.target;
+					textFillColor2='#'+target.value;
+					drawScreen();
+				}
+				function fillTypeChanged(e){
+					var target=e.target;
+					fillType=target.value;
+					drawScreen();
+				}
+				function cvsWidthChanged(e){
+					var target=e.target;
+					cvs.width=target.value;
+					drawScreen();
+				}
+				function cvsHeightChanged(e){
+					var target=e.target;
+					cvs.height=target.value;
+					drawScreen();
+				}
+				function cvsStyleSizeChanged(e){
+					var styleWidth=document.getElementById('cvsStyleWidth');
+					var styleHeight=document.getElementById('cvsStyleHeight');
+					var styleValue='width:'+styleWidth.value+'px;height:'+styleHeight.value+'px;';
+					cvs.setAttribute('style',styleValue);
+					drawScreen();
+				}
+				function createImageDataPressed(e){
+					var imgDataDisplay=document.getElementById(''imgDataDisplay);
+					imgDataDisplay.value=cvs.toDataURL();
+					window.open(imgDataDisplay.value,'cvsImage','left=0,top=0,width='+cvs.width+',height='+cvs.height+',toolbar=0,resizable=0');
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div style="display:none;"><video id="video" autoplay="true" loop="true"></video></div>
+		<div style="position:absolute;top:50px;left:50px">
+			<canvas id="cvs" width="500" height="300"></canvas>
+			<form>
+				Text: <input id="textBox" placeholder="your text"/><br/>
+				Text Font: 
+					<select id="textFont">
+						<option value="serif">serif</option>
+						<option value="sans-serif">sans-serif</option>
+						<option value="cursive">cursive</option>
+						<option value="fantasy">fantasy</option>
+						<option value="monospace">monospace</option>
+					</select><br/>
+				Font Weight: 
+					<select id="fontWeight">
+						<option value="normal">normal</option>
+						<option value="bold">bold</option>
+						<option value="bolder">bolder</option>
+						<option value="lighter">lighter</option>
+					</select><br/>
+				Font Style: 
+					<select id="fontStyle">
+						<option value="normal">normal</option>
+						<option value="italic">italic</option>
+						<option value="oblique">oblique</option>
+					</select><br/>
+				Text Size: <input type="range" id="textSize" min="0" max="200" step="1" value="50"/><br/>
+				Fill Type: 
+					<select id="fillType">
+						<option value="colorFill">Color Fill</option>
+						<option value="linearGradient">Linear Gradient</option>
+						<option value="radialGradient">Radial Gradient</option>
+						<option value="pattern">pattern</option>
+					</select>
+				Text Color: <input class="color" id="textFillColor" value="FF0000" data-jscolor /><br/>
+				Text Color 2: <input class="color" id="textFillColor2" value="000000" data-jscolor /><br/>
+				Fill Or Stroke: 
+					<select id="fillOrStroke">
+						<option value="fill">fill</option>
+						<option value="stroke">stroke</option>
+						<option value="both">both</option>
+					</select><br/>
+				Text Baseline: 
+					<select id="textBaseline">
+						<option value="middle">middle</option>
+						<option value="top">top</option>
+						<option value="hanging">hanging</option>
+						<option value="alphabetic">alphabetic</option>
+						<option value="ideographic">ideographic</option>
+						<option value="bottom">bottom</option>
+					</select><br/>
+				Text Align: 
+					<select id="textAlign">
+						<option value="center">center</option>
+						<option value="start">start</option>
+						<option value="end">end</option>
+						<option value="left">left</option>
+						<option value="right">right<option>
+					</select><br/>
+				Alpha: <input type="range" id="textAlpha" min="0.0" max="1.0" step="0.01" value="1.0"/><br/>
+				Shadow X: <input type="range" id="shadowX" min="-100" max="100" step="1" value="1"/><br/>
+				Shadow Y: <input type="range" id="shadowY" min="-100" max="100" step="1" value="1"/><br/>
+				Shadow Blur: <input type="range" id="shadowBlur" min="1" max="100" step="1" value="1"/><br/>
+				Shadow Color: <input type="color" id="shadowColor" value="707070"/><br/>
+				Canvas Width: <input type="range" id="cvsWidth" min="0" max="1000" step="1" value="500"/><br/>
+				Canvas Height: <input type="range" id="cvsHeight" min="0" max="1000" step="1" value="300"/><br/>
+				Canvas Style Width: <input type="range" id="cvsStyleWidth" min="0" max="1000" step="1" value="500"/><br/>
+				Canvas Style Height: <input type="range" id="cvsStyleHeight" min="0" max="1000" step="1" value="300"/><br/>
+				<input type="button" id="createImageData" value="Create Image Data"/><br/><br/>
+				<textarea id="imgDataDisplay" rows="10" cols="30"></textarea>
+			</form>
+		</div>
+	</body>
+</html>

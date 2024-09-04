@@ -1,0 +1,13 @@
+page		定義頁面
+header		定義頁面中的頁首
+content		定義頁面中的內容
+footer		定義頁命中的頁尾
+dialog		定義對話方塊
+navbar		定義導覽列
+button		定義按鈕
+controlgroup	定義群組按鈕
+listview	定義檢視清單
+collapsible	定義單一可折疊區域
+collapsible-set	定義組合可折疊區域
+tabs		定義頁籤
+panel		定義側邊欄

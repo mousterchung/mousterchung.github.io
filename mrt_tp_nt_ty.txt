@@ -1,0 +1,13 @@
+<tr id="<!--車站編號-->">
+			<td><!--車站編號--></td>
+			<td><!--中文--></td>
+			<td><!--英文--></td>
+			<td><!--日文--></td>
+			<td><!--韓文--></td>
+			<td class="dc-mrt-yes"></td>
+			<td class="dc-mrt-yes"></td>
+			<td class="dc-mrt-<!--日-->"></td>
+			<td class="dc-mrt-<!--韓-->"></td>
+			<td><!--轉乘--></td>
+			<td><!--備註--></td>
+		</tr>

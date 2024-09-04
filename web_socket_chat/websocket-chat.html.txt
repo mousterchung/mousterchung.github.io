@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>Web Sockets Chat</title>
+</head>
+<body>
+	<h1>Web Sockets Chat</h1>
+	<textarea id="chatlog" readonly cols="30" rows="10"></textarea><hr/>
+	<input id="name" type="text" size="6" placeholder="名字"/>
+	<input id="message" type="text" size="20" placeholder="訊息"/>
+	<button id="submitButton" onclick="submitMessage()" disabled>送信</button>
+	<script>
+		var ws=new WebSocket("ws://localhost/chat");
+		//接收伺服端傳來的訊息
+		ws.onmessage=function(event){
+			//寫到聊天室的Log中
+			document.getElementById("chatlog").textContent+=event.data+"\n";
+		};
+		//與伺服端的通信已經確定
+		ws.onopen=function(event){
+			document.getElementById("submitButton").disabled=false;
+		};
+		//與伺服端的通信已經中斷
+		ws.onclose=function(event){
+			document.getElementById("submitButton").disabled=true;
+			alert("與伺服端的通信已經中斷。");
+		};
+		function submitMessage(){
+			var name=document.getElementById("name").value;
+			var message=document.getElementById("message").value;
+			//傳送訊息給伺服端
+			ws.send(name+">"+message);
+		}
+	</script>
+</body>
+</html>

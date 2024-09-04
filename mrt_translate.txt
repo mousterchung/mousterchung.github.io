@@ -1,0 +1,14 @@
+機場		Airport			空港			공항
+溫泉		Hot Spring		温泉			온천
+連通道		Passage			連絡通路		연결통로
+站外轉乘	Out of Station Transfer	改札外乗換		역외 환승
+
+文湖線		Wenhu Line		文湖線			원후 선
+淡水信義線	Tamsui-Xinyi Line	淡水信義線		단수이-신이 선
+松山新店線	Songshan-Xindian Line	松山新店線		쑹산-신뎬 선
+中和新蘆線	Zhonghe-Xinlu Line	中和新蘆線		중서-신루 선
+板南線		Bannan Line		板南線			반난 선
+環狀線		Circular Line		環狀線			운환 선
+桃園機場捷運	Taoyuan Airport MRT	桃園捷運機場線		타오위안 공항 지하철
+淡海輕軌	Danhai LRT		淡海ライトレール	단하이 경전철
+安坑輕軌	Ankeng LRT		安坑ライトレール	안컹 경전철

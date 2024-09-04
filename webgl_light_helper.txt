@@ -1,0 +1,53 @@
+  名稱	  光源形狀	  備註			  建構方法
+平行光	正方形		發射一條直線表示光線	var dlh=new THREE.DirectionalLightHelper(light,size)
+天頂光	八面體		-			var hlh=new THREE.HemisphereLightHelper(light,sphereSize,arrowLength,domeSize)
+點光源	八面體		-			var plh=new THREE.PointLightHelper(light,sphereSize)
+聚光燈	棱錐體		-			var slh=new THREE.SpotLightHelper(light)
+
+@example
+
+@平行光
+//建立一個平行光
+var light=new THREE.DirectionalLight(0x00ffff);
+//設定光源的位置
+light.position.set(200,100,150);
+//將光源增加到場景中
+scene.add(light);
+//根據平行光光源建立平行光輔助幾何體
+help=new THREE.DirectionalLightHelper(light,50);
+//將輔助幾何體增加到場景中
+scene.add(help);
+
+@天頂光
+//建立天頂光光緣
+var skyLight=new THREE.HemisphereLight(0x00ffff,0xffff00,1);
+
+scene.add(skyLight);
+//根據天頂光光源建立天頂光輔助幾何體
+help=new THREE.HemisphereLightHelper(skyLight,300,5,50);
+//將輔助幾何體增加到場景中
+scene.add(help);
+
+@點光源
+//建立一個點光源
+var pointLight=new THREE.PointLight(0x00ffff);
+//設定光源的位置
+pointLight.position.set(300,300,200);
+//將光源加入場景
+scene.add(pointLight);
+//根據點光源建立點光源輔助幾何體
+help=new THREE.PointLightHelper(pointLight,50);
+//將輔助幾何體增加到場景中
+scene.add(help);
+
+@聚光燈
+//建立一個聚光燈光源
+var spotLight=new THREE.SpotLight(0x00ffff);
+//設定光源的位置
+spotLight.position.set(100,300,100);
+//將光源增加到場景中
+scene.add(spotLight);
+//根據聚光燈光源建立聚光燈輔助幾何體
+help=new THREE.SpotLightHelper(spotLight);
+//將輔助幾何體增加到場景中
+scene.add(help);

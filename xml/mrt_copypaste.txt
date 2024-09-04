@@ -1,0 +1,34 @@
+<station sta-id="newtaipei-lg22" no-service="true">
+			<sta-name-zhtw>（站名未定）</sta-name-zhtw>
+			<sta-name-en>( Station Name Undecided )</sta-name-en>
+			<sta-name-ja>（駅名未定）</sta-name-ja>
+			<sta-name-ko>( 역명 미정 )</sta-name-ko>
+			<transfer>
+			</transfer>
+		</station>
+
+
+
+
+<station sta-id="newtaipei-y02">
+			<sta-name-zhtw>象山</sta-name-zhtw>
+			<sta-name-en>Xiangshan</sta-name-en>
+			<sta-name-ja>象山</sta-name-ja>
+			<sta-name-ko>샹산</sta-name-ko>
+			<transfer>
+			</transfer>
+		</station>
+
+
+
+
+<transfer>
+				<transfer-line transfer-line="taipei-g"></transfer-line>
+				<transfer-line-sta transfer-line-sta=""></transfer-line-sta>
+			</transfer>
+
+
+
+
+ no-service="true"
+ out-of-sta="true"

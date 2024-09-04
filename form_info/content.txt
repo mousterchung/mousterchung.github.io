@@ -1,0 +1,10 @@
+Browser
+	Internet Exploer
+	Microsoft Edge
+	Google Chrome
+	Mozilla Firefox
+	Opera
+	Apple Safari
+OS
+	Windows
+	Mac OS

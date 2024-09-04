@@ -1,0 +1,5 @@
+SlikSVN Sbuversion 用戶端工具
+http://www.sliksvn.com/en/download
+
+安裝 pywebsocket
+svn checkout http://pywebsocket.googlecode.com/svn/trunk/pywebsocket-read-only

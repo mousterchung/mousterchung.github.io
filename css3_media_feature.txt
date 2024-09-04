@@ -1,0 +1,15 @@
+特徵			設定值			說明									min/max prefixes
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+width			長度			瀏覽器畫面的寬度							yes
+height			長度			瀏覽器畫面的高度							yes
+device-width		長度			裝置螢幕的寬度								yes
+device-height		長度			裝置螢幕的高度								yes
+orientation		{portrait|landscape}	裝置的方向(portrait表示垂直，landscaspe表示水平)			no
+aspect-ratio		比例			瀏覽器畫面的長寬比(例如16/9表示16:9)					yes
+device-aspect-ratio	比例			裝置螢幕的長寬比(例如1280/720表示水平及垂直方向為1280像素和720像素)	yes
+color			正整數			彩色裝置每個色彩的位元數目(黑白則為0)					yes
+color-index		正整數			裝置的色彩表中有幾筆色彩						yes
+monochrome		正整數			單色裝置每個像素的位元數目(彩色則為0)					yes
+resolution		解析度			裝置螢幕的解析度，與dpi(dots per inch)或dpcm(dots per centimeter)為單位	yes
+scan			{progressive|interlace}	電視的掃描方式(progressive表示循序式，interlace表示交錯式)		no
+grid			{1|0}			裝置為grid或bitmap(1表示網格，0表示點陣)				no

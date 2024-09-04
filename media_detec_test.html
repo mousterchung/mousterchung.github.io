@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>自動導向</title>
+	<script>
+		var mobile_device=navigator.userAgent.match(/iPad|iPhone|android|htc|sony|padfone|blackberry/i);
+		if(mobile_device==null)document.location.replace("media_detect_test_pc.html");
+		else document.location.replace("midia_detect_test_mobile.html");
+	</script>
+</head>
+<body></body>
+</html>

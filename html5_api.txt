@@ -1,0 +1,16 @@
+Video/Audio API			影音多媒體
+Canvas API			繪圖
+Drag and Drop API		拖放操作
+Editing API			RichText編輯
+Offline Web Applications	離線網頁應用程式
+Web Storage API			網頁儲存
+Web SQL Database		網頁SQL資料庫
+Indexed Database API		索引資料庫
+Ceolocation API			地理定位
+File API			用戶端檔案存取
+Communication API		跨文件通訊
+Web Workers API			背景執行
+Web Sockets API			用戶端與伺服器端的雙向通訊
+XMLHttpRequest Level 2		Ajax技術
+Server-Sent Events		伺服器端的資料推播
+Microdata			為資料，用來自訂元素

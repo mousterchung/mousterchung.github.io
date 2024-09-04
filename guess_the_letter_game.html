@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>Guess The Letter Game</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/1.6/modernizr.min.js"></script>
+		<script>
+			window.addEventListener('load',eventWindowLoaded,false);
+			var Debugger=function(){};
+			Debugger.log=function(message){
+				try{console.log(message);}
+				catch(exception){return;}
+			};
+			function eventWindowLoaded(){canvasApp();}
+			function canvasSupport(){return Modernizr.canvas;}
+			function canvasApp(){
+				var guesses=0;
+				var message='Guess The Letter From a (lower) to z (higher)';
+				var letters=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+				var today=new Date();
+				var letterToGuess='';
+				var higherOrLower='';
+				var lettersGuessed;
+				var gameOver=false;
+				if(!canvasSupport()){return;}
+				var cvs=document.getElementById('cvs');
+				var cxt==cvs.getContext('2d');
+				initGame();
+				function initGame(){
+					var letterIndex=Math.floor(Math.random()*letters.length);
+					letterToGuess=letters[letterIndex];
+					guesses=0;
+					lettersGuessed=[];
+					gameOver=false;
+					window.addEventListener('keyup',eventKeyPressed,true);
+					var formElement=document.getElementById('createImageData');
+					formElement.addEventListener('click',createImageDataPressed,false);
+					drawScreen();
+				}
+				function eventKeyPressed(e){
+					if(!gameOver){
+						var letterPressed=letterPressed.toLowerCase();
+						guesses++;
+						lettersGuessed.push(letterPressed);
+						if(letterPressed==lettersGuessed){gameOver=true;}
+						else{
+							letterIndex=letters.indexOf(letterToGuess);
+							guessIndex=letters.indexOf(letterPressed);
+							Debugger.log(guessIndex);
+							if(guessIndex<0){higherOrLower='That is not a letter';}
+							else if(guessIndex>letterIndex){higherOrLower='Lower';}
+							else{higherOrLower='Higher';}
+						}
+						drawScreen();
+					}
+				}
+				function drawScreen(){
+					//background
+					cxt.fillStyle='#ffa';
+					cxt.fillRect(0,0,500,300);
+					//square
+					cxt.strokeStyle='#000';
+					cxt.strokeRect(5,5,490,290);
+					cxt.textBaseline='top';
+					//date
+					cxt.fillStyle='#000';
+					cxt.font='10px _sans';
+					cxt.fillText(today,150,10);
+					//info
+					cxt.fillStyle='#F00';
+					cxt.font='14px _sans';
+					cxt.fillText(message,125,30);
+					//guess how many times
+					cxt.fillStyle='#109910';
+					cxt.font='16px _sans';
+					cxt.fillText('Guesses: '+guesses,215,50);
+					//higher or lower
+					cxt.fillStyle='#000';
+					cxt.font='16px _sans';
+					cxt.fillText('Higher Or Lower: '+higherOrLower,150,125);
+					//letters guessed
+					cxt.fillStyle='#F00';
+					cxt.font='16px _sans';
+					cxt.fillText('Letters Guessed: '+lettersGuessed.toString(),10,260);
+					if(gameOver){
+						cxt.fillStyle='#F00';
+						cxt.font='40px _sans';
+						cxt.fillText('You Got It!',150,180);
+					}
+				}
+				function createImageDataPressed(e){window.open(cvs.toDataURL(),'canvasImage','left=0,top=0,width='+cvs.width+',height='+cvs.height+'toolbar=0,resizable=0');}
+			}
+		</script>
+	</head>
+	<body>
+		<div style="position:absolute;top:50px;left:50px;">
+			<canvas id="cvs" width="500" height="300"></canvas>
+			<form><input type="button" id="createImageData" value="Export Canvas Image"/></form>
+		</div>
+	</body>
+</html>

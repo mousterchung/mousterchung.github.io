@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>ES5 Ball Demo</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/1.6/modernizr.min.js"></script>
+		<script src="js/ElectroServer-5-Client-JavaScript.js"></script>
+		<script>
+			window.addEventListener('load',eventWindowLoaded,false);
+			function eventWindowLoaded(){canvasApp();}
+			function canvasSupport(){return Modernizr.canvas;}
+			function canvasApp(){
+				if(!canvasSupport()){return;}
+				var cvs=document.getElementById('cvs');
+				var cxt=cvs.getContext('2d');
+				var formElement=document.getElementById('sendChat');
+				formElement.addEventListener('click',sendMessage,false);
+				function drawScreen(){
+					//background
+					cxt.fillStyle='#FFA';
+					cxt.fillRect(0,0,500,320);
+					cxt.fillStyle='#000';
+					cxt.font='10px _sans';
+					cxt.textBaseline='top';
+					//square
+					cxt.strokeStyle='#000';
+					cxt.strokeRect(5,5,490,310);
+					var starty=15;
+					var maxMessages=22;
+					//status box
+					cxt.strokeStyle='#000';
+					cxt.strokeRect(345,10,145,285);
+					var starti=0;
+					if(statusMessages.length>maxMessages){starti=statusMessages.length-maxMessages;}
+					for(var i=starti;i<statusMessages.length;i++({
+						cxt.fillText(statusMessages[i],350,starty);
+						starty+=12;
+					}
+					//chat box
+					cxt.strokeStyle='#000';
+					cxt.strokeRect(10,10,335,285);
+					starti=0;
+					lastMessage=chatMessages.length-1;
+					if(chatMessages.length>maxMessages){starti=chatMessages.length-maxMessages;}
+					starty=15;
+					for(var i=starti;i<chatMessages.length;i++){
+						cxt.fillText(chatMessages[i],10,starty);
+						start+=12;
+					}
+					cxt.fillText('User Name: '+username,10,295);
+					update();
+					testWalls();
+					render();
+				}
+				function updateBall(ball){
+					ball.radians=ball.angle*Math.PI/180;
+					ball.velocityx=Math.cos(ball.radians)*ball.speed;
+					ball.velocityy=Math.sin(ball.radians)*ball.speed;
+				}
+				var statusMessages=new Array();
+				var chatMessages=new Array();
+				var server=new ElectroServer.Server('server1');
+				statusMessages.push(server);
+				var availableConnection=new ElectroServer.AvailableConnection('localhost',8989,ElectroServer.TransportType.BinaryHTTP);
+				server.addAvailableConnection(availableConnection);
+				var es=new ElectroServer();
+				es.initialize();
+				var username,usercolor,_room;
+				var ballcounter=0;
+				es.engine.addServer(server);
+				es.engine.addEventListener(MessageType.ConnectionResponse,onConnectionRespose);
+				es.engine.addEventListener(MessageType.LoginResponse,onLoginRespose);
+				es.engine.addEventListener(MessageType.JoinRoomEvent,onJoinRoomEvent);
+				es.engine.addEventListener(MessageType.JoinZoneEvent,onJoinZoneEvent);
+				es.engine.addEventListener(MessageType.ConnectionAttemptResponse,onConnectionAttemptRespose);
+				es.engine.addEventListener(MessageType.PublicMessageEvent,onPublicMessageEvent);
+				es.engine.connect();
+				statusMessages.push('Connection...');
+				var balls=new Array();
+				cvs.addEventListener('mouseup',eventMouseUp,false);
+				var friction=0;
+				setInterval(drawScreen,33);
+				function eventMouseUp(e){
+					var mouseX,mouseY;
+					if(e.layerX||e.layerX==0){//Firefox
+						mouseX=e.layerX;
+						mouseY=e.layerY;
+					}else if(e.offsetX||e.offsetX==0){//Opera
+						mouseX=e.offsetX;
+						mouseY=e.offsetY;
+					}
+					ballcounter++;
+					var maxSize=8;
+					var minSize=5;
+					var maxSpeed=maxSize+5;
+					var tmpRadius=Math.floor(Math.random()*maxSize)+minSize;
+					var tmpX=mouseX;
+					var tmpY=mouseY;
+					var tmpSpeed=maxSpeed-tmpRadius;
+					var tmpAngle=Math.floor(Math.random()*360);
+					var tmpRadians=tmpAngle*Math.PI/180;
+					var tmpvelocityx=Math.cos(tmpRadians)*tmpSpeed;
+					var tmpvelocityy=Math.sin(tmpRadians)*tmpSpeed;
+					var pmr=new PublicMessageRequest();
+					pmr.message='';
+					pmr.roomId=_room.id;
+					pmr.zoneId=_room.zoneId;
+					var esob=new ElectroServer.EsObject();
+					esob.setFloat('tmpX',tmpX);
+					esob.setFloat('tmpY',tmpY);
+					esob.setFloat('tmpRadius',tmpRadius);
+					esob.setFloat('tmpSpeed',tmpSpeed);
+					esob.setFloat('tmpAngle',tmpAngle);
+					esob.setFloat('velocityx',velocityx);
+					esob.setFloat('velocityy',velocityy);
+					esob.setString('usercolor',usercolor);
+					esob.setString('ballname',username+ballcounter);
+					esob.setString('type','newball');
+					pmr.esObject=esob;
+					es.engine.send(pmr);
+					statusMessages.push('send ball');
+				}
+				function createNetBall(tmpX,tmpY,tmpSpeed,tmpAngle,tmpRadius,tmpvelocityx,tmpvelocityy,user,usercolor,ballname){
+					tmpBall={x:tmpX,y:tmpY,radius:tmpRadius,speed:tmpSpeed,angle:tmpAngle,velocityx:tmpvelocityx,velocityy:tmpvelocityy,nextx:tmpX,nexty:tmpY,mass:tmpRadius,usercolor:usercolor,ballname:ballname};
+					balls.push(tmpBall);
+				}
+				function onConnectionAttemptRespose(e){statusMessages.push('connection attempt response!!');}
+				function onJoinRoomEvent(e){
+					statusMessages.push('joined a room');
+					_room=es.managerHelper.zoneManager.zoneById(e.zoneId).roomById(e.roomId);
+					var formElement=document.getElementById('inputForm');
+					formElement.setAttribute('style','display:true');
+				}
+				function onJoinZoneEvent(e){statusMessages.push('joined a zone');}
+				function onConnectionRespose(e){
+					statusMessages.push('Connect Successful? : '+e.successful);
+					var r=new LoginRequest();
+					r.userName='CanvasUser_'+Math.floor(Math.random()*1000);
+					es.engine.send(r);
+				}
+				function onLoginRespose(e){
+					statusMessages.push('Login Successful? : '+e.successful);
+					username=e.userName;
+					usercolor='#'+(Math.random()*0xFFFFFF<<0).toString(16);
+					var crr=new CreateRoomRequest();
+					crr.zoneName='TestZoneCursors';
+					crr.roomName='TestRoomCursors';
+					es.engine.send(crr);
+				}
+				function sendMessage(e){
+					var formElement=document.getElementById('textBox');
+					var pmr=new PublicMessageRequest();
+					pmr.message='';
+					pmr.roomId=_room.id;
+					pmr.zoneId=_room.zoneId;
+					var esob=new ElectroServer.EsObject();
+					esob.setString('message',formElement.value);
+					esob.setString('type','chatmessage');
+					pmr.esObject=esob;
+					es.engine.send(pmr);
+					statusMessages.push('message sent');
+				}
+				function onPublicMessageEvent(e){
+					statusMessages.push('message received');
+					var esob=e.esObject;
+					if(esob.getString('type')=='chatmessage'){chatMessages.push(e.userName+': '+esob.getString('message'));}
+					else if(esob.getString('type')=='newball'){
+						statusMessages.push('create ball');
+						createNetBall(esob.getFloat('tmpX'),esob.getFloat('tmpY'),esob.getFloat('tmpSpeed'),esob.getFloat('tmpAngle'),esob.getFloat('tmpRadius'),esob.getFloat('velocityx'),esob.getFloat('velocityy'),e.userName,esob.getString('usercolor'),esob.getString('ballname'));
+					}
+				}
+				function update(){
+					for(var i=0;i<balls.length;i++){
+						ball=balls[i];
+						//friction
+						ball.velocityx-=ball.velocityx*friction;
+						ball.velocityy-=ball.velocityy*friction;
+						ball.nextx=(ball.x+=ball.velocityx);
+						ball.nexty=(ball.y+=ball.velocityy);
+					}
+				}
+				function testWalls(){
+					var ball,testBall;
+					for(var i=0;i<balls.length;i++){
+						ball=balls[i];
+						if(ball.nextx+ball.radius>cvs.width){
+							ball.velocityx*=-1;
+							ball.nextx=cvs.width-ball.radius;
+						}else if(ball.nextx-ball.radius<0){
+							ball.velocityx*=-1;
+							ball.nextx=ball.radius;
+						}else if(ball.nexty+ball.radius>cvs.height){
+							ball.velocityy*=-1;
+							ball.nexty=cvs.height-ball.radius;
+						}else if(ball.nexty-ball.radius<0){
+							ball.velocityy*=-1;
+							ball.nexty=ball.radius;
+						}
+					}
+				}
+				function render(){
+					var ball;
+					for(var i=0;i<balls.length;i++){
+						ball=balls[i];
+						ball.x=ball.nextx;
+						ball.y=ball.nexty;
+						cxt.fillStyle=ball.usercolor;
+						cxt.beginPath();
+						cxt.arc(ball.x,ball.y,ball.radius,0,Math.PI*2,true);
+						cxt.closePath();
+						cxt.fill();
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div style="position:absolute;top:50px;left:50px;">
+			<canvas id="cvs" width="500" height="320"></canvas>
+			<div id="inputForm" style="display:none;"><form>
+				<input id="textBox" placeholder="your text"/>
+				<input type="button" id="sendChat" value="Send"/>
+			</form></div>
+		</div>
+	</body>
+</html>

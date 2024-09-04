@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>Space Raiders With Optimized Dynamic Network Sound And State Loader</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/1.6/modernizr.min.js"></script>
+		<script>
+			window.addEventListener('load',eventWindowLoaded,false);
+			function eventWindowLoaded(){canvasApp();}
+			function supportedAudioFormat(audio){
+				var returnExtension='';
+				if(audio.canPlayType('audio/ogg')=='probably'||audio.canPlayType('audio/ogg')=='maybe'){returnExtension='ogg';}
+				else if(audio.canPlayType('audio/wav')=='probably'||audio.canPlayType('audio/wav')=='maybe'){returnExtension='wav';}
+				else if(audio.canPlayType('audio/mp3')=='probably'||audio.canPlayType('audio/mp3')=='maybe'){returnExtension='mp3';}
+				return returnExtension;
+			}
+			function canvasSupport(){return Modernizr.canvas;}
+			function canvasApp(){
+				const STATE_INIT=10;
+				const STATE_LOADING=20;
+				const STATE_RESET=30;
+				const STATE_PLAYING=40;
+				var appState=STATE_INIT;
+				var loadCount=0;
+				var alienImg=new Image();
+				var missileImg=new Image();
+				var playerImg=new Image();
+				const SOUND_EXPLODE='explode1';
+				const SOUND_SHOOT='shoot1';
+				const MAX_SOUNDS=6;
+				var soundPool=new Array();
+				var explodeSound,explodeSound2,explodeSound3,shootSound,shootSound2,shootSound3,audioType,mouseX,mouseY;
+				var player={x:250,y:475};
+				var aliens=new Array();
+				var missiles=new Array();
+				const ALIEN_START_X=25;
+				const ALIEN_START_Y=25;
+				const ALIEN_ROWS=5;
+				const ALIEN_COLS=8;
+				const ALIEN_SPACING=40;
+				if(!canvasSupport()){return;}
+				var cvs=document.getElementById('cvs');
+				var cxt=cvs.getContext('2d');
+				function itemLoaded(e){
+					loadCount++;
+					if(loadCount>=itemsToLoad){
+						shootSound.removeEventListener('canplaythrough',itemLoaded,false);
+						shootSound2.removeEventListener('canplaythrough',itemLoaded,false);
+						shootSound3.removeEventListener('canplaythrough',itemLoaded,false);
+						explodeSound.removeEventListener('canplaythrough',itemLoaded,false);
+						explodeSound2.removeEventListener('canplaythrough',itemLoaded,false);
+						explodeSound3.removeEventListener('canplaythrough',itemLoaded,false);
+						soundPool.push({name:'explode1',element:explodeSound,played:false});
+						soundPool.push({name:'explode1',element:explodeSound2,played:false});
+						soundPool.push({name:'explode1',element:explodeSound3,played:false});
+						soundPool.push({name:'shoot1',element:shootSound,played:false});
+						soundPool.push({name:'shoot1',element:shootSound2,played:false});
+						soundPool.push({name:'shoot1',element:shootSound3,played:false});
+						appState=STATE_RESET;
+					}
+				}
+				function initApp(){
+					loadCount=0;
+					itemsToLoad=9;
+					explodeSound=document.createElement('audio');
+					document.body.appendChild(explodeSound);
+					audioType=supportedAudioFormat(explodeSound);
+					explodeSound.setAttribute('src','snd/space_raiders/explode1.'+audioType);
+					explodeSound.addEventListener('canplaythrough',itemLoaded,false);
+					explodeSound2=document.createElement('audio');
+					document.body.appendChild(explodeSound2);
+					audioType=supportedAudioFormat(explodeSound2);
+					explodeSound2.setAttribute('src','snd/space_raiders/explode1.'+audioType);
+					explodeSound2.addEventListener('canplaythrough',itemLoaded,false);
+					explodeSound3=document.createElement('audio');
+					document.body.appendChild(explodeSound3);
+					audioType=supportedAudioFormat(explodeSound3);
+					explodeSound3.setAttribute('src','snd/space_raiders/explode1.'+audioType);
+					explodeSound3.addEventListener('canplaythrough',itemLoaded,false);
+					shootSound=document.createElement('audio');
+					document.body.appendChild(shootSound);
+					audioType=supportedAudioFormat(shootSound);
+					explodeSound.setAttribute('src','snd/space_raiders/shoot1.'+audioType);
+					explodeSound.addEventListener('canplaythrough',itemLoaded,false);
+					shootSound2=document.createElement('audio');
+					document.body.appendChild(shootSound2);
+					audioType=supportedAudioFormat(shootSound2);
+					explodeSound2.setAttribute('src','snd/space_raiders/shoot1.'+audioType);
+					explodeSound2.addEventListener('canplaythrough',itemLoaded,false);
+					shootSound3=document.createElement('audio');
+					document.body.appendChild(shootSound3);
+					audioType=supportedAudioFormat(shootSound3);
+					explodeSound3.setAttribute('src','snd/space_raiders/shoot1.'+audioType);
+					explodeSound3.addEventListener('canplaythrough',itemLoaded,false);
+					alienImg=new Image();
+					alienImg.onload=itemLoaded;
+					alienImg.src='img/space_raiders/alien.png';
+					playerImg=new Image();
+					playerImg.onload=itemLoaded;
+					playerImg.src='img/space_raiders/player.png';
+					missileImg=new Image();
+					missileImg.onload=itemLoaded;
+					missileImg.src='img/space_raiders/missile.png';
+					appState=STATE_LOADING;
+				}
+				function statrLevel(){
+					for(var r=0;r<ALIEN_ROWS;r++){
+						for(var c=0;c<ALIEN_COLS;c++){
+							aliens.push({speed:2,x:ALIEN_START_X+c*ALIEN_SPACING,y:ALIEN_START_Y+r*ALIEN_SPACING,width:alienImg.width,height:alienImg.height});
+						}
+					}
+				}
+				function resetApp(){
+					playSound(SOUND_EXPLODE,0);
+					playSound(SOUND_SHOOT,0);
+					statrLevel();
+					appState=STATE_PLAYING;
+				}
+				function drawScreen(){
+					//move missile
+					for(var i=missiles.length-1;i>=0;i--){
+						missiles[i].y-=missiles.speed;
+						if(missiles[i].y<(0-missiles.height)){missiles.splice(i,1);}
+					}
+					//move alien
+					for(var i=aliens.length-1;i>=0;i--){
+						aliens[i].x+=aliens[i].speed;
+						if(aliens[i].x>(cvs.height-aliens[i].width)||aliens[i].x<0){
+							aliens[i].speed*=-1;
+							aliens[i].y+=20;
+						}if(aliens[i].y>cvs.height){aliens.splice(i,1);}
+					}
+					//check collided
+					missile:for(var i=missiles.length-1;i>=0;i--){
+						var tmpMissile=missiles[i];
+						for(var j=aliens.length-1;j>=0;j--){
+							var tmpAlien=aliens[j];
+							if(hitTest(tmpMissile,tmpAlien)){
+								playSound(SOUND_EXPLODE,.5);
+								missiles.splice(i,1);
+								aliens.splice(i,1);
+								break missile;
+							}
+						}
+						if(aliens.legend<=0){appState=STATE_RESET;}
+					}
+					//background
+					cxt.fillStyle='#000';
+					cxt.fillRect(0,0,cvs.width,cvs.height);
+					//square
+					cxt.strokeStyle='#EEE';
+					cxt.strokeRect(5,5,cvs.width-10,cvs.height-10);
+					//draw player
+					cxt.drawImage(playerImg,player.x,player.y);
+					//draw missile
+					for(var i=missiles.length-1;i>=0;i--){cxt.drawImage(missileImg,missiles[i].x,missiles[i].y);}
+					//draw alien
+					for(var i=aliens.length-1;i>=0;i--){cxt.drawImage(alienImg,aliens[i].x,aliens[i].y);}
+					//draw text
+					cxt.fillStyle='#FFF';
+					cxt.fillText('Active Sounds: '+soundPool.length,200,480);
+				}
+				function hitTest(img1,img2){
+					r1l=img1.x;
+					r1t=img1.y;
+					r1r=img1.x+img1.width;
+					r1b=img1.y+img1.height;
+					r2l=img2.x;
+					r2t=img2.y;
+					r2r=img2.x+img2.width;
+					r2b=img2.y+img2.height;
+					return!((r1l>r2r)||(r1r<r2l)||(r1b<r2t)||(r1t>r2b))
+				}
+				function eventMouseMove(e){
+					if(e.layerX||event.layerX=0){//Firefox
+						mouseX=e.layerX;
+						mouseY=e.layerY;
+					}else if(e.offsetX||e.offsetX==0){//Opera
+						mouseX=e.offsetX;
+						mouseY=e.offsetY;
+					}
+					player.x=mouseX;
+					player.y=mouseY;
+				}
+				function eventMouseUp(e){
+					missiles.push({speed:5,x:player.x+.5*playerImg.width,y:player.y-missileImg.height,width:missileImg.width,height:missileImg.height});
+					playSound(SOUND_SHOOT,.5);
+				}
+				function playSound(sound,volume){
+					var soundFound=false;
+					var soundIndex=0;
+					var tmpSound;
+					if(soundPool.length>0){
+						while(!soundFound&&soundIndex<soundPool.length){
+							var tSound=soundPool[soundIndex];
+							if((tSound.element.ended||!tSound.played)&&tSound.name==sound){
+								soundFound=true;
+								tSound.played=true;
+							}else{soundIndex++;}
+						{
+					}if(soundFound){
+						tmpSound=soundPool[soundIndex].element;
+						tmpSound.volume=volume;
+						tmpSound.play();
+					}else if(soundPool.length<MAX_SOUNDS){
+						tmpSound=document.createElement('audio');
+						tmpSound.setAttribute('src',sound+'.'+audioType);
+						tmpSound.volume=volume;
+						tmpSound.play();
+						soundPool.push({name:sound,element:tmpSound,type:audioType,played:true});
+					}
+				}
+				function run(){
+					switch(appState){
+						case STATE_INIT:
+							initApp();
+							break;
+						case STATE_LOADING:
+							//wait callback
+							break;
+						case STATE_RESET:
+							resetApp();
+							break;
+						case STATE_PLAYING:
+							drawScreen();
+							break;
+					}
+				}
+				cvs.addEventListener('mouseup',eventMouseUp,false);
+				cvs.addEventListener('mousemove',eventMouseMove,false);
+				setInterval(run,33);
+			}
+		</script>
+	</head>
+	<body>
+		<div style="position:absolute;top:50px;left:50px;"><canvas id="cvs" width="500" height="500"></canvas></div>
+	</body>
+</html>
