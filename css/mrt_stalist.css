@@ -43,3 +43,45 @@ body {
 .no-service {
 	background-color: #BBB; 
 }
+
+.route-and-stano {
+	display: inline-block; 
+	border-style: solid; 
+	border-radius: 10px; 
+	width: 17rem; 
+}
+
+.route-and-stano:has(.route[data = "KH"]) {
+	border-radius: 50%; 
+	width: 2.25rem; 
+}
+
+.route-and-stano:has(.route[data = "KH"]) .stano {
+	--stano-data: attr(data); 
+}
+
+.route-and-stano:has(.route[data = "KH"]) .stano::before {
+	content: none; 
+}
+
+.route-and-stano:has(.route[data = "KH"]) .route::before {
+	content: attr(data) var(--stano-data); 
+	text-align: center; 
+	width: 2.25rem; 
+}
+
+.route-and-stano .route::before {
+	content: attr(data); 
+	font-size: 0.5em; 
+	display: inline-block; 
+	width: 1.7rem; 
+	text-align: center; 
+}
+
+.route-and-stano .stano::before {
+	content: attr(data); 
+	font-size: 0.5em; 
+	display: inline-block; 
+	width: 1.7rem; 
+	text-align: center; 
+}
