@@ -1,8 +1,0 @@
-<!ELEMENT bus-stations (station*)>				<!--root-->
-	<!ELEMENT station (sta-name-zhtw, sta-name-en, bus-route*)>
-		<!ATTLIST sta-id ID #REQUIRED>
-		
-		<!ELEMENT sta-name-zhtw #PCDATA>
-		<!ELEMENT sta-name-en   #PCDATA>
-		<!ELEMENT bus-route     #PCDATA>
-			<!ATTLIST bus-route IDREF #REQUIRED>
