@@ -42,14 +42,14 @@
 						var content = ''; 
 						
 						for (var i = 0; i < groups.length; i++) {
-							var letter = groups[i].getAttributeValue('letter'); 
+							var letter = groups[i].getAttribute('letter'); 
 							content += '<div class="group">'+letter+'</div>'; 
 							var stas = groups[i].getElementsByTagName('sta'); 
 							for (var j = 0; j < stas.length; j++) {
 								var sta = stas[j]
 								var sta_name_zhtw = sta.getElementsByTagName('sta-name-zhtw')[0].textContent; 
 								var sta_name_en = sta.getElementsByTagName('sta-name-en')[0].textContent; 
-								var no_service = sta.getAttributeValue('no-service'); 
+								var no_service = sta.getAttribute('no-service'); 
 								if (no_service == 'true') {
 									content += '<div class="no-service">'; 
 								} else if (no_service == null || no_service == 'false'){
@@ -58,9 +58,9 @@
 								content += '<span>'+sta_name_zhtw+'</span><span>'+sta_name_en+'</span>'
 								var route_and_stanos = sta.getElementsByTagName('route-and-stanos')[0].getElementsByTagName('route-and-stano'); 
 								for ( var k = 0; k < route_and_stanos.length; k++) {
-									var sta_place = route_and_stanos[k].getAttributeValue('place'); 
-									var route = route_and_stanos[k].getAttributeValue('route'); 
-									var stano = route_and_stanos[k].getAttributeValue('stano'); 
+									var sta_place = route_and_stanos[k].getAttribute('place'); 
+									var route = route_and_stanos[k].getAttribute('route'); 
+									var stano = route_and_stanos[k].getAttribute('stano'); 
 									content += '<span class="route-and-stano sta-place-'+sta_place+'"><span class="route">'+route+'</span><span class="stano">'+stano+'</span>'; 
 								}
 								content += '</div>'; 
