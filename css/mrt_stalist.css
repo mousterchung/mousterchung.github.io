@@ -1,0 +1,22 @@
+:root {
+	font-family: sans-serif; 
+}
+
+@media (width > 768px) {
+	body {
+		width: 70vw; 
+	}
+}
+
+@media (768px >= width > 425px) {
+	body {
+		width: 80vw; 
+	}
+}
+
+@media (425px >= width) {
+	body {
+		width: 100vw; 
+	}
+}
+
