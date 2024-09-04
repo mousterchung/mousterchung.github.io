@@ -8,13 +8,13 @@ web\xml\mrt_stalist_tn_en.xml
 web\xml\mrt_stalist_copypaste.txt
 web\xml\dtd\mrt_stalist.dtd
 web\css\mrt_stalist_xml.css
-web\xml\mrt_stalist.html
+web\mrt_stalist.html
 web\css\mrt_stalist.css
 web\xml\mrt_stalist_en_template.xml
 web\xml\mrt_stalist_zhtw_template.xml
 web\css\mrt.css
 web\css\mrt_old.css
-web\xml\xslt\mrt.xsl
+web\xml\xsl\mrt.xsl
 web\js\css_attr.js
 web\xml\mrt_copypaste.txt
 
