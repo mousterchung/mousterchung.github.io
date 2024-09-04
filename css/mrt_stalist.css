@@ -25,11 +25,21 @@ body {
 	margin-right: auto; 
 }
 
-group {
+.group {
 	position: sticky; 
 	top: 0; 
 	background: #666; 
 	text-align: center; 
 	font-size: 2em; 
 	color: white; 
+}
+
+.sta {
+	border-bottom-style: solid; 
+	border-bottom-color: #CCC; 
+	border-bottom-width: 1px; 
+}
+
+.no-service {
+	background-color: #BBB; 
 }
