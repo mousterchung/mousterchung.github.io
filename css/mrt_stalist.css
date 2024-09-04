@@ -48,7 +48,7 @@ body {
 	display: inline-block; 
 	border-style: solid; 
 	border-radius: 10px; 
-	width: 17rem; 
+	width: 1.7rem; 
 }
 
 .route-and-stano:has(.route[data = "KH"]) {
