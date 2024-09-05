@@ -26,7 +26,13 @@
 	--tn-r     : #d90023; 
 	--tn-br    : #7f0037; 
 	--tn-o     : #f5a818; 
-	
+	--kh-rrlrk : #e20b65; 
+	--kh-oot   : #faa73f; 
+	--kh-c     : #7cbd52; 
+	--kh-y     : #ffc100; 
+	--kh-p     : #c100ff; 
+	--kh-qj    : #e20b65; 
+	--kh-ld    : #524fff; 
 }
 
 @media (width > 768px) {
@@ -99,10 +105,6 @@ body {
 
 .route, .stano {
 	display: inline-block; 
-}
-
-[sta-place = "KH"] .route, [sta-place = "KH"] .stano {
-	display: inline; 
 }
 
 .route-and-stano .route::before {
