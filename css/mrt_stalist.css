@@ -1,7 +1,32 @@
 :root {
 	font-family: sans-serif; 
-	--tp-br: #c48c31; 
-	--tp-r : #e3002c; 
+	--tp-br    : #c48c31; 
+	--tp-r     : #e3002c; 
+	--tp-r22a  : #fd92a3; 
+	--tp-g     : #008659; 
+	--tp-g03a  : #cfdb00; 
+	--tp-o     : #f8b61c; 
+	--tp-bl    : #0070bd; 
+	--tp-lg    : #a1d884; 
+	--tp-sb    : #25aae1; 
+	--tp-sb11a : #283991; 
+	--tp-lr    : #e40078; 
+	--nt-y     : #ffdb00; 
+	--nt-v     : #e5554f; 
+	--nt-k     : #a28d5b; 
+	--nt-lb    : #79bce8; 
+	--nt-s     : #cc7722; 
+	--nt-f     : #e5007f; 
+	--ty-a     : #8246af; 
+	--ty-g     : #62a033; 
+	--ty-gega  : #006835; 
+	--ty-brh   : #824729; 
+	--tn-bbkbh : #015bba; 
+	--tn-g     : #267f00; 
+	--tn-r     : #d90023; 
+	--tn-br    : #7f0037; 
+	--tn-o     : #f5a818; 
+	
 }
 
 @media (width > 768px) {
@@ -25,10 +50,6 @@
 body {
 	margin-left: auto; 
 	margin-right: auto; 
-}
-
-span:has(~ span)::after {
-	content: ' '; 
 }
 
 .group {
@@ -80,6 +101,10 @@ span:has(~ span)::after {
 	display: inline-block; 
 }
 
+[sta-place = "KH"] .route, [sta-place = "KH"] .stano {
+	display: inline; 
+}
+
 .route-and-stano .route::before {
 	content: attr(data); 
 	font-size: 0.5em; 
@@ -102,4 +127,8 @@ span:has(~ span)::after {
 
 .route-and-stano[sta-place = "TP"]:has(.route[data = "R"]) {
 	border-color: var(--tp-r); 
+}
+
+.route-and-stano[sta-place = "TP"]:has(.route[data = "R"]):has(.stano[data = "22A"]) {
+	border-color: var(--tp-r22a); 
 }
