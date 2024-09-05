@@ -76,6 +76,10 @@ span:has(~ span)::after {
 	width: 2.25rem; 
 }
 
+.route, .stano {
+	display: inline-block; 
+}
+
 .route-and-stano .route::before {
 	content: attr(data); 
 	font-size: 0.5em; 
