@@ -25,7 +25,7 @@ body {
 	margin-right: auto; 
 }
 
-span ~ span::before {
+span ~ span::after {
 	content: ' '; 
 }
 
