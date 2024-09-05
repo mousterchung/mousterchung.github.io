@@ -97,5 +97,9 @@ span:has(~ span)::after {
 }
 
 .route-and-stano[sta-place = "TP"]:has(.route[data = "BR"]) {
-	color: var(--tp-br); 
+	border-color: var(--tp-br); 
+}
+
+.route-and-stano[sta-place = "TP"]:has(.route[data = "R"]) {
+	border-color: var(--tp-r); 
 }
