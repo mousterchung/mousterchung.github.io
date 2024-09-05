@@ -29,6 +29,10 @@ span:has(~ span)::after {
 	content: ' '; 
 }
 
+.route-and-stano:has(~ .route-and-stano)::after {
+	content: ' '; 
+}
+
 .group {
 	position: sticky; 
 	top: 0; 
