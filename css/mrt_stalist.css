@@ -57,20 +57,20 @@ span:has(~ span)::after {
 	width: 1.7rem; 
 }
 
-.route-and-stano:has(.route[data = "KH"]) {
+.route-and-stano[sta-place = "KH"] {
 	border-radius: 50%; 
 	width: 2.25rem; 
 }
 
-.route-and-stano:has(.route[data = "KH"]) .stano {
+.route-and-stano[sta-place = "KH"] .stano {
 	--stano-data: attr(data); 
 }
 
-.route-and-stano[sta-place = "KH"]) .stano::before {
+.route-and-stano[sta-place = "KH"] .stano::before {
 	content: none; 
 }
 
-.route-and-stano[sta-place = "KH"]) .route::before {
+.route-and-stano[sta-place = "KH"] .route::before {
 	content: attr(data) var(--stano-data); 
 	text-align: center; 
 	width: 2.25rem; 
@@ -92,4 +92,6 @@ span:has(~ span)::after {
 	text-align: center; 
 }
 
-.route-and-stano:has(.route[data = "TP"])
+.route-and-stano[sta-place = "TP"]:has(.route[data = "BR"]) {
+	color: var(--tp-br); 
+}
