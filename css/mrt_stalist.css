@@ -1,5 +1,7 @@
 :root {
 	font-family: sans-serif; 
+	--tp-br: #c48c31; 
+	--tp-r : #e3002c; 
 }
 
 @media (width > 768px) {
@@ -26,10 +28,6 @@ body {
 }
 
 span:has(~ span)::after {
-	content: ' '; 
-}
-
-.route-and-stano:has(~ .route-and-stano)::after {
 	content: ' '; 
 }
 
@@ -68,11 +66,11 @@ span:has(~ span)::after {
 	--stano-data: attr(data); 
 }
 
-.route-and-stano:has(.route[data = "KH"]) .stano::before {
+.route-and-stano[sta-place = "KH"]) .stano::before {
 	content: none; 
 }
 
-.route-and-stano:has(.route[data = "KH"]) .route::before {
+.route-and-stano[sta-place = "KH"]) .route::before {
 	content: attr(data) var(--stano-data); 
 	text-align: center; 
 	width: 2.25rem; 
@@ -93,3 +91,5 @@ span:has(~ span)::after {
 	width: 1.7rem; 
 	text-align: center; 
 }
+
+.route-and-stano:has(.route[data = "TP"])
