@@ -7,10 +7,41 @@
 		<meta charset="UTF-8"/>
 		<title></title>
 		<link href="./css/mrt_stalist.css" rel="stylesheet"/>
+		<style id="style"></style>
 	</head>
 	<body>
 		<div id="stalist-content"></div>
 		<script>
+			var sta-color-normal = [['tp', 'br'], 
+									['tp', 'r'], 
+									['tp', 'g'], 
+									['tp', 'o'], 
+									['tp', 'bl'], 
+									['tp', 'lg'], 
+									['tp', 'sb'], 
+									['tp', 'lr'], 
+									['nt', 'y'], 
+									['nt', 'v'], 
+									['nt', 'k'], 
+									['nt', 'lb'], 
+									['nt', 's'], 
+									['nt', 'f'], 
+									['ty', 'a'], 
+									['ty', 'g'], 
+									['ty', ['ge', 'ga']], 
+									['ty', 'brh'], 
+									['tn', ['b', 'bk', 'bh']], 
+									['tn', 'g'], 
+									['tn', 'r'], 
+									['tn', 'br'], 
+									['tn', 'o'], 
+									['kh', ['r', 'rl', 'rk']], 
+									['kh', ['o', 'ot']], 
+									['kh', 'c'], 
+									['kh', 'y'], 
+									['kh', 'p'], 
+									['kh', 'qj'], 
+									['kh', 'ld']]
 			var query_str = window.location.search; 
 			var url_param = new URLSearchParams(query_str); 
 			var title = document.getElementsByTagName('title')[0]; 
