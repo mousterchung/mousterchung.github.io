@@ -120,7 +120,7 @@ body {
 	text-align: center; 
 }
 
-.route-and-stano[sta-place = "TP"]:has(.route[data = "BR"]) {
+/*.route-and-stano[sta-place = "TP"]:has(.route[data = "BR"]) {
 	border-color: var(--tp-br); 
 }
 
@@ -130,4 +130,4 @@ body {
 
 .route-and-stano[sta-place = "TP"]:has(.route[data = "R"]):has(.stano[data = "22A"]) {
 	border-color: var(--tp-r22a); 
-}
+}*/
