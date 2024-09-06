@@ -12,7 +12,9 @@
 	<body>
 		<div id="stalist-content"></div>
 		<script>
-			var sta-color-normal = [['tp', 'br'], 
+			var style = document.getElementById('style'); 
+			var style_content = ''; 
+			var sta_color_normal = [['tp', 'br'], 
 									['tp', 'r'], 
 									['tp', 'g'], 
 									['tp', 'o'], 
@@ -41,7 +43,23 @@
 									['kh', 'y'], 
 									['kh', 'p'], 
 									['kh', 'qj'], 
-									['kh', 'ld']]
+									['kh', 'ld']]; 
+			var sta_color_special = [['tp', 'r', '22a'], 
+									 ['tp', 'g', '03a'], 
+									 ['tp', 'sb', '11a', ['11b', '11c']]]; 
+			for (var i = 0; i < sta_color_normal.length; i++) {
+				var j = sta_color_normal[i]
+				if (Array.isArray(j[1]) {
+					for (var k = 0; k < j[1].length; k++) {
+						
+					}
+				} else {
+					style_content += '.route-and-stano[sta-place = "'+j[0].toUpperCase()+'"]:has(.route[data = "'+j[1].toUpperCase'"]) {\n\tborder-color: var(--'+j[0]+'-'+j[1]+'); \n}'; 
+				}
+			}
+			for (var i = 0; i < sta_color_special.length; i++) {
+				
+			}
 			var query_str = window.location.search; 
 			var url_param = new URLSearchParams(query_str); 
 			var title = document.getElementsByTagName('title')[0]; 
