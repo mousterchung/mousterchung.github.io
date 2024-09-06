@@ -49,12 +49,12 @@
 									 ['tp', 'sb', '11a', ['11b', '11c']]]; 
 			for (var i = 0; i < sta_color_normal.length; i++) {
 				var j = sta_color_normal[i]
-				if (Array.isArray(j[1]) {
+				if (Array.isArray(j[1])) {
 					for (var k = 0; k < j[1].length; k++) {
 						
 					}
 				} else {
-					style_content += '.route-and-stano[sta-place = "'+j[0].toUpperCase()+'"]:has(.route[data = "'+j[1].toUpperCase'"]) {\n\tborder-color: var(--'+j[0]+'-'+j[1]+'); \n}'; 
+					style_content += '.route-and-stano[sta-place = "'+j[0].toUpperCase()+'"]:has(.route[data = "'+j[1].toUpperCase'"]) {\n\tborder-color: var(--'+j[0]+'-'+j[1]+'); \n}\n'; 
 				}
 			}
 			for (var i = 0; i < sta_color_special.length; i++) {
