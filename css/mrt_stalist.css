@@ -87,6 +87,7 @@ body {
 .route-and-stano[sta-place = "KH"] {
 	border-radius: 50%; 
 	width: 2.25rem; 
+	text-align: center; 
 }
 
 .route-and-stano[sta-place = "KH"] .route::before {
