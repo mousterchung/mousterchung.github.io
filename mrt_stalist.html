@@ -65,7 +65,7 @@
 				var j = sta_color_special[i]; 
 				if (j.length === 4) {
 					for (var k = 0; k < j[3].length; k++) {
-						style_content += '.route-and-stano[sta-place = "'+j[0].toUpperCase()+'"]:has(.route[data = "'+j[1].toUpperCase()+'"]):has(.stano[data = "'+j[3][k].toUpperCase()+'"], '; 
+						style_content += '.route-and-stano[sta-place = "'+j[0].toUpperCase()+'"]:has(.route[data = "'+j[1].toUpperCase()+'"]):has(.stano[data = "'+j[3][k].toUpperCase()+'"]), '; 
 					}
 					style_content = style_content.slice(0, -2); 
 					style_content += ' {\n\tborder-color: var(--'+j[0]+'-'+j[2]+'); \n}\n'; 
