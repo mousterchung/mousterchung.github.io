@@ -72,6 +72,7 @@
 				} else {
 					style_content += '.route-and-stano[sta-place = "'+j[0].toUpperCase()+'"]:has(.route[data = "'+j[1].toUpperCase()+'"]):has(.stano[data = "'+j[2].toUpperCase()+'"] {\n\tborder-color: var(--'+j[0]+'-'+j[1]+j[2]+'); \n}\n'; 
 					/*console.log('.route-and-stano[sta-place = "'+j[0].toUpperCase()+'"]:has(.route[data = "'+j[1].toUpperCase()+'"]):has(.stano[data = "'+j[2].toUpperCase()+'"] {\n\tborder-color: var(--'+j[0]+'-'+j[1]+j[2]+'); \n}\n'); */
+				}
 			}
 			style.innerHTML = style_content; 
 			
