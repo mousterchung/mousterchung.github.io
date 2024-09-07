@@ -93,14 +93,12 @@ body {
 .route-and-stano[sta-place = "KH"] .route::before {
 	content: attr(data); 
 	text-align: center; 
-	/*width: 0.8rem; */
 	display: inline; 
 }
 
 .route-and-stano[sta-place = "KH"] .stano::before {
 	content: attr(data); 
 	text-align: center; 
-	/*width: 1.45rem; */
 	display: inline; 
 }
 
