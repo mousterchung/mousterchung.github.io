@@ -90,12 +90,14 @@ body {
 }
 
 .route-and-stano[sta-place = "KH"] .stano::before {
-	content: none; 
-	--stano-data: attr(data); 
+	/*content: none; 
+	--stano-data: attr(data); */
+	content: attr(data); 
 }
 
 .route-and-stano[sta-place = "KH"] .route::before {
-	content: attr(data) var(--stano-data); 
+	/*content: attr(data) var(--stano-data); */
+	content: attr(data); 
 	text-align: center; 
 	width: 2.25rem; 
 }
