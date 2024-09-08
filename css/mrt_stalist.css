@@ -58,9 +58,18 @@ body {
 	margin-right: auto; 
 }
 
-.group {
+.hide-noservice {
 	position: sticky; 
 	top: 0; 
+}
+
+.hide-noservice:checked + .group .no-service {
+	display: none; 
+}
+
+.group {
+	position: sticky; 
+	top: 1rem; 
 	background: #666; 
 	text-align: center; 
 	font-size: 2em; 
