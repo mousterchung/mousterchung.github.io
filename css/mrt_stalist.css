@@ -77,6 +77,10 @@ body {
 	background-color: #BBB; 
 }
 
+.sta-name-zhtw::after, .sta-name-en::after, .route-and-stano::after {
+	content: ' '; 
+}
+
 .route-and-stano {
 	display: inline-block; 
 	border-style: solid; 
