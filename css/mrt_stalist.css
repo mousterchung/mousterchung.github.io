@@ -65,13 +65,6 @@ label:has(.hide-noservice) {
 	background: white; 
 }
 
-label:has(.hide-noservice:checked) {
-	border-style: solid; 
-	border-width: 10px; 
-	border-color: red; 
-	color: red; 
-}
-
 label:has(.hide-noservice:checked) ~ .group .no-service {
 	display: none; 
 }
