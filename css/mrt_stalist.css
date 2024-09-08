@@ -71,7 +71,7 @@ label:has(.hide-noservice) {
 
 .group {
 	position: sticky; 
-	top: 1rem; 
+	top: 1.2rem; 
 	background: #666; 
 	text-align: center; 
 	font-size: 2em; 
