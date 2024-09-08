@@ -64,7 +64,7 @@ div.sticky {
 	background: white; 
 }
 
-label:has(.hide-noservice:checked) + div .no-service {
+div:has(.hide-noservice:checked) + div .no-service {
 	display: none; 
 }
 
