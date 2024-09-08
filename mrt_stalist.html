@@ -118,9 +118,9 @@
 								var sta_name_zhtw = sta.getElementsByTagName('sta-name-zhtw')[0].textContent; 
 								var sta_name_en = sta.getElementsByTagName('sta-name-en')[0].textContent; 
 								var no_service = sta.getAttribute('no-service'); 
-								if (no_service == 'true') {
+								if (no_service === 'true') {
 									content += '<div class="no-service sta">'; 
-								} else if (no_service == null || no_service == 'false'){
+								} else{
 									content += '<div class="sta">'; 
 								}
 								content += '<span class="sta-name-zhtw">'+sta_name_zhtw+'</span><span class="sta-name-en">'+sta_name_en+'</span>'
@@ -129,7 +129,12 @@
 									var sta_place = route_and_stanos[k].getAttribute('place'); 
 									var route = route_and_stanos[k].getAttribute('route'); 
 									var stano = route_and_stanos[k].getAttribute('stano'); 
-									content += '<span class="route-and-stano" sta-place="'+sta_place+'"><span class="route" data="'+route+'"></span><span class="stano" data="'+stano+'"></span></span>'; 
+									content += '<span class="route-and-stano'; 
+									var no_service = route-and-stanos[k].getAttribute('no-service'); 
+									if (no_service === 'true') {
+										content += ' no-service'; 
+									}
+									content += '" sta-place="'+sta_place+'"><span class="route" data="'+route+'"></span><span class="stano" data="'+stano+'"></span></span>'; 
 								}
 								content += '</div>'; 
 							}
