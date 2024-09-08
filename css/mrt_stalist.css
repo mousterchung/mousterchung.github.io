@@ -72,7 +72,7 @@ label:has(.hide-noservice:checked) {
 	color: red; 
 }
 
-.hide-noservice:checked ~ .group .no-service {
+label:has(.hide-noservice:checked) ~ .group .no-service {
 	display: none; 
 }
 
