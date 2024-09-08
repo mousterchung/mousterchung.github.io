@@ -114,7 +114,7 @@
 						
 						for (var i = 0; i < groups.length; i++) {
 							var letter = groups[i].getAttribute('letter'); 
-							content += '<div class="group">'+letter+'</div>'; 
+							content += '<div class="group" id="'+letter+'">'+letter+'</div>'; 
 							var stas = groups[i].getElementsByTagName('sta'); 
 							for (var j = 0; j < stas.length; j++) {
 								var sta = stas[j]
