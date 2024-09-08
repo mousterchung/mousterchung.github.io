@@ -58,13 +58,13 @@ body {
 	margin-right: auto; 
 }
 
-div.sticky {
+.div-sticky {
 	position: sticky; 
 	top: 0; 
 	background: white; 
 }
 
-div:has(.hide-noservice:checked) + div .no-service {
+.div-sticky:has(.hide-noservice:checked) + [id = "stalist-content"] .no-service {
 	display: none; 
 }
 
