@@ -6,34 +6,120 @@
 		
 	</group>
 	<group letter="Ｂ">
-		
+		<sta>
+			<sta-name-zhtw>北屯總站</sta-name-zhtw>
+			<sta-name-en>Beitun Main Station</sta-name-en>
+			<route-and-stanos>
+				<route-and-stano place="TC" route="G/1" stano="03a"/>
+			</route-and-stanos>
+		</sta>
 	</group>
 	<group letter="Ｃ">
-		
+		<sta no-service="true">
+			<sta-name-zhtw>成功嶺</sta-name-zhtw>
+			<sta-name-en>Chenggongling</sta-name-en>
+			<route-and-stanos>
+				<route-and-stano place="TC" route="G/1" stano="20"/>
+			</route-and-stanos>
+		</sta>
 	</group>
 	<group letter="Ｄ">
-		
+		<sta no-service="true">
+			<sta-name-zhtw>大坑</sta-name-zhtw>
+			<sta-name-en>Dakeng</sta-name-en>
+			<route-and-stanos>
+				<route-and-stano place="TC" route="G/1" stano="01"/>
+				<route-and-stano place="TC" route="P/4" stano="01"/>
+			</route-and-stanos>
+		</sta>
+		<sta>
+			<sta-name-zhtw>大慶（中山醫大）</sta-name-zhtw>
+			<sta-name-en>Daqing ( Chungshan Medical University )</sta-name-en>
+			<route-and-stanos>
+				<route-and-stano place="TC" route="G/1" stano="15"/>
+				<route-and-stano place="TC" route="P/4" stano="16" no-service="true"/>
+			</route-and-stanos>
+		</sta>
+		<sta no-service="true">
+			<sta-name-zhtw>渡船頭</sta-name-zhtw>
+			<sta-name-en>Duchuantou</sta-name-en>
+			<route-and-stanos>
+				<route-and-stano place="TC" route="G/1" stano="22"/>
+			</route-and-stanos>
+		</sta>
 	</group>
 	<group letter="Ｅ">
 		
 	</group>
 	<group letter="Ｆ">
-		
+		<sta>
+			<sta-name-zhtw>豐樂公園</sta-name-zhtw>
+			<sta-name-en>Feng-le Park</sta-name-en>
+			<route-and-stanos>
+				<route-and-stano place="TC" route="G/1" stano="14"/>
+			</route-and-stanos>
+		</sta>
 	</group>
 	<group letter="Ｇ">
 		
 	</group>
 	<group letter="Ｈ">
-		
+		<sta>
+			<sta-name-zhtw>高鐵台中站</sta-name-zhtw>
+			<sta-name-en>HSR Taichung Station</sta-name-en>
+			<route-and-stanos>
+				<route-and-stano place="TC" route="G/1" stano="19"/>
+			</route-and-stanos>
+		</sta>
 	</group>
 	<group letter="Ｉ">
 		
 	</group>
 	<group letter="Ｊ">
-		
+		<sta no-service="true">
+			<sta-name-zhtw>金馬</sta-name-zhtw>
+			<sta-name-en>Jingma</sta-name-en>
+			<route-and-stanos>
+				<route-and-stano place="TC" route="G/1" stano="24"/>
+			</route-and-stanos>
+		</sta>
+		<sta>
+			<sta-name-zhtw>九德</sta-name-zhtw>
+			<sta-name-en>Jiude</sta-name-en>
+			<route-and-stanos>
+				<route-and-stano place="TC" route="G/1" stano="17"/>
+			</route-and-stanos>
+		</sta>
+		<sta>
+			<sta-name-zhtw>舊社</sta-name-zhtw>
+			<sta-name-en>Jiushe</sta-name-en>
+			<route-and-stanos>
+				<route-and-stano place="TC" route="G/1" stano="03"/>
+			</route-and-stanos>
+		</sta>
+		<sta>
+			<sta-name-zhtw>九張犁</sta-name-zhtw>
+			<sta-name-en>Jiuzhangli</sta-name-en>
+			<route-and-stanos>
+				<route-and-stano place="TC" route="G/1" stano="16"/>
+			</route-and-stanos>
+		</sta>
+		<sta no-service="true">
+			<sta-name-zhtw>軍功寮</sta-name-zhtw>
+			<sta-name-en>Jungongliao</sta-name-en>
+			<route-and-stanos>
+				<route-and-stano place="TC" route="G/1" stano="02"/>
+			</route-and-stanos>
+		</sta>
 	</group>
 	<group letter="Ｋ">
-		
+		<sta no-service="true">
+			<sta-name-zhtw>苦苓腳</sta-name-zhtw>
+			<sta-name-en>Kulingjiao</sta-name-en>
+			<route-and-stanos>
+				<route-and-stano place="TC" route="G/1" stano="23"/>
+			</route-and-stanos>
+		</sta>
 	</group>
 	<group letter="Ｌ">
 		
@@ -42,7 +128,13 @@
 		
 	</group>
 	<group letter="Ｎ">
-		
+		<sta>
+			<sta-name-zhtw>南屯（文心五權西）</sta-name-zhtw>
+			<sta-name-en>Nantun ( Wenxin Wuquan W. )</sta-name-en>
+			<route-and-stanos>
+				<route-and-stano place="TC" route="G/1" stano="13"/>
+			</route-and-stanos>
+		</sta>
 	</group>
 	<group letter="Ｏ">
 		
@@ -54,13 +146,46 @@
 		
 	</group>
 	<group letter="Ｒ">
-		
+		<sta no-service="true">
+			<sta-name-zhtw>榮泉</sta-name-zhtw>
+			<sta-name-en>Rongquan</sta-name-en>
+			<route-and-stanos>
+				<route-and-stano place="TC" route="G/1" stano="21"/>
+			</route-and-stanos>
+		</sta>
 	</group>
 	<group letter="Ｓ">
-		
+		<sta>
+			<sta-name-zhtw>四維國小（二分埔）</sta-name-zhtw>
+			<sta-name-en>Sihwei Elementary School ( Erfenpu )</sta-name-en>
+			<route-and-stanos>
+				<route-and-stano place="TC" route="G/1" stano="05"/>
+			</route-and-stanos>
+		</sta>
+		<sta>
+			<sta-name-zhtw>松竹</sta-name-zhtw>
+			<sta-name-en>Songzhu</sta-name-en>
+			<route-and-stanos>
+				<route-and-stano place="TC" route="G/1" stano="04"/>
+			</route-and-stanos>
+		</sta>
+		<sta>
+			<sta-name-zhtw>水安宮</sta-name-zhtw>
+			<sta-name-en>Shui-an Temple</sta-name-en>
+			<route-and-stanos>
+				<route-and-stano place="TC" route="G/1" stano="11"/>
+			</route-and-stanos>
+		</sta>
 	</group>
 	<group letter="Ｔ">
-		
+		<sta>
+			<sta-name-zhtw>市政府</sta-name-zhtw>
+			<sta-name-en>Taichung City Hall</sta-name-en>
+			<route-and-stanos>
+				<route-and-stano place="TC" route="G/1" stano="10"/>
+				<route-and-stano place="TC" route="B/2" stano="14" no-service="true"/>
+			</route-and-stanos>
+		</sta>
 	</group>
 	<group letter="Ｕ">
 		
@@ -69,7 +194,49 @@
 		
 	</group>
 	<group letter="Ｗ">
-		
+		<sta>
+			<sta-name-zhtw>文華高中</sta-name-zhtw>
+			<sta-name-en>Wenhua Senior High School</sta-name-en>
+			<route-and-stanos>
+				<route-and-stano place="TC" route="G/1" stano="08"/>
+			</route-and-stanos>
+		</sta>
+		<sta>
+			<sta-name-zhtw>文心崇德</sta-name-zhtw>
+			<sta-name-en>Wenxin Chongde</sta-name-en>
+			<route-and-stanos>
+				<route-and-stano place="TC" route="G/1" stano="06"/>
+			</route-and-stanos>
+		</sta>
+		<sta>
+			<sta-name-zhtw>文心森林公園</sta-name-zhtw>
+			<sta-name-en>Wenxin Forest Park</sta-name-en>
+			<route-and-stanos>
+				<route-and-stano place="TC" route="G/1" stano="12"/>
+			</route-and-stanos>
+		</sta>
+		<sta>
+			<sta-name-zhtw>文心櫻花</sta-name-zhtw>
+			<sta-name-en>Wenxin Yinghua</sta-name-en>
+			<route-and-stanos>
+				<route-and-stano place="TC" route="G/1" stano="09"/>
+			</route-and-stanos>
+		</sta>
+		<sta>
+			<sta-name-zhtw>文心中清（天津商圈）</sta-name-zhtw>
+			<sta-name-en>Wenxin Zhongqing ( Tianjin Shopping District )</sta-name-en>
+			<route-and-stanos>
+				<route-and-stano place="TC" route="G/1" stano="07"/>
+				<route-and-stano place="TC" route="O/3" stano="11" no-service="true"/>
+			</route-and-stanos>
+		</sta>
+		<sta>
+			<sta-name-zhtw>烏日</sta-name-zhtw>
+			<sta-name-en>Wiri</sta-name-en>
+			<route-and-stanos>
+				<route-and-stano place="TC" route="G/1" stano="18"/>
+			</route-and-stanos>
+		</sta>
 	</group>
 	<group letter="Ｘ">
 		
