@@ -146,13 +146,7 @@
 		
 	</group>
 	<group letter="Ｒ">
-		<sta no-service="true">
-			<sta-name-zhtw>榮泉</sta-name-zhtw>
-			<sta-name-en>Rongquan</sta-name-en>
-			<route-and-stanos>
-				<route-and-stano place="TC" route="G/1" stano="21"/>
-			</route-and-stanos>
-		</sta>
+		
 	</group>
 	<group letter="Ｓ">
 		<sta>
@@ -167,6 +161,13 @@
 			<sta-name-en>Songzhu</sta-name-en>
 			<route-and-stanos>
 				<route-and-stano place="TC" route="G/1" stano="04"/>
+			</route-and-stanos>
+		</sta>
+		<sta no-service="true">
+			<sta-name-zhtw>旭光國小</sta-name-zhtw>
+			<sta-name-en>Shuih Kuang Elementary School</sta-name-en>
+			<route-and-stanos>
+				<route-and-stano place="TC" route="G/1" stano="21"/>
 			</route-and-stanos>
 		</sta>
 		<sta>
