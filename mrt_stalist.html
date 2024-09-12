@@ -46,7 +46,11 @@
 									['kh', 'y'], 
 									['kh', 'p'], 
 									['kh', 'qj'], 
-									['kh', 'ld']]; 
+									['kh', 'ld'], 
+									['tc', 'g/1'], 
+									['tc', 'b/2'], 
+									['tc', 'o/3'], 
+									['tc', 'p/4']]; 
 			var sta_color_special = [['tp', 'r', '22a'], 
 									 ['tp', 'g', '03a'], 
 									 ['tp', 'sb', ['11a', '11b', '11c']]]; 
@@ -61,7 +65,12 @@
 					style_content = style_content.slice(0, -2); 
 					style_content += ' {\n\tborder-color: var(--'+j[0]+'-'+route+'); \n}\n'; 
 				} else {
-					style_content += '.route-and-stano[sta-place = "'+j[0].toUpperCase()+'"]:has(.route[data = "'+j[1].toUpperCase()+'"]) {\n\tborder-color: var(--'+j[0]+'-'+j[1]+'); \n}\n'; 
+					if (j[1].text.includes('/')) {
+						sta_route = j[1].replace('/', '\\47'); 
+					} else {
+						sta_route = j[1]; 
+					}
+					style_content += '.route-and-stano[sta-place = "'+j[0].toUpperCase()+'"]:has(.route[data = "'+j[1].toUpperCase()+'"]) {\n\tborder-color: var(--'+j[0]+'-'+sta_route+'); \n}\n'; 
 				}
 			}
 			for (var i = 0; i < sta_color_special.length; i++) {
