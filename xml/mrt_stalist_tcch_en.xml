@@ -16,10 +16,31 @@
 	</group>
 	<group letter="Ｃ">
 		<sta no-service="true">
+			<sta-name-zhtw>澄清醫院</sta-name-zhtw>
+			<sta-name-en>Cheng Ching Hospital</sta-name-en>
+			<route-and-stanos>
+				<route-and-stano place="TC" route="B/2" stano="11"/>
+			</route-and-stanos>
+		</sta>
+		<sta no-service="true">
 			<sta-name-zhtw>成功嶺</sta-name-zhtw>
 			<sta-name-en>Chenggongling</sta-name-en>
 			<route-and-stanos>
 				<route-and-stano place="TC" route="G/1" stano="20"/>
+			</route-and-stanos>
+		</sta>
+		<sta no-service="true">
+			<sta-name-zhtw>竹林國小</sta-name-zhtw>
+			<sta-name-en>Chu-lin Elementary School</sta-name-en>
+			<route-and-stanos>
+				<route-and-stano place="TC" route="B/2" stano="05"/>
+			</route-and-stanos>
+		</sta>
+		<sta no-service="true">
+			<sta-name-zhtw>忠明國小</sta-name-zhtw>
+			<sta-name-en>Chungming Elementary School</sta-name-en>
+			<route-and-stanos>
+				<route-and-stano place="TC" route="B/2" stano="15"/>
 			</route-and-stanos>
 		</sta>
 	</group>
@@ -41,6 +62,13 @@
 			</route-and-stanos>
 		</sta>
 		<sta no-service="true">
+			<sta-name-zhtw>東平</sta-name-zhtw>
+			<sta-name-en>Dongping</sta-name-en>
+			<route-and-stanos>
+				<route-and-stano place="TC" route="B/2" stano="24"/>
+			</route-and-stanos>
+		</sta>
+		<sta no-service="true">
 			<sta-name-zhtw>渡船頭</sta-name-zhtw>
 			<sta-name-en>Duchuantou</sta-name-en>
 			<route-and-stanos>
@@ -49,7 +77,13 @@
 		</sta>
 	</group>
 	<group letter="Ｅ">
-		
+		<sta no-service="true">
+			<sta-name-zhtw>帝國製糖廠</sta-name-zhtw>
+			<sta-name-en>Empire Sugar Factory</sta-name-en>
+			<route-and-stanos>
+				<route-and-stano place="TC" route="B/2" stano="20"/>
+			</route-and-stanos>
+		</sta>
 	</group>
 	<group letter="Ｆ">
 		<sta>
@@ -59,16 +93,37 @@
 				<route-and-stano place="TC" route="G/1" stano="14"/>
 			</route-and-stanos>
 		</sta>
+		<sta no-service="true">
+			<sta-name-zhtw>福安</sta-name-zhtw>
+			<sta-name-en>Fu-an</sta-name-en>
+			<route-and-stanos>
+				<route-and-stano place="TC" route="B/2" stano="12"/>
+			</route-and-stanos>
+		</sta>
 	</group>
 	<group letter="Ｇ">
 		
 	</group>
 	<group letter="Ｈ">
+		<sta no-service="true">
+			<sta-name-zhtw>旱溪</sta-name-zhtw>
+			<sta-name-en>Han River</sta-name-en>
+			<route-and-stanos>
+				<route-and-stano place="TC" route="B/2" stano="21"/>
+			</route-and-stanos>
+		</sta>
 		<sta>
 			<sta-name-zhtw>高鐵台中站</sta-name-zhtw>
 			<sta-name-en>HSR Taichung Station</sta-name-en>
 			<route-and-stanos>
 				<route-and-stano place="TC" route="G/1" stano="19"/>
+			</route-and-stanos>
+		</sta>
+		<sta no-service="true">
+			<sta-name-zhtw>弘光科大</sta-name-zhtw>
+			<sta-name-en>Hungkuang University</sta-name-en>
+			<route-and-stanos>
+				<route-and-stano place="TC" route="B/2" stano="07"/>
 			</route-and-stanos>
 		</sta>
 	</group>
@@ -78,7 +133,7 @@
 	<group letter="Ｊ">
 		<sta no-service="true">
 			<sta-name-zhtw>金馬</sta-name-zhtw>
-			<sta-name-en>Jingma</sta-name-en>
+			<sta-name-en>Jinma</sta-name-en>
 			<route-and-stanos>
 				<route-and-stano place="TC" route="G/1" stano="24"/>
 			</route-and-stanos>
@@ -125,7 +180,13 @@
 		
 	</group>
 	<group letter="Ｍ">
-		
+		<sta no-service="true">
+			<sta-name-zhtw>秋紅谷</sta-name-zhtw>
+			<sta-name-en>Maple Garden</sta-name-en>
+			<route-and-stanos>
+				<route-and-stano place="TC" route="B/2" stano="13"/>
+			</route-and-stanos>
+		</sta>
 	</group>
 	<group letter="Ｎ">
 		<sta>
@@ -135,15 +196,34 @@
 				<route-and-stano place="TC" route="G/1" stano="13"/>
 			</route-and-stanos>
 		</sta>
+		<sta no-service="true">
+			<sta-name-zhtw>科博館</sta-name-zhtw>
+			<sta-name-en>National Museum of Natural Science</sta-name-en>
+			<route-and-stanos>
+				<route-and-stano place="TC" route="B/2" stano="16"/>
+			</route-and-stanos>
+		</sta>
 	</group>
 	<group letter="Ｏ">
 		
 	</group>
 	<group letter="Ｐ">
-		
+		<sta no-service="true">
+			<sta-name-zhtw>靜宜大學</sta-name-zhtw>
+			<sta-name-en>Providence University</sta-name-en>
+			<route-and-stanos>
+				<route-and-stano place="TC" route="B/2" stano="06"/>
+			</route-and-stanos>
+		</sta>
 	</group>
 	<group letter="Ｑ">
-		
+		<sta no-service="true">
+			<sta-name-zhtw>茄苳腳</sta-name-zhtw>
+			<sta-name-en>Qiedongjiao</sta-name-en>
+			<route-and-stanos>
+				<route-and-stano place="TC" route="B/2" stano="17"/>
+			</route-and-stanos>
+		</sta>
 	</group>
 	<group letter="Ｒ">
 		
@@ -156,11 +236,11 @@
 				<route-and-stano place="TC" route="G/1" stano="05"/>
 			</route-and-stanos>
 		</sta>
-		<sta>
-			<sta-name-zhtw>松竹</sta-name-zhtw>
-			<sta-name-en>Songzhu</sta-name-en>
+		<sta no-service="true">
+			<sta-name-zhtw>沙鹿</sta-name-zhtw>
+			<sta-name-en>Shalu</sta-name-en>
 			<route-and-stanos>
-				<route-and-stano place="TC" route="G/1" stano="04"/>
+				<route-and-stano place="TC" route="B/2" stano="04"/>
 			</route-and-stanos>
 		</sta>
 		<sta no-service="true">
@@ -177,6 +257,13 @@
 				<route-and-stano place="TC" route="G/1" stano="11"/>
 			</route-and-stanos>
 		</sta>
+		<sta>
+			<sta-name-zhtw>松竹</sta-name-zhtw>
+			<sta-name-en>Songzhu</sta-name-en>
+			<route-and-stanos>
+				<route-and-stano place="TC" route="G/1" stano="04"/>
+			</route-and-stanos>
+		</sta>
 	</group>
 	<group letter="Ｔ">
 		<sta>
@@ -185,6 +272,64 @@
 			<route-and-stanos>
 				<route-and-stano place="TC" route="G/1" stano="10"/>
 				<route-and-stano place="TC" route="B/2" stano="14" no-service="true"/>
+			</route-and-stanos>
+		</sta>
+		<sta no-service="true">
+			<sta-name-zhtw>第二市場</sta-name-zhtw>
+			<sta-name-en>Taichung City Second Market</sta-name-en>
+			<route-and-stanos>
+				<route-and-stano place="TC" route="B/2" stano="18"/>
+			</route-and-stanos>
+		</sta>
+		<sta no-service="true">
+			<sta-name-zhtw>台中港</sta-name-zhtw>
+			<sta-name-en>Taichung Port</sta-name-en>
+			<route-and-stanos>
+				<route-and-stano place="TC" route="B/2" stano="01"/>
+			</route-and-stanos>
+		</sta>
+		<sta no-service="true">
+			<sta-name-zhtw>台中車站</sta-name-zhtw>
+			<sta-name-en>Taichung Station</sta-name-en>
+			<route-and-stanos>
+				<route-and-stano place="TC" route="B/2" stano="19"/>
+				<route-and-stano place="TC" route="O/3" stano="16"/>
+			</route-and-stanos>
+		</sta>
+		<sta no-service="true">
+			<sta-name-zhtw>太平</sta-name-zhtw>
+			<sta-name-en>Taiping</sta-name-en>
+			<route-and-stanos>
+				<route-and-stano place="TC" route="B/2" stano="22"/>
+				<route-and-stano place="TC" route="P/4" stano="07"/>
+			</route-and-stanos>
+		</sta>
+		<sta no-service="true">
+			<sta-name-zhtw>太平運動場</sta-name-zhtw>
+			<sta-name-en>Taiping Stadium</sta-name-en>
+			<route-and-stanos>
+				<route-and-stano place="TC" route="B/2" stano="23"/>
+			</route-and-stanos>
+		</sta>
+		<sta no-service="true">
+			<sta-name-zhtw>東海大學</sta-name-zhtw>
+			<sta-name-en>Tunghai University</sta-name-en>
+			<route-and-stanos>
+				<route-and-stano place="TC" route="B/2" stano="10"/>
+			</route-and-stanos>
+		</sta>
+		<sta no-service="true">
+			<sta-name-zhtw>東海別墅</sta-name-zhtw>
+			<sta-name-en>Tunghai Villa</sta-name-en>
+			<route-and-stanos>
+				<route-and-stano place="TC" route="B/2" stano="09"/>
+			</route-and-stanos>
+		</sta>
+		<sta no-service="true">
+			<sta-name-zhtw>童綜合醫院</sta-name-zhtw>
+			<sta-name-en>Tungs' Taichung MetroHarbor Hospital</sta-name-en>
+			<route-and-stanos>
+				<route-and-stano place="TC" route="B/2" stano="03"/>
 			</route-and-stanos>
 		</sta>
 	</group>
@@ -231,9 +376,16 @@
 				<route-and-stano place="TC" route="O/3" stano="11" no-service="true"/>
 			</route-and-stanos>
 		</sta>
+		<sta no-service="true">
+			<sta-name-zhtw>梧棲</sta-name-zhtw>
+			<sta-name-en>Wuqi</sta-name-en>
+			<route-and-stanos>
+				<route-and-stano place="TC" route="B/2" stano="02"/>
+			</route-and-stanos>
+		</sta>
 		<sta>
 			<sta-name-zhtw>烏日</sta-name-zhtw>
-			<sta-name-en>Wiri</sta-name-en>
+			<sta-name-en>Wuri</sta-name-en>
 			<route-and-stanos>
 				<route-and-stano place="TC" route="G/1" stano="18"/>
 			</route-and-stanos>
@@ -246,7 +398,13 @@
 		
 	</group>
 	<group letter="Ｚ">
-		
+		<sta no-service="true">
+			<sta-name-zhtw>正英路</sta-name-zhtw>
+			<sta-name-en>Zhengying Road</sta-name-en>
+			<route-and-stanos>
+				<route-and-stano place="TC" route="B/2" stano="08"/>
+			</route-and-stanos>
+		</sta>
 	</group>
 	<group letter="＊">
 		
