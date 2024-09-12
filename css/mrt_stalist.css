@@ -33,6 +33,10 @@
 	--kh-p     : #c100ff; 
 	--kh-qj    : #e20b65; 
 	--kh-ld    : #524fff; 
+	--tc-g\47 1: #8ec31c; 
+	--tc-b\47 2: #0093d8; 
+	--tc-o\47 3: #fca311; 
+	--tc-p\47 4: #cc00cc; 
 }
 
 @media (width > 768px) {
@@ -135,15 +139,3 @@ body {
 	width: 1.7rem; 
 	text-align: center; 
 }
-
-/*.route-and-stano[sta-place = "TP"]:has(.route[data = "BR"]) {
-	border-color: var(--tp-br); 
-}
-
-.route-and-stano[sta-place = "TP"]:has(.route[data = "R"]) {
-	border-color: var(--tp-r); 
-}
-
-.route-and-stano[sta-place = "TP"]:has(.route[data = "R"]):has(.stano[data = "22A"]) {
-	border-color: var(--tp-r22a); 
-}*/
