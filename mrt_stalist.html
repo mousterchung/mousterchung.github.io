@@ -65,7 +65,7 @@
 					style_content = style_content.slice(0, -2); 
 					style_content += ' {\n\tborder-color: var(--'+j[0]+'-'+route+'); \n}\n'; 
 				} else {
-					if (j[1].text.includes('/')) {
+					if (j[1].includes('/')) {
 						sta_route = j[1].replace('/', '\\47'); 
 					} else {
 						sta_route = j[1]; 
