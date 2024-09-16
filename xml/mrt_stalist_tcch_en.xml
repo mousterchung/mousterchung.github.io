@@ -16,6 +16,13 @@
 	</group>
 	<group letter="Ｃ">
 		<sta no-service="true">
+			<sta-name-zhtw>長榮</sta-name-zhtw>
+			<sta-name-en>Changrong</sta-name-en>
+			<route-and-stanos>
+				<route-and-stano place="TC" route="O/3" stano="17"/>
+			</route-and-stanos>
+		</sta>
+		<sta no-service="true">
 			<sta-name-zhtw>澄清醫院</sta-name-zhtw>
 			<sta-name-en>Cheng Ching Hospital</sta-name-en>
 			<route-and-stanos>
@@ -27,6 +34,27 @@
 			<sta-name-en>Chenggongling</sta-name-en>
 			<route-and-stanos>
 				<route-and-stano place="TC" route="G/1" stano="20"/>
+			</route-and-stanos>
+		</sta>
+		<sta no-service="true">
+			<sta-name-zhtw>陳平</sta-name-zhtw>
+			<sta-name-en>Chenping</sta-name-en>
+			<route-and-stanos>
+				<route-and-stano place="TC" route="O/3" stano="10"/>
+			</route-and-stanos>
+		</sta>
+		<sta no-service="true">
+			<sta-name-zhtw>中國醫藥大學</sta-name-zhtw>
+			<sta-name-en>China Medical University Hospital</sta-name-en>
+			<route-and-stanos>
+				<route-and-stano place="TC" route="O/3" stano="13/>
+			</route-and-stanos>
+		</sta>
+		<sta no-service="true">
+			<sta-name-zhtw>清泉崗</sta-name-zhtw>
+			<sta-name-en>Ching Chuan Kang</sta-name-en>
+			<route-and-stanos>
+				<route-and-stano place="TC" route="O/3" stano="03"/>
 			</route-and-stanos>
 		</sta>
 		<sta no-service="true">
@@ -59,6 +87,13 @@
 			<route-and-stanos>
 				<route-and-stano place="TC" route="G/1" stano="15"/>
 				<route-and-stano place="TC" route="P/4" stano="16" no-service="true"/>
+			</route-and-stanos>
+		</sta>
+		<sta no-service="true">
+			<sta-name-zhtw>大雅</sta-name-zhtw>
+			<sta-name-en>Daya</sta-name-en>
+			<route-and-stanos>
+				<route-and-stano place="TC" route="O/3" stano="06"/>
 			</route-and-stanos>
 		</sta>
 		<sta no-service="true">
@@ -102,7 +137,13 @@
 		</sta>
 	</group>
 	<group letter="Ｇ">
-		
+		<sta no-service="true">
+			<sta-name-zhtw>公明</sta-name-zhtw>
+			<sta-name-en>Gongming</sta-name-en>
+			<route-and-stanos>
+				<route-and-stano place="TC" route="O/3" stano="02"/>
+			</route-and-stanos>
+		</sta>
 	</group>
 	<group letter="Ｈ">
 		<sta no-service="true">
@@ -131,6 +172,13 @@
 		
 	</group>
 	<group letter="Ｊ">
+		<sta no-service="true">
+			<sta-name-zhtw>仁愛醫院</sta-name-zhtw>
+			<sta-name-en>Jen-Ai Hospital</sta-name-en>
+			<route-and-stanos>
+				<route-and-stano place="TC" route="O/3" stano="19"/>
+			</route-and-stanos>
+		</sta>
 		<sta no-service="true">
 			<sta-name-zhtw>金馬</sta-name-zhtw>
 			<sta-name-en>Jinma</sta-name-en>
@@ -169,6 +217,13 @@
 	</group>
 	<group letter="Ｋ">
 		<sta no-service="true">
+			<sta-name-zhtw>科雅</sta-name-zhtw>
+			<sta-name-en>Keya</sta-name-en>
+			<route-and-stanos>
+				<route-and-stano place="TC" route="O/3" stano="05"/>
+			</route-and-stanos>
+		</sta>
+		<sta no-service="true">
 			<sta-name-zhtw>苦苓腳</sta-name-zhtw>
 			<sta-name-en>Kulingjiao</sta-name-en>
 			<route-and-stanos>
@@ -177,7 +232,13 @@
 		</sta>
 	</group>
 	<group letter="Ｌ">
-		
+		<sta no-service="true">
+			<sta-name-zhtw>賴厝</sta-name-zhtw>
+			<sta-name-en>Laicuo</sta-name-en>
+			<route-and-stanos>
+				<route-and-stano place="TC" route="O/3" stano="12"/>
+			</route-and-stanos>
+		</sta>
 	</group>
 	<group letter="Ｍ">
 		<sta no-service="true">
@@ -197,6 +258,13 @@
 			</route-and-stanos>
 		</sta>
 		<sta no-service="true">
+			<sta-name-zhtw>中興大學</sta-name-zhtw>
+			<sta-name-en>National Chung Hsing University</sta-name-en>
+			<route-and-stanos>
+				<route-and-stano place="TC" route="O/3" stano="18"/>
+			</route-and-stanos>
+		</sta>
+		<sta no-service="true">
 			<sta-name-zhtw>科博館</sta-name-zhtw>
 			<sta-name-en>National Museum of Natural Science</sta-name-en>
 			<route-and-stanos>
@@ -213,6 +281,13 @@
 			<sta-name-en>Providence University</sta-name-en>
 			<route-and-stanos>
 				<route-and-stano place="TC" route="B/2" stano="06"/>
+			</route-and-stanos>
+		</sta>
+		<sta no-service="true">
+			<sta-name-zhtw>埔子墘</sta-name-zhtw>
+			<sta-name-en>Puziqian</sta-name-en>
+			<route-and-stanos>
+				<route-and-stano place="TC" route="O/3" stano="04"/>
 			</route-and-stanos>
 		</sta>
 	</group>
@@ -244,6 +319,13 @@
 			</route-and-stanos>
 		</sta>
 		<sta no-service="true">
+			<sta-name-zhtw>新民高中</sta-name-zhtw>
+			<sta-name-en>Shin Min High School</sta-name-en>
+			<route-and-stanos>
+				<route-and-stano place="TC" route="O/3" stano="14"/>
+			</route-and-stanos>
+		</sta>
+		<sta no-service="true">
 			<sta-name-zhtw>旭光國小</sta-name-zhtw>
 			<sta-name-en>Shuih Kuang Elementary School</sta-name-en>
 			<route-and-stanos>
@@ -257,6 +339,20 @@
 				<route-and-stano place="TC" route="G/1" stano="11"/>
 			</route-and-stanos>
 		</sta>
+		<sta no-service="true">
+			<sta-name-zhtw>水湳轉運中心</sta-name-zhtw>
+			<sta-name-en>Shuinan Transfer Center</sta-name-en>
+			<route-and-stanos>
+				<route-and-stano place="TC" route="O/3" stano="08"/>
+			</route-and-stanos>
+		</sta>
+		<sta no-service="true">
+			<sta-name-zhtw>四塊厝</sta-name-zhtw>
+			<sta-name-en>Sitetshu</sta-name-en>
+			<route-and-stanos>
+				<route-and-stano place="TC" route="O/3" stano="07"/>
+			</route-and-stanos>
+		</sta>
 		<sta>
 			<sta-name-zhtw>松竹</sta-name-zhtw>
 			<sta-name-en>Songzhu</sta-name-en>
@@ -266,6 +362,13 @@
 		</sta>
 	</group>
 	<group letter="Ｔ">
+		<sta no-service="true">
+			<sta-name-zhtw>中央公園</sta-name-zhtw>
+			<sta-name-en>Taichung Central Park</sta-name-en>
+			<route-and-stanos>
+				<route-and-stano place="TC" route="O/3" stano="09"/>
+			</route-and-stanos>
+		</sta>
 		<sta>
 			<sta-name-zhtw>市政府</sta-name-zhtw>
 			<sta-name-en>Taichung City Hall</sta-name-en>
@@ -279,6 +382,13 @@
 			<sta-name-en>Taichung City Second Market</sta-name-en>
 			<route-and-stanos>
 				<route-and-stano place="TC" route="B/2" stano="18"/>
+			</route-and-stanos>
+		</sta>
+		<sta no-service="true">
+			<sta-name-zhtw>台中國際機場</sta-name-zhtw>
+			<sta-name-en>Taichung International Airport</sta-name-en>
+			<route-and-stanos>
+				<route-and-stano place="TC" route="O/3" stano="01"/>
 			</route-and-stanos>
 		</sta>
 		<sta no-service="true">
@@ -395,7 +505,13 @@
 		
 	</group>
 	<group letter="Ｙ">
-		
+		<sta no-service="true">
+			<sta-name-zhtw>一中商圈</sta-name-zhtw>
+			<sta-name-en>Yizhong Shopping District</sta-name-en>
+			<route-and-stanos>
+				<route-and-stano place="TC" route="O/3" stano="15"/>
+			</route-and-stanos>
+		</sta>
 	</group>
 	<group letter="Ｚ">
 		<sta no-service="true">
