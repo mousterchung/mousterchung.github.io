@@ -13,6 +13,13 @@
 				<route-and-stano place="TC" route="G/1" stano="03a"/>
 			</route-and-stanos>
 		</sta>
+		<sta no-service="true">
+			<sta-name-zhtw>蝴蝶橋</sta-name-zhtw>
+			<sta-name-en>Butterfly Bridge</sta-name-en>
+			<route-and-stanos>
+				<route-and-stano place="TC" route="P/4" stano="02"/>
+			</route-and-stanos>
+		</sta>
 	</group>
 	<group letter="Ｃ">
 		<sta no-service="true">
@@ -81,6 +88,21 @@
 				<route-and-stano place="TC" route="P/4" stano="01"/>
 			</route-and-stanos>
 		</sta>
+		<sta no-service="true">
+			<sta-name-zhtw>大里</sta-name-zhtw>
+			<sta-name-en>Dali</sta-name-en>
+			<route-and-stanos>
+				<route-and-stano place="TC" route="O/3" stano="20"/>
+				<route-and-stano place="TC" route="P/4" stano="13"/>
+			</route-and-stanos>
+		</sta>
+		<sta no-service="true">
+			<sta-name-zhtw>大里運動中心</sta-name-zhtw>
+			<sta-name-en>Dali Civil Sports Center</sta-name-en>
+			<route-and-stanos>
+				<route-and-stano place="TC" route="O/3" stano="21"/>
+			</route-and-stanos>
+		</sta>
 		<sta>
 			<sta-name-zhtw>大慶（中山醫大）</sta-name-zhtw>
 			<sta-name-en>Daqing ( Chungshan Medical University )</sta-name-en>
@@ -94,6 +116,13 @@
 			<sta-name-en>Daya</sta-name-en>
 			<route-and-stanos>
 				<route-and-stano place="TC" route="O/3" stano="06"/>
+			</route-and-stanos>
+		</sta>
+		<sta no-service="true">
+			<sta-name-zhtw>大元國小</sta-name-zhtw>
+			<sta-name-en>Dayuan Elementary School</sta-name-en>
+			<route-and-stanos>
+				<route-and-stano place="TC" route="P/4" stano="12"/>
 			</route-and-stanos>
 		</sta>
 		<sta no-service="true">
@@ -154,7 +183,7 @@
 			</route-and-stanos>
 		</sta>
 		<sta>
-			<sta-name-zhtw>高鐵台中站</sta-name-zhtw>
+			<sta-name-zhtw>高鐵臺中站</sta-name-zhtw>
 			<sta-name-en>HSR Taichung Station</sta-name-en>
 			<route-and-stanos>
 				<route-and-stano place="TC" route="G/1" stano="19"/>
@@ -239,6 +268,13 @@
 				<route-and-stano place="TC" route="O/3" stano="12"/>
 			</route-and-stanos>
 		</sta>
+		<sta no-service="true">
+			<sta-name-zhtw>立仁路</sta-name-zhtw>
+			<sta-name-en>Liren Road</sta-name-en>
+			<route-and-stanos>
+				<route-and-stano place="TC" route="P/4" stano="10"/>
+			</route-and-stanos>
+		</sta>
 	</group>
 	<group letter="Ｍ">
 		<sta no-service="true">
@@ -276,6 +312,13 @@
 		
 	</group>
 	<group letter="Ｐ">
+		<sta no-service="true">
+			<sta-name-zhtw>坪林橋</sta-name-zhtw>
+			<sta-name-en>Pinglin Bridge</sta-name-en>
+			<route-and-stanos>
+				<route-and-stano place="TC" route="P/4" stano="04"/>
+			</route-and-stanos>
+		</sta>
 		<sta no-service="true">
 			<sta-name-zhtw>靜宜大學</sta-name-zhtw>
 			<sta-name-en>Providence University</sta-name-en>
@@ -319,6 +362,13 @@
 			</route-and-stanos>
 		</sta>
 		<sta no-service="true">
+			<sta-name-zhtw>十九甲</sta-name-zhtw>
+			<sta-name-en>Shijiujia</sta-name-en>
+			<route-and-stanos>
+				<route-and-stano place="TC" route="P/4" stano="11"/>
+			</route-and-stanos>
+		</sta>
+		<sta no-service="true">
 			<sta-name-zhtw>新民高中</sta-name-zhtw>
 			<sta-name-en>Shin Min High School</sta-name-en>
 			<route-and-stanos>
@@ -344,6 +394,13 @@
 			<sta-name-en>Shuinan Transfer Center</sta-name-en>
 			<route-and-stanos>
 				<route-and-stano place="TC" route="O/3" stano="08"/>
+			</route-and-stanos>
+		</sta>
+		<sta no-service="true">
+			<sta-name-zhtw>樹王（文心東興）</sta-name-zhtw>
+			<sta-name-en>Shuwang ( Wenxin Dongxing )</sta-name-en>
+			<route-and-stanos>
+				<route-and-stano place="TC" route="P/4" stano="13"/>
 			</route-and-stanos>
 		</sta>
 		<sta no-service="true">
@@ -385,21 +442,35 @@
 			</route-and-stanos>
 		</sta>
 		<sta no-service="true">
-			<sta-name-zhtw>台中國際機場</sta-name-zhtw>
+			<sta-name-zhtw>臺中高工</sta-name-zhtw>
+			<sta-name-en>Taichung Industrial Senior High School</sta-name-en>
+			<route-and-stanos>
+				<route-and-stano place="TC" route="P/4" stano="15"/>
+			</route-and-stanos>
+		</sta>
+		<sta no-service="true">
+			<sta-name-zhtw>臺中國際機場</sta-name-zhtw>
 			<sta-name-en>Taichung International Airport</sta-name-en>
 			<route-and-stanos>
 				<route-and-stano place="TC" route="O/3" stano="01"/>
 			</route-and-stanos>
 		</sta>
 		<sta no-service="true">
-			<sta-name-zhtw>台中港</sta-name-zhtw>
+			<sta-name-zhtw>臺中港</sta-name-zhtw>
 			<sta-name-en>Taichung Port</sta-name-en>
 			<route-and-stanos>
 				<route-and-stano place="TC" route="B/2" stano="01"/>
 			</route-and-stanos>
 		</sta>
 		<sta no-service="true">
-			<sta-name-zhtw>台中車站</sta-name-zhtw>
+			<sta-name-zhtw>軟體園區</sta-name-zhtw>
+			<sta-name-en>Taichung Software Park</sta-name-en>
+			<route-and-stanos>
+				<route-and-stano place="TC" route="O/3" stano="23"/>
+			</route-and-stanos>
+		</sta>
+		<sta no-service="true">
+			<sta-name-zhtw>臺中車站</sta-name-zhtw>
 			<sta-name-en>Taichung Station</sta-name-en>
 			<route-and-stanos>
 				<route-and-stano place="TC" route="B/2" stano="19"/>
@@ -419,6 +490,27 @@
 			<sta-name-en>Taiping Stadium</sta-name-en>
 			<route-and-stanos>
 				<route-and-stano place="TC" route="B/2" stano="23"/>
+			</route-and-stanos>
+		</sta>
+		<sta no-service="true">
+			<sta-name-zhtw>民主議政園區</sta-name-zhtw>
+			<sta-name-en>Taiwan Provincial Consultative Council</sta-name-en>
+			<route-and-stanos>
+				<route-and-stano place="TC" route="O/3" stano="26"/>
+			</route-and-stanos>
+		</sta>
+		<sta no-service="true">
+			<sta-name-zhtw>太原六號橋</sta-name-zhtw>
+			<sta-name-en>Taiyuan NO.6 Bridge</sta-name-en>
+			<route-and-stanos>
+				<route-and-stano place="TC" route="P/4" stano="03"/>
+			</route-and-stanos>
+		</sta>
+		<sta no-service="true">
+			<sta-name-zhtw>塗城</sta-name-zhtw>
+			<sta-name-en>Tucheng</sta-name-en>
+			<route-and-stanos>
+				<route-and-stano place="TC" route="O/3" stano="22"/>
 			</route-and-stanos>
 		</sta>
 		<sta no-service="true">
@@ -487,6 +579,20 @@
 			</route-and-stanos>
 		</sta>
 		<sta no-service="true">
+			<sta-name-zhtw>霧峰</sta-name-zhtw>
+			<sta-name-en>Wufeng</sta-name-en>
+			<route-and-stanos>
+				<route-and-stano place="TC" route="O/3" stano="25"/>
+			</route-and-stanos>
+		</sta>
+		<sta no-service="true">
+			<sta-name-zhtw>霧峰農工</sta-name-zhtw>
+			<sta-name-en>Wufeng Agricultural &amp; Industrial High School</sta-name-en>
+			<route-and-stanos>
+				<route-and-stano place="TC" route="O/3" stano="24"/>
+			</route-and-stanos>
+		</sta>
+		<sta no-service="true">
 			<sta-name-zhtw>梧棲</sta-name-zhtw>
 			<sta-name-en>Wuqi</sta-name-en>
 			<route-and-stanos>
@@ -502,7 +608,27 @@
 		</sta>
 	</group>
 	<group letter="Ｘ">
-		
+		<sta no-service="true">
+			<sta-name-zhtw>欣豐橋</sta-name-zhtw>
+			<sta-name-en>Xinfeng Bridge</sta-name-en>
+			<route-and-stanos>
+				<route-and-stano place="TC" route="P/4" stano="05"/>
+			</route-and-stanos>
+		</sta>
+		<sta no-service="true">
+			<sta-name-zhtw>新仁路</sta-name-zhtw>
+			<sta-name-en>Xinren Road</sta-name-en>
+			<route-and-stanos>
+				<route-and-stano place="TC" route="P/4" stano="09"/>
+			</route-and-stanos>
+		</sta>
+		<sta no-service="true">
+			<sta-name-zhtw>溪洲橋</sta-name-zhtw>
+			<sta-name-en>Xizhou Bridge</sta-name-en>
+			<route-and-stanos>
+				<route-and-stano place="TC" route="P/4" stano="06"/>
+			</route-and-stanos>
+		</sta>
 	</group>
 	<group letter="Ｙ">
 		<sta no-service="true">
@@ -510,6 +636,13 @@
 			<sta-name-en>Yizhong Shopping District</sta-name-en>
 			<route-and-stanos>
 				<route-and-stano place="TC" route="O/3" stano="15"/>
+			</route-and-stanos>
+		</sta>
+		<sta no-service="true">
+			<sta-name-zhtw>永成路</sta-name-zhtw>
+			<sta-name-en>Yongcheng Road</sta-name-en>
+			<route-and-stanos>
+				<route-and-stano place="TC" route="P/4" stano="08"/>
 			</route-and-stanos>
 		</sta>
 	</group>
