@@ -1952,7 +1952,7 @@
 			<sta-name-en>Yongchun</sta-name-en>
 			<route-and-stanos>
 				<route-and-stano place="TP" route="BL" stano="19"/>
-				<route-and-stano place="NT" route="Y" stano="38"/>
+				<route-and-stano place="NT" route="Y" stano="38" no-service="true"/>
 			</route-and-stanos>
 		</sta>
 		<sta no-service="true">
