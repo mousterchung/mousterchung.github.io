@@ -54,7 +54,7 @@
 			<sta-name-zhtw>中國醫藥大學</sta-name-zhtw>
 			<sta-name-en>China Medical University Hospital</sta-name-en>
 			<route-and-stanos>
-				<route-and-stano place="TC" route="O/3" stano="13/>
+				<route-and-stano place="TC" route="O/3" stano="13"/>
 			</route-and-stanos>
 		</sta>
 		<sta no-service="true">
