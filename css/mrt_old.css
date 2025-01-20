@@ -1,5 +1,9 @@
 @charset "UTF-8"; 
-td:empty::before {content: '-'; }
+td:empty::before {
+	content: '-'; 
+	text-align: center; 
+	display: block; 
+}
 table {
 	white-space: nowrap; 
 }
@@ -9,6 +13,7 @@ table {
 	z-index: 1; 
 	background: white; 
 }
+
 [id="br"][id] th {background-color: #c48c31; color: white; z-index: 2; }
 [id="r" ][id] th {background-color: #e3002c; color: white; z-index: 2; }
 [id="g" ][id] th {background-color: #008659; color: white; z-index: 2; }
@@ -18,9 +23,10 @@ table {
 [id="a" ][id] th {background-color: #8246af; color: white; z-index: 2; }
 [id="v" ][id] th {background-color: #e5554f; color: white; z-index: 2; }
 [id="k" ][id] th {background-color: #a28d5b; color: white; z-index: 2; }
-.dc-mrt-yes.dc-mrt-yes::before {content: "✅"; }
-.dc-mrt-no.dc-mrt-no::before {content: "❌"; }
-.dc-mrt-idk.dc-mrt-idk::before {content: "❓"; }
-.dc-mrt-noserv.dc-mrt-noserv {color: grey; }
+
+/*.mrt-yes::before {content: "✅"; }
+.mrt-no::before {content: "❌"; }
+.mrt-idk::before {content: "❓"; }*/
+.mrt-noservice {color: grey; }
 [href] {text-decoration: none; }
 [href]:hover {text-decoration: underline; }
