@@ -1,8 +1,6 @@
 @charset "UTF-8"; 
 td:empty::before {content: '-'; }
 table {
-	position: sticky; 
-	top: 20px; 
 	white-space: nowrap; 
 }
 :is(td, th:not([id])):first-child {
