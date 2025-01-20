@@ -19,6 +19,11 @@
 		tr:nth-of-type(n+3) th {top: 7em; }
 		td:nth-of-type(4) {font-family: var(--font-family-ja); }
 		td:nth-of-type(5) {font-family: var(--font-family-ko); }
+		table {
+			background: white; 
+			border: black; 
+		}
+		th {background-clip: border-box; }
 	</style>
 </head>
 <body>
@@ -48,21 +53,16 @@
 			<col/><col/><col/>
 			<col class="ja" style="font-family: var(--font-family-ja); "/>
 			<col class="ko" style="font-family: var(--font-family-ko); "/>
-			<col/><col/><col/><col/><col/><col/>
+			<col/><col/>
 		</colgroup>
 		<tr>
 			<th rowspan="2" style="z-index: 2;">車站編號</th>
 			<th colspan="4">車站名稱</th>
-			<th colspan="4">廣播</th>
 			<th rowspan="2">轉乘</th>
 			<th rowspan="2">備註</th>
 		</tr>
 		<tr class="emoji">
 			<th style="top:5.2em; left: initial">🇹🇼🇨🇳中文</th>
-			<th>🇺🇸🇬🇧英文</th>
-			<th>🇯🇵日文</th>
-			<th>🇰🇷🇰🇵韓文</th>
-			<th>🇹🇼🇨🇳中文、台語、客語</th>
 			<th>🇺🇸🇬🇧英文</th>
 			<th>🇯🇵日文</th>
 			<th>🇰🇷🇰🇵韓文</th>
@@ -74,10 +74,6 @@
 			<td>Taipei Zoo</td>
 			<td>動物園</td>
 			<td>동물원</td>
-			<td class="dc-mrt-yes"></td>
-			<td class="dc-mrt-yes"></td>
-			<td class="dc-mrt-idk"></td>
-			<td class="dc-mrt-idk"></td>
 			<td></td>
 			<td></td>
 		</tr>
@@ -87,10 +83,6 @@
 			<td>Muzha</td>
 			<td>木柵</td>
 			<td>무자</td>
-			<td class="dc-mrt-yes"></td>
-			<td class="dc-mrt-yes"></td>
-			<td class="dc-mrt-idk"></td>
-			<td class="dc-mrt-idk"></td>
 			<td></td>
 			<td></td>
 		</tr>
@@ -100,10 +92,6 @@
 			<td>Wanfang Community</td>
 			<td>万芳コミュニティ</td>
 			<td>완팡 단지</td>
-			<td class="dc-mrt-yes"></td>
-			<td class="dc-mrt-yes"></td>
-			<td class="dc-mrt-idk"></td>
-			<td class="dc-mrt-idk"></td>
 			<td></td>
 			<td></td>
 		</tr>
@@ -113,10 +101,6 @@
 			<td>Wanfang Hospital</td>
 			<td>万芳病院</td>
 			<td>완팡 병원</td>
-			<td class="dc-mrt-yes"></td>
-			<td class="dc-mrt-yes"></td>
-			<td class="dc-mrt-idk"></td>
-			<td class="dc-mrt-idk"></td>
 			<td></td>
 			<td></td>
 		</tr>
@@ -126,10 +110,6 @@
 			<td>Xinhai</td>
 			<td>辛亥</td>
 			<td>신하이</td>
-			<td class="dc-mrt-yes"></td>
-			<td class="dc-mrt-yes"></td>
-			<td class="dc-mrt-idk"></td>
-			<td class="dc-mrt-idk"></td>
 			<td></td>
 			<td></td>
 		</tr>
@@ -139,10 +119,6 @@
 			<td>Linguang</td>
 			<td>麟光</td>
 			<td>린광</td>
-			<td class="dc-mrt-yes"></td>
-			<td class="dc-mrt-yes"></td>
-			<td class="dc-mrt-idk"></td>
-			<td class="dc-mrt-idk"></td>
 			<td></td>
 			<td></td>
 		</tr>
@@ -152,10 +128,6 @@
 			<td>Liuzhangli</td>
 			<td>六張犁</td>
 			<td>류장리</td>
-			<td class="dc-mrt-yes"></td>
-			<td class="dc-mrt-yes"></td>
-			<td class="dc-mrt-idk"></td>
-			<td class="dc-mrt-idk"></td>
 			<td></td>
 			<td></td>
 		</tr>
@@ -165,10 +137,6 @@
 			<td>Technology Building</td>
 			<td>テクノロジービル</td>
 			<td>테크놀로지 빌딩</td>
-			<td class="dc-mrt-yes"></td>
-			<td class="dc-mrt-yes"></td>
-			<td class="dc-mrt-idk"></td>
-			<td class="dc-mrt-idk"></td>
 			<td></td>
 			<td></td>
 		</tr>
@@ -178,10 +146,6 @@
 			<td>Daan</td>
 			<td>大安</td>
 			<td>다안</td>
-			<td class="dc-mrt-yes"></td>
-			<td class="dc-mrt-yes"></td>
-			<td class="dc-mrt-idk"></td>
-			<td class="dc-mrt-idk"></td>
 			<td><a href="#r">淡水信義線</a><a href="#r05">大安站</a></td>
 			<td></td>
 		</tr>
@@ -191,10 +155,6 @@
 			<td>Zhongxiao Fuxing</td>
 			<td>忠孝復興</td>
 			<td>중샤오 푸싱</td>
-			<td class="dc-mrt-yes"></td>
-			<td class="dc-mrt-yes"></td>
-			<td class="dc-mrt-idk"></td>
-			<td class="dc-mrt-idk"></td>
 			<td><a href="#bl">板南線</a><a href="#bl15">忠孝復興站</a></td>
 			<td></td>
 		</tr>
@@ -204,10 +164,6 @@
 			<td>Nanjing Fuxing</td>
 			<td>南京復興</td>
 			<td>난싱 푸싱</td>
-			<td class="dc-mrt-yes"></td>
-			<td class="dc-mrt-yes"></td>
-			<td class="dc-mrt-idk"></td>
-			<td class="dc-mrt-idk"></td>
 			<td><a href="#g">松山新店線</a><a href="#g16">南京復興站</a></td>
 			<td></td>
 		</tr>
@@ -217,10 +173,6 @@
 			<td>Zhongshan Junior High School</td>
 			<td>中山中学校</td>
 			<td>중산 중학교</td>
-			<td class="dc-mrt-yes"></td>
-			<td class="dc-mrt-yes"></td>
-			<td class="dc-mrt-idk"></td>
-			<td class="dc-mrt-idk"></td>
 			<td></td>
 			<td></td>
 		</tr>
@@ -230,10 +182,6 @@
 			<td>Songshan Airport</td>
 			<td>松山空港</td>
 			<td>송산 공항</td>
-			<td class="dc-mrt-yes"></td>
-			<td class="dc-mrt-yes"></td>
-			<td class="dc-mrt-idk"></td>
-			<td class="dc-mrt-idk"></td>
 			<td></td>
 			<td>機場</td>
 		</tr>
@@ -243,10 +191,6 @@
 			<td>Dazhi</td>
 			<td>大直</td>
 			<td>다즈</td>
-			<td class="dc-mrt-yes"></td>
-			<td class="dc-mrt-yes"></td>
-			<td class="dc-mrt-idk"></td>
-			<td class="dc-mrt-idk"></td>
 			<td></td>
 			<td></td>
 		</tr>
@@ -256,10 +200,6 @@
 			<td>Jiannan Rd.</td>
 			<td>剣南路</td>
 			<td>젠난루</td>
-			<td class="dc-mrt-yes"></td>
-			<td class="dc-mrt-yes"></td>
-			<td class="dc-mrt-idk"></td>
-			<td class="dc-mrt-idk"></td>
 			<td></td>
 			<td></td>
 		</tr>
@@ -269,10 +209,6 @@
 			<td>Xihu</td>
 			<td>西湖</td>
 			<td>시후</td>
-			<td class="dc-mrt-yes"></td>
-			<td class="dc-mrt-yes"></td>
-			<td class="dc-mrt-idk"></td>
-			<td class="dc-mrt-idk"></td>
 			<td></td>
 			<td></td>
 		</tr>
@@ -282,10 +218,6 @@
 			<td>Gangqian</td>
 			<td>港墘</td>
 			<td>강첸</td>
-			<td class="dc-mrt-yes"></td>
-			<td class="dc-mrt-yes"></td>
-			<td class="dc-mrt-idk"></td>
-			<td class="dc-mrt-idk"></td>
 			<td></td>
 			<td></td>
 		</tr>
@@ -295,10 +227,6 @@
 			<td>Wende</td>
 			<td>文徳</td>
 			<td>원더</td>
-			<td class="dc-mrt-yes"></td>
-			<td class="dc-mrt-yes"></td>
-			<td class="dc-mrt-idk"></td>
-			<td class="dc-mrt-idk"></td>
 			<td></td>
 			<td></td>
 		</tr>
@@ -308,10 +236,6 @@
 			<td>Neihu</td>
 			<td>内湖</td>
 			<td>네이후</td>
-			<td class="dc-mrt-yes"></td>
-			<td class="dc-mrt-yes"></td>
-			<td class="dc-mrt-idk"></td>
-			<td class="dc-mrt-idk"></td>
 			<td></td>
 			<td></td>
 		</tr>
@@ -321,10 +245,6 @@
 			<td>Dahu Park</td>
 			<td>大湖公園</td>
 			<td>다후 공원</td>
-			<td class="dc-mrt-yes"></td>
-			<td class="dc-mrt-yes"></td>
-			<td class="dc-mrt-idk"></td>
-			<td class="dc-mrt-idk"></td>
 			<td></td>
 			<td></td>
 		</tr>
@@ -334,10 +254,6 @@
 			<td>Huzhou</td>
 			<td>葫洲</td>
 			<td>후저우</td>
-			<td class="dc-mrt-yes"></td>
-			<td class="dc-mrt-yes"></td>
-			<td class="dc-mrt-idk"></td>
-			<td class="dc-mrt-idk"></td>
 			<td></td>
 			<td></td>
 		</tr>
@@ -347,10 +263,6 @@
 			<td>Donghu</td>
 			<td>東湖</td>
 			<td>둥후</td>
-			<td class="dc-mrt-yes"></td>
-			<td class="dc-mrt-yes"></td>
-			<td class="dc-mrt-no"></td>
-			<td class="dc-mrt-no"></td>
 			<td></td>
 			<td></td>
 		</tr>
@@ -360,10 +272,6 @@
 			<td>Nangang Software Park</td>
 			<td>南港ソフトウェアパーク</td>
 			<td>난강 소프트웨어 단지</td>
-			<td class="dc-mrt-yes"></td>
-			<td class="dc-mrt-yes"></td>
-			<td class="dc-mrt-no"></td>
-			<td class="dc-mrt-no"></td>
 			<td></td>
 			<td></td>
 		</tr>
@@ -373,10 +281,6 @@
 			<td>Taipei Nangang Exibition Center</td>
 			<td>南港展覧館</td>
 			<td>난강 전람관</td>
-			<td class="dc-mrt-yes"></td>
-			<td class="dc-mrt-yes"></td>
-			<td class="dc-mrt-yes"></td>
-			<td class="dc-mrt-yes"></td>
 			<td><a href="#bl">板南線</a><a href="#bl23">南港展覽館站</a></td>
 			<td></td>
 		</tr>
@@ -386,11 +290,7 @@
 			<td>象山</td>
 			<td>Xiangshan</td>
 			<td>象山</td>
-			<td>샹산</td>
-			<td class="dc-mrt-yes"></td>
-			<td class="dc-mrt-yes"></td>
-			<td class="dc-mrt-idk"></td>
-			<td class="dc-mrt-idk"></td>
+			<td>샹산</td>
 			<td></td>
 			<td></td>
 		</tr>
@@ -399,11 +299,7 @@
 			<td>台北１０１／世貿</td>
 			<td>Taipei 101 / World Trade Center</td>
 			<td>台北１０１／世界貿易センター</td>
-			<td>타이베이101 / 세계무역센터</td>
-			<td class="dc-mrt-yes"></td>
-			<td class="dc-mrt-yes"></td>
-			<td class="dc-mrt-yes"></td>
-			<td class="dc-mrt-yes"></td>
+			<td>타이베이101 / 세계무역센터</td>
 			<td></td>
 			<td></td>
 		</tr>
@@ -412,11 +308,7 @@
 			<td>信義安和</td>
 			<td>Xinyi Anhe</td>
 			<td>信義安和</td>
-			<td>신이 안허</td>
-			<td class="dc-mrt-yes"></td>
-			<td class="dc-mrt-yes"></td>
-			<td class="dc-mrt-no"></td>
-			<td class="dc-mrt-no"></td>
+			<td>신이 안허</td>
 			<td></td>
 			<td></td>
 		</tr>
@@ -425,11 +317,7 @@
 			<td>大安</td>
 			<td>Daan</td>
 			<td>大安</td>
-			<td>다안</td>
-			<td class="dc-mrt-yes"></td>
-			<td class="dc-mrt-yes"></td>
-			<td class="dc-mrt-yes"></td>
-			<td class="dc-mrt-yes"></td>
+			<td>다안</td>
 			<td></td>
 			<td></td>
 		</tr>
@@ -438,11 +326,7 @@
 			<td>大安森林公園</td>
 			<td>Daan Park</td>
 			<td>大安森林公園</td>
-			<td>다안 삼림 공원</td>
-			<td class="dc-mrt-yes"></td>
-			<td class="dc-mrt-yes"></td>
-			<td class="dc-mrt-no"></td>
-			<td class="dc-mrt-no"></td>
+			<td>다안 삼림 공원</td>
 			<td></td>
 			<td></td>
 		</tr>
@@ -451,11 +335,7 @@
 			<td>東門</td>
 			<td>Dongmen</td>
 			<td>東門</td>
-			<td>둥먼</td>
-			<td class="dc-mrt-yes"></td>
-			<td class="dc-mrt-yes"></td>
-			<td class="dc-mrt-yes"></td>
-			<td class="dc-mrt-yes"></td>
+			<td>둥먼</td>
 			<td><a href="#o">中和新蘆線</a><a href="o06">東門站</a></td>
 			<td></td>
 		</tr>
