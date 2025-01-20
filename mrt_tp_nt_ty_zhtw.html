@@ -13,15 +13,17 @@
 	<style>
 		.emoji {font-family: var(--font-family-emoji); }
 		.center {text-align: center; }
-		table, th {position: sticky; }
-		tr:nth-of-type(1) th {top: 3.4em; background: white; }
-		tr:nth-of-type(2) th {top: 5.2em; background: white; }
-		tr:nth-of-type(n+3) th {top: 7em; }
+		th {position: sticky; }
+		thead tr:nth-of-type(1) th {top: 3.4em; background: white; }
+		thead tr:nth-of-type(2) th {top: 5.2em; background: white; }
+		tbody tr th {top: 7em; }
+		/*thead {top: 3.4em; background: white; position: sticky; }*/
 		td:nth-of-type(4) {font-family: var(--font-family-ja); }
 		td:nth-of-type(5) {font-family: var(--font-family-ko); }
+		td:nth-of-type(1) {text-align: center; }
 		table {
 			background: white; 
-			border: black; 
+			/*border-collapse: collapse; */
 		}
 		th {background-clip: border-box; }
 	</style>
@@ -55,298 +57,302 @@
 			<col class="ko" style="font-family: var(--font-family-ko); "/>
 			<col/><col/>
 		</colgroup>
-		<tr>
-			<th rowspan="2" style="z-index: 2;">車站編號</th>
-			<th colspan="4">車站名稱</th>
-			<th rowspan="2">轉乘</th>
-			<th rowspan="2">備註</th>
-		</tr>
-		<tr class="emoji">
-			<th style="top:5.2em; left: initial">🇹🇼🇨🇳中文</th>
-			<th>🇺🇸🇬🇧英文</th>
-			<th>🇯🇵日文</th>
-			<th>🇰🇷🇰🇵韓文</th>
-		</tr>
-		<tr id="br"><th colspan="11">BR 文湖線</th></tr>
-		<tr id="br01">
-			<td>BR01</td>
-			<td>動物園</td>
-			<td>Taipei Zoo</td>
-			<td>動物園</td>
-			<td>동물원</td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr id="br02">
-			<td>BR02</td>
-			<td>木柵</td>
-			<td>Muzha</td>
-			<td>木柵</td>
-			<td>무자</td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr id="br03">
-			<td>BR03</td>
-			<td>萬芳社區</td>
-			<td>Wanfang Community</td>
-			<td>万芳コミュニティ</td>
-			<td>완팡 단지</td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr id="br04">
-			<td>BR04</td>
-			<td>萬芳醫院</td>
-			<td>Wanfang Hospital</td>
-			<td>万芳病院</td>
-			<td>완팡 병원</td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr id="br05">
-			<td>BR05</td>
-			<td>辛亥</td>
-			<td>Xinhai</td>
-			<td>辛亥</td>
-			<td>신하이</td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr id="br06">
-			<td>BR06</td>
-			<td>麟光</td>
-			<td>Linguang</td>
-			<td>麟光</td>
-			<td>린광</td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr id="br07">
-			<td>BR07</td>
-			<td>六張犁</td>
-			<td>Liuzhangli</td>
-			<td>六張犁</td>
-			<td>류장리</td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr id="br08">
-			<td>BR08</td>
-			<td>科技大樓</td>
-			<td>Technology Building</td>
-			<td>テクノロジービル</td>
-			<td>테크놀로지 빌딩</td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr id="br09">
-			<td>BR09</td>
-			<td>大安</td>
-			<td>Daan</td>
-			<td>大安</td>
-			<td>다안</td>
-			<td><a href="#r">淡水信義線</a><a href="#r05">大安站</a></td>
-			<td></td>
-		</tr>
-		<tr id="br10">
-			<td>BR10</td>
-			<td>忠孝復興</td>
-			<td>Zhongxiao Fuxing</td>
-			<td>忠孝復興</td>
-			<td>중샤오 푸싱</td>
-			<td><a href="#bl">板南線</a><a href="#bl15">忠孝復興站</a></td>
-			<td></td>
-		</tr>
-		<tr id="br11">
-			<td>BR11</td>
-			<td>南京復興</td>
-			<td>Nanjing Fuxing</td>
-			<td>南京復興</td>
-			<td>난싱 푸싱</td>
-			<td><a href="#g">松山新店線</a><a href="#g16">南京復興站</a></td>
-			<td></td>
-		</tr>
-		<tr id="br12">
-			<td>BR12</td>
-			<td>中山國中</td>
-			<td>Zhongshan Junior High School</td>
-			<td>中山中学校</td>
-			<td>중산 중학교</td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr id="br13">
-			<td>BR13</td>
-			<td>松山機場</td>
-			<td>Songshan Airport</td>
-			<td>松山空港</td>
-			<td>송산 공항</td>
-			<td></td>
-			<td>機場</td>
-		</tr>
-		<tr id="br14">
-			<td>BR14</td>
-			<td>大直</td>
-			<td>Dazhi</td>
-			<td>大直</td>
-			<td>다즈</td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr id="br15">
-			<td>BR15</td>
-			<td>劍南路</td>
-			<td>Jiannan Rd.</td>
-			<td>剣南路</td>
-			<td>젠난루</td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr id="br16">
-			<td>BR16</td>
-			<td>西湖</td>
-			<td>Xihu</td>
-			<td>西湖</td>
-			<td>시후</td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr id="br17">
-			<td>BR17</td>
-			<td>港墘</td>
-			<td>Gangqian</td>
-			<td>港墘</td>
-			<td>강첸</td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr id="br18">
-			<td>BR18</td>
-			<td>文德</td>
-			<td>Wende</td>
-			<td>文徳</td>
-			<td>원더</td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr id="br19">
-			<td>BR19</td>
-			<td>內湖</td>
-			<td>Neihu</td>
-			<td>内湖</td>
-			<td>네이후</td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr id="br20">
-			<td>BR20</td>
-			<td>大湖公園</td>
-			<td>Dahu Park</td>
-			<td>大湖公園</td>
-			<td>다후 공원</td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr id="br21">
-			<td>BR21</td>
-			<td>葫洲</td>
-			<td>Huzhou</td>
-			<td>葫洲</td>
-			<td>후저우</td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr id="br22">
-			<td>BR22</td>
-			<td>東湖</td>
-			<td>Donghu</td>
-			<td>東湖</td>
-			<td>둥후</td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr id="br23">
-			<td>BR23</td>
-			<td>南港軟體園區</td>
-			<td>Nangang Software Park</td>
-			<td>南港ソフトウェアパーク</td>
-			<td>난강 소프트웨어 단지</td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr id="br24">
-			<td>BR24</td>
-			<td>南港展覽館</td>
-			<td>Taipei Nangang Exibition Center</td>
-			<td>南港展覧館</td>
-			<td>난강 전람관</td>
-			<td><a href="#bl">板南線</a><a href="#bl23">南港展覽館站</a></td>
-			<td></td>
-		</tr>
-		<tr id="r"><th colspan="11">R 淡水信義線</th></tr>
-		<tr id="r02">
-			<td>R02</td>
-			<td>象山</td>
-			<td>Xiangshan</td>
-			<td>象山</td>
-			<td>샹산</td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr id="r03">
-			<td>R03</td>
-			<td>台北１０１／世貿</td>
-			<td>Taipei 101 / World Trade Center</td>
-			<td>台北１０１／世界貿易センター</td>
-			<td>타이베이101 / 세계무역센터</td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr id="r04">
-			<td>R04</td>
-			<td>信義安和</td>
-			<td>Xinyi Anhe</td>
-			<td>信義安和</td>
-			<td>신이 안허</td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr id="r05">
-			<td>R05</td>
-			<td>大安</td>
-			<td>Daan</td>
-			<td>大安</td>
-			<td>다안</td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr id="r06">
-			<td>R06</td>
-			<td>大安森林公園</td>
-			<td>Daan Park</td>
-			<td>大安森林公園</td>
-			<td>다안 삼림 공원</td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr id="r07">
-			<td>R07</td>
-			<td>東門</td>
-			<td>Dongmen</td>
-			<td>東門</td>
-			<td>둥먼</td>
-			<td><a href="#o">中和新蘆線</a><a href="o06">東門站</a></td>
-			<td></td>
-		</tr>
-		<tr id="g"><th colspan="11">G 松山新店線</th></tr>
-		<tr id="o"><th colspan="11">O 中和新蘆線</th></tr>
-		<tr id="bl"><th colspan="11">BL 板南線</th></tr>
-		<tr id="y"><th colspan="11">Y 環狀線</th></tr>
-		<tr id="a"><th colspan="11">A 桃園機場捷運</th></tr>
-		<tr id="v"><th colspan="11">V 淡海輕軌</th></tr>
-		<tr id="k"><th colspan="11">K 安坑輕軌</th></tr>
-		<tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr>
+		<thead>
+			<tr>
+				<th rowspan="2" style="z-index: 2;">車站<br/>編號</th>
+				<th colspan="4">車站名稱</th>
+				<th rowspan="2">轉乘</th>
+				<th rowspan="2">備註</th>
+			</tr>
+			<tr class="emoji">
+				<th style="top:5.2em; left: initial">🇹🇼🇨🇳中文</th>
+				<th>🇺🇸🇬🇧英文</th>
+				<th>🇯🇵日文</th>
+				<th>🇰🇷🇰🇵韓文</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr id="br"><th colspan="11">BR 文湖線</th></tr>
+			<tr id="br01">
+				<td>BR01</td>
+				<td>動物園</td>
+				<td>Taipei Zoo</td>
+				<td>動物園</td>
+				<td>동물원</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr id="br02">
+				<td>BR02</td>
+				<td>木柵</td>
+				<td>Muzha</td>
+				<td>木柵</td>
+				<td>무자</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr id="br03">
+				<td>BR03</td>
+				<td>萬芳社區</td>
+				<td>Wanfang Community</td>
+				<td>万芳コミュニティ</td>
+				<td>완팡 단지</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr id="br04">
+				<td>BR04</td>
+				<td>萬芳醫院</td>
+				<td>Wanfang Hospital</td>
+				<td>万芳病院</td>
+				<td>완팡 병원</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr id="br05">
+				<td>BR05</td>
+				<td>辛亥</td>
+				<td>Xinhai</td>
+				<td>辛亥</td>
+				<td>신하이</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr id="br06">
+				<td>BR06</td>
+				<td>麟光</td>
+				<td>Linguang</td>
+				<td>麟光</td>
+				<td>린광</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr id="br07">
+				<td>BR07</td>
+				<td>六張犁</td>
+				<td>Liuzhangli</td>
+				<td>六張犁</td>
+				<td>류장리</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr id="br08">
+				<td>BR08</td>
+				<td>科技大樓</td>
+				<td>Technology Building</td>
+				<td>テクノロジービル</td>
+				<td>테크놀로지 빌딩</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr id="br09">
+				<td>BR09</td>
+				<td>大安</td>
+				<td>Daan</td>
+				<td>大安</td>
+				<td>다안</td>
+				<td><a href="#r">淡水信義線</a><a href="#r05">大安站</a></td>
+				<td></td>
+			</tr>
+			<tr id="br10">
+				<td>BR10</td>
+				<td>忠孝復興</td>
+				<td>Zhongxiao Fuxing</td>
+				<td>忠孝復興</td>
+				<td>중샤오 푸싱</td>
+				<td><a href="#bl">板南線</a><a href="#bl15">忠孝復興站</a></td>
+				<td></td>
+			</tr>
+			<tr id="br11">
+				<td>BR11</td>
+				<td>南京復興</td>
+				<td>Nanjing Fuxing</td>
+				<td>南京復興</td>
+				<td>난싱 푸싱</td>
+				<td><a href="#g">松山新店線</a><a href="#g16">南京復興站</a></td>
+				<td></td>
+			</tr>
+			<tr id="br12">
+				<td>BR12</td>
+				<td>中山國中</td>
+				<td>Zhongshan Junior High School</td>
+				<td>中山中学校</td>
+				<td>중산 중학교</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr id="br13">
+				<td>BR13</td>
+				<td>松山機場</td>
+				<td>Songshan Airport</td>
+				<td>松山空港</td>
+				<td>송산 공항</td>
+				<td></td>
+				<td>機場</td>
+			</tr>
+			<tr id="br14">
+				<td>BR14</td>
+				<td>大直</td>
+				<td>Dazhi</td>
+				<td>大直</td>
+				<td>다즈</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr id="br15">
+				<td>BR15</td>
+				<td>劍南路</td>
+				<td>Jiannan Rd.</td>
+				<td>剣南路</td>
+				<td>젠난루</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr id="br16">
+				<td>BR16</td>
+				<td>西湖</td>
+				<td>Xihu</td>
+				<td>西湖</td>
+				<td>시후</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr id="br17">
+				<td>BR17</td>
+				<td>港墘</td>
+				<td>Gangqian</td>
+				<td>港墘</td>
+				<td>강첸</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr id="br18">
+				<td>BR18</td>
+				<td>文德</td>
+				<td>Wende</td>
+				<td>文徳</td>
+				<td>원더</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr id="br19">
+				<td>BR19</td>
+				<td>內湖</td>
+				<td>Neihu</td>
+				<td>内湖</td>
+				<td>네이후</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr id="br20">
+				<td>BR20</td>
+				<td>大湖公園</td>
+				<td>Dahu Park</td>
+				<td>大湖公園</td>
+				<td>다후 공원</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr id="br21">
+				<td>BR21</td>
+				<td>葫洲</td>
+				<td>Huzhou</td>
+				<td>葫洲</td>
+				<td>후저우</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr id="br22">
+				<td>BR22</td>
+				<td>東湖</td>
+				<td>Donghu</td>
+				<td>東湖</td>
+				<td>둥후</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr id="br23">
+				<td>BR23</td>
+				<td>南港軟體園區</td>
+				<td>Nangang Software Park</td>
+				<td>南港ソフトウェアパーク</td>
+				<td>난강 소프트웨어 단지</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr id="br24">
+				<td>BR24</td>
+				<td>南港展覽館</td>
+				<td>Taipei Nangang Exibition Center</td>
+				<td>南港展覧館</td>
+				<td>난강 전람관</td>
+				<td><a href="#bl">板南線</a><a href="#bl23">南港展覽館站</a></td>
+				<td></td>
+			</tr>
+			<tr id="r"><th colspan="11">R 淡水信義線</th></tr>
+			<tr id="r02">
+				<td>R02</td>
+				<td>象山</td>
+				<td>Xiangshan</td>
+				<td>象山</td>
+				<td>샹산</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr id="r03">
+				<td>R03</td>
+				<td>台北１０１／世貿</td>
+				<td>Taipei 101 / World Trade Center</td>
+				<td>台北１０１／世界貿易センター</td>
+				<td>타이베이101 / 세계무역센터</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr id="r04">
+				<td>R04</td>
+				<td>信義安和</td>
+				<td>Xinyi Anhe</td>
+				<td>信義安和</td>
+				<td>신이 안허</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr id="r05">
+				<td>R05</td>
+				<td>大安</td>
+				<td>Daan</td>
+				<td>大安</td>
+				<td>다안</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr id="r06">
+				<td>R06</td>
+				<td>大安森林公園</td>
+				<td>Daan Park</td>
+				<td>大安森林公園</td>
+				<td>다안 삼림 공원</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr id="r07">
+				<td>R07</td>
+				<td>東門</td>
+				<td>Dongmen</td>
+				<td>東門</td>
+				<td>둥먼</td>
+				<td><a href="#o">中和新蘆線</a><a href="o06">東門站</a></td>
+				<td></td>
+			</tr>
+			<tr id="g"><th colspan="11">G 松山新店線</th></tr>
+			<tr id="o"><th colspan="11">O 中和新蘆線</th></tr>
+			<tr id="bl"><th colspan="11">BL 板南線</th></tr>
+			<tr id="y"><th colspan="11">Y 環狀線</th></tr>
+			<tr id="a"><th colspan="11">A 桃園機場捷運</th></tr>
+			<tr id="v"><th colspan="11">V 淡海輕軌</th></tr>
+			<tr id="k"><th colspan="11">K 安坑輕軌</th></tr>
+			<tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr>
+		</tbody>
 	</table>
 </body>
 </html>
