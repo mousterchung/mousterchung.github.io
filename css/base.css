@@ -16,4 +16,4 @@ body {font-family: var(--font-family-base); }
 .mono {font-family: var(--font-family-mono); }
 .emoji {font-family: var(--font-family-emoji); }
 [href][href][href] {text-decoration: none; }
-[href][href][href]: hover {text-decoration: underline; }
+[href][href][href]:hover {text-decoration: underline; }
