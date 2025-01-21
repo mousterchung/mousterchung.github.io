@@ -12,20 +12,20 @@
 	<link rel="stylesheet" href="css/mrt_old.css"/>
 	<style>
 		.emoji {font-family: var(--font-family-emoji); }
-		.center {text-align: center; }
 		th {box-shadow:  0.8px  0.8px white, 
 						 0.8px -0.8px white, 
 						-0.8px  0.8px white, 
-						-0.8px -0.8px white; }
+						-0.8px -0.8px white; 
+		}
 		thead tr:nth-of-type(1) th {
-			top: 3.35em; 
+			top: calc(calc(23.4px + 0.8px) + calc(28.2px + 0.8px) + 1px); 
 			background: white; 
 		}
 		thead tr:nth-of-type(2) th {
-			top: 5.15em; 
+			top: calc(calc(23.4px + 0.8px) + calc(28.2px + 0.8px) + 1px + 26.8px + 1px); 
 			background: white; 
 		}
-		tbody tr th {top: 6.9em; }
+		tbody tr th {top: calc(calc(23.4px + 0.8px) + calc(28.2px + 0.8px) + 1px + calc(26.8px + 1px) * 2 + 0.8px); }
 		thead {
 			top: 0em; 
 			background: white; 
@@ -68,12 +68,12 @@
 		</colgroup>
 		<thead>
 			<tr>
-				<th rowspan="2" style="z-index: 2;">車站<br/>編號</th>
+				<th rowspan="2" style="z-index: 3; left: 0; ">車站<br/>編號</th>
 				<th colspan="4">車站名稱</th>
 				<th rowspan="2">轉乘</th>
 				<th rowspan="2">備註</th>
 			</tr>
-			<tr class="nosticky">
+			<tr>
 				<th><span class="emoji">🇹🇼🇨🇳</span>中文</th>
 				<th><span class="emoji">🇺🇸🇬🇧</span>英文</th>
 				<th><span class="emoji">🇯🇵</span>日文</th>
