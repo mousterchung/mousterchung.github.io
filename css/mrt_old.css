@@ -1,6 +1,7 @@
 @charset "UTF-8"; 
 td:empty::before {
 	content: '-'; 
+	color: grey; 
 	text-align: center; 
 	display: block; 
 }
