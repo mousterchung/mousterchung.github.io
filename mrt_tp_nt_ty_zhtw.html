@@ -13,19 +13,29 @@
 	<style>
 		.emoji {font-family: var(--font-family-emoji); }
 		.center {text-align: center; }
-		th {position: sticky; }
-		thead tr:nth-of-type(1) th {top: 3.4em; background: white; }
-		thead tr:nth-of-type(2) th {top: 5.2em; background: white; }
-		tbody tr th {top: 7em; }
-		/*thead {top: 3.4em; background: white; position: sticky; }*/
+		th {box-shadow:  1px  1px white, 
+						 1px -1px white, 
+						-1px  1px white, 
+						-1px -1px white; }
+		thead tr:nth-of-type(1) th {
+			top: 3.35em; 
+			background: white; 
+		}
+		thead tr:nth-of-type(2) th {
+			top: 5.15em; 
+			background: white; 
+		}
+		tbody tr th {top: 6.9em; }
+		thead {
+			top: 0em; 
+			background: white; 
+			position: relative; 
+			z-index: 2; 
+		}
 		td:nth-of-type(4) {font-family: var(--font-family-ja); }
 		td:nth-of-type(5) {font-family: var(--font-family-ko); }
 		td:nth-of-type(1) {text-align: center; }
-		table {
-			background: white; 
-			/*border-collapse: collapse; */
-		}
-		th {background-clip: border-box; }
+		table {background: white; }
 	</style>
 </head>
 <body>
