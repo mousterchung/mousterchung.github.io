@@ -20,15 +20,15 @@ th {
 	z-index: 2; 
 }
 
-[id="br"][id] th {background-color: #c48c31; color: white; z-index: 2; }
-[id="r" ][id] th {background-color: #e3002c; color: white; z-index: 2; }
-[id="g" ][id] th {background-color: #008659; color: white; z-index: 2; }
-[id="o" ][id] th {background-color: #f8b61c; color: black; z-index: 2; }
-[id="bl"][id] th {background-color: #0070bd; color: white; z-index: 2; }
-[id="y" ][id] th {background-color: #ffdb00; color: black; z-index: 2; }
-[id="a" ][id] th {background-color: #8246af; color: white; z-index: 2; }
-[id="v" ][id] th {background-color: #e5554f; color: white; z-index: 2; }
-[id="k" ][id] th {background-color: #a28d5b; color: white; z-index: 2; }
+[id="br"][id] th {background-color: #c48c31; color: white; }
+[id="r" ][id] th {background-color: #e3002c; color: white; }
+[id="g" ][id] th {background-color: #008659; color: white; }
+[id="o" ][id] th {background-color: #f8b61c; color: black; }
+[id="bl"][id] th {background-color: #0070bd; color: white; }
+[id="y" ][id] th {background-color: #ffdb00; color: black; }
+[id="a" ][id] th {background-color: #8246af; color: white; }
+[id="v" ][id] th {background-color: #e5554f; color: white; }
+[id="k" ][id] th {background-color: #a28d5b; color: white; }
 
 /*.mrt-yes::before {content: "✅"; }
 .mrt-no::before {content: "❌"; }
