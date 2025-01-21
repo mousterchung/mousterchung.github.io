@@ -1,11 +1,20 @@
 @charset "UTF-8"; 
+
 nav {
+	margin-left: -10px; 
+	margin-right: -10px; 
 	width: 100%; 
 	border-bottom: 1px solid #DDDCCC; 
 	display: flex; 
 	flex-direction: row; 
 	justify-content: flex-end; 
+	position: sticky; 
+	left: 0.1px; 
+	background: white; 
+	background-clip: margin-box; 
+	z-index: 100; 
 }
+
 nav ul {
 	overflow: hidden; 
 	padding: 0 0 5px 0; 
@@ -16,6 +25,7 @@ nav li {
 	list-style: none; 
 	padding: 0 5px; 
 }
+
 @media screen and (max-width: 920px) {
 	nav {
 		justify-content: space-between; 
@@ -30,11 +40,7 @@ nav li {
 		align-items: center; 
 	}
 }
-nav {
-	position: sticky; 
-	background: white; 
-	z-index: 100; 
-}
-nav:nth-of-type(1) {top: 0px; }
+
+nav:nth-of-type(1) {top: 0; }
 nav:nth-of-type(2) {top: 1.5em; }
 nav:nth-of-type(3) {top: 3em; }
