@@ -1,4 +1,5 @@
 @charset "UTF-8"; 
+
 td:empty::before {
 	content: '-'; 
 	color: grey; 
@@ -31,9 +32,31 @@ th {
 [id="v" ][id] th {background-color: #e5554f; color: white; }
 [id="k" ][id] th {background-color: #a28d5b; color: white; }
 
-/*.mrt-yes::before {content: "✅"; }
-.mrt-no::before {content: "❌"; }
-.mrt-idk::before {content: "❓"; }*/
-.mrt-noservice {color: grey; }
-[href] {text-decoration: none; }
-[href]:hover {text-decoration: underline; }
+/*.mrt-yes::before {
+	content: "✅"; 
+}
+.mrt-no::before {
+	content: "❌"; 
+}
+.mrt-idk::before {
+	content: "❓"; 
+}*/
+.mrt-noservice.mrt-noservice {color: grey; }
+                .mrt-legend-airport::before {color: initial; content: "🛧"; }
+.mrt-legend-word.mrt-legend-airport::before {color: initial; content: "🛧機場"; }
+                .mrt-legend-hsr::before     {color: initial; content: "🚄"; }
+.mrt-legend-word.mrt-legend-hsr::before     {color: initial; content: "🚄高鐵"; }
+                .mrt-legend-tra::before     {color: initial; content: "🚆"; }
+.mrt-legend-word.mrt-legend-tra::before     {color: initial; content: "🚆台鐵"; }
+                .mrt-legend-maokong::before {color: initial; content: "🚡"; }
+.mrt-legend-word.mrt-legend-maokong::before {color: initial; content: "🚡貓空纜車"; }
+
+/*
+🚇	metro
+🚈	light rail
+🚊	tram
+
+🚉	station
+
+https://www.unicode.org/charts/nameslist/n_1F680.html
+*/
