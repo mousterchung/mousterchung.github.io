@@ -1,9 +1,12 @@
 @charset "UTF-8"; 
+:root {
+	--scrollbar-width: 17px; 
+}
 
 nav {
 	margin-left: -8px; 
 	margin-right: -8px; 
-	width: auto; 
+	width: calc(100vw - var(--scrollbar-width)); 
 	border-bottom: 1px solid #DDDCCC; 
 	display: flex; 
 	flex-direction: row; 
