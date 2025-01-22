@@ -15,5 +15,6 @@ body {font-family: var(--font-family-base); }
 .ko {font-family: var(--font-family-ko); }
 .mono {font-family: var(--font-family-mono); }
 .emoji {font-family: var(--font-family-emoji); }
-[href][href][href] {text-decoration: none; }
-[href][href][href]:hover {text-decoration: underline; }
+.inline-block {display: inline-block; }
+[href] {text-decoration: none; }
+[href]:hover {text-decoration: underline; }
