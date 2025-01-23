@@ -32,10 +32,6 @@
 			position: relative; 
 			z-index: 2; 
 		}
-		td:nth-of-type(4) {font-family: var(--font-family-ja); }
-		td:nth-of-type(5) {font-family: var(--font-family-ko); }
-		td:nth-of-type(1) {text-align: center; }
-		body {display: inline-block; }
 	</style>
 	<script src="js/nav.js"></script>
 </head>
@@ -90,9 +86,7 @@
 				<td>Taipei Zoo</td>
 				<td>動物園</td>
 				<td>동물원</td>
-				<td><span class="mrt-noservice"><a href="#nt-y">環狀線</a><a href="#nt-y01">動物園站</a>Y01</span><br/>
-				    <span class="mrt-noservice mrt-legend-transfer-outofsta mrt-legend-lrt"><a href="#nt-s">深坑輕軌</a><a href="#nt-s1">動物園站</a>S1</span><br/>
-				    <span class="mrt-legend-transfer-outofsta mrt-legend-maokong"><a href="#tp-maokong">貓空纜車</a><a href="#tp-maokong1">動物園站</a></span></td>
+				<td><span class="mrt-noservice"><a href="#nt-y">環狀線</a><a href="#nt-y01">動物園站</a>Y01</span><br/><span class="mrt-noservice mrt-legend-transfer-outofsta mrt-legend-lrt"><a href="#nt-s">深坑輕軌</a><a href="#nt-s1">動物園站</a>S1</span><br/><span class="mrt-legend-transfer-outofsta mrt-legend-maokong"><a href="#tp-maokong">貓空纜車</a><a href="#tp-maokong1">動物園站</a></span></td>
 				<td></td>
 			</tr>
 			<tr id="tp-br02">
@@ -215,7 +209,7 @@
 			<tr id="tp-br15">
 				<td>BR15</td>
 				<td>劍南路</td>
-				<td>Jiannan Rd.</td>
+				<td>Jiannan Road</td>
 				<td>剣南路</td>
 				<td>젠난루</td>
 				<td><span class="mrt-noservice"><a href="#nt-y">環狀線</a><a href="#nt-y32">劍南路站</a>Y32</span></td>
@@ -281,7 +275,7 @@
 				<td>Donghu</td>
 				<td>東湖</td>
 				<td>둥후</td>
-				<td></td>
+				<td><span class="mrt-noservice"><a href="#tp-sb">民生汐止線／汐東捷運</a><a href="#tp-sb10">東湖站</a>SB10</span></td>
 				<td></td>
 			</tr>
 			<tr id="tp-br23">
@@ -299,17 +293,26 @@
 				<td>Taipei Nangang Exibition Center</td>
 				<td>南港展覧館</td>
 				<td>난강 전람관</td>
-				<td><span><a href="#tp-bl">板南線</a><a href="#tp-bl23">南港展覽館站</a>BL23</span></td>
+				<td><span><a href="#tp-bl">板南線</a><a href="#tp-bl23">南港展覽館站</a>BL23</span><br/><span class="mrt-noservice"><a href="#tp-sb">民生汐止線／基隆捷運</a><a href="#tp-sb32">南港展覽館站</a>SB32</td>
 				<td></td>
 			</tr>
 			<tr id="tp-r"><th colspan="11">R 淡水信義線</th></tr>
+			<tr id="tp-r01" class="mrt-noservice">
+				<td>R01</td>
+				<td>廣慈／奉天宮</td>
+				<td>Guangci / Fentian Temple</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
 			<tr id="tp-r02">
 				<td>R02</td>
 				<td>象山</td>
 				<td>Xiangshan</td>
 				<td>象山</td>
 				<td>샹산</td>
-				<td></td>
+				<td><span class="mrt-noservice"><a href="#nt-y">環狀線</a><a href="#nt-y41">象山站</a>Y41</span></td>
 				<td></td>
 			</tr>
 			<tr id="tp-r03">
@@ -355,6 +358,60 @@
 				<td>東門</td>
 				<td>둥먼</td>
 				<td><span><a href="#tp-o">中和新蘆線</a><a href="#tp-o06">東門站</a>O06</span></td>
+				<td></td>
+			</tr>
+			<tr id="tp-r08">
+				<td>R08</td>
+				<td>中正紀念堂（南門）</td>
+				<td>Chiang Kai-Shek Memorial Hall (Nanmen)</td>
+				<td>中正紀念堂</td>
+				<td>중정 기념당</td>
+				<td><span><a href="#tp-g">松山新店線</a><a href="#tp-g10">中正紀念堂（南門）站</a>G10</span><br/><span class="mrt-noservice"><a href="#tp-lg">萬大中和樹林線</a><a href="#tp-lg01">中正紀念堂（南門）站</a>LG01</span></td>
+				<td></td>
+			</tr>
+			<tr id="tp-r09">
+				<td>R09</td>
+				<td>台大醫院</td>
+				<td>National Taiwan University Hospital</td>
+				<td>台湾大学病院</td>
+				<td>대만 대학 병원</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr id="tp-r10">
+				<td>R10</td>
+				<td>台北車站</td>
+				<td>Taipei Main Station</td>
+				<td>台北駅</td>
+				<td>타이베이 역</td>
+				<td><span><a href="#tp-bl">板南線</a><a href="#tp-bl12">台北車站</a>BL12</span><br/><span class="mrt-legend-transfer-outofsta"><a href="#tp-g">松山新店線</a><a href="#tp-g13">北門站</a>G13</span><br/><span><a href="#ty-a">桃園機場捷運</a><a href="#ty-a1">台北車站</a>A1</span><br/><span class="mrt-legend-tra mrt-legend-word">台北站</span><br/><span class="mrt-legend-hsr mrt-legend-word">台北站</span></td>
+				<td></td>
+			</tr>
+			<tr id="tp-r11">
+				<td>R11</td>
+				<td>中山</td>
+				<td>Zhongshan</td>
+				<td>中山</td>
+				<td>중산</td>
+				<td><span><a href="#tp-g">松山新店線</a><a href="#tp-g14">中山站</a>G14</span></td>
+				<td></td>
+			</tr>
+			<tr id="tp-r12">
+				<td>R12</td>
+				<td>雙連</td>
+				<td>Shuanglian</td>
+				<td>双連</td>
+				<td>솽롄</td>
+				<td><span class="mrt-noservice"><a href="#tp-sb">民生汐止線</a><a href="#tp-sb02">雙連站</a>SB02</span></td>
+				<td></td>
+			</tr>
+			<tr id="tp-r13">
+				<td>R13</td>
+				<td>台大醫院</td>
+				<td>National Taiwan University Hospital</td>
+				<td>台湾大学病院</td>
+				<td>대만 대학 병원</td>
+				<td></td>
 				<td></td>
 			</tr>
 			<tr id="tp-g"><th colspan="11">G 松山新店線</th></tr>
