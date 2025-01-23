@@ -1,5 +1,23 @@
 @charset "UTF-8"; 
 
+@font-face{
+	font-family: "Taipei Sans TC Beta";
+	src: local("Taipei Sans TC Beta"), "../font/TaipeiSansTCBeta/TaipeiSansTCBeta-Regular.ttf"
+	font-weight: normal;
+}
+
+@font-face{
+	font-family: "Taipei Sans TC Beta";
+	src: local("Taipei Sans TC Beta"), "../font/TaipeiSansTCBeta/TaipeiSansTCBeta-Bold.ttf"
+	font-weight: bold;
+}
+
+@font-face{
+	font-family: "Taipei Sans TC Beta";
+	src: local("Taipei Sans TC Beta"), "../font/TaipeiSansTCBeta/TaipeiSansTCBeta-Light.ttf"
+	font-weight: 300;
+}
+
 td:empty::before {
 	content: '-'; 
 	color: grey; 
@@ -33,6 +51,12 @@ td span {
 [id="ty-a" ][id] th {background-color: #8246af; color: white; }
 [id="nt-v" ][id] th {background-color: #e5554f; color: white; }
 [id="nt-k" ][id] th {background-color: #a28d5b; color: white; }
+
+td:nth-of-type(4) {font-family: var(--font-family-ja); }
+td:nth-of-type(5) {font-family: var(--font-family-ko); }
+td:nth-of-type(2), td:nth-of-type(3) {font-family: "Taipei Sans TC Beta"; }
+td:nth-of-type(1) {text-align: center; }
+body {display: inline-block; }
 
 /*.mrt-yes::before {
 	content: "✅"; 
