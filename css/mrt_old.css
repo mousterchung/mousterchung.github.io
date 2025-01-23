@@ -15,22 +15,24 @@ td:first-child {
 	z-index: 1; 
 	background: white; 
 }
-
 th {
 	position: sticky; 
 	background: white; 
 	z-index: 2; 
 }
+td span {
+	display: inline-block; 
+}
 
-[id="br"][id] th {background-color: #c48c31; color: white; }
-[id="r" ][id] th {background-color: #e3002c; color: white; }
-[id="g" ][id] th {background-color: #008659; color: white; }
-[id="o" ][id] th {background-color: #f8b61c; color: black; }
-[id="bl"][id] th {background-color: #0070bd; color: white; }
-[id="y" ][id] th {background-color: #ffdb00; color: black; }
-[id="a" ][id] th {background-color: #8246af; color: white; }
-[id="v" ][id] th {background-color: #e5554f; color: white; }
-[id="k" ][id] th {background-color: #a28d5b; color: white; }
+[id="tp-br"][id] th {background-color: #c48c31; color: white; }
+[id="tp-r" ][id] th {background-color: #e3002c; color: white; }
+[id="tp-g" ][id] th {background-color: #008659; color: white; }
+[id="tp-o" ][id] th {background-color: #f8b61c; color: black; }
+[id="tp-bl"][id] th {background-color: #0070bd; color: white; }
+[id="nt-y" ][id] th {background-color: #ffdb00; color: black; }
+[id="ty-a" ][id] th {background-color: #8246af; color: white; }
+[id="nt-v" ][id] th {background-color: #e5554f; color: white; }
+[id="nt-k" ][id] th {background-color: #a28d5b; color: white; }
 
 /*.mrt-yes::before {
 	content: "✅"; 
@@ -42,6 +44,8 @@ th {
 	content: "❓"; 
 }*/
 .mrt-noservice.mrt-noservice {color: grey; }
+.mrt-noservice a {color: #6699CC}
+.mrt-legend-transfer-outofsta::after {content: "（站外轉乘）"; }
                 .mrt-legend-airport::before {color: initial; content: "🛧"; }
 .mrt-legend-word.mrt-legend-airport::before {color: initial; content: "🛧機場"; }
                 .mrt-legend-hsr::before     {color: initial; content: "🚄"; }
@@ -50,8 +54,14 @@ th {
 .mrt-legend-word.mrt-legend-tra::before     {color: initial; content: "🚆台鐵"; }
                 .mrt-legend-maokong::before {color: initial; content: "🚡"; }
 .mrt-legend-word.mrt-legend-maokong::before {color: initial; content: "🚡貓空纜車"; }
+                .mrt-legend-lrt::before     {color: initial; content: "🚈"; }
+.mrt-legend-word.mrt-legend-lrt::before     {color: initial; content: "🚈輕軌"; }
 
 /*
+🛧	airport
+🚄	high speed rail
+🚆	railway
+🚡	gondola
 🚇	metro
 🚈	light rail
 🚊	tram
