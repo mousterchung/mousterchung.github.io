@@ -1,21 +1,21 @@
 @charset "UTF-8"; 
 
-@font-face{
-	font-family: "Taipei Sans TC Beta";
+@font-face {
+	font-family: "Taipei Sans TC Beta"; 
 	src: local("Taipei Sans TC Beta"), "../font/TaipeiSansTCBeta/TaipeiSansTCBeta-Regular.ttf"; 
-	font-weight: normal;
+	font-weight: normal; 
 }
 
-@font-face{
-	font-family: "Taipei Sans TC Beta";
+@font-face {
+	font-family: "Taipei Sans TC Beta"; 
 	src: local("Taipei Sans TC Beta"), "../font/TaipeiSansTCBeta/TaipeiSansTCBeta-Bold.ttf"; 
-	font-weight: bold;
+	font-weight: bold; 
 }
 
-@font-face{
-	font-family: "Taipei Sans TC Beta";
+@font-face {
+	font-family: "Taipei Sans TC Beta"; 
 	src: local("Taipei Sans TC Beta"), "../font/TaipeiSansTCBeta/TaipeiSansTCBeta-Light.ttf"; 
-	font-weight: 300;
+	font-weight: 300; 
 }
 
 td:empty::before {
