@@ -88,6 +88,8 @@ body {display: inline-block; }
 .mrt-legend-word.mrt-legend-tra::before     {color: initial; content: "🚆台鐵"; }
                 .mrt-legend-maokong::before {color: initial; content: "🚡"; }
 .mrt-legend-word.mrt-legend-maokong::before {color: initial; content: "🚡貓空纜車"; }
+                .mrt-legend-mrt::before     {color: initial; content: "🚇"; }
+.mrt-legend-word.mrt-legend-mrt::before     {color: initial; content: "🚇捷運"; }
                 .mrt-legend-lrt::before     {color: initial; content: "🚈"; }
 .mrt-legend-word.mrt-legend-lrt::before     {color: initial; content: "🚈輕軌"; }
 
