@@ -60,7 +60,8 @@ body {display: inline-block; }
 
 .mrt-sub {font-size: 0.5em; }
 
-/*.mrt-yes::before {
+/*
+.mrt-yes::before {
 	content: "✅"; 
 }
 .mrt-no::before {
@@ -68,7 +69,8 @@ body {display: inline-block; }
 }
 .mrt-idk::before {
 	content: "❓"; 
-}*/
+}
+*/
 
 .mrt-noservice.mrt-noservice {color: grey; }
 .mrt-noservice a {color: #6699CC}
