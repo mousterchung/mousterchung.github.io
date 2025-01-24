@@ -80,18 +80,18 @@ body {display: inline-block; }
 .mrt-legend-transfer-to::after {content: "方向"; }
 .mrt-legend-branch::after {content: "支線"; }
 
-                .mrt-legend-airport::before {color: initial; content: "🛧"; }
-.mrt-legend-word.mrt-legend-airport::before {color: initial; content: "🛧機場"; }
-                .mrt-legend-hsr::before     {color: initial; content: "🚄"; }
-.mrt-legend-word.mrt-legend-hsr::before     {color: initial; content: "🚄高鐵"; }
-                .mrt-legend-tra::before     {color: initial; content: "🚆"; }
-.mrt-legend-word.mrt-legend-tra::before     {color: initial; content: "🚆台鐵"; }
-                .mrt-legend-maokong::before {color: initial; content: "🚡"; }
-.mrt-legend-word.mrt-legend-maokong::before {color: initial; content: "🚡貓空纜車"; }
-                .mrt-legend-mrt::before     {color: initial; content: "🚇"; }
-.mrt-legend-word.mrt-legend-mrt::before     {color: initial; content: "🚇捷運"; }
-                .mrt-legend-lrt::before     {color: initial; content: "🚈"; }
-.mrt-legend-word.mrt-legend-lrt::before     {color: initial; content: "🚈輕軌"; }
+                .mrt-legend-airport::before {font-family: var(--font-family-emoji); color: initial; content: "🛧"; }
+.mrt-legend-word.mrt-legend-airport::before {font-family: var(--font-family-emoji); color: initial; content: "🛧機場"; }
+                .mrt-legend-hsr::before     {font-family: var(--font-family-emoji); color: initial; content: "🚄"; }
+.mrt-legend-word.mrt-legend-hsr::before     {font-family: var(--font-family-emoji); color: initial; content: "🚄高鐵"; }
+                .mrt-legend-tra::before     {font-family: var(--font-family-emoji); color: initial; content: "🚆"; }
+.mrt-legend-word.mrt-legend-tra::before     {font-family: var(--font-family-emoji); color: initial; content: "🚆台鐵"; }
+                .mrt-legend-maokong::before {font-family: var(--font-family-emoji); color: initial; content: "🚡"; }
+.mrt-legend-word.mrt-legend-maokong::before {font-family: var(--font-family-emoji); color: initial; content: "🚡貓空纜車"; }
+                .mrt-legend-mrt::before     {font-family: var(--font-family-emoji); color: initial; content: "🚇"; }
+.mrt-legend-word.mrt-legend-mrt::before     {font-family: var(--font-family-emoji); color: initial; content: "🚇捷運"; }
+                .mrt-legend-lrt::before     {font-family: var(--font-family-emoji); color: initial; content: "🚈"; }
+.mrt-legend-word.mrt-legend-lrt::before     {font-family: var(--font-family-emoji); color: initial; content: "🚈輕軌"; }
 
 /*
 🛧	airport
