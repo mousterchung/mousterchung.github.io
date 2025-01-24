@@ -58,6 +58,8 @@ td:nth-of-type(1), td:nth-of-type(2), td:nth-of-type(3) {font-family: "Taipei Sa
 td:nth-of-type(1) {text-align: center; }
 body {display: inline-block; }
 
+.mrt-sub {font-size: 0.5em; }
+
 /*.mrt-yes::before {
 	content: "✅"; 
 }
@@ -70,6 +72,9 @@ body {display: inline-block; }
 .mrt-noservice.mrt-noservice {color: grey; }
 .mrt-noservice a {color: #6699CC}
 .mrt-legend-transfer-outofsta::after {content: "（站外轉乘）"; }
+.mrt-legend-transfer-to::before {content: "往"; }
+.mrt-legend-transfer-to::after {content: "方向"; }
+.mrt-legend-branch::after {content: "支線"; }
                 .mrt-legend-airport::before {color: initial; content: "🛧"; }
 .mrt-legend-word.mrt-legend-airport::before {color: initial; content: "🛧機場"; }
                 .mrt-legend-hsr::before     {color: initial; content: "🚄"; }
