@@ -1,13 +1,13 @@
 @charset "UTF-8"; 
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&family=Noto+Emoji:wght@300..700&family=Noto+Sans+JP:wght@100..900&family=Noto+Sans+KR:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Noto+Sans:ital,wdth,wght@0,62.5..100,100..900;1,62.5..100,100..900&family=Zen+Kurenaido&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&family=Noto+Emoji:wght@300..700&family=Noto+Sans+JP:wght@100..900&family=Noto+Sans+KR:wght@100..900&family=Noto+Sans+Mono:wdth,wght@62.5..100,100..900&family=Noto+Sans+TC:wght@100..900&family=Noto+Sans:ital,wdth,wght@0,62.5..100,100..900;1,62.5..100,100..900&family=Zen+Kurenaido&display=swap'); 
 
 :root {
-	--font-family-base: "Arial", 'Noto Sans TC', 'Noto Sans', sans-serif; 
+	--font-family-base: 'Noto Sans TC', 'Noto Sans', "Arial", sans-serif; 
 	--font-family-gr: "Symbol", var(--font-family-base); 
-	--font-family-ja: "Yu Gothic UI Semibold", "標楷體", var(--font-family-base); 
-	--font-family-ko: "Malgun Goghic", var(--font-family-base); 
-	--font-family-mono: "Consolas", "Courier New", "Courier", monospace; 
+	--font-family-ja: 'Noto Sans JP', "Yu Gothic UI Semibold", "標楷體", var(--font-family-base); 
+	--font-family-ko: 'Noto Sans KR', "Malgun Goghic", var(--font-family-base); 
+	--font-family-mono: 'Noto Sans Mono', "Consolas", "Courier New", "Courier", monospace; 
 	--font-family-emoji: 'Noto Color Emoji', 'Noto Emoji', var(--font-family-base); 
 }
 body {font-family: var(--font-family-base); }
