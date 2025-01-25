@@ -2,19 +2,19 @@
 
 @font-face {
 	font-family: "Taipei Sans TC Beta"; 
-	src: local("Taipei Sans TC Beta"), "../font/TaipeiSansTCBeta/TaipeiSansTCBeta-Regular.ttf"; 
+	src: local("Taipei Sans TC Beta"), url("../font/TaipeiSansTCBeta/TaipeiSansTCBeta-Regular.ttf"); 
 	font-weight: normal; 
 }
 
 @font-face {
 	font-family: "Taipei Sans TC Beta"; 
-	src: local("Taipei Sans TC Beta"), "../font/TaipeiSansTCBeta/TaipeiSansTCBeta-Bold.ttf"; 
+	src: local("Taipei Sans TC Beta"), url("../font/TaipeiSansTCBeta/TaipeiSansTCBeta-Bold.ttf"); 
 	font-weight: bold; 
 }
 
 @font-face {
 	font-family: "Taipei Sans TC Beta"; 
-	src: local("Taipei Sans TC Beta"), "../font/TaipeiSansTCBeta/TaipeiSansTCBeta-Light.ttf"; 
+	src: local("Taipei Sans TC Beta"), url("../font/TaipeiSansTCBeta/TaipeiSansTCBeta-Light.ttf"); 
 	font-weight: 300; 
 }
 
@@ -42,20 +42,50 @@ td span {
 	display: inline-block; 
 }
 
-[id="tp-br"][id] th {background-color: #c48c31; color: white; }
-[id="tp-r" ][id] th {background-color: #e3002c; color: white; }
-[id="tp-g" ][id] th {background-color: #008659; color: white; }
-[id="tp-o" ][id] th {background-color: #f8b61c; color: black; }
-[id="tp-bl"][id] th {background-color: #0070bd; color: white; }
-[id="nt-y" ][id] th {background-color: #ffdb00; color: black; }
-[id="ty-a" ][id] th {background-color: #8246af; color: white; }
-[id="nt-v" ][id] th {background-color: #e5554f; color: white; }
-[id="nt-k" ][id] th {background-color: #a28d5b; color: white; }
+[id="tp-br"     ][id] th {background-color: #c48c31; color: white; }
+[id="tp-r"      ][id] th {background-color: #e3002c; color: white; }
+[id="tp-g"      ][id] th {background-color: #008659; color: white; }
+[id="tp-o"      ][id] th {background-color: #f8b61c; color: black; }
+[id="tp-bl"     ][id] th {background-color: #0070bd; color: white; }
+[id="tp-maokong"][id] th {background-color: #77bc1f; color: white; }
+[id="tp-lg"     ][id] th {background-color: #a1d884; color: black; }
+[id="tp-sb"     ][id] th {background-color: #25aae1; color: white; }
+[id="tp-lr"     ][id] th {background-color: #e40078; color: white; }
+[id="nt-y"      ][id] th {background-color: #ffdb00; color: black; }
+[id="nt-v"      ][id] th {background-color: #e5554f; color: white; }
+[id="nt-lb"     ][id] th {background-color: #79bce8; color: white; }
+[id="nt-k"      ][id] th {background-color: #a28d5b; color: white; }
+[id="nt-s"      ][id] th {background-color: #cc7722; color: white; }
+[id="nt-f"      ][id] th {background-color: #e5007f; color: white; }
+[id="ty-a"      ][id] th {background-color: #8246af; color: white; }
+[id="ty-g"      ][id] th {background-color: #62a033; color: white; }
+[id="ty-br"     ][id] th {background-color: #824729; color: white; }
+[id="ty-o"      ][id] th {background-color: #ffa500; color: white; }
+[id="ty-c"      ][id] th {background-color: #00ffff; color: black; }
+[id="tc-g1"     ][id] th {background-color: #8ec31c; color: white; }
+[id="tc-b2"     ][id] th {background-color: #0093d8; color: white; }
+[id="tc-o3"     ][id] th {background-color: #fca311; color: white; }
+[id="tc-p4"     ][id] th {background-color: #cc00cc; color: white; }
+[id="tc-r5"     ][id] th {background-color: #ea0437; color: white; }
+[id="tc-6"      ][id] th {background-color: #ffdf00; color: white; }
+[id="tc-7"      ][id] th {background-color: #00ced1; color: white; }
+[id="ch-r"      ][id] th {background-color: #db0000; color: white; }
+[id="tn-b"      ][id] th {background-color: #015bba; color: white; }
+[id="tn-g"      ][id] th {background-color: #267f00; color: white; }
+[id="tn-r"      ][id] th {background-color: #d90023; color: white; }
+[id="tn-dg"     ][id] th {background-color: #107547; color: white; }
+[id="kh-r"      ][id] th {background-color: #e20b65; color: white; }
+[id="kh-o"      ][id] th {background-color: #faa73f; color: white; }
+[id="kh-c"      ][id] th {background-color: #7cbd52; color: white; }
+[id="kh-y"      ][id] th {background-color: #ffc100; color: black; }
+[id="kh-p"      ][id] th {background-color: #c100ff; color: black; }
+[id="kh-qj"     ][id] th {background-color: #e20b65; color: black; }
 
+td {font-family: 'Taipei Sans TC Beta'; line-height: 1.5em; }
 td:nth-of-type(4) {font-family: var(--font-family-ja); }
 td:nth-of-type(5) {font-family: var(--font-family-ko); }
-td:nth-of-type(1), td:nth-of-type(2), td:nth-of-type(3) {font-family: "Taipei Sans TC Beta"; }
-td:nth-of-type(1) {text-align: center; }
+td:nth-of-type(1), td:nth-last-of-type(1) {text-align: center; }
+td:nth-last-of-type(1) span::before {display: inline-block; }
 body {display: inline-block; }
 
 .mrt-sub {font-size: 0.5em; }
@@ -72,7 +102,7 @@ body {display: inline-block; }
 }
 */
 
-.mrt-noservice.mrt-noservice {color: grey; }
+.mrt-noservice[class] {color: grey; }
 .mrt-noservice a {color: #6699CC}
 
 .mrt-legend-transfer-outofsta::after {content: "（站外轉乘）"; }
@@ -80,18 +110,18 @@ body {display: inline-block; }
 .mrt-legend-transfer-to::after {content: "方向"; }
 .mrt-legend-branch::after {content: "支線"; }
 
-                .mrt-legend-airport::before {font-family: var(--font-family-emoji); color: initial; content: "🛧"; }
-.mrt-legend-word.mrt-legend-airport::before {font-family: var(--font-family-emoji); color: initial; content: "🛧機場"; }
-                .mrt-legend-hsr::before     {font-family: var(--font-family-emoji); color: initial; content: "🚄"; }
-.mrt-legend-word.mrt-legend-hsr::before     {font-family: var(--font-family-emoji); color: initial; content: "🚄高鐵"; }
-                .mrt-legend-tra::before     {font-family: var(--font-family-emoji); color: initial; content: "🚆"; }
-.mrt-legend-word.mrt-legend-tra::before     {font-family: var(--font-family-emoji); color: initial; content: "🚆台鐵"; }
-                .mrt-legend-maokong::before {font-family: var(--font-family-emoji); color: initial; content: "🚡"; }
-.mrt-legend-word.mrt-legend-maokong::before {font-family: var(--font-family-emoji); color: initial; content: "🚡貓空纜車"; }
-                .mrt-legend-mrt::before     {font-family: var(--font-family-emoji); color: initial; content: "🚇"; }
-.mrt-legend-word.mrt-legend-mrt::before     {font-family: var(--font-family-emoji); color: initial; content: "🚇捷運"; }
-                .mrt-legend-lrt::before     {font-family: var(--font-family-emoji); color: initial; content: "🚈"; }
-.mrt-legend-word.mrt-legend-lrt::before     {font-family: var(--font-family-emoji); color: initial; content: "🚈輕軌"; }
+                .mrt-legend-airport::before {font-family: var(--font-family-emoji), 'Taipei Sans TC Beta'; content: "🛧"; }
+.mrt-legend-word.mrt-legend-airport::before {font-family: var(--font-family-emoji), 'Taipei Sans TC Beta'; content: "🛧機場"; }
+                .mrt-legend-hsr::before     {font-family: var(--font-family-emoji), 'Taipei Sans TC Beta'; content: "🚄"; }
+.mrt-legend-word.mrt-legend-hsr::before     {font-family: var(--font-family-emoji), 'Taipei Sans TC Beta'; content: "🚄高鐵"; }
+                .mrt-legend-tra::before     {font-family: var(--font-family-emoji), 'Taipei Sans TC Beta'; content: "🚆"; }
+.mrt-legend-word.mrt-legend-tra::before     {font-family: var(--font-family-emoji), 'Taipei Sans TC Beta'; content: "🚆台鐵"; }
+                .mrt-legend-gondola::before {font-family: var(--font-family-emoji), 'Taipei Sans TC Beta'; content: "🚡"; }
+.mrt-legend-word.mrt-legend-gondola::before {font-family: var(--font-family-emoji), 'Taipei Sans TC Beta'; content: "🚡纜車"; }
+                .mrt-legend-mrt::before     {font-family: var(--font-family-emoji), 'Taipei Sans TC Beta'; content: "🚇"; }
+.mrt-legend-word.mrt-legend-mrt::before     {font-family: var(--font-family-emoji), 'Taipei Sans TC Beta'; content: "🚇捷運"; }
+                .mrt-legend-lrt::before     {font-family: var(--font-family-emoji), 'Taipei Sans TC Beta'; content: "🚈"; }
+.mrt-legend-word.mrt-legend-lrt::before     {font-family: var(--font-family-emoji), 'Taipei Sans TC Beta'; content: "🚈輕軌"; }
 
 /*
 🛧	airport
