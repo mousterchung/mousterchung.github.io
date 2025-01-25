@@ -88,7 +88,7 @@ td:nth-of-type(1), td:nth-last-of-type(1) {text-align: center; }
 td:nth-last-of-type(1) span::before {display: inline-block; }
 body {display: inline-block; }
 
-.mrt-sub {font-size: 0.5em; }
+.mrt-sub {font-size: 0.75em; }
 
 /*
 .mrt-yes::before {
@@ -105,7 +105,11 @@ body {display: inline-block; }
 .mrt-noservice[class] {color: grey; }
 .mrt-noservice a {color: #6699CC}
 .mrt-noservice span:not(.mrt-noservice) > a {color: revert; }
-.mrt-noservice span:not(.mrt-noservice) {color: initial; }
+.mrt-noservice span:not(.mrt-noservice):not(.mrt-sub) {color: initial; }
+.mrt-nodata[class]::before {
+	content: "暫無資料"; 
+	color: grey; 
+}
 
 .mrt-legend-transfer-outofsta::after {content: "（站外轉乘）"; }
 .mrt-legend-transfer-to::before {content: "往"; }
