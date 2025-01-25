@@ -104,6 +104,8 @@ body {display: inline-block; }
 
 .mrt-noservice[class] {color: grey; }
 .mrt-noservice a {color: #6699CC}
+.mrt-noservice span:not(.mrt-noservice) > a {color: revert; }
+.mrt-noservice span:not(.mrt-noservice) {color: initial; }
 
 .mrt-legend-transfer-outofsta::after {content: "（站外轉乘）"; }
 .mrt-legend-transfer-to::before {content: "往"; }
@@ -122,6 +124,8 @@ body {display: inline-block; }
 .mrt-legend-word.mrt-legend-mrt::before     {font-family: var(--font-family-emoji), 'Taipei Sans TC Beta'; content: "🚇捷運"; }
                 .mrt-legend-lrt::before     {font-family: var(--font-family-emoji), 'Taipei Sans TC Beta'; content: "🚈"; }
 .mrt-legend-word.mrt-legend-lrt::before     {font-family: var(--font-family-emoji), 'Taipei Sans TC Beta'; content: "🚈輕軌"; }
+                .mrt-legend-mono::before    {font-family: var(--font-family-emoji), 'Taipei Sans TC Beta'; content: "🚝"; }
+.mrt-legend-word.mrt-legend-mono::before    {font-family: var(--font-family-emoji), 'Taipei Sans TC Beta'; content: "🚝單軌電車"; }
 
 /*
 🛧	airport
@@ -131,6 +135,7 @@ body {display: inline-block; }
 🚇	metro
 🚈	light rail
 🚊	tram
+🚝	monotrail
 
 🚉	station
 
