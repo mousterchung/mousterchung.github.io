@@ -4,11 +4,11 @@
 
 :root {
 	--font-family-base: 'Noto Sans TC', 'Noto Sans', "Arial", sans-serif; 
-	--font-family-gr: "Symbol", var(--font-family-base); 
+	--font-family-gr: "Symbol", sans-serif; 
 	--font-family-ja: 'Noto Sans JP', "Yu Gothic UI Semibold", "標楷體", var(--font-family-base); 
 	--font-family-ko: 'Noto Sans KR', "Malgun Goghic", var(--font-family-base); 
 	--font-family-mono: 'Noto Sans Mono', "Consolas", "Courier New", "Courier", monospace; 
-	--font-family-emoji: 'Noto Color Emoji', 'Noto Emoji', var(--font-family-base); 
+	--font-family-emoji: 'Noto Color Emoji', 'Noto Emoji'; 
 }
 body {font-family: var(--font-family-base); }
 .gr {font-family: var(--font-family-gr); }
