@@ -114,6 +114,9 @@ body {display: inline-block; }
 .mrt-legend-transfer-outofsta::after {content: "（站外轉乘）"; }
 .mrt-legend-transfer-to::before {content: "往"; }
 .mrt-legend-transfer-to::after {content: "方向"; }
+.mrt-legend-transfer-circular.mrt-legend-transfer-circular-up::before {content: "↑接"; }
+.mrt-legend-transfer-circular.mrt-legend-transfer-circular-down::before {content: "↓接"; }
+.mrt-legend-transfer-circular::after {content: "環狀運轉"; }
 .mrt-legend-branch::after {content: "支線"; }
 
                 .mrt-legend-airport::before {font-family: var(--font-family-emoji), 'Taipei Sans TC Beta'; content: "🛧"; }
