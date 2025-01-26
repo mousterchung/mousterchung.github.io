@@ -21,8 +21,40 @@
 table {
 	white-space: nowrap; 
 }
-td:nth-of-type(2), td:nth-of-type(3), td:nth-of-type(4), td:nth-of-type(5) {
-	white-space: initial; 
+@media screen and (min-width: 920px) {
+	td {
+		white-space: initial; 
+	}
+	td:nth-of-type(1), td:nth-of-type(7) {
+		white-space: nowrap; 
+	}
+}
+
+th {
+	position: sticky; 
+	background: white; 
+	z-index: 2; 
+	box-shadow:  0.8px  0.8px white, 
+				 0.8px -0.8px white, 
+				-0.8px  0.8px white, 
+				-0.8px -0.8px white; 
+}
+thead tr:nth-of-type(1) th {
+	top: calc(calc(23.4px + 0.8px) + calc(28.2px + 0.8px) + 1px); 
+	background: white; 
+}
+thead tr:nth-of-type(2) th {
+	top: calc(calc(23.4px + 0.8px) + calc(28.2px + 0.8px) + 1px + 26.8px + 1px + 0.8px + 0.7px); 
+	background: white; 
+}
+tbody tr th {
+	top: calc(calc(23.4px + 0.8px) + calc(28.2px + 0.8px) + 1px + calc(26.8px + 1px) * 2 + 0.8px + 2.5px); 
+}
+thead {
+	top: 0em; 
+	background: white; 
+	position: relative; 
+	z-index: 2; 
 }
 
 td:empty::before {
@@ -37,14 +69,13 @@ td:first-child {
 	z-index: 1; 
 	background: white; 
 }
-th {
-	position: sticky; 
-	background: white; 
-	z-index: 2; 
-}
 td span {
 	display: inline-block; 
 }
+td:nth-of-type(6) > span {
+	display: inline list-item; 
+}
+
 
 [id="tp-br"][id] th {background-color: #c48c31; color: white; }
 [id="tp-r" ][id] th {background-color: #e3002c; color: white; }
@@ -123,20 +154,23 @@ body {display: inline-block; }
 .mrt-legend-transfer-circular::after {content: "環狀運轉"; }
 .mrt-legend-branch::after {content: "支線"; }
 
-                .mrt-legend-airport::before {font-family: var(--font-family-emoji), 'Taipei Sans TC Beta'; content: "🛧"; }
-.mrt-legend-word.mrt-legend-airport::before {font-family: var(--font-family-emoji), 'Taipei Sans TC Beta'; content: "🛧機場"; }
-                .mrt-legend-hsr::before     {font-family: var(--font-family-emoji), 'Taipei Sans TC Beta'; content: "🚄"; }
-.mrt-legend-word.mrt-legend-hsr::before     {font-family: var(--font-family-emoji), 'Taipei Sans TC Beta'; content: "🚄高鐵"; }
-                .mrt-legend-tra::before     {font-family: var(--font-family-emoji), 'Taipei Sans TC Beta'; content: "🚆"; }
-.mrt-legend-word.mrt-legend-tra::before     {font-family: var(--font-family-emoji), 'Taipei Sans TC Beta'; content: "🚆台鐵"; }
-                .mrt-legend-gondola::before {font-family: var(--font-family-emoji), 'Taipei Sans TC Beta'; content: "🚡"; }
-.mrt-legend-word.mrt-legend-gondola::before {font-family: var(--font-family-emoji), 'Taipei Sans TC Beta'; content: "🚡纜車"; }
-                .mrt-legend-mrt::before     {font-family: var(--font-family-emoji), 'Taipei Sans TC Beta'; content: "🚇"; }
-.mrt-legend-word.mrt-legend-mrt::before     {font-family: var(--font-family-emoji), 'Taipei Sans TC Beta'; content: "🚇捷運"; }
-                .mrt-legend-lrt::before     {font-family: var(--font-family-emoji), 'Taipei Sans TC Beta'; content: "🚈"; }
-.mrt-legend-word.mrt-legend-lrt::before     {font-family: var(--font-family-emoji), 'Taipei Sans TC Beta'; content: "🚈輕軌"; }
-                .mrt-legend-mono::before    {font-family: var(--font-family-emoji), 'Taipei Sans TC Beta'; content: "🚝"; }
-.mrt-legend-word.mrt-legend-mono::before    {font-family: var(--font-family-emoji), 'Taipei Sans TC Beta'; content: "🚝單軌電車"; }
+:root {
+	--font-family-emoji-taipeisans: var(--font-family-emoji), 'Taipei Sans TC Beta'; 
+}
+                .mrt-legend-airport::before {font-family: ; content: "🛧"; }
+.mrt-legend-word.mrt-legend-airport::before {font-family: var(--font-family-emoji-taipeisans); content: "🛧機場"; }
+                .mrt-legend-hsr::before     {font-family: var(--font-family-emoji-taipeisans); content: "🚄"; }
+.mrt-legend-word.mrt-legend-hsr::before     {font-family: var(--font-family-emoji-taipeisans); content: "🚄高鐵"; }
+                .mrt-legend-tra::before     {font-family: var(--font-family-emoji-taipeisans); content: "🚆"; }
+.mrt-legend-word.mrt-legend-tra::before     {font-family: var(--font-family-emoji-taipeisans); content: "🚆台鐵"; }
+                .mrt-legend-gondola::before {font-family: var(--font-family-emoji-taipeisans); content: "🚡"; }
+.mrt-legend-word.mrt-legend-gondola::before {font-family: var(--font-family-emoji-taipeisans); content: "🚡纜車"; }
+                .mrt-legend-mrt::before     {font-family: var(--font-family-emoji-taipeisans); content: "🚇"; }
+.mrt-legend-word.mrt-legend-mrt::before     {font-family: var(--font-family-emoji-taipeisans); content: "🚇捷運"; }
+                .mrt-legend-lrt::before     {font-family: var(--font-family-emoji-taipeisans); content: "🚈"; }
+.mrt-legend-word.mrt-legend-lrt::before     {font-family: var(--font-family-emoji-taipeisans); content: "🚈輕軌"; }
+                .mrt-legend-mono::before    {font-family: var(--font-family-emoji-taipeisans); content: "🚝"; }
+.mrt-legend-word.mrt-legend-mono::before    {font-family: var(--font-family-emoji-taipeisans); content: "🚝單軌電車"; }
 
 /*
 🛧	airport
