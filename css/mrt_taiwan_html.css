@@ -18,14 +18,18 @@
 	font-weight: 300; 
 }
 
+table {
+	white-space: nowrap; 
+}
+td:nth-of-type(2), td:nth-of-type(3), td:nth-of-type(4), td:nth-of-type(5) {
+	white-space: initial; 
+}
+
 td:empty::before {
 	content: '-'; 
 	color: grey; 
 	text-align: center; 
 	display: block; 
-}
-table {
-	white-space: nowrap; 
 }
 td:first-child {
 	position: sticky; 
@@ -81,7 +85,7 @@ td span {
 [id="kh-p" ][id] th {background-color: #c100ff; color: black; }
 [id="kh-qj"][id] th {background-color: #e20b65; color: black; }
 
-td {font-family: 'Taipei Sans TC Beta'; line-height: 1.5em; }
+th, td {font-family: 'Taipei Sans TC Beta'; line-height: 1.5em; }
 td:nth-of-type(4) {font-family: var(--font-family-ja); }
 td:nth-of-type(5) {font-family: var(--font-family-ko); }
 td:nth-of-type(1), td:nth-last-of-type(1) {text-align: center; }
