@@ -14,19 +14,16 @@
 			li										{ background-color: inherit; }
 			.chapter								{ counter-increment: chapter; 
 													  font-size: 20pt; 
-													  font-weight: bold; 
-													  background: inherit; }
+													  font-weight: bold; }
 			.chapter::before						{ content: "第" counter(chapter, trad-chinese-informal) "章　"; }
 			.first									{ counter-increment: first; 
 													  counter-reset: second; 
 													  font-size: 15pt; 
-													  font-weight: normal; 
-													  background: inherit; }
+													  font-weight: normal; }
 			.first[start]							{ counter-reset: first attr(start); }
 			.first::before							{ content: "第 " counter(first) " 條　"; 
 													  color: #555; }
 			.second									{ counter-increment: second; 
-													  background: inherit; 
 													  counter-reset: third; }
 			.second::before							{ content: counter(second) "　"; 
 													  font-style: italic; 
