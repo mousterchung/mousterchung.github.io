@@ -11,9 +11,9 @@
 	--font-family-emoji: 'Noto Color Emoji', 'Noto Emoji'; 
 }
 body {font-family: var(--font-family-base); }
-.gr {font-family: var(--font-family-gr); }
-.ja {font-family: var(--font-family-ja); }
-.ko {font-family: var(--font-family-ko); }
+[lang|="gr"], .gr {font-family: var(--font-family-gr); }
+[lang|="ja"], .ja {font-family: var(--font-family-ja); }
+[lang|="ko"], .ko {font-family: var(--font-family-ko); }
 .mono {font-family: var(--font-family-mono); }
 .emoji {font-family: var(--font-family-emoji); }
 .inline-block {display: inline-block; }
