@@ -1,0 +1,16 @@
+.title-name {
+	font-weight: bold; 
+}
+
+h1, h2 {
+	font-weight: normal; 
+	border-bottom: solid 1px #a2a9b1; 
+}
+
+thead, th {
+	font-weight: bold; 
+	background-color: #eaecf0; 
+}
+tbody, td {
+	background-color: #a2a9b1; 
+}
