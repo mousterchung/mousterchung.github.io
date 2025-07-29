@@ -14,3 +14,25 @@ thead, th {
 tbody, td {
 	background-color: #a2a9b1; 
 }
+
+[href|="#link_ref"], [href|="#link_note"] {
+	vertical-align: super; 
+	font-size: smaller; 
+}
+[href|="#link_note"]::after {
+	content: " "; 
+}
+
+a.site-out::after {
+	content: "　"; 
+	background-image: url(https://zh.wikipedia.org/w/skins/Vector/resources/skins.vector.styles/images/link-external-small-ltr-progressive.svg?fb64d); 
+	background-repeat: no-repeat; 
+}
+
+a:link {color: #0645ad; }
+a:visited {color: #6a60b0; }	/* #ab47bc */
+a:visited:hover {color: #534fa3; }
+a:visited:active {color: #353262; }
+a:hover {color: #3056a9; }		/* #2196f3 */
+a:active {color: #233566; }		/* #0d47a1 */
+a:focus {color: #36c; }
