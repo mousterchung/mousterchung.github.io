@@ -27,6 +27,7 @@ a.site-out::after {
 	content: "　"; 
 	background-image: url(https://zh.wikipedia.org/w/skins/Vector/resources/skins.vector.styles/images/link-external-small-ltr-progressive.svg?fb64d); 
 	background-repeat: no-repeat; 
+	background-size: .857em; 
 	vertical-align: middle; 
 }
 a:link {color: #0645ad; }
