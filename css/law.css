@@ -1,0 +1,94 @@
+body {
+	counter-reset: chapter first second third apdx atom-num; 
+}
+
+a {
+	text-decoration: none; 
+}
+a:hover {
+	text-decoration: underline; 
+}
+
+ol {
+	list-style-type: none; 
+}
+li {
+	background-color: inherit; 
+}
+
+.chapter {
+	counter-increment: chapter; 
+	font-size: 20pt; 
+	font-weight: bold; 
+}
+.chapter::before {
+	content: "第" counter(chapter, trad-chinese-informal) "章　"; 
+}
+
+.first {
+	counter-increment: first; 
+	counter-reset: second; 
+	font-size: 15pt; 
+	font-weight: normal; 
+}
+.first[start] {
+	counter-reset: first attr(start); 
+}
+.first::before {
+	content: "第 " counter(first) " 條　"; 
+	color: #555; 
+}
+
+.second {
+	counter-increment: second; 
+	counter-reset: third; 
+}
+.second::before {
+	content: counter(second) "　"; 
+	font-style: italic; 
+	color: #888; 
+}
+
+.third {
+	counter-increment: third; 
+}
+.third::before {
+	content: counter(third, trad-chinese-informal) "、"; 
+	font-weight: bold; 
+}
+
+.apdx {
+	counter-increment: apdx; 
+	background-color: inherit; 
+	font-size: 20pt; 
+	font-weight: bold; 
+}
+.apdx::before {
+	content: "附錄" counter(apdx, upper-alpha) "　"; 
+}
+.apdx * {
+	font-size: 1rem; 
+	font-weight: normal; 
+}
+
+.person {
+	text-decoration: rgba(255, 0, 0, 0.1) dashed underline; 
+}
+
+time {
+	color: #888; 
+}
+ins, ins :is(ol, li) {
+	background-color: #D9EAD3; 
+	text-decoration: #6AA84F solid underline; 
+}
+del, del :is(ol, li) {
+	background-color: #F4CCCC; 
+	text-decoration: #CC0000 solid line-through; 
+}
+
+.important {
+	font-weight: bold; 
+	font-style: italic; 
+	text-decoration: #000 solid underline; 
+}
