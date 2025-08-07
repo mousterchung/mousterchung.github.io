@@ -30,6 +30,8 @@ li {
 	counter-reset: second; 
 	font-size: 15pt; 
 	font-weight: normal; 
+	text-indent: -4.6em; 
+	padding-left: 4.6em; 
 }
 .first[start] {
 	counter-reset: first attr(start); 
@@ -42,6 +44,7 @@ li {
 .second {
 	counter-increment: second; 
 	counter-reset: third; 
+	text-indent: -1.5em; 
 }
 .second::before {
 	content: counter(second) "　"; 
@@ -51,6 +54,7 @@ li {
 
 .third {
 	counter-increment: third; 
+	text-indent: -2em; 
 }
 .third::before {
 	content: counter(third, trad-chinese-informal) "、"; 
