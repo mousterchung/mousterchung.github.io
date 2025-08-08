@@ -11,8 +11,10 @@ p {
 }
 
 table {
-	border: 1px solid #a2a9b1; 
 	border-collapse: collapse; 
+}
+table, th, td {
+	border: 1px solid #a2a9b1; 
 }
 thead, th {
 	font-weight: bold; 
