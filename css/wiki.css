@@ -44,6 +44,20 @@ a:visited:active {color: #353262; }
 a:hover {color: #3056a9; }		/* #2196f3 */
 a:active {color: #233566; }		/* #0d47a1 */
 a:focus {color: #36c; }
+
+.file_docx, .file_pdf {
+	display: inline-block; 
+	width: 1em; 
+	background-repeat: no-repeat; 
+	background-size: 1em; 
+}
+.file_docx[href] {
+	background-image: url(https://upload.wikimedia.org/wikipedia/commons/d/db/DOCX_icon_bold.svg); 
+}
+.file_pdf[href] {
+	background-image: url(https://upload.wikimedia.org/wikipedia/commons/6/6c/PDF_icon.svg); 
+}
+
 .link {
 	font-size: .9em; 
 }
