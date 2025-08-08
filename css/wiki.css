@@ -6,6 +6,9 @@ h1, h2 {
 	font-weight: normal; 
 	border-bottom: solid 1px #a2a9b1; 
 }
+p {
+	text-indent: 2em; 
+}
 
 thead, th {
 	font-weight: bold; 
