@@ -28,7 +28,7 @@ tbody, td {
 
 a.site-out::after {
 	content: "　"; 
-	background-image: url(https://zh.wikipedia.org/w/skins/Vector/resources/skins.vector.styles/images/link-external-small-ltr-progressive.svg?fb64d); 
+	background-image: url(https://upload.wikimedia.org/wikipedia/commons/9/96/Link-external-small-ltr-progressive.svg); 
 	background-repeat: no-repeat; 
 	background-size: .857em; 
 	vertical-align: middle; 
