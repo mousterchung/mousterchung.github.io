@@ -10,12 +10,16 @@ p {
 	text-indent: 2em; 
 }
 
+table {
+	border: 1px solid #a2a9b1; 
+	border-collapse: collapse; 
+}
 thead, th {
 	font-weight: bold; 
 	background-color: #eaecf0; 
 }
 tbody, td {
-	background-color: #a2a9b1; 
+	background-color: #f8f9fa; 
 }
 
 [href|="#link_ref"], [href|="#link_note"] {
