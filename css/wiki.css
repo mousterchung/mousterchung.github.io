@@ -16,6 +16,9 @@ table {
 table, th, td {
 	border: 1px solid #a2a9b1; 
 }
+th, td {
+	padding: .2em .4em; 
+}
 thead, th {
 	font-weight: bold; 
 	background-color: #eaecf0; 
@@ -50,6 +53,7 @@ a:focus {color: #36c; }
 .file_docx, .file_pdf {
 	display: inline-block; 
 	width: 1em; 
+	height: 1em; 
 	background-repeat: no-repeat; 
 	background-size: 1em; 
 }
