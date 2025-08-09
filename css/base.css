@@ -17,5 +17,6 @@ body {font-family: var(--font-family-base); }
 .mono {font-family: var(--font-family-mono); }
 .emoji {font-family: var(--font-family-emoji); }
 .inline-block {display: inline-block; }
+.align-center {text-align: center; }
 [href] {text-decoration: none; }
 [href]:hover {text-decoration: underline; }
