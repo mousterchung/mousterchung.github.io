@@ -21,156 +21,167 @@
 													  border: 1px solid; }
 			.atom-list tr td:nth-of-type(1)::before	{ content: counter(atom-num); 
 													  text-align: center; }
-			.atom-list tr td:nth-of-type(4)			{ text-align: start; }
+			.atom-list tr td:nth-of-type(5)			{ text-align: start; }
+			table, :is(th, td):not(:empty)			{ border: 1px solid black; }
 		</style>
 		<link rel="stylesheet" href="../css/base.css"/>
 	</head>
 	<body>
 		<table border="1" class="atom-list">
-			<col/><col/><col/><col style="text-align: start; "/>
-			<tr><th rowspan="2">原子<br/>序</th><th rowspan="2">元素<br/>符號</th><th colspan="2">元素名稱</th></tr>
-			<tr>																 <th>中</th>	  <th>英</th></tr>
-			<tr><td></td><td>H </td><td>氫</td><td>hydrogen</td></tr>
-			<tr><td></td><td>He</td><td>氦</td><td>helium</td></tr>
-			<tr><td></td><td>Li</td><td>鋰</td><td>lithium</td></tr>
-			<tr><td></td><td>Be</td><td>鈹</td><td>beryllium</td></tr>
-			<tr><td></td><td>B </td><td>硼</td><td>boron</td></tr>
-			<tr><td></td><td>C </td><td>碳</td><td>carbon</td></tr>
-			<tr><td></td><td>N </td><td>氮</td><td>nitrogen</td></tr>
-			<tr><td></td><td>O </td><td>氧</td><td>oxygen</td></tr>
-			<tr><td></td><td>F </td><td>氟</td><td>fluorine</td></tr>
-			<tr><td></td><td>Ne</td><td>氖</td><td>neon</td></tr>
-			<tr><td></td><td>Na</td><td>鈉</td><td>sodium<sup>*1</sup></td></tr>
-			<tr><td></td><td>Mg</td><td>鎂</td><td>magnesium</td></tr>
-			<tr><td></td><td>Al</td><td>鋁</td><td>aluminium<sup>*2</sup></td></tr>
-			<tr><td></td><td>Si</td><td>矽</td><td>silicon</td></tr>
-			<tr><td></td><td>P </td><td>磷</td><td>phosphorus</td></tr>
-			<tr><td></td><td>S </td><td>硫</td><td>sulfur / sulphur</td></tr>
-			<tr><td></td><td>Cl</td><td>氯</td><td>chlorne</td></tr>
-			<tr><td></td><td>Ar</td><td>氬</td><td>argon</td></tr>
-			<tr><td></td><td>K </td><td>鉀</td><td>potassium<sup>*3</sup></td></tr>
-			<tr><td></td><td>Ca</td><td>鈣</td><td>calcium</td></tr>
-			<tr><td></td><td>Sc</td><td>鈧</td><td>scandium</td></tr>
-			<tr><td></td><td>Ti</td><td>鈦</td><td>titanium</td></tr>
-			<tr><td></td><td>V </td><td>釩</td><td>vanadium</td></tr>
-			<tr><td></td><td>Cr</td><td>鉻</td><td>chromium</td></tr>
-			<tr><td></td><td>Mn</td><td>錳</td><td>manganese</td></tr>
-			<tr><td></td><td>Fe</td><td>鐵</td><td>iron<sup>*4</sup></td></tr>
-			<tr><td></td><td>Co</td><td>鈷</td><td>cobalt</td></tr>
-			<tr><td></td><td>Ni</td><td>鎳</td><td>nickel</td></tr>
-			<tr><td></td><td>Cu</td><td>銅</td><td>copper<sup>*5</sup></td></tr>
-			<tr><td></td><td>Zn</td><td>鋅</td><td>zinc</td></tr>
-			<tr><td></td><td>Ga</td><td>鎵</td><td>gallium</td></tr>
-			<tr><td></td><td>Ge</td><td>鍺</td><td>germanium</td></tr>
-			<tr><td></td><td>As</td><td>砷</td><td>arsenic</td></tr>
-			<tr><td></td><td>Se</td><td>硒</td><td>selenium</td></tr>
-			<tr><td></td><td>Br</td><td>溴</td><td>bromine</td></tr>
-			<tr><td></td><td>Kr</td><td>氪</td><td>krypton</td></tr>
-			<tr><td></td><td>Rb</td><td>銣</td><td>rubidium</td></tr>
-			<tr><td></td><td>Sr</td><td>鍶</td><td>strontium</td></tr>
-			<tr><td></td><td>Y </td><td>釔</td><td>yttrium</td></tr>
-			<tr><td></td><td>Zr</td><td>鋯</td><td>zirconium</td></tr>
-			<tr><td></td><td>Nb</td><td>鈮</td><td>niobium</td></tr>
-			<tr><td></td><td>Mo</td><td>鉬</td><td>molybdenum</td></tr>
-			<tr><td></td><td>Tc</td><td>鎝</td><td>technetium</td></tr>
-			<tr><td></td><td>Ru</td><td>釕</td><td>ruthenium</td></tr>
-			<tr><td></td><td>Rh</td><td>銠</td><td>rhodium</td></tr>
-			<tr><td></td><td>Pd</td><td>鈀</td><td>palladium</td></tr>
-			<tr><td></td><td>Ag</td><td>銀</td><td>silver<sup>*6</sup></td></tr>
-			<tr><td></td><td>Cd</td><td>鎘</td><td>cadmium</td></tr>
-			<tr><td></td><td>In</td><td>銦</td><td>indium</td></tr>
-			<tr><td></td><td>Sn</td><td>錫</td><td>tin<sup>*7</sup></td></tr>
-			<tr><td></td><td>Sb</td><td>銻</td><td>antimony<sup>*8</sup></td></tr>
-			<tr><td></td><td>Te</td><td>碲</td><td>tellurium</td></tr>
-			<tr><td></td><td>I </td><td>碘</td><td>iodine</td></tr>
-			<tr><td></td><td>Xe</td><td>氙</td><td>xenon</td></tr>
-			<tr><td></td><td>Cs</td><td>銫</td><td>caesium<sup>*9</sup></td></tr>
-			<tr><td></td><td>Ba</td><td>鋇</td><td>barium</td></tr>
-			<tr><td></td><td>La</td><td>鑭</td><td>lanthanum</td></tr>
-			<tr><td></td><td>Ce</td><td>鈰</td><td>cerium</td></tr>
-			<tr><td></td><td>Pr</td><td>鐠</td><td>praseodymium</td></tr>
-			<tr><td></td><td>Nd</td><td>釹</td><td>neodymium</td></tr>
-			<tr><td></td><td>Pm</td><td>鉕</td><td>promethium</td></tr>
-			<tr><td></td><td>Sm</td><td>釤</td><td>samarium</td></tr>
-			<tr><td></td><td>Eu</td><td>銪</td><td>europium</td></tr>
-			<tr><td></td><td>Gd</td><td>釓</td><td>gadolinium</td></tr>
-			<tr><td></td><td>Tb</td><td>鋱</td><td>terbium</td></tr>
-			<tr><td></td><td>Dy</td><td>鏑</td><td>dysprosium</td></tr>
-			<tr><td></td><td>Ho</td><td>鈥</td><td>holmium</td></tr>
-			<tr><td></td><td>Er</td><td>鉺</td><td>erbium</td></tr>
-			<tr><td></td><td>Tm</td><td>銩</td><td>thulium</td></tr>
-			<tr><td></td><td>Yb</td><td>鐿</td><td>ytterbium</td></tr>
-			<tr><td></td><td>Lu</td><td>鎦</td><td>lutetium</td></tr>
-			<tr><td></td><td>Hf</td><td>鉿</td><td>hafnium</td></tr>
-			<tr><td></td><td>Ta</td><td>鉭</td><td>tantalum</td></tr>
-			<tr><td></td><td>W </td><td>鎢</td><td>tungstrn<sup>*10</sup></td></tr>
-			<tr><td></td><td>Re</td><td>錸</td><td>rhenium</td></tr>
-			<tr><td></td><td>Os</td><td>鋨</td><td>osmium</td></tr>
-			<tr><td></td><td>Ir</td><td>銥</td><td>iridium</td></tr>
-			<tr><td></td><td>Pt</td><td>鉑</td><td>platinum</td></tr>
-			<tr><td></td><td>Au</td><td>金</td><td>gold<sup>*11</sup></td></tr>
-			<tr><td></td><td>Hg</td><td>汞</td><td>mercury<sup>*12</sup></td></tr>
-			<tr><td></td><td>Tl</td><td>鉈</td><td>thallium</td></tr>
-			<tr><td></td><td>Pb</td><td>鉛</td><td>lead<sup>*13</sup></td></tr>
-			<tr><td></td><td>Bi</td><td>鉍</td><td>bismuth</td></tr>
-			<tr><td></td><td>Po</td><td>釙</td><td>polonium</td></tr>
-			<tr><td></td><td>At</td><td>砈</td><td>astatine</td></tr>
-			<tr><td></td><td>Rn</td><td>氡</td><td>radon</td></tr>
-			<tr><td></td><td>Fr</td><td>鍅</td><td>francium</td></tr>
-			<tr><td></td><td>Ra</td><td>鐳</td><td>radium</td></tr>
-			<tr><td></td><td>Ac</td><td>錒</td><td>actinium</td></tr>
-			<tr><td></td><td>Th</td><td>釷</td><td>thorium</td></tr>
-			<tr><td></td><td>Pa</td><td>鏷</td><td>protactinium</td></tr>
-			<tr><td></td><td>U </td><td>鈾</td><td>uranium</td></tr>
-			<tr><td></td><td>Np</td><td>錼</td><td>neptunium</td></tr>
-			<tr><td></td><td>Pu</td><td>鈽</td><td>plutonium</td></tr>
-			<tr><td></td><td>Am</td><td>鋂</td><td>americium</td></tr>
-			<tr><td></td><td>Cm</td><td>鋦</td><td>curium</td></tr>
-			<tr><td></td><td>Bk</td><td>鉳</td><td>berkelium</td></tr>
-			<tr><td></td><td>Cf</td><td>鉲</td><td>californium</td></tr>
-			<tr><td></td><td>Es</td><td>鑀</td><td>einsteinium</td></tr>
-			<tr><td></td><td>Fm</td><td>鐨</td><td>fermium</td></tr>
-			<tr><td></td><td>Md</td><td>鍆</td><td>mendelevium</td></tr>
-			<tr><td></td><td>No</td><td>鍩</td><td>nobelium</td></tr>
-			<tr><td></td><td>Lr</td><td>鐒</td><td>lawrencium</td></tr>
-			<tr><td></td><td>Rf</td><td>鑪</td><td>rutherfordium</td></tr>
-			<tr><td></td><td>Db</td><td>𨧀**</td><td>dubnium</td></tr>
-			<tr><td></td><td>Sg</td><td>𨭎**</td><td>seaborgium</td></tr>
-			<tr><td></td><td>Bh</td><td>𨨏**</td><td>bohrium</td></tr>
-			<tr><td></td><td>Hs</td><td>𨭆**</td><td>hassium</td></tr>
-			<tr><td></td><td>Mt</td><td>䥑**</td><td>meitnerium</td></tr>
-			<tr><td></td><td>Ds</td><td>鐽</td><td>darmstadtium</td></tr>
-			<tr><td></td><td>Rg</td><td>錀</td><td>roentgenium</td></tr>
-			<tr><td></td><td>Cn</td><td>鎶</td><td>copernicium</td></tr>
-			<tr><td></td><td>Nh</td><td>鉨**</td><td>nihonium</td></tr>
-			<tr><td></td><td>Fl</td><td>鈇</td><td>flerovium</td></tr>
-			<tr><td></td><td>Mc</td><td>鏌</td><td>moscovium</td></tr>
-			<tr><td></td><td>Lv</td><td>鉝</td><td>livermorium</td></tr>
-			<tr><td></td><td>Ts</td><td>鿬**</td><td>tennessine</td></tr>
-			<tr><td></td><td>Og</td><td>鿫**</td><td>oganesson</td></tr>
+			<tr><th rowspan="2">原子<br/>序</th><th rowspan="2">元素<br/>符號</th><th rowspan="2">元素<sup>★</sup><br/>狀態</th><th colspan="2">元素名稱</th></tr>
+			<tr>																												 <th>中</th><th>英</th></tr>
+			<tr><td></td><td>H </td><td>💨</td><td>氫</td><td>hydrogen</td></tr>
+			<tr><td></td><td>He</td><td>💨</td><td>氦</td><td>helium</td></tr>
+			<tr><td></td><td>Li</td><td>🪨</td><td>鋰</td><td>lithium</td></tr>
+			<tr><td></td><td>Be</td><td>🪨</td><td>鈹</td><td>beryllium</td></tr>
+			<tr><td></td><td>B </td><td>🪨</td><td>硼</td><td>boron</td></tr>
+			<tr><td></td><td>C </td><td>🪨</td><td>碳</td><td>carbon</td></tr>
+			<tr><td></td><td>N </td><td>💨</td><td>氮</td><td>nitrogen</td></tr>
+			<tr><td></td><td>O </td><td>💨</td><td>氧</td><td>oxygen</td></tr>
+			<tr><td></td><td>F </td><td>💨</td><td>氟</td><td>fluorine</td></tr>
+			<tr><td></td><td>Ne</td><td>💨</td><td>氖</td><td>neon</td></tr>
+			<tr><td></td><td>Na</td><td>🪨</td><td>鈉</td><td>sodium<sup>*1</sup></td></tr>
+			<tr><td></td><td>Mg</td><td>🪨</td><td>鎂</td><td>magnesium</td></tr>
+			<tr><td></td><td>Al</td><td>🪨</td><td>鋁</td><td>aluminium<sup>*2</sup></td></tr>
+			<tr><td></td><td>Si</td><td>🪨</td><td>矽</td><td>silicon</td></tr>
+			<tr><td></td><td>P </td><td>🪨</td><td>磷</td><td>phosphorus</td></tr>
+			<tr><td></td><td>S </td><td>🪨</td><td>硫</td><td>sulfur / sulphur</td></tr>
+			<tr><td></td><td>Cl</td><td>💨</td><td>氯</td><td>chlorne</td></tr>
+			<tr><td></td><td>Ar</td><td>💨</td><td>氬</td><td>argon</td></tr>
+			<tr><td></td><td>K </td><td>🪨</td><td>鉀</td><td>potassium<sup>*3</sup></td></tr>
+			<tr><td></td><td>Ca</td><td>🪨</td><td>鈣</td><td>calcium</td></tr>
+			<tr><td></td><td>Sc</td><td>🪨</td><td>鈧</td><td>scandium</td></tr>
+			<tr><td></td><td>Ti</td><td>🪨</td><td>鈦</td><td>titanium</td></tr>
+			<tr><td></td><td>V </td><td>🪨</td><td>釩</td><td>vanadium</td></tr>
+			<tr><td></td><td>Cr</td><td>🪨</td><td>鉻</td><td>chromium</td></tr>
+			<tr><td></td><td>Mn</td><td>🪨</td><td>錳</td><td>manganese</td></tr>
+			<tr><td></td><td>Fe</td><td>🪨</td><td>鐵</td><td>iron<sup>*4</sup></td></tr>
+			<tr><td></td><td>Co</td><td>🪨</td><td>鈷</td><td>cobalt</td></tr>
+			<tr><td></td><td>Ni</td><td>🪨</td><td>鎳</td><td>nickel</td></tr>
+			<tr><td></td><td>Cu</td><td>🪨</td><td>銅</td><td>copper<sup>*5</sup></td></tr>
+			<tr><td></td><td>Zn</td><td>🪨</td><td>鋅</td><td>zinc</td></tr>
+			<tr><td></td><td>Ga</td><td>🪨</td><td>鎵</td><td>gallium</td></tr>
+			<tr><td></td><td>Ge</td><td>🪨</td><td>鍺</td><td>germanium</td></tr>
+			<tr><td></td><td>As</td><td>🪨</td><td>砷</td><td>arsenic</td></tr>
+			<tr><td></td><td>Se</td><td>🪨</td><td>硒</td><td>selenium</td></tr>
+			<tr><td></td><td>Br</td><td>💧</td><td>溴</td><td>bromine</td></tr>
+			<tr><td></td><td>Kr</td><td>💨</td><td>氪</td><td>krypton</td></tr>
+			<tr><td></td><td>Rb</td><td>🪨</td><td>銣</td><td>rubidium</td></tr>
+			<tr><td></td><td>Sr</td><td>🪨</td><td>鍶</td><td>strontium</td></tr>
+			<tr><td></td><td>Y </td><td>🪨</td><td>釔</td><td>yttrium</td></tr>
+			<tr><td></td><td>Zr</td><td>🪨</td><td>鋯</td><td>zirconium</td></tr>
+			<tr><td></td><td>Nb</td><td>🪨</td><td>鈮</td><td>niobium</td></tr>
+			<tr><td></td><td>Mo</td><td>🪨</td><td>鉬</td><td>molybdenum</td></tr>
+			<tr><td></td><td>Tc</td><td>🪨</td><td>鎝</td><td>technetium</td></tr>
+			<tr><td></td><td>Ru</td><td>🪨</td><td>釕</td><td>ruthenium</td></tr>
+			<tr><td></td><td>Rh</td><td>🪨</td><td>銠</td><td>rhodium</td></tr>
+			<tr><td></td><td>Pd</td><td>🪨</td><td>鈀</td><td>palladium</td></tr>
+			<tr><td></td><td>Ag</td><td>🪨</td><td>銀</td><td>silver<sup>*6</sup></td></tr>
+			<tr><td></td><td>Cd</td><td>🪨</td><td>鎘</td><td>cadmium</td></tr>
+			<tr><td></td><td>In</td><td>🪨</td><td>銦</td><td>indium</td></tr>
+			<tr><td></td><td>Sn</td><td>🪨</td><td>錫</td><td>tin<sup>*7</sup></td></tr>
+			<tr><td></td><td>Sb</td><td>🪨</td><td>銻</td><td>antimony<sup>*8</sup></td></tr>
+			<tr><td></td><td>Te</td><td>🪨</td><td>碲</td><td>tellurium</td></tr>
+			<tr><td></td><td>I </td><td>🪨</td><td>碘</td><td>iodine</td></tr>
+			<tr><td></td><td>Xe</td><td>💨</td><td>氙</td><td>xenon</td></tr>
+			<tr><td></td><td>Cs</td><td>🪨</td><td>銫</td><td>caesium<sup>*9</sup></td></tr>
+			<tr><td></td><td>Ba</td><td>🪨</td><td>鋇</td><td>barium</td></tr>
+			<tr><td></td><td>La</td><td>🪨</td><td>鑭</td><td>lanthanum</td></tr>
+			<tr><td></td><td>Ce</td><td>🪨</td><td>鈰</td><td>cerium</td></tr>
+			<tr><td></td><td>Pr</td><td>🪨</td><td>鐠</td><td>praseodymium</td></tr>
+			<tr><td></td><td>Nd</td><td>🪨</td><td>釹</td><td>neodymium</td></tr>
+			<tr><td></td><td>Pm</td><td>🪨</td><td>鉕</td><td>promethium</td></tr>
+			<tr><td></td><td>Sm</td><td>🪨</td><td>釤</td><td>samarium</td></tr>
+			<tr><td></td><td>Eu</td><td>🪨</td><td>銪</td><td>europium</td></tr>
+			<tr><td></td><td>Gd</td><td>🪨</td><td>釓</td><td>gadolinium</td></tr>
+			<tr><td></td><td>Tb</td><td>🪨</td><td>鋱</td><td>terbium</td></tr>
+			<tr><td></td><td>Dy</td><td>🪨</td><td>鏑</td><td>dysprosium</td></tr>
+			<tr><td></td><td>Ho</td><td>🪨</td><td>鈥</td><td>holmium</td></tr>
+			<tr><td></td><td>Er</td><td>🪨</td><td>鉺</td><td>erbium</td></tr>
+			<tr><td></td><td>Tm</td><td>🪨</td><td>銩</td><td>thulium</td></tr>
+			<tr><td></td><td>Yb</td><td>🪨</td><td>鐿</td><td>ytterbium</td></tr>
+			<tr><td></td><td>Lu</td><td>🪨</td><td>鎦</td><td>lutetium</td></tr>
+			<tr><td></td><td>Hf</td><td>🪨</td><td>鉿</td><td>hafnium</td></tr>
+			<tr><td></td><td>Ta</td><td>🪨</td><td>鉭</td><td>tantalum</td></tr>
+			<tr><td></td><td>W </td><td>🪨</td><td>鎢</td><td>tungstrn<sup>*10</sup></td></tr>
+			<tr><td></td><td>Re</td><td>🪨</td><td>錸</td><td>rhenium</td></tr>
+			<tr><td></td><td>Os</td><td>🪨</td><td>鋨</td><td>osmium</td></tr>
+			<tr><td></td><td>Ir</td><td>🪨</td><td>銥</td><td>iridium</td></tr>
+			<tr><td></td><td>Pt</td><td>🪨</td><td>鉑</td><td>platinum</td></tr>
+			<tr><td></td><td>Au</td><td>🪨</td><td>金</td><td>gold<sup>*11</sup></td></tr>
+			<tr><td></td><td>Hg</td><td>💧</td><td>汞</td><td>mercury<sup>*12</sup></td></tr>
+			<tr><td></td><td>Tl</td><td>🪨</td><td>鉈</td><td>thallium</td></tr>
+			<tr><td></td><td>Pb</td><td>🪨</td><td>鉛</td><td>lead<sup>*13</sup></td></tr>
+			<tr><td></td><td>Bi</td><td>🪨</td><td>鉍</td><td>bismuth</td></tr>
+			<tr><td></td><td>Po</td><td>🪨</td><td>釙</td><td>polonium</td></tr>
+			<tr><td></td><td>At</td><td>❓</td><td>砈</td><td>astatine</td></tr>
+			<tr><td></td><td>Rn</td><td>💨</td><td>氡</td><td>radon</td></tr>
+			<tr><td></td><td>Fr</td><td>❓</td><td>鍅</td><td>francium</td></tr>
+			<tr><td></td><td>Ra</td><td>🪨</td><td>鐳</td><td>radium</td></tr>
+			<tr><td></td><td>Ac</td><td>🪨</td><td>錒</td><td>actinium</td></tr>
+			<tr><td></td><td>Th</td><td>🪨</td><td>釷</td><td>thorium</td></tr>
+			<tr><td></td><td>Pa</td><td>🪨</td><td>鏷</td><td>protactinium</td></tr>
+			<tr><td></td><td>U </td><td>🪨</td><td>鈾</td><td>uranium</td></tr>
+			<tr><td></td><td>Np</td><td>🪨</td><td>錼</td><td>neptunium</td></tr>
+			<tr><td></td><td>Pu</td><td>🪨</td><td>鈽</td><td>plutonium</td></tr>
+			<tr><td></td><td>Am</td><td>🪨</td><td>鋂</td><td>americium</td></tr>
+			<tr><td></td><td>Cm</td><td>🪨</td><td>鋦</td><td>curium</td></tr>
+			<tr><td></td><td>Bk</td><td>🪨</td><td>鉳</td><td>berkelium</td></tr>
+			<tr><td></td><td>Cf</td><td>🪨</td><td>鉲</td><td>californium</td></tr>
+			<tr><td></td><td>Es</td><td>🪨</td><td>鑀</td><td>einsteinium</td></tr>
+			<tr><td></td><td>Fm</td><td>❓</td><td>鐨</td><td>fermium</td></tr>
+			<tr><td></td><td>Md</td><td>❓</td><td>鍆</td><td>mendelevium</td></tr>
+			<tr><td></td><td>No</td><td>❓</td><td>鍩</td><td>nobelium</td></tr>
+			<tr><td></td><td>Lr</td><td>❓</td><td>鐒</td><td>lawrencium</td></tr>
+			<tr><td></td><td>Rf</td><td>❓</td><td>鑪</td><td>rutherfordium</td></tr>
+			<tr><td></td><td>Db</td><td>❓</td><td>𨧀**</td><td>dubnium</td></tr>
+			<tr><td></td><td>Sg</td><td>❓</td><td>𨭎**</td><td>seaborgium</td></tr>
+			<tr><td></td><td>Bh</td><td>❓</td><td>𨨏**</td><td>bohrium</td></tr>
+			<tr><td></td><td>Hs</td><td>❓</td><td>𨭆**</td><td>hassium</td></tr>
+			<tr><td></td><td>Mt</td><td>❓</td><td>䥑**</td><td>meitnerium</td></tr>
+			<tr><td></td><td>Ds</td><td>❓</td><td>鐽</td><td>darmstadtium</td></tr>
+			<tr><td></td><td>Rg</td><td>❓</td><td>錀</td><td>roentgenium</td></tr>
+			<tr><td></td><td>Cn</td><td>❓</td><td>鎶</td><td>copernicium</td></tr>
+			<tr><td></td><td>Nh</td><td>❓</td><td>鉨**</td><td>nihonium</td></tr>
+			<tr><td></td><td>Fl</td><td>❓</td><td>鈇</td><td>flerovium</td></tr>
+			<tr><td></td><td>Mc</td><td>❓</td><td>鏌</td><td>moscovium</td></tr>
+			<tr><td></td><td>Lv</td><td>❓</td><td>鉝</td><td>livermorium</td></tr>
+			<tr><td></td><td>Ts</td><td>❓</td><td>鿬**</td><td>tennessine</td></tr>
+			<tr><td></td><td>Og</td><td>❓</td><td>鿫**</td><td>oganesson</td></tr>
 		</table>
 		<div style="font-size: 1rem; font-weight: normal; ">
-			＊１：符號來自拉丁語natrium<br/>
-			＊２：aluminium（IUPAC） / aluminum（北美）<br/>
-			＊３：符號來自德語kalium<br/>
-			＊４：符號來自拉丁語ferrum<br/>
-			＊５：符號來自拉丁語cuprum<br/>
-			＊６：符號來自拉丁語argentum<br/>
-			＊７：符號來自拉丁語stannum<br/>
-			＊８：符號來自拉丁語stibium<br/>
-			＊９：caesium（IUPAC） / cesium（北美）<br/>
-			＊１０：符號來自德語wolfram<br/>
-			＊１１：符號來自拉丁語aurum<br/>
-			＊１２：符號來自拉丁語hydrargyrum<br/>
-			＊１３：符號來自拉丁語plumbum<br/>
-			＊＊Db：釒杜；<br/>
-			　　Sg：釒喜；<br/>
-			　　Bh：釒波；<br/>
-			　　Hs：釒黑；<br/>
-			　　Mt：釒麥；<br/>
-			　　Nh：釒尔；<br/>
-			　　Ts：石田；<br/>
-			　　Og：气奧<br/>
+			<p>
+				★此指１ａｔｍ、０℃下的元素狀態。<br/>
+				　🪨：固態<br/>
+				　💧：液態<br/>
+				　💨：氣態<br/>
+				　❓：型態不明
+			</p>
+			<p>
+				＊１：符號來自拉丁語natrium<br/>
+				＊２：aluminium（IUPAC） / aluminum（北美）<br/>
+				＊３：符號來自德語kalium<br/>
+				＊４：符號來自拉丁語ferrum<br/>
+				＊５：符號來自拉丁語cuprum<br/>
+				＊６：符號來自拉丁語argentum<br/>
+				＊７：符號來自拉丁語stannum<br/>
+				＊８：符號來自拉丁語stibium<br/>
+				＊９：caesium（IUPAC） / cesium（北美）<br/>
+				＊１０：符號來自德語wolfram<br/>
+				＊１１：符號來自拉丁語aurum<br/>
+				＊１２：符號來自拉丁語hydrargyrum<br/>
+				＊１３：符號來自拉丁語plumbum
+			</p>
+			<p>
+				＊＊Db：⿰釒杜；<br/>
+				　　Sg：⿰釒喜；<br/>
+				　　Bh：⿰釒波；<br/>
+				　　Hs：⿰釒黑；<br/>
+				　　Mt：⿰釒麥；<br/>
+				　　Nh：⿰釒尔；<br/>
+				　　Ts：⿰石田；<br/>
+				　　Og：⿹气奧
+			</p>
 		</div>
 	</body>
 </html>
